@@ -1,0 +1,2085 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<title>The Cortegaça Chronicle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+/>
+<style>
+  :root {
+    --paper: #f5f1e6;
+    --paper-2: #efe9da;
+    --ink: #1b1917;
+    --ink-2: #403a34;
+    --ink-3: #6b625a;
+    --rule: #c9bfae;
+    --rule-2: #a89c88;
+    --accent: #9c2b1e;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding-block: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  p {
+    text-wrap: pretty;
+    orphans: 3;
+    widows: 3;
+    margin: 0 0 0.72em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover .hl,
+  a:hover.hl {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  .ear {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 5px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .ear .price {
+    color: var(--accent);
+  }
+  .nameplate {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 10.5vw, 5.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0.26em 0 0.2em;
+    color: var(--ink);
+  }
+  .nameplate .the {
+    display: block;
+    font-size: 0.24em;
+    font-weight: 400;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    color: var(--ink-2);
+  }
+  .strip {
+    border-top: 3px double var(--rule-2);
+    border-bottom: 3px double var(--rule-2);
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 18px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-align: center;
+  }
+  .strip b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .strip .sep {
+    color: var(--rule-2);
+  }
+
+  /* ---------- TOP BAND ---------- */
+  .topband {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 0 26px;
+    margin-top: 22px;
+  }
+  .rail {
+    border: 1px solid var(--rule-2);
+    padding: 14px 14px 16px;
+    align-self: start;
+    background: var(--paper-2);
+  }
+  .rail h3 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .rail p {
+    font-size: 0.845rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .rail .sig {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 14px;
+  }
+  .mixhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-top: 2px solid var(--ink);
+    padding-top: 8px;
+    margin-bottom: 9px;
+    color: var(--ink);
+  }
+  .mix {
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    gap: 5px 8px;
+    align-items: center;
+  }
+  .mix .lab {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.655rem;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    line-height: 1.15;
+  }
+  .mix .lab.focus {
+    color: var(--accent);
+  }
+  .mix .barwrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mix .bar {
+    height: 9px;
+    background: var(--ink);
+    display: block;
+  }
+  .mix .n {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .mix .star {
+    color: var(--accent);
+    font-size: 0.66rem;
+  }
+  .mixcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 9px;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  /* ---------- LEAD ---------- */
+  .eyebrow {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .lead h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5.1vw, 3.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    margin-bottom: 0.22em;
+  }
+  .standfirst {
+    font-size: 1.06rem;
+    color: var(--ink-2);
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.6em;
+    max-width: 60ch;
+  }
+  .byline {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 5px 0;
+    margin-bottom: 16px;
+  }
+  .leadbody {
+    columns: 2;
+    column-gap: 28px;
+    column-rule: 1px solid var(--rule);
+  }
+  .leadbody p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .leadbody p:first-of-type::first-letter {
+    float: left;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 3.55em;
+    line-height: 0.78;
+    padding: 0.06em 0.09em 0 0;
+    color: var(--ink);
+  }
+  .pull {
+    break-inside: avoid;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 9px 0 11px;
+    margin: 6px 0 12px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .pull .who {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-style: normal;
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 7px;
+  }
+
+  /* ---------- FIGURE / CHART ---------- */
+  figure.fig {
+    margin: 0 0 18px;
+    border-top: 2px solid var(--ink);
+    padding-top: 10px;
+  }
+  figure.fig .figtitle {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+  figure.fig .figsub {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .chartbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .chartbox svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 330px;
+  }
+  figcaption {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    color: var(--ink-3);
+    text-align: left;
+    margin-top: 7px;
+    border-top: 1px solid var(--rule);
+    padding-top: 6px;
+  }
+  .barG rect.val {
+    fill: var(--ink);
+  }
+  .barG:hover rect.val {
+    fill: var(--accent);
+  }
+  .barG.win rect.val {
+    fill: var(--accent);
+  }
+  .barG.win:hover rect.val {
+    fill: var(--ink);
+  }
+
+  /* ---------- SECTION BANDS ---------- */
+  .band {
+    margin-top: 30px;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .banner::before,
+  .banner::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-top: 2px;
+  }
+  .banner h2 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: clamp(0.78rem, 2.1vw, 0.95rem);
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .feat h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.38rem, 2.8vw, 1.82rem);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    margin-bottom: 0.3em;
+  }
+  .feat p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    font-size: 1rem;
+  }
+  .brief {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+  .brief h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.045rem;
+    line-height: 1.17;
+    margin-bottom: 0.25em;
+  }
+  .brief p {
+    font-size: 0.915rem;
+    color: var(--ink-2);
+    line-height: 1.46;
+  }
+  .kicker {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .kicker.hot {
+    color: var(--accent);
+  }
+  .src {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 5px;
+  }
+
+  .split-a {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 0 28px;
+  }
+  .split-b {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 0 28px;
+  }
+  .split-c {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 0 24px;
+  }
+  .split-a > .col + .col,
+  .split-b > .col + .col,
+  .split-c > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 28px;
+  }
+  .split-c > .col + .col {
+    padding-left: 24px;
+  }
+  .quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 22px;
+  }
+  .quad > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 22px;
+  }
+  .colhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.67rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .quad .feat h3 {
+    font-size: 1.18rem;
+    line-height: 1.15;
+  }
+  .quad .feat p,
+  .quad .brief p {
+    font-size: 0.875rem;
+    text-align: left;
+    hyphens: none;
+  }
+  .quad .brief h4 {
+    font-size: 0.98rem;
+  }
+
+  /* ---------- LISTS (Now Open / New Releases / Cinemas) ---------- */
+  .minilist {
+    border-top: 2px solid var(--ink);
+    margin-top: 16px;
+    padding-top: 8px;
+  }
+  .minilist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .minilist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .minilist li {
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .minilist li:last-child {
+    border-bottom: 0;
+  }
+  .minilist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* ---------- AGENDA ---------- */
+  .agenda {
+    border-top: 3px double var(--ink);
+    border-bottom: 3px double var(--ink);
+    margin-top: 26px;
+    padding: 14px 0 16px;
+  }
+  .agenda-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 14px;
+  }
+  .agenda-head h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+    letter-spacing: -0.01em;
+  }
+  .agenda-head .sub {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-3);
+  }
+  .agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 26px;
+  }
+  .ev {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0 14px;
+    border-top: 1px solid var(--rule);
+    padding: 11px 0;
+  }
+  .agenda-grid > .ev:nth-child(1),
+  .agenda-grid > .ev:nth-child(2) {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .agenda-grid > .ev:nth-child(even) {
+    border-left: 1px solid var(--rule);
+    padding-left: 26px;
+  }
+  .ev .date {
+    text-align: center;
+  }
+  .ev .mo {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+  }
+  .ev .dy {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 2.35rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.34em;
+    font-variant-numeric: tabular-nums;
+  }
+  .ev .wd {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+  }
+  .ev .txt {
+    min-width: 0;
+    border-left: 1px solid var(--rule);
+    padding-left: 14px;
+  }
+  .ev .txt h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .ev .venue {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 5px;
+  }
+  .ev .ctx {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    line-height: 1.42;
+    margin: 0;
+  }
+
+  .colophon {
+    border-top: 1px solid var(--rule-2);
+    margin-top: 30px;
+    padding-top: 12px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .quad {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 22px;
+    }
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .quad > .col:nth-child(4) {
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .topband {
+      grid-template-columns: 210px 1fr;
+      gap: 0 22px;
+    }
+  }
+  @media (max-width: 860px) {
+    body {
+      font-size: 15.5px;
+    }
+    .topband {
+      grid-template-columns: 1fr;
+    }
+    .rail {
+      margin-bottom: 22px;
+    }
+    .leadbody {
+      columns: 1;
+    }
+    .split-a,
+    .split-b,
+    .split-c,
+    .quad {
+      grid-template-columns: 1fr;
+    }
+    .split-a > .col + .col,
+    .split-b > .col + .col,
+    .split-c > .col + .col,
+    .quad > .col + .col,
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .agenda-grid {
+      grid-template-columns: 1fr;
+    }
+    .agenda-grid > .ev:nth-child(even) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .agenda-grid > .ev:nth-child(2) {
+      border-top: 1px solid var(--rule);
+      padding-top: 11px;
+    }
+    .leadbody p,
+    .feat p {
+      text-align: left;
+      hyphens: none;
+    }
+    .banner h2 {
+      white-space: normal;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+</style>
+
+<div class="sheet" lang="en">
+  <!-- ================= MASTHEAD ================= -->
+  <header>
+    <div class="ear">
+      Tuesday, 22 September 2026 &nbsp;·&nbsp; No. 2 &nbsp;·&nbsp; Price:
+      <span class="price">one bica</span>
+    </div>
+    <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
+    <div class="strip">
+      <span>Topic today: <b>Berlin turns left</b></span>
+      <span class="sep">✦</span>
+      <span>Weather · Aveiro <b>27°C</b> high, clear, light east wind</span>
+      <span class="sep">✦</span>
+      <span>Berlin <b>19°C</b></span>
+    </div>
+  </header>
+
+  <!-- ================= TOP BAND ================= -->
+  <div class="topband">
+    <aside class="rail">
+      <h3>Column One</h3>
+      <p>
+        Two capitals hold this edition together. In Berlin, a party that took 12
+        per cent three years ago has just come first — and the numbers are
+        strange enough to be worth drawing rather than describing.
+      </p>
+      <p>
+        Closer to home, Ovar published the bill for its Carnival: a record cost
+        against a shrinking gate. And Portugal woke to the loss of Jorge Palma.
+      </p>
+      <p class="sig">— The Editor</p>
+
+      <div class="mixhead">Today's edition</div>
+      <div class="mix">
+        <span class="lab">Cortegaça &amp; Ovar</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 88px"></span
+          ><span class="n">4</span></span
+        >
+
+        <span class="lab focus">✦ Germany · Berlin</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 88px"></span
+          ><span class="n">4</span></span
+        >
+
+        <span class="lab">Portugal</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 66px"></span
+          ><span class="n">3</span></span
+        >
+
+        <span class="lab">Technology</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 44px"></span
+          ><span class="n">2</span></span
+        >
+
+        <span class="lab">Screen</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 44px"></span
+          ><span class="n">2</span></span
+        >
+
+        <span class="lab">Arts</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 44px"></span
+          ><span class="n">2</span></span
+        >
+
+        <span class="lab">Sound</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 44px"></span
+          ><span class="n">2</span></span
+        >
+
+        <span class="lab">The World</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 66px"></span
+          ><span class="n">3</span></span
+        >
+      </div>
+      <div class="mixcap">✦ today's focus — bar length is the story count</div>
+    </aside>
+
+    <article class="lead">
+      <div class="eyebrow">Abgeordnetenhauswahl · Provisional result</div>
+      <h1>
+        <a
+          href="https://www.rbb24.de/politik/berlin-wahl-2026/beitraege/abgeordnetenhaus-wahltag-prognose-hochrechnungen-ergebnis.html"
+          target="_blank"
+          rel="noopener"
+          class="hl"
+          >Die Linke wins Berlin outright, and the SPD falls to its worst result
+          ever</a
+        >
+      </h1>
+      <p class="standfirst">
+        A party on 12.3 per cent in 2023 has doubled its vote and come first for
+        the first time in the city's history — on the highest turnout in over a
+        decade.
+      </p>
+      <div class="byline">rbb24 · Berlin · reported 21 September</div>
+
+      <figure class="fig">
+        <div class="figtitle">Berlin, Abgeordnetenhaus 2026 — second votes</div>
+        <div class="figsub">
+          Bars: provisional 2026 result. Ticks (│): the same party in 2023.
+          Hover a bar for the exact figures.
+        </div>
+        <div class="chartbox">
+          <svg
+            viewBox="0 0 620 300"
+            role="img"
+            aria-label="Horizontal bar chart of the 2026 Berlin state election second votes, with 2023 results marked as ticks and the five per cent threshold drawn as a line"
+          >
+            <title>
+              Berlin Abgeordnetenhaus election 2026 — share of second votes by
+              party
+            </title>
+
+            <!-- gridlines -->
+            <g stroke="#c9bfae" stroke-width="1">
+              <line x1="80" y1="30" x2="80" y2="252"></line>
+              <line
+                x1="160"
+                y1="30"
+                x2="160"
+                y2="252"
+                stroke="#9c2b1e"
+                stroke-dasharray="4 4"
+                stroke-width="1.4"
+              ></line>
+              <line x1="240" y1="240" x2="240" y2="252"></line>
+              <line x1="320" y1="240" x2="320" y2="252"></line>
+              <line x1="400" y1="240" x2="400" y2="252"></line>
+              <line x1="480" y1="240" x2="480" y2="252"></line>
+              <line x1="560" y1="240" x2="560" y2="252"></line>
+            </g>
+            <text
+              x="164"
+              y="24"
+              fill="#9c2b1e"
+              font-family="'Old Standard TT',Georgia,serif"
+              font-size="11"
+              letter-spacing="1.1"
+            >
+              5% THRESHOLD
+            </text>
+
+            <!-- Linke: 25.7 (2023 12.3) -->
+            <g class="barG win">
+              <title>Die Linke — 2026: 25.7% (+13.4 pts) · 2023: 12.3%</title>
+              <rect
+                x="0"
+                y="36"
+                width="620"
+                height="28"
+                fill="transparent"
+              ></rect>
+              <text
+                x="74"
+                y="55"
+                text-anchor="end"
+                fill="#1b1917"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="12.5"
+                letter-spacing=".8"
+              >
+                LINKE
+              </text>
+              <rect class="val" x="80" y="42" width="411.2" height="16"></rect>
+              <rect
+                x="276.8"
+                y="38"
+                width="2.2"
+                height="24"
+                fill="#f5f1e6"
+              ></rect>
+              <text
+                x="499"
+                y="55"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="13"
+                font-weight="700"
+              >
+                25.7
+              </text>
+              <text
+                x="534"
+                y="55"
+                fill="#6b625a"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="11.5"
+              >
+                +13.4
+              </text>
+            </g>
+
+            <!-- CDU: 18.8 (2023 28.3) -->
+            <g class="barG">
+              <title>CDU — 2026: 18.8% (−9.5 pts) · 2023: 28.3%</title>
+              <rect
+                x="0"
+                y="66"
+                width="620"
+                height="28"
+                fill="transparent"
+              ></rect>
+              <text
+                x="74"
+                y="85"
+                text-anchor="end"
+                fill="#1b1917"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="12.5"
+                letter-spacing=".8"
+              >
+                CDU
+              </text>
+              <rect class="val" x="80" y="72" width="300.8" height="16"></rect>
+              <rect
+                x="532.8"
+                y="68"
+                width="2.2"
+                height="24"
+                fill="#403a34"
+              ></rect>
+              <text
+                x="389"
+                y="85"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="13"
+                font-weight="700"
+              >
+                18.8
+              </text>
+              <text
+                x="424"
+                y="85"
+                fill="#6b625a"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="11.5"
+              >
+                −9.5
+              </text>
+            </g>
+
+            <!-- AfD: 16.3 (2023 9.1) -->
+            <g class="barG">
+              <title>AfD — 2026: 16.3% (+7.2 pts) · 2023: 9.1%</title>
+              <rect
+                x="0"
+                y="96"
+                width="620"
+                height="28"
+                fill="transparent"
+              ></rect>
+              <text
+                x="74"
+                y="115"
+                text-anchor="end"
+                fill="#1b1917"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="12.5"
+                letter-spacing=".8"
+              >
+                AFD
+              </text>
+              <rect class="val" x="80" y="102" width="260.8" height="16"></rect>
+              <rect
+                x="225.6"
+                y="98"
+                width="2.2"
+                height="24"
+                fill="#f5f1e6"
+              ></rect>
+              <text
+                x="349"
+                y="115"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="13"
+                font-weight="700"
+              >
+                16.3
+              </text>
+              <text
+                x="384"
+                y="115"
+                fill="#6b625a"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="11.5"
+              >
+                +7.2
+              </text>
+            </g>
+
+            <!-- Grüne: 14.3 (2023 18.4) -->
+            <g class="barG">
+              <title>Grüne — 2026: 14.3% (−4.1 pts) · 2023: 18.4%</title>
+              <rect
+                x="0"
+                y="126"
+                width="620"
+                height="28"
+                fill="transparent"
+              ></rect>
+              <text
+                x="74"
+                y="145"
+                text-anchor="end"
+                fill="#1b1917"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="12.5"
+                letter-spacing=".8"
+              >
+                GRÜNE
+              </text>
+              <rect class="val" x="80" y="132" width="228.8" height="16"></rect>
+              <rect
+                x="374.4"
+                y="128"
+                width="2.2"
+                height="24"
+                fill="#403a34"
+              ></rect>
+              <text
+                x="317"
+                y="145"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="13"
+                font-weight="700"
+              >
+                14.3
+              </text>
+              <text
+                x="386"
+                y="145"
+                fill="#6b625a"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="11.5"
+              >
+                −4.1
+              </text>
+            </g>
+
+            <!-- SPD: 12.1 (2023 18.4) -->
+            <g class="barG">
+              <title>
+                SPD — 2026: 12.1% (−6.3 pts), its worst ever · 2023: 18.4%
+              </title>
+              <rect
+                x="0"
+                y="156"
+                width="620"
+                height="28"
+                fill="transparent"
+              ></rect>
+              <text
+                x="74"
+                y="175"
+                text-anchor="end"
+                fill="#1b1917"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="12.5"
+                letter-spacing=".8"
+              >
+                SPD
+              </text>
+              <rect class="val" x="80" y="162" width="193.6" height="16"></rect>
+              <rect
+                x="374.4"
+                y="158"
+                width="2.2"
+                height="24"
+                fill="#403a34"
+              ></rect>
+              <text
+                x="282"
+                y="175"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="13"
+                font-weight="700"
+              >
+                12.1
+              </text>
+              <text
+                x="317"
+                y="175"
+                fill="#6b625a"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="11.5"
+              >
+                −6.3
+              </text>
+            </g>
+
+            <!-- BSW: 4.7 -->
+            <g class="barG">
+              <title>
+                BSW — 2026: 4.7%, short of the 5% threshold and out of
+                parliament
+              </title>
+              <rect
+                x="0"
+                y="186"
+                width="620"
+                height="28"
+                fill="transparent"
+              ></rect>
+              <text
+                x="74"
+                y="205"
+                text-anchor="end"
+                fill="#6b625a"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="12.5"
+                letter-spacing=".8"
+              >
+                BSW
+              </text>
+              <rect class="val" x="80" y="192" width="75.2" height="16"></rect>
+              <text
+                x="170"
+                y="205"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="13"
+                font-weight="700"
+              >
+                4.7
+              </text>
+              <text
+                x="199"
+                y="205"
+                fill="#9c2b1e"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="11.5"
+              >
+                missed by 0.3
+              </text>
+            </g>
+
+            <!-- FDP: 2.5 -->
+            <g class="barG">
+              <title>FDP — 2026: 2.5%, well short of the threshold</title>
+              <rect
+                x="0"
+                y="216"
+                width="620"
+                height="28"
+                fill="transparent"
+              ></rect>
+              <text
+                x="74"
+                y="235"
+                text-anchor="end"
+                fill="#6b625a"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="12.5"
+                letter-spacing=".8"
+              >
+                FDP
+              </text>
+              <rect class="val" x="80" y="222" width="40" height="16"></rect>
+              <text
+                x="134"
+                y="235"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="13"
+                font-weight="700"
+              >
+                2.5
+              </text>
+            </g>
+
+            <!-- axis -->
+            <line
+              x1="80"
+              y1="252"
+              x2="560"
+              y2="252"
+              stroke="#1b1917"
+              stroke-width="1.4"
+            ></line>
+            <g
+              fill="#6b625a"
+              font-family="'Old Standard TT',Georgia,serif"
+              font-size="11"
+              text-anchor="middle"
+            >
+              <text x="80" y="268">0</text>
+              <text x="160" y="268">5</text>
+              <text x="240" y="268">10</text>
+              <text x="320" y="268">15</text>
+              <text x="400" y="268">20</text>
+              <text x="480" y="268">25</text>
+              <text x="560" y="268">30</text>
+            </g>
+            <text
+              x="320"
+              y="288"
+              text-anchor="middle"
+              fill="#6b625a"
+              font-family="'Old Standard TT',Georgia,serif"
+              font-size="11"
+              letter-spacing="1.2"
+            >
+              SHARE OF SECOND VOTES, PER CENT
+            </text>
+          </svg>
+        </div>
+        <figcaption>
+          Source: rbb24, provisional result of the Berlin Abgeordnetenhaus
+          election of 20 September 2026. The 2023 ticks are the 2026 share minus
+          the change in percentage points that rbb24 reports for each party;
+          rbb24 gives no 2023 comparison for BSW or FDP, so neither carries a
+          tick.
+        </figcaption>
+      </figure>
+
+      <div class="leadbody">
+        <p>
+          Die Linke took 25.7 per cent of Berlin's second votes on Sunday, more
+          than doubling its 2023 share and finishing first in the capital for
+          the first time. The CDU came second on 18.8 per cent — a loss of 9.5
+          points, the heaviest of any party — followed by the AfD on 16.3, the
+          Greens on 14.3 and the SPD on 12.1.
+        </p>
+        <p>
+          For the Social Democrats, the party of Willy Brandt and Klaus
+          Wowereit, that is the worst result in the history of Berlin state
+          elections; their lead candidate Steffen Krach called it
+          "catastrophic". The BSW fell 0.3 points short of the five-per-cent
+          threshold and stays out of parliament, as does the FDP on 2.5.
+        </p>
+        <p class="pull">
+          Berlin has voted left. Governing with the left will not be so simple
+          for Elif Eralp.<span class="who">Jan Menzel, rbb24 commentary</span>
+        </p>
+        <p>
+          Turnout was 74.2 per cent of 2.49 million eligible voters, sharply up
+          from 62.9 per cent in 2023, and 16- and 17-year-olds could vote for
+          the first time. Lead candidate Elif Eralp — who had never held a
+          senior office before — reads the result as a mandate to become
+          Berlin's governing mayor, but she needs two coalition partners: 158
+          members were elected, and a majority takes at least 80. A
+          Linke–Green–SPD deal is the obvious route, and the Greens have already
+          signalled willingness. Every party has ruled out the AfD.
+        </p>
+        <p>
+          The scale of the shift shows up in the map. Die Linke won
+          Friedrichshain-Kreuzberg's five direct mandates outright, taking the
+          original Green stronghold, and in one Wedding polling district it
+          added 29 points to reach 50.5 per cent. It came first in both halves
+          of the city — 27.8 per cent in the former East, 24.1 in the West — the
+          first time the party has been strongest in territory that was once
+          West Germany.
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= LOCAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Cortegaça, Ovar &amp; the Coast</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">The books are in</span>
+          <h3>
+            <a
+              href="https://www.ovarnews.pt/carnaval-de-ovar-custou-143-milhoes-de-euros-em-2026-e-esforco-municipal-subiu-para-841-mil-euros/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Ovar's Carnival cost €1.43 million this year — and took less at
+              the gate</a
+            >
+          </h3>
+          <p>
+            The Câmara's final report puts the 2026 Carnival's total spend at
+            €1,427,442.66, some €113,535.61 more than last year, a rise of 8.6
+            per cent. Income went the other way, down 17.8 per cent, so the
+            share the municipality had to carry itself climbed to €841,000.
+            February's rain is the explanation the report leans on: it kept
+            crowds away and forced several events to be cancelled or moved.
+            Ovar's Carnival is the concelho's biggest annual undertaking and one
+            of the two or three that matter nationally, which makes a widening
+            gap between what it costs and what it earns a live budget question
+            rather than an accounting footnote.
+          </p>
+          <p class="src">OvarNews</p>
+        </article>
+      </div>
+      <div class="col">
+        <article
+          class="brief"
+          style="border-top: 0; padding-top: 0; margin-top: 0"
+        >
+          <span class="kicker">Maceda &amp; Cortegaça</span>
+          <h4>
+            <a
+              href="https://www.ovarnews.pt/cristina-ferreira-rende-se-a-cortegaca-e-maceda-queria-esta-zona-perto-de-casa/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >"I wanted this area near home"</a
+            >
+          </h4>
+          <p>
+            The television presenter Cristina Ferreira spent Saturday along the
+            Ovar coast with her partner, the tennis player João Monteiro, and
+            posted about Cortegaça and Maceda afterwards — the stretch of dune
+            and pine that rarely gets that kind of national airtime.
+          </p>
+          <p class="src">OvarNews · 20 Sept</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Stage</span>
+          <h4>
+            <a
+              href="https://www.ovarnews.pt/glult-o-novo-espetaculo-de-rui-paixao-estreia-em-franca-e-segue-para-ovar/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Rui Paixão's GLÜLT premieres in Lyon, then comes to Ovar</a
+            >
+          </h4>
+          <p>
+            The new solo opens on 12–14 November at Les SUBS in Lyon, as part of
+            La Nuit du Cirque with UTOPISTES. Its Portuguese premiere is booked
+            for the Centro de Arte de Ovar.
+          </p>
+          <p class="src">OvarNews</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Football</span>
+          <h4>
+            <a
+              href="https://www.ovarnews.pt/ovarense-eliminada-da-taca-de-portugal-pelo-marialvas/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Ovarense out of the Taça de Portugal</a
+            >
+          </h4>
+          <p>
+            Marialvas won 1–0 at the Estádio Marques da Silva through a Zé Félix
+            goal on 15 minutes — Ovarense's first defeat of the season, and the
+            end of their cup run.
+          </p>
+          <p class="src">OvarNews · 20 Sept</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GERMANY ================= -->
+  <section class="band">
+    <div class="banner"><h2>Germany · Berlin &amp; Brandenburg</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article
+          class="brief"
+          style="border-top: 0; padding-top: 0; margin-top: 0"
+        >
+          <span class="kicker">Casualty of the night</span>
+          <h4>
+            <a
+              href="https://www.rbb24.de/politik/berlin-wahl-2026/beitraege/abgeordnetenhaus-wahlkreise-direktkandidaten-giffey-wegner-evers.html"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Giffey misses out on the Abgeordnetenhaus</a
+            >
+          </h4>
+          <p>
+            The former governing mayor Franziska Giffey lost her constituency
+            and, without a list seat, leaves the Berlin parliament altogether.
+            Other well-known names got in only via their party lists.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">At the pump</span>
+          <h4>
+            <a
+              href="https://www.tagesschau.de/wirtschaft/tankrabatt-254.html"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Fuel-tax cut clears cabinet, due 1 October</a
+            >
+          </h4>
+          <p>
+            The bill went through by written procedure on Tuesday morning and
+            should pass the Bundestag and Bundesrat this week. Duty on petrol
+            and diesel falls by roughly 17 cents a litre.
+          </p>
+          <p class="src">tagesschau · heise</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="feat">
+          <span class="kicker">The districts</span>
+          <h3>
+            <a
+              href="https://www.rbb24.de/politik/berlin-wahl-2026/bvv/bvv-wahl-20-september-ergebnisse-gesamt.html"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Six districts for Die Linke, four for the CDU — and
+              Marzahn-Hellersdorf for the AfD</a
+            >
+          </h3>
+          <p>
+            Sunday's district-assembly (BVV) results split the city into four
+            pieces. Die Linke came first in Pankow, Mitte,
+            Friedrichshain-Kreuzberg, Neukölln, Lichtenberg and Treptow-Köpenick
+            — topping 40.1 per cent in Friedrichshain-Kreuzberg, ahead of the
+            Greens on 25.2, and winning Neukölln by more than sixteen points
+            (32.0 to the CDU's 15.6). The CDU held four western districts:
+            Steglitz-Zehlendorf (28.5), Spandau (27.7), Reinickendorf (27.4)
+            and, narrowly, Charlottenburg-Wilmersdorf on 24.0 against 22.5 for
+            the Greens. The Greens salvaged one district, Tempelhof-Schöneberg,
+            on 22.7 to Die Linke's 20.3. In Marzahn-Hellersdorf the AfD won
+            clearly with 33.8 per cent, thirteen and a half points clear of Die
+            Linke — the sharpest illustration that Berlin's dividing line no
+            longer runs east to west.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Lausitz</span>
+          <h4>
+            <a
+              href="https://www.rbb24.de/wirtschaft/beitrag/2026/09/batterie-speicher-jaenschwalde-leag-baustart.html"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Germany's largest battery starts going up on a coal-plant site</a
+            >
+          </h4>
+          <p>
+            Leag broke ground on Monday at the Jänschwalde power station for
+            what is to be the country's biggest storage installation, and
+            switched on two new wind and solar parks built on former open-cast
+            mining land.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTUGAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Portugal &amp; the Coast</h2></div>
+    <div class="split-c">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">Obituary</span>
+          <h3>
+            <a
+              href="https://www.rtp.pt/noticias/cultura/morreu-jorge-palma-um-dos-maiores-nomes-da-musica-portuguesa_v1766925"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Jorge Palma has died at 76</a
+            >
+          </h3>
+          <p>
+            The singer and composer died on Monday night, ending a career of
+            more than five decades whose songs became part of the country's
+            collective memory. Tributes arrived from across Portuguese public
+            life through the night and morning: the foreign minister Paulo
+            Rangel called it "a sad day — a very sad day — for Portuguese
+            music", and the prime minister's line, "Jorge Palma is leaving, but
+            his music stays", was picked up everywhere. President António José
+            Seguro remembered him as an "icon".
+          </p>
+          <p class="src">RTP · Observador</p>
+        </article>
+      </div>
+      <div class="col">
+        <article
+          class="brief"
+          style="border-top: 0; padding-top: 0; margin-top: 0"
+        >
+          <span class="kicker">Heat</span>
+          <h4>
+            <a
+              href="https://observador.pt/2026/09/22/mais-de-80-concelhos-de-nove-distritos-em-perigo-maximo-de-incendio-2/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >More than 80 municipalities at maximum fire risk</a
+            >
+          </h4>
+          <p>
+            The IPMA has nine districts' worth of concelhos at the top of its
+            rural-fire scale today, with highs above 30°C across most of the
+            mainland and fifteen districts under a yellow heat warning. The
+            elevated risk is forecast to hold at least until Sunday. A fire that
+            started on Monday afternoon in Arcos de Valdevez, fought by close to
+            300 firefighters, is now under control.
+          </p>
+          <p class="src">Observador · RTP</p>
+        </article>
+      </div>
+      <div class="col">
+        <article
+          class="brief"
+          style="border-top: 0; padding-top: 0; margin-top: 0"
+        >
+          <span class="kicker">Found in a garage</span>
+          <h4>
+            <a
+              href="https://observador.pt/2026/09/22/descobertas-duas-pilastras-pintadas-por-columbano-bordalo-pinheiro-no-caramulo/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Two Columbano Bordalo Pinheiro pilasters turn up in Caramulo</a
+            >
+          </h4>
+          <p>
+            The painted wooden pilasters were sitting in the garage of the house
+            Abel Lacerda built at Caramulo, in Tondela, and were found by the
+            great-nephews of the Museu do Caramulo's founder.
+          </p>
+          <p class="src">Observador</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- AGENDA -->
+    <div class="agenda">
+      <div class="agenda-head">
+        <h3>✦ The Diary — What's On</h3>
+        <div class="sub">Upcoming around Cortegaça, Ovar &amp; Aveiro</div>
+      </div>
+      <div class="agenda-grid">
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">23</span
+            ><span class="wd">Wed</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/events/1852040/semana-europeia-do-desporto-2026-espinho"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Semana Europeia do Desporto 2026</a
+              >
+            </h4>
+            <div class="venue">Largo da Câmara Municipal · Espinho</div>
+            <p class="ctx">
+              Free open-air sports sessions on the town-hall square, part of the
+              EU-wide week — the closest of these to the Cortegaça beaches.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">24</span
+            ><span class="wd">Thu</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/events/1851305/shortcutz-ovar-sessao-108"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Shortcutz Ovar · sessão #108</a
+              >
+            </h4>
+            <div class="venue">Escola de Artes e Ofícios de Ovar · 20:30</div>
+            <p class="ctx">
+              The town's regular short-film night, now past its hundredth
+              edition: a programme of Portuguese shorts with a conversation
+              afterwards.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">24</span
+            ><span class="wd">Thu</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/events/1845489/festas-nossa-senhora-da-saude-2026"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Festas de Nossa Senhora da Saúde</a
+              >
+            </h4>
+            <div class="venue">Praia da Costa Nova</div>
+            <p class="ctx">
+              The Costa Nova parish's patron-saint festival, held among the
+              striped wooden palheiros south of the ria mouth.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">24</span
+            ><span class="wd">Thu</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/events/1839338/festival-internacional-de-marionetas-de-sant"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Festival Internacional de Marionetas</a
+              >
+            </h4>
+            <div class="venue">
+              CCMP Milheirós de Poiares · Sta. Maria da Feira
+            </div>
+            <p class="ctx">
+              Feira's international puppetry festival, which spreads its
+              programme out into the smaller halls around the concelho.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">25</span
+            ><span class="wd">Fri</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/events/1839577/miolo-festival-da-literatura-e-do-pensamento"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Miolo — Festival da Literatura e do Pensamento</a
+              >
+            </h4>
+            <div class="venue">Biblioteca Municipal · Sta. Maria da Feira</div>
+            <p class="ctx">
+              A weekend of readings and public conversations at the municipal
+              library, half an hour inland from Ovar.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">26</span
+            ><span class="wd">Sat</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.noticiasdeaveiro.pt/desfolhada-milho-rei-musica-e-celebracao-em-comunidade/"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Desfolhada — milho-rei, music and community</a
+              >
+            </h4>
+            <div class="venue">Câmara de Ovar · with Os Moliceiros de Ovar</div>
+            <p class="ctx">
+              A staged re-enactment of the old maize-husking night, the communal
+              harvest ritual where turning up a red cob won you a kiss.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">26</span
+            ><span class="wd">Sat</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/aveiro"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Aveiro ao Lusco-Fusco</a
+              >
+            </h4>
+            <div class="venue">Aveiro city</div>
+            <p class="ctx">
+              The city's guided dusk walks return for another run — the canals
+              and the salt pans at the hour they look best.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Oct</span><span class="dy">2</span
+            ><span class="wd">Fri</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/events/1836882/festival-inquietude-10-anos-landescape"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Festival Inquietude — 10 anos Landescape</a
+              >
+            </h4>
+            <div class="venue">Ovar</div>
+            <p class="ctx">
+              Ovar's festival of experimental music and performance, this
+              edition marking ten years of its Landescape strand.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CULTURE QUAD ================= -->
+  <section class="band">
+    <div class="banner"><h2>Machines, Screen, Art &amp; Sound</h2></div>
+    <div class="quad">
+      <!-- TECHNOLOGY -->
+      <div class="col">
+        <div class="colhead">Technology</div>
+        <article class="feat">
+          <h3>
+            <a
+              href="https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Meta's Muse assistant ships with a zero-day</a
+            >
+          </h3>
+          <p>
+            Researchers have found a way to fully hijack Meta's new agent, which
+            runs with unusually broad privileges across a user's accounts. A
+            plain ClickFix-style lure — getting the victim to paste something
+            they were told to paste — is only one of the routes in. The pattern
+            is now familiar: the more an assistant is allowed to do on your
+            behalf, the more a single prompt-level trick is worth.
+          </p>
+          <p class="src">Ars Technica</p>
+        </article>
+        <article class="brief">
+          <h4>
+            <a
+              href="https://www.theverge.com/transportation/998550/a-cut-cable-disrupted-hundreds-of-flights-across-the-us"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >One cut fibre, hundreds of grounded flights</a
+            >
+          </h4>
+          <p>
+            Construction crews in New Jersey severed a Verizon cable carrying
+            air-traffic-control traffic; the FAA found it only after chasing a
+            circuit failure. Airports across the US Northeast spent Monday
+            cancelling and delaying.
+          </p>
+          <p class="src">The Verge</p>
+        </article>
+      </div>
+
+      <!-- SCREEN -->
+      <div class="col">
+        <div class="colhead">Screen</div>
+        <article class="feat">
+          <h3>
+            <a
+              href="https://www.indiewire.com/news/trailers/watch-the-further-misadventures-of-cliff-booth-trailer-1235217948/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Fincher directs Tarantino: the Cliff Booth trailer lands</a
+            >
+          </h3>
+          <p>
+            The first trailer for
+            <em>The Further Mis-Adventures of Cliff Booth</em> puts Brad Pitt's
+            stuntman back in Hollywood, now 1977. David Fincher directs from a
+            Tarantino script — a sequel to
+            <em>Once Upon a Time in Hollywood</em> made by everyone except its
+            original director, who is currently busy writing a swashbuckling
+            stage comedy instead of shooting his tenth film.
+          </p>
+          <p class="src">IndieWire · The Film Stage</p>
+        </article>
+        <article class="brief">
+          <h4>
+            <a
+              href="https://thefilmstage.com/dennis-lim-on-the-64th-new-york-film-festival-the-importance-of-naza-and-the-main-slate-gems-to-see/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Dennis Lim on the 64th New York Film Festival</a
+            >
+          </h4>
+          <p>
+            The festival's artistic director talks through the main slate and
+            calls the discourse around NAZA "alarming", days before the opening.
+          </p>
+          <p class="src">The Film Stage</p>
+        </article>
+        <div class="minilist">
+          <h5>In Cinemas &amp; Festivals</h5>
+          <ul>
+            <li>
+              <span class="name">New York Film Festival, 64th</span> — opens Fri
+              25 Sept, running a little over two weeks
+            </li>
+            <li>
+              <span class="name">I Deserve a Lover…</span> — Mani Haghighi's
+              Iranian documentary, world premiere at NYFF on 30 Sept
+            </li>
+            <li>
+              <span class="name">La Gradiva</span> — Marine Atlan's debut,
+              Cannes Critics' Week Grand Prize; first poster out
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ARTS -->
+      <div class="col">
+        <div class="colhead">Arts</div>
+        <article class="feat">
+          <h3>
+            <a
+              href="https://www.artforum.com/news/shock-downpour-sends-water-cascading-into-the-uffizi-1234759415/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >A cloudburst sends water into the Uffizi</a
+            >
+          </h3>
+          <p>
+            Nearly two inches of rain fell on Florence in an hour on 17
+            September. Water came through a gallery skylight at the Uffizi and
+            into the Palazzo Pitti, with the paintings in that room the
+            immediate worry — a reminder of how thin the margin is between a
+            summer storm and a conservation emergency.
+          </p>
+          <p class="src">Artforum</p>
+        </article>
+        <article class="brief">
+          <h4>
+            <a
+              href="https://hyperallergic.com/german-duo-arrested-after-hanging-paintings-next-to-mona-lisa/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Two Germans hang their own paintings beside the Mona Lisa</a
+            >
+          </h4>
+          <p>
+            They were arrested at the Louvre. Their explanation to Paris police
+            was that the stunt was "for fun".
+          </p>
+          <p class="src">Hyperallergic</p>
+        </article>
+        <div class="minilist">
+          <h5>Now Open</h5>
+          <ul>
+            <li>
+              <span class="name">CCA Tashkent</span> — Uzbekistan's first
+              permanent contemporary-art institution, opened 6 Sept with
+              "Hikmah"
+            </li>
+            <li>
+              <span class="name">Thyssen-Bornemisza, Madrid</span> — a second
+              venue for 360-plus contemporary works from the TBA21 Collection
+            </li>
+            <li>
+              <span class="name">Pratt Manhattan Gallery</span> — touring show
+              on bodies and non-human objects, 25 Sept – 19 Dec
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SOUND -->
+      <div class="col">
+        <div class="colhead">Sound</div>
+        <article class="feat">
+          <h3>
+            <a
+              href="https://www.radioeins.de/musik/cd_der_woche/-the-meaning-of-flowers--von-agnes-obel.html"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Agnes Obel's fifth, and it isn't about motherhood</a
+            >
+          </h3>
+          <p>
+            <em>The Meaning of Flowers</em> is radioeins's record of the week
+            and drew a Pitchfork review the same morning. Pregnancy and the
+            birth of her daughter set the thinking going, but the album's real
+            subject is change itself — constant metamorphosis. Pitchfork hears
+            an album ruled by vocal melody and an abiding mystery: otherworldly
+            and profoundly earthy at once.
+          </p>
+          <p class="src">radioeins · Pitchfork</p>
+        </article>
+        <article class="brief">
+          <h4>
+            <a
+              href="https://www.radioeins.de/programm/sendungen/der_schoene_morgen/_/fruehkritik--sigur-ros.html"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Sigur Rós at the Uber Eats Music Hall</a
+            >
+          </h4>
+          <p>
+            Chamber orchestra and choir in tow, minimal lighting, the post-rock
+            arrangements left to carry the room. Berlin's early review says it
+            worked.
+          </p>
+          <p class="src">radioeins</p>
+        </article>
+        <div class="minilist">
+          <h5>New Releases</h5>
+          <ul>
+            <li>
+              <span class="name">Actress — Radical Frame</span> — a prickly
+              tenth album of avant-techno and mangled spoken word
+            </li>
+            <li>
+              <span class="name">Agnes Obel — The Meaning of Flowers</span> —
+              exquisite vocal lines, deliberate mystery
+            </li>
+            <li>
+              <span class="name">The Drin — I Lost My Way for Centuries</span> —
+              sprawling double LP, murky electronics traded for analogue
+            </li>
+            <li>
+              <span class="name">After — Fell Asleep in the Sun</span> — LA
+              debut, note-perfect 2000s trip-hop reverence
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORLD ================= -->
+  <section class="band">
+    <div class="banner"><h2>The World</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker">Japan</span>
+          <h3>
+            <a
+              href="https://www.bbc.co.uk/news/articles/cm3wj2lexl97o"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Typhoon Dujuan leaves four dead around Tokyo</a
+            >
+          </h3>
+          <p>
+            The storm struck the greater Tokyo area after weeks of repeated
+            heavy rain, killing at least four people and leaving several missing
+            before pulling away. Landslide warnings remain in force across the
+            saturated ground it left behind.
+          </p>
+          <p class="src">BBC · tagesschau</p>
+        </article>
+      </div>
+      <div class="col">
+        <article
+          class="brief"
+          style="border-top: 0; padding-top: 0; margin-top: 0"
+        >
+          <span class="kicker">United States</span>
+          <h4>
+            <a
+              href="https://www.bbc.co.uk/news/articles/cm0e32rwvrryo"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >CNN, MS NOW and Politico sue over the White House ban</a
+            >
+          </h4>
+          <p>
+            The three outlets have gone to court after being barred from the
+            building; several major networks then suspended their White House
+            television coverage of the president. Fox News, usually friendly to
+            the administration, has backed the complaint.
+          </p>
+          <p class="src">BBC · tagesschau</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">New York</span>
+          <h4>
+            <a
+              href="https://www.rtp.pt/noticias/noticiario-antena1/6h-ultimo-discurso-de-antonio-guterres-na-onu_a1_1766919"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Guterres opens his last General Assembly</a
+            >
+          </h4>
+          <p>
+            The general debate begins today with the Portuguese
+            secretary-general presiding for the final time. Iran's president
+            Massoud Pezeshkian has flown to New York promising to "firmly
+            defend" Tehran's positions.
+          </p>
+          <p class="src">RTP</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Baltic</span>
+          <h4>
+            <a
+              href="https://www.bbc.co.uk/news/articles/ck5yw8npxzrlo"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Lithuania has evacuation plans, and says it would fight back</a
+            >
+          </h4>
+          <p>
+            Prime minister Sinkevičius told the BBC that Lithuanians feel
+            "constantly threatened" by Moscow, and that contingency plans exist
+            — while insisting the country is prepared to defend itself.
+          </p>
+          <p class="src">BBC</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="colophon">
+    The Cortegaça Chronicle · assembled from 25 feeds on the morning of 22
+    September 2026<br />
+    Sources named under every item · headlines link out to the original
+  </div>
+</div>

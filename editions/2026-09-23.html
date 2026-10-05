@@ -1,0 +1,2099 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<title>The Cortegaça Chronicle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+/>
+<style>
+  :root {
+    --paper: #f5f1e6;
+    --paper-2: #efe9da;
+    --ink: #1b1917;
+    --ink-2: #403a34;
+    --ink-3: #6b625a;
+    --rule: #c9bfae;
+    --rule-2: #a89c88;
+    --accent: #9c2b1e;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding-block: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  p {
+    text-wrap: pretty;
+    orphans: 3;
+    widows: 3;
+    margin: 0 0 0.72em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover .hl,
+  a:hover.hl {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  .ear {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 5px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .ear .price {
+    color: var(--accent);
+  }
+  .nameplate {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 10.5vw, 5.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0.26em 0 0.2em;
+    color: var(--ink);
+  }
+  .nameplate .the {
+    display: block;
+    font-size: 0.24em;
+    font-weight: 400;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    color: var(--ink-2);
+  }
+  .strip {
+    border-top: 3px double var(--rule-2);
+    border-bottom: 3px double var(--rule-2);
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 18px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-align: center;
+  }
+  .strip b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .strip .sep {
+    color: var(--rule-2);
+  }
+
+  /* ---------- TOP BAND ---------- */
+  .topband {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 0 26px;
+    margin-top: 22px;
+  }
+  .rail {
+    border: 1px solid var(--rule-2);
+    padding: 14px 14px 16px;
+    align-self: start;
+    background: var(--paper-2);
+  }
+  .rail h3 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .rail p {
+    font-size: 0.845rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .rail .sig {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 14px;
+  }
+  .mixhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-top: 2px solid var(--ink);
+    padding-top: 8px;
+    margin-bottom: 9px;
+    color: var(--ink);
+  }
+  .mix {
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    gap: 5px 8px;
+    align-items: center;
+  }
+  .mix .lab {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.655rem;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    line-height: 1.15;
+  }
+  .mix .lab.focus {
+    color: var(--accent);
+  }
+  .mix .barwrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mix .bar {
+    height: 9px;
+    background: var(--ink);
+    display: block;
+  }
+  .mix .n {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .mix .star {
+    color: var(--accent);
+    font-size: 0.66rem;
+  }
+  .mixcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 9px;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  /* ---------- LEAD ---------- */
+  .eyebrow {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .lead h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5.1vw, 3.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    margin-bottom: 0.22em;
+  }
+  .standfirst {
+    font-size: 1.06rem;
+    color: var(--ink-2);
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.6em;
+    max-width: 60ch;
+  }
+  .byline {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 5px 0;
+    margin-bottom: 16px;
+  }
+  .leadbody {
+    columns: 2;
+    column-gap: 28px;
+    column-rule: 1px solid var(--rule);
+  }
+  .leadbody p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .leadbody p:first-of-type::first-letter {
+    float: left;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 3.55em;
+    line-height: 0.78;
+    padding: 0.06em 0.09em 0 0;
+    color: var(--ink);
+  }
+  .pull {
+    break-inside: avoid;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 9px 0 11px;
+    margin: 6px 0 12px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .pull .who {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-style: normal;
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 7px;
+  }
+
+  /* ---------- FIGURE / CHART ---------- */
+  figure.fig {
+    margin: 0 0 18px;
+    border-top: 2px solid var(--ink);
+    padding-top: 10px;
+  }
+  figure.fig .figtitle {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+  figure.fig .figsub {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .chartbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .chartbox svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 330px;
+  }
+  figcaption {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    color: var(--ink-3);
+    text-align: left;
+    margin-top: 7px;
+    border-top: 1px solid var(--rule);
+    padding-top: 6px;
+  }
+  .barG rect.val {
+    fill: var(--ink);
+  }
+  .barG:hover rect.val {
+    fill: var(--accent);
+  }
+  .barG.win rect.val {
+    fill: var(--accent);
+  }
+  .barG.win:hover rect.val {
+    fill: var(--ink);
+  }
+  .barG rect.valo {
+    fill: var(--paper);
+    stroke: var(--ink);
+    stroke-width: 1.4;
+  }
+  .barG:hover rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win:hover rect.valo {
+    stroke: var(--ink);
+  }
+
+  /* ---------- SECTION BANDS ---------- */
+  .band {
+    margin-top: 30px;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .banner::before,
+  .banner::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-top: 2px;
+  }
+  .banner h2 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: clamp(0.78rem, 2.1vw, 0.95rem);
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .feat h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.38rem, 2.8vw, 1.82rem);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    margin-bottom: 0.3em;
+  }
+  .feat p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    font-size: 1rem;
+  }
+  .brief {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+  .brief h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.045rem;
+    line-height: 1.17;
+    margin-bottom: 0.25em;
+  }
+  .brief p {
+    font-size: 0.915rem;
+    color: var(--ink-2);
+    line-height: 1.46;
+  }
+  .kicker {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .kicker.hot {
+    color: var(--accent);
+  }
+  .src {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 5px;
+  }
+
+  .split-a {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 0 28px;
+  }
+  .split-b {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 0 28px;
+  }
+  .split-c {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 0 24px;
+  }
+  .split-a > .col + .col,
+  .split-b > .col + .col,
+  .split-c > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 28px;
+  }
+  .split-c > .col + .col {
+    padding-left: 24px;
+  }
+  .quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 22px;
+  }
+  .quad > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 22px;
+  }
+  .colhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.67rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .quad .feat h3 {
+    font-size: 1.18rem;
+    line-height: 1.15;
+  }
+  .quad .feat p,
+  .quad .brief p {
+    font-size: 0.875rem;
+    text-align: left;
+    hyphens: none;
+  }
+  .quad .brief h4 {
+    font-size: 0.98rem;
+  }
+
+  /* ---------- LISTS (Now Open / New Releases / Cinemas) ---------- */
+  .minilist {
+    border-top: 2px solid var(--ink);
+    margin-top: 16px;
+    padding-top: 8px;
+  }
+  .minilist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .minilist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .minilist li {
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .minilist li:last-child {
+    border-bottom: 0;
+  }
+  .minilist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* ---------- NOW STREAMING ---------- */
+  .streamlist {
+    border-top: 2px solid var(--ink);
+    margin-top: 18px;
+    padding-top: 8px;
+  }
+  .streamlist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .streamlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3;
+    column-gap: 26px;
+  }
+  .streamlist li {
+    break-inside: avoid;
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .streamlist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .streamcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ---------- AGENDA ---------- */
+  .agenda {
+    border-top: 3px double var(--ink);
+    border-bottom: 3px double var(--ink);
+    margin-top: 26px;
+    padding: 14px 0 16px;
+  }
+  .agenda-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 14px;
+  }
+  .agenda-head h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+    letter-spacing: -0.01em;
+  }
+  .agenda-head .sub {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-3);
+  }
+  .agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 26px;
+  }
+  .ev {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0 14px;
+    border-top: 1px solid var(--rule);
+    padding: 11px 0;
+  }
+  .agenda-grid > .ev:nth-child(1),
+  .agenda-grid > .ev:nth-child(2) {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .agenda-grid > .ev:nth-child(even) {
+    border-left: 1px solid var(--rule);
+    padding-left: 26px;
+  }
+  .ev .date {
+    text-align: center;
+  }
+  .ev .mo {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+  }
+  .ev .dy {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 2.35rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.34em;
+    font-variant-numeric: tabular-nums;
+  }
+  .ev .wd {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+  }
+  .ev .txt {
+    min-width: 0;
+    border-left: 1px solid var(--rule);
+    padding-left: 14px;
+  }
+  .ev .txt h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .ev .venue {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 5px;
+  }
+  .ev .ctx {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    line-height: 1.42;
+    margin: 0;
+  }
+
+  .colophon {
+    border-top: 1px solid var(--rule-2);
+    margin-top: 30px;
+    padding-top: 12px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .quad {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 22px;
+    }
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .quad > .col:nth-child(4) {
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .topband {
+      grid-template-columns: 210px 1fr;
+      gap: 0 22px;
+    }
+    .streamlist ul {
+      columns: 2;
+    }
+  }
+  @media (max-width: 860px) {
+    body {
+      font-size: 15.5px;
+    }
+    .topband {
+      grid-template-columns: 1fr;
+    }
+    .rail {
+      margin-bottom: 22px;
+    }
+    .leadbody {
+      columns: 1;
+    }
+    .split-a,
+    .split-b,
+    .split-c,
+    .quad {
+      grid-template-columns: 1fr;
+    }
+    .split-a > .col + .col,
+    .split-b > .col + .col,
+    .split-c > .col + .col,
+    .quad > .col + .col,
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .agenda-grid {
+      grid-template-columns: 1fr;
+    }
+    .agenda-grid > .ev:nth-child(even) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .agenda-grid > .ev:nth-child(2) {
+      border-top: 1px solid var(--rule);
+      padding-top: 11px;
+    }
+    .streamlist ul {
+      columns: 1;
+    }
+    .leadbody p,
+    .feat p {
+      text-align: left;
+      hyphens: none;
+    }
+    .banner h2 {
+      white-space: normal;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+</style>
+
+<div class="sheet" lang="en">
+  <!-- ================= MASTHEAD ================= -->
+  <header>
+    <div class="ear">
+      Wednesday, 23 September 2026 &nbsp;·&nbsp; No. 3 &nbsp;·&nbsp; Price:
+      <span class="price">one bica</span>
+    </div>
+    <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
+    <div class="strip">
+      <span>Topic today: <b>The price of intelligence</b></span>
+      <span class="sep">✦</span>
+      <span>Weather · Aveiro <b>24°C</b> high, sunny, sea breeze</span>
+      <span class="sep">✦</span>
+      <span>Berlin <b>17°C</b></span>
+    </div>
+  </header>
+
+  <!-- ================= TOP BAND ================= -->
+  <div class="topband">
+    <aside class="rail">
+      <h3>Column One</h3>
+      <p>
+        Today's front page is a chart of falling prices. Anthropic's new
+        flagship both tops the intelligence rankings and undercuts the model it
+        replaces — a squeeze the whole frontier is now feeling, and one worth
+        drawing rather than describing.
+      </p>
+      <p>
+        Nearer home, Ovar signs off on a new roundabout for the EN 327, and
+        Portugal's face-covering law takes effect today. A new
+        <b>Now Streaming</b> band joins the edition, below the culture pages.
+      </p>
+      <p class="sig">— The Editor</p>
+
+      <div class="mixhead">Today's edition</div>
+      <div class="mix">
+        <span class="lab">Cortegaça &amp; Ovar</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 88px"></span
+          ><span class="n">4</span></span
+        >
+
+        <span class="lab">Germany · Berlin</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 66px"></span
+          ><span class="n">3</span></span
+        >
+
+        <span class="lab">Portugal</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 66px"></span
+          ><span class="n">3</span></span
+        >
+
+        <span class="lab focus">✦ Technology</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 66px"></span
+          ><span class="n">3</span></span
+        >
+
+        <span class="lab">Screen</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 44px"></span
+          ><span class="n">2</span></span
+        >
+
+        <span class="lab">Arts</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 44px"></span
+          ><span class="n">2</span></span
+        >
+
+        <span class="lab">Sound</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 44px"></span
+          ><span class="n">2</span></span
+        >
+
+        <span class="lab">Now Streaming</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 66px"></span
+          ><span class="n">3</span></span
+        >
+
+        <span class="lab">The World</span>
+        <span class="barwrap"
+          ><span class="bar" style="width: 88px"></span
+          ><span class="n">4</span></span
+        >
+      </div>
+      <div class="mixcap">✦ today's focus — bar length is the story count</div>
+    </aside>
+
+    <article class="lead">
+      <div class="eyebrow">Frontier models · Price war</div>
+      <h1>
+        <a
+          href="https://artificialanalysis.ai/articles/claude-opus-5-5"
+          target="_blank"
+          rel="noopener"
+          class="hl"
+          >Claude Opus 5.5 takes the intelligence crown — and cuts its own
+          price</a
+        >
+      </h1>
+      <p class="standfirst">
+        Anthropic's new flagship posts the highest score Artificial Analysis has
+        ever measured while listing 20 per cent cheaper than the model it
+        replaces — and OpenAI's GPT-6 Sol answers by undercutting it at half the
+        price.
+      </p>
+      <div class="byline">
+        Ars Technica · Artificial Analysis · reported 22 September
+      </div>
+
+      <figure class="fig">
+        <div class="figtitle">Flagship list prices — US dollars per 1M tokens</div>
+        <div class="figsub">
+          Hollow bar: input. Solid bar: output. Hover a bar for the figure.
+        </div>
+        <div class="chartbox">
+          <svg
+            viewBox="0 0 620 244"
+            role="img"
+            aria-label="Grouped horizontal bar chart of input and output list prices, in US dollars per million tokens, for Claude Opus 5, Claude Opus 5.5 and GPT-6 Sol"
+          >
+            <title>
+              Input and output list prices per million tokens for Claude Opus 5,
+              Claude Opus 5.5 and GPT-6 Sol
+            </title>
+
+            <!-- gridlines -->
+            <g stroke="#c9bfae" stroke-width="1">
+              <line x1="96" y1="30" x2="96" y2="190"></line>
+              <line x1="182" y1="178" x2="182" y2="190"></line>
+              <line x1="268" y1="178" x2="268" y2="190"></line>
+              <line x1="354" y1="178" x2="354" y2="190"></line>
+              <line x1="440" y1="178" x2="440" y2="190"></line>
+              <line x1="526" y1="178" x2="526" y2="190"></line>
+            </g>
+
+            <!-- legend -->
+            <g>
+              <rect
+                x="360"
+                y="12"
+                width="13"
+                height="11"
+                fill="#f5f1e6"
+                stroke="#1b1917"
+                stroke-width="1.4"
+              ></rect>
+              <text
+                x="379"
+                y="21"
+                fill="#6b625a"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="11"
+                letter-spacing=".6"
+              >
+                INPUT
+              </text>
+              <rect x="440" y="12" width="13" height="11" fill="#1b1917"></rect>
+              <text
+                x="459"
+                y="21"
+                fill="#6b625a"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="11"
+                letter-spacing=".6"
+              >
+                OUTPUT
+              </text>
+            </g>
+
+            <!-- Opus 5 -->
+            <g class="barG">
+              <title>Claude Opus 5 (Jul 2026) — input $5, output $25 per 1M tokens</title>
+              <rect x="0" y="34" width="620" height="38" fill="transparent"></rect>
+              <text
+                x="88"
+                y="50"
+                text-anchor="end"
+                fill="#1b1917"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="12"
+                letter-spacing=".6"
+              >
+                OPUS 5
+              </text>
+              <text
+                x="88"
+                y="64"
+                text-anchor="end"
+                fill="#6b625a"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="9.5"
+                letter-spacing=".6"
+              >
+                JUL '26
+              </text>
+              <rect class="valo" x="96" y="38" width="86" height="14"></rect>
+              <text
+                x="188"
+                y="49"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="12"
+                font-weight="700"
+              >
+                $5
+              </text>
+              <rect class="val" x="96" y="54" width="430" height="14"></rect>
+              <text
+                x="532"
+                y="65"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="12"
+                font-weight="700"
+              >
+                $25
+              </text>
+            </g>
+
+            <!-- Opus 5.5 (focus) -->
+            <g class="barG win">
+              <title>
+                Claude Opus 5.5 (22 Sep 2026) — input $4, output $20 per 1M
+                tokens, a 20% cut from Opus 5
+              </title>
+              <rect x="0" y="90" width="620" height="38" fill="transparent"></rect>
+              <text
+                x="88"
+                y="106"
+                text-anchor="end"
+                fill="#9c2b1e"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="12"
+                letter-spacing=".6"
+              >
+                OPUS 5.5
+              </text>
+              <text
+                x="88"
+                y="120"
+                text-anchor="end"
+                fill="#9c2b1e"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="9.5"
+                letter-spacing=".6"
+              >
+                NEW
+              </text>
+              <rect class="valo" x="96" y="94" width="68.8" height="14"></rect>
+              <text
+                x="171"
+                y="105"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="12"
+                font-weight="700"
+              >
+                $4
+              </text>
+              <rect class="val" x="96" y="110" width="344" height="14"></rect>
+              <text
+                x="446"
+                y="121"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="12"
+                font-weight="700"
+              >
+                $20
+              </text>
+            </g>
+
+            <!-- GPT-6 Sol -->
+            <g class="barG">
+              <title>GPT-6 Sol — input $2, output $10 per 1M tokens, half of Opus 5.5</title>
+              <rect x="0" y="146" width="620" height="38" fill="transparent"></rect>
+              <text
+                x="88"
+                y="162"
+                text-anchor="end"
+                fill="#1b1917"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="12"
+                letter-spacing=".6"
+              >
+                GPT-6
+              </text>
+              <text
+                x="88"
+                y="176"
+                text-anchor="end"
+                fill="#6b625a"
+                font-family="'Old Standard TT',Georgia,serif"
+                font-size="9.5"
+                letter-spacing=".6"
+              >
+                SOL
+              </text>
+              <rect class="valo" x="96" y="150" width="34.4" height="14"></rect>
+              <text
+                x="136"
+                y="161"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="12"
+                font-weight="700"
+              >
+                $2
+              </text>
+              <rect class="val" x="96" y="166" width="172" height="14"></rect>
+              <text
+                x="274"
+                y="177"
+                fill="#1b1917"
+                font-family="'PT Serif',Georgia,serif"
+                font-size="12"
+                font-weight="700"
+              >
+                $10
+              </text>
+            </g>
+
+            <!-- axis -->
+            <line
+              x1="96"
+              y1="190"
+              x2="526"
+              y2="190"
+              stroke="#1b1917"
+              stroke-width="1.4"
+            ></line>
+            <g
+              fill="#6b625a"
+              font-family="'Old Standard TT',Georgia,serif"
+              font-size="11"
+              text-anchor="middle"
+            >
+              <text x="96" y="206">0</text>
+              <text x="182" y="206">5</text>
+              <text x="268" y="206">10</text>
+              <text x="354" y="206">15</text>
+              <text x="440" y="206">20</text>
+              <text x="526" y="206">25</text>
+            </g>
+            <text
+              x="311"
+              y="228"
+              text-anchor="middle"
+              fill="#6b625a"
+              font-family="'Old Standard TT',Georgia,serif"
+              font-size="11"
+              letter-spacing="1.2"
+            >
+              US DOLLARS PER MILLION TOKENS
+            </text>
+          </svg>
+        </div>
+        <figcaption>
+          Sources: Anthropic and OpenAI list prices via implicator.ai; Artificial
+          Analysis. Opus 5 launched in July 2026 at $5 / $25; Opus 5.5, released
+          22 September 2026, lists at $4 / $20 — a 20 per cent cut. GPT-6 Sol
+          lists at $2 / $10, half the Opus 5.5 price. Prices exclude caching and
+          fast-mode tiers.
+        </figcaption>
+      </figure>
+
+      <div class="leadbody">
+        <p>
+          Anthropic released Claude Opus 5.5 on 22 September and, on Artificial
+          Analysis's Intelligence Index, it went straight to the top — a score of
+          58, the highest the benchmarking outfit says it has measured, and well
+          clear of a field whose median sits at 25. What made the launch unusual
+          was the price tag underneath the score: $4 per million input tokens and
+          $20 per million output, down from the $5 and $25 that Opus 5 charged in
+          July. A new flagship that is both more capable and cheaper than the old
+          one breaks the usual pattern, where the best model is also the dearest.
+        </p>
+        <p>
+          The competitive pressure is easy to read once the numbers are laid out.
+          OpenAI's GPT-6 Sol lists at $2 / $10 — half the Opus 5.5 rate — and on
+          Artificial Analysis's own cost-per-task figures the gap narrows further:
+          Opus 5.5 scored 51.2 at medium effort for about $1.34 a task, against
+          Sol's 47.5 at maximum effort for $1.06, or 39.8 at its default setting
+          for just $0.25. Grok 4.7, from Elon Musk's xAI, sits on 46. The labs
+          are no longer only racing on capability; they are racing on what a unit
+          of that capability costs to run.
+        </p>
+        <p class="pull">
+          The frontier AI model race has entered its comparison-shopping phase.
+          <span class="who">Ars Technica</span>
+        </p>
+        <p>
+          For anyone building on these models, that shift is the story. A year ago
+          the calculus was which model was smart enough; increasingly it is which
+          one is smart enough at a price that survives contact with a real
+          workload. Anthropic's answer is to fold in cheaper cache reads — $0.20
+          per million tokens, down from $0.50 — and to keep a pricier fast-mode
+          tier for those who want lower latency; OpenAI's is to lead with a
+          headline rate that looks almost disposable at the default setting.
+        </p>
+        <p>
+          The comparisons carry an asterisk worth keeping in view. Artificial
+          Analysis has just moved its Intelligence Index to a new version and
+          reweighted the components, so scores from before the change do not line
+          up cleanly with the ones after it, and rival labs quote different
+          leaderboards depending on which cut they favour. The list prices,
+          though, are unambiguous — and they are all pointing the same way: down.
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= LOCAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Cortegaça, Ovar &amp; the Coast</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">On the EN 327</span>
+          <h3>
+            <a
+              href="https://www.ovarnews.pt/ovar-aprova-acordo-com-a-infraestruturas-de-portugal-para-construir-rotunda-da-pousada/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Ovar signs off on the "rotunda da Pousada"</a
+            >
+          </h3>
+          <p>
+            The Câmara Municipal de Ovar has approved a management agreement with
+            Infraestruturas de Portugal (IP) to build a new roundabout on the
+            EN 327, at the access to Avenida D. Manuel I near the pousada. It is
+            the sort of decision that rarely makes headlines and reshapes a daily
+            commute all the same: the EN 327 is one of the main roads through the
+            concelho, and the junction it fixes is a known pinch-point. Under an
+            "acordo de gestão", the municipality takes on the works on a road that
+            formally belongs to the national network — the mechanism councils
+            increasingly use to get IP-owned junctions built without waiting on
+            Lisbon's own timetable.
+          </p>
+          <p class="src">OvarNews · 22 Sept</p>
+        </article>
+      </div>
+      <div class="col">
+        <article
+          class="brief"
+          style="border-top: 0; padding-top: 0; margin-top: 0"
+        >
+          <span class="kicker">Live at the Escola de Artes</span>
+          <h4>
+            <a
+              href="https://www.ovarnews.pt/chico-chico-anuncia-digressao-europeia-com-ovar-no-mapa/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Chico Chico brings his European tour to Ovar in December</a
+            >
+          </h4>
+          <p>
+            The Brazilian singer-songwriter has put Ovar on his first European
+            tour: 3 December at the Escola de Artes e Ofícios, in support of his
+            latest album <em>Let It Burn / Deixa Arder</em>. Tickets and the wider
+            run were announced this week.
+          </p>
+          <p class="src">OvarNews · 22 Sept</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">On Esmoriz beach</span>
+          <h4>
+            <a
+              href="https://www.ovarnews.pt/bombeiros-dareia-aproxima-populacao-da-realidade-dos-soldados-da-paz/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >"Bombeiro D'Areia" puts firefighters through the sand</a
+            >
+          </h4>
+          <p>
+            The Bombeiros Voluntários de Esmoriz run their annual national and
+            international endurance contest on the Praia de Esmoriz — an
+            obstacle course in the sand that recreates the physical and mental
+            extremes crews meet on the job.
+          </p>
+          <p class="src">OvarNews · 21 Sept</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Climate</span>
+          <h4>
+            <a
+              href="https://www.ovarnews.pt/estamos-alinhados-com-a-missao-da-ue-para-a-adaptacao-as-alteracoes-climaticas/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Ovar joins the region's climate-adaptation push</a
+            >
+          </h4>
+          <p>
+            The Comunidade Intermunicipal da Região de Aveiro (CIRA) and its
+            eleven municipalities, Ovar among them, are running RESILIENCIRA, a
+            project to strengthen the territory's capacity to adapt to climate
+            change under the EU's Adaptation Mission.
+          </p>
+          <p class="src">OvarNews · 22 Sept</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GERMANY ================= -->
+  <section class="band">
+    <div class="banner"><h2>Germany · Berlin &amp; Brandenburg</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article
+          class="brief"
+          style="border-top: 0; padding-top: 0; margin-top: 0"
+        >
+          <span class="kicker">At the pump</span>
+          <h4>
+            <a
+              href="https://www.rbb24.de/wirtschaft/beitrag/2026/09/tankrabatt-brandenburg-kosten-steuer-keller.html"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >The fuel-tax cut will cost Brandenburg up to €50 million</a
+            >
+          </h4>
+          <p>
+            The Tankrabatt takes effect on 1 October, and the bill lands on the
+            states. Brandenburg's finance minister Daniel Keller (SPD) puts the
+            unplanned hit to the current budget at "about €38 million"; experts
+            reckon the real figure runs higher, up towards €50 million.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">The Union</span>
+          <h4>
+            <a
+              href="https://www.tagesschau.de/inland/innenpolitik/unionsfraktion-merz-100.html"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Merz survives the fraction meeting — with plenty of grumbling</a
+            >
+          </h4>
+          <p>
+            After the CDU's weekend election drubbing, the chancellor faced the
+            Bundestag Union group and came away with backing rather than a
+            revolt. Fraction chief Frei publicly stood behind him, but the
+            message was that Merz must now "deliver".
+          </p>
+          <p class="src">tagesschau</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="feat">
+          <span class="kicker">After the win</span>
+          <h3>
+            <a
+              href="https://www.rbb24.de/politik/beitrag/2026/09/berlin-wahl-linke-regierungsfaehigkeit-koalition-debatte.html"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Now the harder question for Die Linke: can it govern?</a
+            >
+          </h3>
+          <p>
+            Two days after coming first in Berlin, Die Linke has moved from the
+            confetti to the awkward part. The party has little recent experience
+            of running a city hall, and the win has revived a row over
+            antisemitism in parts of it. The Neukölln Bundestag member Ferat
+            Koçak is letting his parliamentary functions rest after a member of
+            the Remmo clan turned up at the Neukölln election party, and has
+            apologised for a chat with Remmo's son; an antisemitism researcher,
+            for her part, calls the surrounding debate overblown. The SPD, sunk
+            to its worst-ever Berlin result, is reshuffling too: fraction chief
+            Raed Saleh will not stand again. A Linke–Green–SPD coalition remains
+            the obvious route to the 80 seats a majority needs — but the talks
+            just got more delicate.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Pensions</span>
+          <h4>
+            <a
+              href="https://www.rbb24.de/panorama/beitrag/2026/09/rentenreform-kommission-rente-vorschlaege.html"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >"Everyone in one system, on the same terms"</a
+            >
+          </h4>
+          <p>
+            As the boomers retire, the generations behind them worry about their
+            own pensions. The government's pension commission has floated a
+            single, unified scheme — the outline of a reform that will be argued
+            over for months.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTUGAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Portugal &amp; the Coast</h2></div>
+    <div class="split-c">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">In force today</span>
+          <h3>
+            <a
+              href="https://www.rtp.pt/noticias/pais/lei-das-burcas-entra-hoje-em-vigor-e-preve-coimas-ate-tres-mil-euros-por-cobrir-a-cara_n1767041"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >The "burqa law" takes effect, with fines up to €3,000</a
+            >
+          </h3>
+          <p>
+            From today it is an offence in Portugal to conceal the face in public
+            spaces, under the law popularly known as the "lei das burcas". The
+            statute sets fines of up to €3,000 for covering the face, with
+            carve-outs for health, professional and other justified reasons. It
+            has been contested since it was passed — supporters frame it as a
+            security and integration measure, critics as one aimed at a very
+            small number of people — and its real test now moves to how, and how
+            often, it is actually enforced.
+          </p>
+          <p class="src">RTP</p>
+        </article>
+      </div>
+      <div class="col">
+        <article
+          class="brief"
+          style="border-top: 0; padding-top: 0; margin-top: 0"
+        >
+          <span class="kicker">Lisbon</span>
+          <h4>
+            <a
+              href="https://observador.pt/2026/09/23/trotinetes-em-lisboa-podem-ir-a-referendo-municipal/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >E-scooters could go to a Lisbon referendum</a
+            >
+          </h4>
+          <p>
+            The motoring association ACP says it has gathered 20,000 signatures —
+            four times the minimum — to put the city's rental e-scooters to a
+            municipal referendum. If the assembly approves, the Constitutional
+            Court has 25 days to validate the question.
+          </p>
+          <p class="src">Observador</p>
+        </article>
+      </div>
+      <div class="col">
+        <article
+          class="brief"
+          style="border-top: 0; padding-top: 0; margin-top: 0"
+        >
+          <span class="kicker">Housing</span>
+          <h4>
+            <a
+              href="https://observador.pt/2026/09/23/comprar-casa-usada-na-grande-lisboa-custa-quase-400-mil/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >A used home in Greater Lisbon now averages €393,000</a
+            >
+          </h4>
+          <p>
+            INE figures reported by Negócios put the average price paid for
+            second-hand homes in the Grande Lisboa area at close to €393,000 — the
+            latest marker of how far the capital region's market has run from
+            local incomes.
+          </p>
+          <p class="src">Observador · INE</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- AGENDA -->
+    <div class="agenda">
+      <div class="agenda-head">
+        <h3>✦ The Diary — What's On</h3>
+        <div class="sub">Upcoming around Cortegaça, Ovar &amp; Aveiro</div>
+      </div>
+      <div class="agenda-grid">
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">24</span
+            ><span class="wd">Thu</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/events/1851305/shortcutz-ovar-sessao-108"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Shortcutz Ovar · sessão #108</a
+              >
+            </h4>
+            <div class="venue">Escola de Artes e Ofícios de Ovar · 20:30</div>
+            <p class="ctx">
+              The town's regular short-film night, past its hundredth edition: a
+              programme of shorts with a conversation afterwards.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">24</span
+            ><span class="wd">Thu</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/events/1845489/festas-nossa-senhora-da-saude-2026"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Festas de Nossa Senhora da Saúde</a
+              >
+            </h4>
+            <div class="venue">Praia da Costa Nova</div>
+            <p class="ctx">
+              The Costa Nova parish's patron-saint festival, held among the
+              striped wooden palheiros south of the ria mouth.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">25</span
+            ><span class="wd">Fri</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/events/1839577/miolo-festival-da-literatura-e-do-pensamento"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Miolo — Festival da Literatura e do Pensamento</a
+              >
+            </h4>
+            <div class="venue">Biblioteca Municipal · Sta. Maria da Feira</div>
+            <p class="ctx">
+              A weekend of readings and public conversations at the municipal
+              library, half an hour inland from Ovar.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">26</span
+            ><span class="wd">Sat</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.noticiasdeaveiro.pt/canoagem-ao-lusco-fusco-2026-volta-a-remar-na-cidade-de-aveiro/"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Canoagem ao Lusco-Fusco 2026</a
+              >
+            </h4>
+            <div class="venue">Ria de Aveiro · Aveiro city</div>
+            <p class="ctx">
+              A dusk paddle through the city's canals, billed as one of the most
+              special dates in Aveiro's canoeing calendar.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">27</span
+            ><span class="wd">Sun</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/events/1846977/danni-gato"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Danni Gato</a
+              >
+            </h4>
+            <div class="venue">Praia de Esmoriz</div>
+            <p class="ctx">
+              A live music date down on the Esmoriz seafront — the nearest of the
+              week's gigs to the Cortegaça dunes.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Sep</span><span class="dy">27</span
+            ><span class="wd">Sun</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.ovarnews.pt/ovar-estarreja-e-murtosa-juntam-se-para-assinalar-o-dia-mundial-do-turismo/"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Dia Mundial do Turismo · Ria Adentro</a
+              >
+            </h4>
+            <div class="venue">Ovar · Estarreja · Murtosa</div>
+            <p class="ctx">
+              The three ria councils mark World Tourism Day with a joint
+              experience under their "Ria Adentro" project, on the theme of
+              "redesigning tourism".
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Oct</span><span class="dy">2</span
+            ><span class="wd">Fri</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.viralagenda.com/pt/events/1836882/festival-inquietude-10-anos-landescape"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Festival Inquietude — 10 anos Landescape</a
+              >
+            </h4>
+            <div class="venue">Ovar (cidade)</div>
+            <p class="ctx">
+              Ovar's festival of experimental music and performance, this
+              edition marking ten years of its Landescape strand.
+            </p>
+          </div>
+        </div>
+
+        <div class="ev">
+          <div class="date">
+            <span class="mo">Dec</span><span class="dy">3</span
+            ><span class="wd">Wed</span>
+          </div>
+          <div class="txt">
+            <h4>
+              <a
+                href="https://www.ovarnews.pt/chico-chico-anuncia-digressao-europeia-com-ovar-no-mapa/"
+                target="_blank"
+                rel="noopener"
+                class="hl"
+                >Chico Chico — Deixa Arder tour</a
+              >
+            </h4>
+            <div class="venue">Escola de Artes e Ofícios de Ovar</div>
+            <p class="ctx">
+              The Brazilian songwriter's only northern-Portugal date on his first
+              European tour — worth the early note in the diary.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CULTURE QUAD ================= -->
+  <section class="band">
+    <div class="banner"><h2>Machines, Screen, Art &amp; Sound</h2></div>
+    <div class="quad">
+      <!-- TECHNOLOGY -->
+      <div class="col">
+        <div class="colhead">Technology</div>
+        <article class="feat">
+          <h3>
+            <a
+              href="https://www.theverge.com/2026/09/22/qualcomm-snapdragon-8-elite-gen-6-extreme"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Qualcomm's new phone chip clocks 5 GHz — and gets an "Extreme" twin</a
+            >
+          </h3>
+          <p>
+            Qualcomm has unveiled the Snapdragon 8 Elite Gen 6 and, for the first
+            time, a step-up Extreme variant alongside it. The standard chip
+            reaches 5 GHz in early benchmarks, running a tight race with Apple's
+            A20 Pro; the Extreme adds mostly AI, video-capture and gaming gains.
+            Motorola's Signature 27 is the first phone announced to carry the
+            top-end part.
+          </p>
+          <p class="src">The Verge · heise</p>
+        </article>
+        <article class="brief">
+          <h4>
+            <a
+              href="https://arstechnica.com/security/2026/09/microsoft-disrupts-eviltokens-ai-phishing-platform/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Microsoft takes down "EvilTokens"</a
+            >
+          </h4>
+          <p>
+            Microsoft says it has disrupted an AI-assisted phishing platform that
+            compromised some 12,000 accounts — an end-to-end kit that made mass
+            takeovers faster and cheaper to run.
+          </p>
+          <p class="src">Ars Technica</p>
+        </article>
+      </div>
+
+      <!-- SCREEN -->
+      <div class="col">
+        <div class="colhead">Screen</div>
+        <article class="feat">
+          <h3>
+            <a
+              href="https://www.indiewire.com/news/festivals/digger-first-reactions-inarritu-tom-cruise-1235218000/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Iñárritu's <em>Digger</em> splits the room — with Cruise's "best in
+              years"</a
+            >
+          </h3>
+          <p>
+            First reactions to Alejandro G. Iñárritu's apocalyptic satire
+            <em>Digger</em> are fiercely divided — "audacious", "a hollow
+            misfire", "a massive swing" — with several critics singling out Tom
+            Cruise's performance as his best in years. Warner Bros. opens it on
+            2 October.
+          </p>
+          <p class="src">IndieWire</p>
+        </article>
+        <article class="brief">
+          <h4>
+            <a
+              href="https://www.indiewire.com/news/breaking-news/robert-eggers-romeo-and-juliet-focus-1235217900/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Eggers to film <em>Romeo and Juliet</em></a
+            >
+          </h4>
+          <p>
+            Robert Eggers is closing in on a <em>Romeo and Juliet</em> adaptation
+            at Focus as his next project after this Christmas's
+            <em>Werwulf</em> — a swerve from vampires and folk horror to
+            Shakespeare.
+          </p>
+          <p class="src">IndieWire</p>
+        </article>
+        <div class="minilist">
+          <h5>In Cinemas &amp; Festivals</h5>
+          <ul>
+            <li>
+              <span class="name">Paper Tiger</span> — James Gray opens NYFF 64 in
+              35mm, Fri 26 Sept, with Teller, Driver &amp; Johansson
+            </li>
+            <li>
+              <span class="name">Digger</span> — Iñárritu's satire, in US cinemas
+              from 2 Oct
+            </li>
+            <li>
+              <span class="name">Coyote vs. Acme</span> — shelved by Warner as a
+              tax write-off, now past $100M worldwide via Ketchup Entertainment
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ARTS -->
+      <div class="col">
+        <div class="colhead">Arts</div>
+        <article class="feat">
+          <h3>
+            <a
+              href="https://hyperallergic.com/met-museum-brokers-return-of-three-artworks-to-nigeria/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >The Met brokers the return of three works to Nigeria</a
+            >
+          </h3>
+          <p>
+            The Metropolitan Museum has arranged to return three artworks to
+            Nigeria. The collector Ceil Pulitzer supplied detailed provenance for
+            the pieces — though the museum, notably, chose a route other than the
+            one that provenance pointed to, a small tell about how restitution is
+            still being negotiated case by case.
+          </p>
+          <p class="src">Hyperallergic</p>
+        </article>
+        <article class="brief">
+          <h4>
+            <a
+              href="https://www.artnews.com/art-news/news/tyler-mitchell-don-tyson-prize-crystal-bridges-1234759900/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Tyler Mitchell wins the $250,000 Don Tyson Prize</a
+            >
+          </h4>
+          <p>
+            The photographer and video artist, known for tender, joyful images of
+            African-American life, takes Crystal Bridges Museum's biennial award
+            for the advancement of American art.
+          </p>
+          <p class="src">ARTnews · Artforum</p>
+        </article>
+        <div class="minilist">
+          <h5>Now Open</h5>
+          <ul>
+            <li>
+              <span class="name">Tarot for a Broken World</span> — the Morgan
+              Library, New York, with some of the oldest surviving tarot decks
+            </li>
+            <li>
+              <span class="name">Solange Knowles, High Line</span> — a large-scale
+              sculpture on view 24–27 Sept
+            </li>
+            <li>
+              <span class="name">Bienal de Yucatán, "Vocal"</span> — Cruzvillegas
+              curates Mexico's first, 76 artists, Mérida from November
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SOUND -->
+      <div class="col">
+        <div class="colhead">Sound</div>
+        <article class="feat">
+          <h3>
+            <a
+              href="https://pitchfork.com/news/chvrches-return-with-first-song-in-three-years-roses/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Chvrches return with "Roses"</a
+            >
+          </h3>
+          <p>
+            The Scottish trio are back with their first new song in three years.
+            "Roses" opens what the band calls a new phase built on "the most
+            coherent vision we've had" — the synth-pop group's first release since
+            a stretch of solo detours.
+          </p>
+          <p class="src">Pitchfork</p>
+        </article>
+        <article class="brief">
+          <h4>
+            <a
+              href="https://www.radioeins.de/musik/studioeins/fee-penafiel.html"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Fee Penafiel at studioeins</a
+            >
+          </h4>
+          <p>
+            The Frankfurt singer-songwriter brings her German indie-pop to
+            radioeins's studioeins for her third album, <em>Die Wolken über
+            uns</em> — plain-spoken lyrics, real stories, six years on from her
+            last.
+          </p>
+          <p class="src">radioeins</p>
+        </article>
+        <div class="minilist">
+          <h5>New Releases</h5>
+          <ul>
+            <li>
+              <span class="name">Boy Harsher — Get Mean</span> — the industrial-
+              dance duo's major-label debut, brighter but still murky
+            </li>
+            <li>
+              <span class="name">Alex G — Camp Miasma (Score)</span> — his score
+              for Jane Schoenbrun's horror-romance, hinting at new territory
+            </li>
+            <li>
+              <span class="name">Beck — Ride Lonesome</span> — a greyer, spiritual
+              sequel to <em>Morning Phase</em>
+            </li>
+            <li>
+              <span class="name">Emma Ruth Rundle — These Killing Times</span> —
+              doomy but newly optimistic, with a wide cast of collaborators
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOW STREAMING ================= -->
+  <section class="band">
+    <div class="banner"><h2>Now Streaming</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">What everyone's watching</span>
+          <h3>
+            <a
+              href="https://www.whats-on-netflix.com/news/monster-the-lizzie-borden-story-debuts-with-12-1m-views/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Monster: The Lizzie Borden Story is the week's biggest hit</a
+            >
+          </h3>
+          <p>
+            The latest chapter of Netflix's <em>Monster</em> true-crime anthology
+            — this one turning to Lizzie Borden, tried and acquitted over the 1892
+            axe murders of her father and stepmother — opened with 12.1 million
+            views, topping the Netflix weekly Top 10 ahead of strong debuts for
+            <em>Crew Girl</em> and <em>The Gentlemen</em>'s second season. It is
+            streaming now on Netflix worldwide, and continues the anthology's run
+            of turning grim American cases into the service's most-watched events.
+          </p>
+          <p class="src">What's on Netflix · Netflix Top 10</p>
+        </article>
+      </div>
+      <div class="col">
+        <article
+          class="brief"
+          style="border-top: 0; padding-top: 0; margin-top: 0"
+        >
+          <span class="kicker">Netflix</span>
+          <h4>
+            <a
+              href="https://www.whats-on-netflix.com/news/i-will-find-you-ends-netflix-top-10-run/"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >"I Will Find You" ends up Netflix's #5 English series ever</a
+            >
+          </h4>
+          <p>
+            The final numbers are in for Harlan Coben's Sam Worthington thriller:
+            it leaves the Top 10 as the fifth most-watched English-language
+            series in Netflix history.
+          </p>
+          <p class="src">What's on Netflix</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Channel 4 · UK</span>
+          <h4>
+            <a
+              href="https://www.theguardian.com/tv-and-radio/2026/sep/22/the-great-british-bake-off-review-nigella"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Nigella joins Bake Off</a
+            >
+          </h4>
+          <p>
+            The Great British Bake Off returns with Nigella Lawson as its new
+            judge — "wise, generous", says the Guardian, and a soothing foil to
+            Paul Hollywood. On Channel 4 in the UK.
+          </p>
+          <p class="src">Guardian TV</p>
+        </article>
+      </div>
+    </div>
+    <div class="streamlist">
+      <h5>New This Week</h5>
+      <ul>
+        <li>
+          <span class="name">Top Gun: Maverick</span> · Netflix (US) · Tue 23 Sep
+        </li>
+        <li>
+          <span class="name">Party Down (S1–3)</span> · Netflix (US) · Tue 23 Sep
+        </li>
+        <li>
+          <span class="name">Unabomber</span> · Netflix Original · Fri 26 Sep
+        </li>
+        <li>
+          <span class="name">Blindspotting</span> · Netflix (US) · this week
+        </li>
+        <li>
+          <span class="name">Monster: The Lizzie Borden Story</span> · Netflix ·
+          streaming now
+        </li>
+        <li>
+          <span class="name">The Great British Bake Off</span> · Channel 4 (UK) ·
+          weekly
+        </li>
+      </ul>
+      <div class="streamcap">
+        Dates are for Netflix US unless marked; Portuguese and German
+        availability may differ. Sources: What's on Netflix, Guardian TV.
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORLD ================= -->
+  <section class="band">
+    <div class="banner"><h2>The World</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker">Arctic</span>
+          <h3>
+            <a
+              href="https://www.bbc.co.uk/news/articles/greenland-us-denmark-bases-deal"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >US to build two military bases in Greenland under Denmark deal</a
+            >
+          </h3>
+          <p>
+            A defence deal signed on the sidelines of the UN General Assembly lets
+            the United States build two military bases in Greenland while
+            reaffirming Denmark's sovereignty over the semi-autonomous Arctic
+            island. Commentators read it as an old arrangement in new packaging —
+            a way to close down President Trump's repeated claims on Greenland
+            without ceding it — and Greenlanders' relief is tempered by doubt that
+            the matter is really settled.
+          </p>
+          <p class="src">BBC · tagesschau</p>
+        </article>
+      </div>
+      <div class="col">
+        <article
+          class="brief"
+          style="border-top: 0; padding-top: 0; margin-top: 0"
+        >
+          <span class="kicker">Climate</span>
+          <h4>
+            <a
+              href="https://www.bbc.co.uk/news/articles/el-nino-strongest-on-record-2026"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >This El Niño is the strongest on record</a
+            >
+          </h4>
+          <p>
+            Scientists say the developing El Niño has become the strongest ever
+            measured, weeks before its expected peak, with weather impacts already
+            being felt around the world — a sign the coming months could be
+            unusually disruptive.
+          </p>
+          <p class="src">BBC</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Sanctions</span>
+          <h4>
+            <a
+              href="https://www.bbc.co.uk/news/articles/eu-removes-russian-oligarchs-sanctions"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >EU drops two oligarchs from its sanctions list</a
+            >
+          </h4>
+          <p>
+            Alisher Usmanov and Mikhail Fridman, both with close ties to
+            President Putin, have been removed from the EU's sanctions list. Kyiv
+            reacted with anger, saying the move sends Moscow the wrong signal.
+          </p>
+          <p class="src">BBC</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">United Nations</span>
+          <h4>
+            <a
+              href="https://www.bbc.co.uk/news/articles/trump-un-speech-iran-2026"
+              target="_blank"
+              rel="noopener"
+              class="hl"
+              >Trump threatens to "annihilate" Iran at the UN</a
+            >
+          </h4>
+          <p>
+            In his General Assembly address the US president wondered aloud
+            whether a deal would be reached or whether he would take "extreme
+            action" against Iran — even as officials from both countries met on
+            the sidelines.
+          </p>
+          <p class="src">BBC</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="colophon">
+    The Cortegaça Chronicle · assembled from 25 feeds on the morning of 23
+    September 2026<br />
+    Sources named under every item · headlines link out to the original
+  </div>
+</div>

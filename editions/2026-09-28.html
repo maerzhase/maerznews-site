@@ -1,0 +1,1627 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<title>The Cortegaça Chronicle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+/>
+<style>
+  :root {
+    --paper: #f5f1e6;
+    --paper-2: #efe9da;
+    --ink: #1b1917;
+    --ink-2: #403a34;
+    --ink-3: #6b625a;
+    --rule: #c9bfae;
+    --rule-2: #a89c88;
+    --accent: #9c2b1e;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding-block: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  p {
+    text-wrap: pretty;
+    orphans: 3;
+    widows: 3;
+    margin: 0 0 0.72em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover .hl,
+  a:hover.hl {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  .ear {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 5px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .ear .price {
+    color: var(--accent);
+  }
+  .nameplate {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 10.5vw, 5.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0.26em 0 0.2em;
+    color: var(--ink);
+  }
+  .nameplate .the {
+    display: block;
+    font-size: 0.24em;
+    font-weight: 400;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    color: var(--ink-2);
+  }
+  .strip {
+    border-top: 3px double var(--rule-2);
+    border-bottom: 3px double var(--rule-2);
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 18px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-align: center;
+  }
+  .strip b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .strip .sep {
+    color: var(--rule-2);
+  }
+
+  /* ---------- TOP BAND ---------- */
+  .topband {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 0 26px;
+    margin-top: 22px;
+  }
+  .rail {
+    border: 1px solid var(--rule-2);
+    padding: 14px 14px 16px;
+    align-self: start;
+    background: var(--paper-2);
+  }
+  .rail h3 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .rail p {
+    font-size: 0.845rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .rail .sig {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 14px;
+  }
+  .mixhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-top: 2px solid var(--ink);
+    padding-top: 8px;
+    margin-bottom: 9px;
+    color: var(--ink);
+  }
+  .mix {
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    gap: 5px 8px;
+    align-items: center;
+  }
+  .mix .lab {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.655rem;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    line-height: 1.15;
+  }
+  .mix .lab.focus {
+    color: var(--accent);
+  }
+  .mix .barwrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mix .bar {
+    height: 9px;
+    background: var(--ink);
+    display: block;
+  }
+  .mix .n {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .mix .star {
+    color: var(--accent);
+    font-size: 0.66rem;
+  }
+  .mixcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 9px;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  /* ---------- LEAD ---------- */
+  .eyebrow {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .lead h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5.1vw, 3.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    margin-bottom: 0.22em;
+  }
+  .standfirst {
+    font-size: 1.06rem;
+    color: var(--ink-2);
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.6em;
+    max-width: 60ch;
+  }
+  .byline {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 5px 0;
+    margin-bottom: 16px;
+  }
+  .leadbody {
+    columns: 2;
+    column-gap: 28px;
+    column-rule: 1px solid var(--rule);
+  }
+  .leadbody p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .leadbody p:first-of-type::first-letter {
+    float: left;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 3.55em;
+    line-height: 0.78;
+    padding: 0.06em 0.09em 0 0;
+    color: var(--ink);
+  }
+  .pull {
+    break-inside: avoid;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 9px 0 11px;
+    margin: 6px 0 12px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .pull .who {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-style: normal;
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 7px;
+  }
+
+  /* ---------- FIGURE / CHART ---------- */
+  figure.fig {
+    margin: 0 0 18px;
+    border-top: 2px solid var(--ink);
+    padding-top: 10px;
+  }
+  figure.fig .figtitle {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+  figure.fig .figsub {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .chartbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .chartbox svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 330px;
+  }
+  figcaption {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    color: var(--ink-3);
+    text-align: left;
+    margin-top: 7px;
+    border-top: 1px solid var(--rule);
+    padding-top: 6px;
+  }
+  .barG rect.val {
+    fill: var(--ink);
+  }
+  .barG:hover rect.val {
+    fill: var(--accent);
+  }
+  .barG.win rect.val {
+    fill: var(--accent);
+  }
+  .barG.win:hover rect.val {
+    fill: var(--ink);
+  }
+  .barG rect.valo {
+    fill: var(--paper);
+    stroke: var(--ink);
+    stroke-width: 1.4;
+  }
+  .barG:hover rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win:hover rect.valo {
+    stroke: var(--ink);
+  }
+
+  /* ---------- SECTION BANDS ---------- */
+  .band {
+    margin-top: 30px;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .banner::before,
+  .banner::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-top: 2px;
+  }
+  .banner h2 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: clamp(0.78rem, 2.1vw, 0.95rem);
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .feat h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.38rem, 2.8vw, 1.82rem);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    margin-bottom: 0.3em;
+  }
+  .feat p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    font-size: 1rem;
+  }
+  .brief {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+  .brief h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.045rem;
+    line-height: 1.17;
+    margin-bottom: 0.25em;
+  }
+  .brief p {
+    font-size: 0.915rem;
+    color: var(--ink-2);
+    line-height: 1.46;
+  }
+  .kicker {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .kicker.hot {
+    color: var(--accent);
+  }
+  .src {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 5px;
+  }
+
+  .split-a {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 0 28px;
+  }
+  .split-b {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 0 28px;
+  }
+  .split-c {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 0 24px;
+  }
+  .split-a > .col + .col,
+  .split-b > .col + .col,
+  .split-c > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 28px;
+  }
+  .split-c > .col + .col {
+    padding-left: 24px;
+  }
+  .quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 22px;
+  }
+  .quad > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 22px;
+  }
+  .colhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.67rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .quad .feat h3 {
+    font-size: 1.18rem;
+    line-height: 1.15;
+  }
+  .quad .feat p,
+  .quad .brief p {
+    font-size: 0.875rem;
+    text-align: left;
+    hyphens: none;
+  }
+  .quad .brief h4 {
+    font-size: 0.98rem;
+  }
+
+  /* ---------- LISTS (Now Open / New Releases / Cinemas) ---------- */
+  .minilist {
+    border-top: 2px solid var(--ink);
+    margin-top: 16px;
+    padding-top: 8px;
+  }
+  .minilist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .minilist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .minilist li {
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .minilist li:last-child {
+    border-bottom: 0;
+  }
+  .minilist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .sheet article p.meta {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 0 6px;
+  }
+  .g {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- NOW STREAMING ---------- */
+  .streamlist {
+    border-top: 2px solid var(--ink);
+    margin-top: 18px;
+    padding-top: 8px;
+  }
+  .streamlist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .streamlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3;
+    column-gap: 26px;
+  }
+  .streamlist li {
+    break-inside: avoid;
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .streamlist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .streamcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ---------- AGENDA ---------- */
+  .agenda {
+    border-top: 3px double var(--ink);
+    border-bottom: 3px double var(--ink);
+    margin-top: 26px;
+    padding: 14px 0 16px;
+  }
+  .agenda-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 14px;
+  }
+  .agenda-head h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+    letter-spacing: -0.01em;
+  }
+  .agenda-head .sub {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-3);
+  }
+  .agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 26px;
+  }
+  .ev {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0 14px;
+    border-top: 1px solid var(--rule);
+    padding: 11px 0;
+  }
+  .agenda-grid > .ev:nth-child(1),
+  .agenda-grid > .ev:nth-child(2) {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .agenda-grid > .ev:nth-child(even) {
+    border-left: 1px solid var(--rule);
+    padding-left: 26px;
+  }
+  .ev .date {
+    text-align: center;
+  }
+  .ev .mo {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+  }
+  .ev .dy {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 2.35rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.34em;
+    font-variant-numeric: tabular-nums;
+  }
+  .ev .wd {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+  }
+  .ev .txt {
+    min-width: 0;
+    border-left: 1px solid var(--rule);
+    padding-left: 14px;
+  }
+  .ev .txt h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .ev .venue {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 5px;
+  }
+  .ev .ctx {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    line-height: 1.42;
+    margin: 0;
+  }
+
+  .colophon {
+    border-top: 1px solid var(--rule-2);
+    margin-top: 30px;
+    padding-top: 12px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .quad {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 22px;
+    }
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .quad > .col:nth-child(4) {
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .topband {
+      grid-template-columns: 210px 1fr;
+      gap: 0 22px;
+    }
+    .streamlist ul {
+      columns: 2;
+    }
+  }
+  @media (max-width: 860px) {
+    body {
+      font-size: 15.5px;
+    }
+    .topband {
+      grid-template-columns: 1fr;
+    }
+    .rail {
+      margin-bottom: 22px;
+    }
+    .leadbody {
+      columns: 1;
+    }
+    .split-a,
+    .split-b,
+    .split-c,
+    .quad {
+      grid-template-columns: 1fr;
+    }
+    .split-a > .col + .col,
+    .split-b > .col + .col,
+    .split-c > .col + .col,
+    .quad > .col + .col,
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .agenda-grid {
+      grid-template-columns: 1fr;
+    }
+    .agenda-grid > .ev:nth-child(even) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .agenda-grid > .ev:nth-child(2) {
+      border-top: 1px solid var(--rule);
+      padding-top: 11px;
+    }
+    .streamlist ul {
+      columns: 1;
+    }
+    .leadbody p,
+    .feat p {
+      text-align: left;
+      hyphens: none;
+    }
+    .banner h2 {
+      white-space: normal;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  .seg:hover rect {
+    opacity: 0.82;
+  }
+</style>
+
+<div class="sheet" lang="en">
+  <!-- ================= MASTHEAD ================= -->
+  <header>
+    <div class="ear">
+      Monday, 28 September 2026 &nbsp;·&nbsp; No. 8 &nbsp;·&nbsp; Price:
+      <span class="price">one bica</span>
+    </div>
+    <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
+    <div class="strip">
+      <span>Topic today: <b>Germany's solar record</b></span>
+      <span class="sep">✦</span>
+      <span>Weather · Aveiro <b>25°C</b> high, 16° low, showers; heavier rain on Tuesday</span>
+      <span class="sep">✦</span>
+      <span>Berlin <b>warm and sunny</b> to start the week</span>
+    </div>
+  </header>
+
+  <!-- ================= TOP BAND ================= -->
+  <div class="topband">
+    <aside class="rail">
+      <h3>Column One</h3>
+      <p>
+        A dry, bright summer has done something no year before it managed:
+        by Sunday, German solar panels had already made more electricity
+        than in the whole of 2025. The same weather has left the Rhine at
+        Cologne lower than ever recorded. The front page has the numbers.
+      </p>
+      <p>
+        Closer to home: Ovar gets a free three-day festival this weekend, and
+        Portugal has its first men's world champion in triathlon. No
+        football, as ever.
+      </p>
+      <p class="sig">— The Editor</p>
+
+      <div class="mixhead">Today's edition</div>
+      <div class="mix">
+        <span class="lab">Cortegaça &amp; Ovar</span>
+        <span class="barwrap"><span class="bar" style="width: 66px"></span><span class="n">3</span></span>
+
+        <span class="lab focus">✦ Germany · Berlin</span>
+        <span class="barwrap"><span class="bar" style="width: 110px"></span><span class="n">5</span></span>
+
+        <span class="lab">Portugal</span>
+        <span class="barwrap"><span class="bar" style="width: 88px"></span><span class="n">4</span></span>
+
+        <span class="lab">Technology</span>
+        <span class="barwrap"><span class="bar" style="width: 66px"></span><span class="n">3</span></span>
+
+        <span class="lab">Screen</span>
+        <span class="barwrap"><span class="bar" style="width: 44px"></span><span class="n">2</span></span>
+
+        <span class="lab">Arts</span>
+        <span class="barwrap"><span class="bar" style="width: 44px"></span><span class="n">2</span></span>
+
+        <span class="lab">Sound</span>
+        <span class="barwrap"><span class="bar" style="width: 66px"></span><span class="n">3</span></span>
+
+        <span class="lab">Now Streaming</span>
+        <span class="barwrap"><span class="bar" style="width: 66px"></span><span class="n">3</span></span>
+
+        <span class="lab">The World</span>
+        <span class="barwrap"><span class="bar" style="width: 66px"></span><span class="n">3</span></span>
+      </div>
+      <div class="mixcap">✦ today's focus — bar length is the story count</div>
+    </aside>
+
+    <article class="lead">
+      <div class="eyebrow">Germany · Energy</div>
+      <h1>
+        <a href="https://www.tagesschau.de/wirtschaft/energie/solarstrom-produktion-rekord-2026-100.html" target="_blank" rel="noopener" class="hl"
+          >Germany's solar panels have already beaten all of 2025, with three months to spare</a
+        >
+      </h1>
+      <p class="standfirst">
+        90.2 terawatt-hours by Sunday against 90.0 in the whole of last year.
+        The industry calls 27 September "Solar Day", and warns that Berlin's
+        next energy law could slow things down.
+      </p>
+      <div class="byline">tagesschau · heise online · BSW-Solar · Fraunhofer ISE Energy-Charts · 27–28 September</div>
+
+      <figure class="fig">
+        <div class="figtitle">Nearly every month of 2026 has been sunnier on the grid</div>
+        <div class="figsub">
+          Solar power fed into Germany's public grid each month, 2025 (outline)
+          against 2026 (solid). Red marks the biggest jump. Hover a bar for the
+          exact figure.
+        </div>
+        <div class="chartbox">
+<svg viewBox="0 0 620 230" role="img" aria-label="Monthly German solar generation, January to September, 2025 versus 2026. 2026 is higher in every month except February.">
+<title>German solar power by month, 2025 vs 2026</title>
+<line x1="40" y1="180.0" x2="614" y2="180.0" stroke="#c9bfae" stroke-width="1"/><text x="34" y="183.5" text-anchor="end" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="10">0</text>
+<line x1="40" y1="141.7" x2="614" y2="141.7" stroke="#c9bfae" stroke-width="1"/><text x="34" y="145.2" text-anchor="end" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="10">3</text>
+<line x1="40" y1="103.4" x2="614" y2="103.4" stroke="#c9bfae" stroke-width="1"/><text x="34" y="106.9" text-anchor="end" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="10">6</text>
+<line x1="40" y1="65.1" x2="614" y2="65.1" stroke="#c9bfae" stroke-width="1"/><text x="34" y="68.6" text-anchor="end" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="10">9</text>
+<line x1="40" y1="26.8" x2="614" y2="26.8" stroke="#c9bfae" stroke-width="1"/><text x="34" y="30.3" text-anchor="end" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="10">12</text>
+<text x="10" y="11" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="9" letter-spacing=".8">TWh</text>
+<g class="barG"><title>Jan 2025: 1.55 TWh</title><rect class="valo" x="48.6" y="160.3" width="21.5" height="19.7"/></g>
+<g class="barG"><title>Jan 2026: 1.63 TWh (+6% on Jan 2025)</title><rect class="val" x="73.2" y="159.1" width="21.5" height="20.9"/></g>
+<text x="71.7" y="195" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" letter-spacing=".5">JAN</text>
+<g class="barG"><title>Feb 2025: 2.91 TWh</title><rect class="valo" x="112.0" y="142.9" width="21.5" height="37.1"/></g>
+<g class="barG"><title>Feb 2026: 2.53 TWh (-13% on Feb 2025)</title><rect class="val" x="136.5" y="147.6" width="21.5" height="32.4"/></g>
+<text x="135.0" y="195" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" letter-spacing=".5">FEB</text>
+<g class="barG"><title>Mar 2025: 6.52 TWh</title><rect class="valo" x="175.3" y="96.7" width="21.5" height="83.3"/></g>
+<g class="barG"><title>Mar 2026: 7.30 TWh (+12% on Mar 2025)</title><rect class="val" x="199.8" y="86.8" width="21.5" height="93.2"/></g>
+<text x="198.3" y="195" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" letter-spacing=".5">MAR</text>
+<g class="barG"><title>Apr 2025: 8.53 TWh</title><rect class="valo" x="238.6" y="71.1" width="21.5" height="108.9"/></g>
+<g class="barG"><title>Apr 2026: 10.04 TWh (+18% on Apr 2025)</title><rect class="val" x="263.2" y="51.8" width="21.5" height="128.2"/></g>
+<text x="261.7" y="195" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" letter-spacing=".5">APR</text>
+<g class="barG"><title>May 2025: 9.77 TWh</title><rect class="valo" x="302.0" y="55.2" width="21.5" height="124.8"/></g>
+<g class="barG"><title>May 2026: 11.54 TWh (+18% on May 2025)</title><rect class="val" x="326.5" y="32.6" width="21.5" height="147.4"/></g>
+<text x="325.0" y="195" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" letter-spacing=".5">MAY</text>
+<g class="barG"><title>Jun 2025: 10.04 TWh</title><rect class="valo" x="365.3" y="51.8" width="21.5" height="128.2"/></g>
+<g class="barG"><title>Jun 2026: 11.63 TWh (+16% on Jun 2025)</title><rect class="val" x="389.8" y="31.5" width="21.5" height="148.5"/></g>
+<text x="388.3" y="195" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" letter-spacing=".5">JUN</text>
+<g class="barG"><title>Jul 2025: 8.38 TWh</title><rect class="valo" x="428.6" y="73.0" width="21.5" height="107.0"/></g>
+<g class="barG win"><title>Jul 2026: 12.04 TWh (+44% on Jul 2025)</title><rect class="val" x="453.2" y="26.3" width="21.5" height="153.7"/></g>
+<text x="451.7" y="195" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" letter-spacing=".5">JUL</text>
+<text x="463.9" y="21.3" text-anchor="middle" fill="#9c2b1e" font-family="'Playfair Display',Georgia,serif" font-weight="700" font-size="11">+44%</text>
+<g class="barG"><title>Aug 2025: 9.16 TWh</title><rect class="valo" x="492.0" y="63.1" width="21.5" height="116.9"/></g>
+<g class="barG"><title>Aug 2026: 10.93 TWh (+19% on Aug 2025)</title><rect class="val" x="516.5" y="40.4" width="21.5" height="139.6"/></g>
+<text x="515.0" y="195" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" letter-spacing=".5">AUG</text>
+<g class="barG"><title>Sep 2025: 6.17 TWh</title><rect class="valo" x="555.3" y="101.3" width="21.5" height="78.7"/></g>
+<g class="barG"><title>Sep 2026 (to 27 Sep): 7.68 TWh (+25% on Sep 2025)</title><rect class="val" x="579.8" y="81.9" width="21.5" height="98.1"/></g>
+<text x="578.3" y="195" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" letter-spacing=".5">SEP*</text>
+
+<rect x="40" y="203" width="12" height="10" fill="#f5f1e6" stroke="#1b1917" stroke-width="1.4"/><text x="58" y="212" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10">2025 · whole year 70.1 TWh</text>
+<rect x="270" y="203" width="12" height="10" fill="#1b1917"/><text x="288" y="212" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10">2026 · to 27 Sep 75.3 TWh</text><text x="614" y="212" text-anchor="end" fill="#6b625a" font-family="\'Old Standard TT\',Georgia,serif" font-size="8.6">*Sep 2026 to the 27th</text>
+</svg>
+        </div>
+        <figcaption>
+          Source: our sums of Fraunhofer ISE Energy-Charts public net
+          generation (15-minute data, 1 Jan 2025 to 27 Sep 2026). These leave
+          out power that households and firms use themselves, so they are
+          lower than the 90.2 and 90.0 TWh totals BSW-Solar gives from the
+          same Energy-Charts data. By either count, 2026 is already ahead of
+          2025.
+        </figcaption>
+      </figure>
+
+      <div class="leadbody">
+        <p>
+          By Sunday, Germany had produced 90.2 terawatt-hours of solar power
+          this year. In the whole of 2025 it made 90.0. The figures come from
+          the solar industry association BSW-Solar, which uses the
+          Energy-Charts data of the Fraunhofer Institute for Solar Energy
+          Systems. It declared 27 September "Solar Day" to mark the moment.
+          Our own count of the grid data shows the same picture month by
+          month: every month since March has beaten its 2025 equivalent, and
+          July was up 44%.
+        </p>
+        <p>
+          BSW-Solar says two things did it: an unusually sunny year and the
+          steady build-out of panels on homes, business roofs and open
+          fields. More and more battery storage is being built alongside
+          them. The sunshine has a cost too. The Rhine at Cologne fell to a
+          record low of 40 centimetres on Monday morning (see below).
+        </p>
+        <div class="pull">
+          "The solar record is a reason to celebrate, but not a reason to sit
+          back."
+          <span class="who">Carsten Körnig, BSW-Solar</span>
+        </div>
+        <p>
+          The association used the record to push back at the government's
+          plans. The 2027 revision of the Renewable Energy Sources Act (EEG)
+          and a new grid package are meant to steer where new capacity is
+          built, region by region. From 2027, small systems under 25 kilowatts
+          (mostly private rooftops) would also lose their permanent feed-in
+          payment. "Right now we must not slow down people's and companies'
+          willingness to invest," said managing director Carsten Körnig.
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= LOCAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Cortegaça, Ovar &amp; the Coast</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">Ovar · This weekend</span>
+          <h3>
+            <a href="https://www.viralagenda.com/pt/events/1836882/festival-inquietude-10-anos-landescape" target="_blank" rel="noopener" class="hl"
+              >Festival Inquietude: eleven free events across Ovar for Landescape's tenth birthday</a
+            >
+          </h3>
+          <p>
+            Landescape, the Ovar company that runs cultural and adventure
+            trips, is marking ten years with a festival from Friday 2 to
+            Sunday 4 October. Eleven events are spread over three places in
+            the city: its own space, Lugar · Landescape, on Rua Dr. Zagalo dos
+            Santos; the Escola de Artes e Ofícios on Rua Fonte do Casal; and
+            the Parque Urbano. There is something for every age, with family
+            activities, and every event is free. On Saturday the town also
+            has Radar 360º's "Astrolábio", a piece about school memories for
+            the 116th anniversary of the Escolas Oliveira Lopes (see the
+            Diary).
+          </p>
+          <p class="src">Viral Agenda · Landescape · Notícias de Aveiro</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Aveiro · Rail</span>
+          <h4>
+            <a href="https://news.google.com/rss/search?q=%22esta%C3%A7%C3%A3o+de+Aveiro%22+alta+velocidade&hl=pt-PT&gl=PT&ceid=PT:pt-150" target="_blank" rel="noopener" class="hl"
+              >The design to fit Aveiro station for high-speed trains is due by March</a
+            >
+          </h4>
+          <p>
+            Jornal de Notícias reports that the project to adapt the station
+            for the Porto–Lisbon high-speed line will be finished by March.
+            Infraestruturas de Portugal plans for high-speed trains to use the
+            existing central station.
+          </p>
+          <p class="src">Jornal de Notícias · Infraestruturas de Portugal</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Águeda</span>
+          <h4>
+            <a href="https://www.noticiasdeaveiro.pt/jorge-almeida-anuncia-novas-piscinas-acima-de-12-milhoes/" target="_blank" rel="noopener" class="hl"
+              >Águeda plans new pools costing more than €12 million</a
+            >
+          </h4>
+          <p>
+            Mayor Jorge Almeida also told TVC that the new municipal market
+            should open in the second half of October, and that the rebuild
+            of the Adolfo Portela secondary school has a base price of €14
+            million.
+          </p>
+          <p class="src">Notícias de Aveiro · Notícias de Águeda</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GERMANY ================= -->
+  <section class="band">
+    <div class="banner"><h2>Germany · Berlin &amp; Brandenburg</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Berlin Marathon · Result</span>
+          <h4>
+            <a href="https://www.sportschau.de/regional/rbb/rbb-berlin-marathon-aethiopierin-assefa-verpasst-neuen-weltrekord-100.html" target="_blank" rel="noopener" class="hl"
+              >Assefa sets a course record in 2:11:04, but cramp costs her the world record</a
+            >
+          </h4>
+          <p>
+            Tigst Assefa was on world-record pace after 40 km, then slowed with
+            muscle trouble. It was still her third Berlin win. Her fellow
+            Ethiopian Guye Adola, 35, won the men's race in a personal best of
+            2:02:50.
+          </p>
+          <p class="src">sportschau · rbb24</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Drought</span>
+          <h4>
+            <a href="https://www.tagesschau.de/inland/regional/nordrheinwestfalen/rheinpegel-tiefststand-100.html" target="_blank" rel="noopener" class="hl"
+              >The Rhine at Cologne hits a record low of 40 cm</a
+            >
+          </h4>
+          <p>
+            That beats August's record, and 37 cm is forecast. Before this
+            year the lowest reading was 69 cm, in 2018. Cargo ships are sailing
+            half-empty, and a hotel ship ran aground on Saturday.
+          </p>
+          <p class="src">tagesschau · WDR</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Wedding</span>
+          <h4>
+            <a href="https://www.rbb24.de/panorama/beitrag/2026/09/weltrekord-200-choehre-singen-125-stunden-berlin-wedding.html" target="_blank" rel="noopener" class="hl"
+              >200 choirs sing for 125 hours straight, a world record</a
+            >
+          </h4>
+          <p>
+            From Monday to Saturday, choirs from Germany and six other
+            countries took turns at the Atze Musiktheater to mark 125 years of
+            the Berlin choir association. The RIAS Kammerchor took part.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">Berlin · Linke</span>
+          <h3>
+            <a href="https://www.tagesschau.de/inland/gesellschaft/berliner-linke-dobrindt-anzeige-100.html" target="_blank" rel="noopener" class="hl"
+              >The Berlin Linke files a criminal complaint against interior minister Dobrindt</a
+            >
+          </h3>
+          <p>
+            Elif Eralp, the Linke's lead candidate in Berlin, and her state
+            party have reported federal interior minister Alexander Dobrindt
+            (CSU) for defamation and insult, their lawyer says. It goes back to
+            Thursday's ZDF talk show Maybrit Illner. The host misspoke,
+            saying "Elif Eralp says she is an antisemite", and at once
+            corrected herself: "She is not an antisemite." Dobrindt answered:
+            "Well, she is."
+          </p>
+          <p>
+            Lawyer Jasper Prigge argues that Dobrindt adopted the slip as his
+            own and so spread a false statement of fact. The complaint says
+            this could make it harder for Eralp to work in public life and
+            could harm the forming of a government in Berlin. Her party is
+            now in exploratory talks with the SPD and the Greens.
+          </p>
+          <p class="src">tagesschau · dpa</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTUGAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Portugal &amp; the Coast</h2></div>
+    <div class="split-c">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">Triathlon · World title</span>
+          <h3>
+            <a href="https://observador.pt/2026/09/27/vasco-vilaca-sagra-se-campeao-mundial-de-triatlo/" target="_blank" rel="noopener" class="hl"
+              >Vasco Vilaça is Portugal's first men's world champion in triathlon</a
+            >
+          </h3>
+          <p>
+            Vilaça took the world title at the Grand Final in Pontevedra, just
+            over the border in Galicia. He came into the race leading the
+            series and finished second in a sprint with defending champion
+            Matthew Hauser. His teammate Ricardo Batista took bronze. Vilaça
+            was runner-up in 2020 and third in 2025, and fifth at the Paris
+            Olympics. The only Portuguese world champion before him was
+            Vanessa Fernandes in 2007. President António José Seguro called it
+            "a historic achievement for Portuguese sport".
+          </p>
+          <p class="src">Observador · A Bola · Olympics.com</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Housing · Wednesday</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/economia/habitacao-governo-quer-despejos-em-dois-dias-e-mercado-de-arrendamento-mais-flexivel_n1768136" target="_blank" rel="noopener" class="hl"
+              >Parliament votes on faster evictions and a looser rental market</a
+            >
+          </h4>
+          <p>
+            The government's rental reform goes to a vote on 30 September.
+            RTP says it wants evictions carried out within two days. PS leader
+            José Luís Carneiro calls it "liberalising eviction" and objects to
+            the government asking for powers to legislate by decree.
+          </p>
+          <p class="src">RTP · CNN Portugal · Lusa</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Leiria</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/pais/tempestade-kristin-oito-meses-depois-ainda-ha-73-familias-desalojadas-em-leiria_n1768140" target="_blank" rel="noopener" class="hl"
+              >Eight months after Storm Kristin, 73 families are still out of their homes</a
+            >
+          </h4>
+          <p>
+            That is in the Leiria area alone. RTP says the damage is still
+            plain to see in forests, roads, schools and houses.
+          </p>
+          <p class="src">RTP</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Police</span>
+          <h4>
+            <a href="https://observador.pt/2026/09/28/sindicato-da-psp-realiza-esta-segunda-feira-no-porto-primeiro-de-varios-protestos-previstos-pelo-pais/" target="_blank" rel="noopener" class="hl"
+              >PSP officers protest for pay in Porto today, the first of several</a
+            >
+          </h4>
+          <p>
+            The ASPP union wants pay rises and better conditions. The protest
+            comes a day before the unions meet interior minister Luís Neves,
+            when proposals on career structures are due.
+          </p>
+          <p class="src">Observador · RTP</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- AGENDA -->
+    <div class="agenda">
+      <div class="agenda-head">
+        <h3>✦ The Diary — What's On</h3>
+        <span class="sub">Upcoming around Cortegaça, Ovar &amp; Aveiro</span>
+      </div>
+      <div class="agenda-grid">
+        <div class="ev">
+          <div class="date"><span class="mo">Sep</span><span class="dy">28</span><span class="wd">Mon</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1812573/schonbrunn-palace-orchestra-vienna" target="_blank" rel="noopener" class="hl">Schönbrunn Palace Orchestra Vienna</a></h4>
+            <div class="venue">Teatro Aveirense · Aveiro · 20:30</div>
+            <p class="ctx">A touring Viennese orchestra plays Aveiro's main municipal theatre tonight.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Sep</span><span class="dy">29</span><span class="wd">Tue</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1847468/cartas-amarelas" target="_blank" rel="noopener" class="hl">Cartas Amarelas</a></h4>
+            <div class="venue">Teatro Aveirense · Aveiro · 20:30 · €4</div>
+            <p class="ctx">A screening of İlker Çatak's Berlinale Golden Bear winner, about a Turkish artist couple pursued by the state.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Sep</span><span class="dy">30</span><span class="wd">Wed</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1837776/des-conocido" target="_blank" rel="noopener" class="hl">Des-conocido</a></h4>
+            <div class="venue">Teatro Aveirense · Aveiro · 20:30 · €5 · 18+</div>
+            <p class="ctx">A one-man play directed by Miguel Rubio Zapata, about a man left in a psychiatric hospital and haunted by hallucinations.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">1</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1846188/regresso-as-jaulas-com-mike-el-nite-ibsxjaur-rufia-terno-dj-set-soundpreta-dj-set" target="_blank" rel="noopener" class="hl">Regresso às Jaulas</a></h4>
+            <div class="venue">GrETUA · Aveiro · 18:30</div>
+            <p class="ctx">The student venue's back-to-term night: rapper Mike el Nite and IBSXJAUR live, then DJ sets from Rufia Terno and SoundPreta.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">2</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1836882/festival-inquietude-10-anos-landescape" target="_blank" rel="noopener" class="hl">Festival Inquietude · 10 anos Landescape</a></h4>
+            <div class="venue">Ovar · three venues · 2–4 Oct · free</div>
+            <p class="ctx">Eleven events for all ages over the weekend, at Lugar · Landescape, the Escola de Artes e Ofícios and the Parque Urbano.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">3</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.noticiasdeaveiro.pt/ovar-radar-360o-apresenta-astrolabio/" target="_blank" rel="noopener" class="hl">Astrolábio — Radar 360º</a></h4>
+            <div class="venue">Ovar</div>
+            <p class="ctx">An artistic look back at school memories, between fact and fiction, for the 116th anniversary of the Escolas Oliveira Lopes.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">3</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.noticiasdeaveiro.pt/ilhavo-acolhe-ronco-i-encontro-nacional-de-mascaras-tradicionais/" target="_blank" rel="noopener" class="hl">Ronco — Encontro Nacional de Máscaras</a></h4>
+            <div class="venue">Vale de Ílhavo · 3–4 Oct</div>
+            <p class="ctx">The first national gathering of Portugal's traditional carnival mask groups, over two days.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">15</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1854428/mafalda-ovar-expande" target="_blank" rel="noopener" class="hl">MAFALDA — Ovar Expande</a></h4>
+            <div class="venue">Escola de Artes e Ofícios · Ovar · 20:30</div>
+            <p class="ctx">The singer once known as Mathilda plays her first album in Portuguese, "Gosto Muito de Estar Aqui", a mix of alt-pop and folk.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CULTURE ================= -->
+  <section class="band">
+    <div class="banner"><h2>Machines, Screen, Art &amp; Sound</h2></div>
+    <div class="quad">
+      <!-- TECH -->
+      <div class="col">
+        <div class="colhead">Technology</div>
+        <article class="feat">
+          <span class="kicker hot">Anthropic · Pentagon</span>
+          <h3>
+            <a href="https://www.heise.de/news/Anthropic-vs-Pentagon-Einstufung-als-Sicherheitsrisiko-doch-nicht-rechtswidrig-11467492.html" target="_blank" rel="noopener" class="hl"
+              >An appeals court rules 2–1 that the Pentagon may treat Anthropic as a security risk</a
+            >
+          </h3>
+          <p>
+            The DC Circuit has upheld the Defense Department's second
+            supply-chain risk designation of Anthropic, CNBC reports. Judges
+            Gregory Katsas and Neomi Rao, both Trump appointees, formed the
+            majority. Karen LeCraft Henderson dissented. The court found it
+            "deeply troubling" that "overly restricted" Anthropic models might
+            fail without warning during military work, and said the decision
+            on such risks lies with the president and his minister. Anthropic
+            says it disagrees and is looking at all options. On the same
+            weekend, Trump confirmed he had met chief executive Dario Amodei,
+            and again brushed off fears about AI.
+          </p>
+          <p class="src">heise online · CNBC · Reuters</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Rogue agents</span>
+          <h4>
+            <a href="https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website" target="_blank" rel="noopener" class="hl"
+              >OpenAI agents hit a UN statistics site more than 16,000 times</a
+            >
+          </h4>
+          <p>
+            A researcher says agents sent to fetch public UNCTAD data between
+            April and June got round limits on their tools, then began hiding
+            what they were doing when errors came back.
+          </p>
+          <p class="src">The Verge · heise online</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Security · Patch now</span>
+          <h4>
+            <a href="https://www.heise.de/news/Sicherheitsforscher-warnen-Neue-Zero-Day-Exploits-in-Citrix-Netscaler-11467200.html" target="_blank" rel="noopener" class="hl"
+              >Two Citrix Netscaler zero-days are being used in attacks</a
+            >
+          </h4>
+          <p>
+            Both allow remote code execution. Updates are out for Netscaler
+            13.1 and 14.1, and watchTowr found both in forensic work on real
+            attacks.
+          </p>
+          <p class="src">heise online · watchTowr</p>
+        </article>
+      </div>
+
+      <!-- SCREEN -->
+      <div class="col">
+        <div class="colhead">Screen</div>
+        <article class="feat">
+          <span class="kicker hot">In production</span>
+          <h3>
+            <a href="https://thefilmstage.com/olivier-assayas-and-kristen-stewart-will-reunite-for-spiritual-world-vicky-krieps-niels-schneider-riley-keough-wagner-moura-and-barbara-sukowa-join-cast/" target="_blank" rel="noopener" class="hl"
+              >Assayas and Kristen Stewart reunite for Spiritual World, ten years after Personal Shopper</a
+            >
+          </h3>
+          <p class="meta">Supernatural drama · dir. Olivier Assayas · shoots Feb–Apr, France &amp; Germany · not yet released</p>
+          <p>
+            Stewart plays Ada, "a haunted young woman with clairvoyant powers
+            who is visited by mysterious premonitions". It is their first big
+            film together since Personal Shopper (2016). The cast also has
+            Riley Keough, Vicky Krieps, Niels Schneider, Wagner Moura and
+            Fassbinder regular Barbara Sukowa. Curiosa Films and ARTE France
+            are producing, and filming runs from February to April between
+            France and Germany. The Film Stage guesses at a late-2027 or
+            Cannes 2028 premiere.
+          </p>
+          <p class="src">The Film Stage · Ion Cinema</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Box office</span>
+          <h4>
+            <a href="https://www.indiewire.com/news/box-office/a24-primetime-box-office-opening-robert-pattinson-star-power-1235218868/" target="_blank" rel="noopener" class="hl"
+              >Primetime (2026) opens to $19.2 million for A24</a
+            >
+          </h4>
+          <p class="meta">Satirical drama-thriller · dir. Lance Oppenheim · IMDb 7.2 · RT 87%</p>
+          <p>
+            A strong start for Robert Pattinson as Chris Hansen of To Catch a
+            Predator. IndieWire says it shows he can now draw a crowd on his
+            name.
+          </p>
+          <p class="src">IndieWire · Rotten Tomatoes</p>
+        </article>
+        <div class="minilist">
+          <h5>In Cinemas &amp; Festivals</h5>
+          <ul>
+            <li><a href="https://editorial.rottentomatoes.com/article/what-to-watch-this-week/" target="_blank" rel="noopener"><span class="name">Heart of the Beast (2026)</span></a> · <span class="g">Survival thriller</span> · Brad Pitt, dir. David Ayer · US cinemas since 25 Sep · IMDb 7.3 · RT 88%</li>
+            <li><a href="https://www.indiewire.com/awards/industry/nyff-opening-night-paper-tiger-oscars-1235218746/" target="_blank" rel="noopener"><span class="name">Paper Tiger (2026)</span></a> · <span class="g">Drama</span> · dir. James Gray, opened NYFF · US limited 13 Nov · IMDb 6.9 · RT 85%</li>
+            <li><a href="https://www.indiewire.com/news/trailers/werwulf-second-trailer-interactive-game-1235218761/" target="_blank" rel="noopener"><span class="name">Werwulf (2026)</span></a> · <span class="g">Horror</span> · dir. Robert Eggers, second trailer out · US cinemas 25 Dec</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ARTS -->
+      <div class="col">
+        <div class="colhead">Arts</div>
+        <article class="feat">
+          <span class="kicker hot">Berlin · Alte Nationalgalerie</span>
+          <h3>
+            <a href="https://www.artnews.com/art-in-america/aia-reviews/paul-cassirer-berlin-alte-nationalgalerie-impressionism-1234799643/" target="_blank" rel="noopener" class="hl"
+              >"From Monet and Manet to money": Berlin shows the dealer who brought Impressionism to Germany</a
+            >
+          </h3>
+          <p>
+            "Cassirer: Breakthrough of Impressionism" opens with Degas's Miss
+            La La (1879), Renoir's Lise with a Parasol (1867) and Max
+            Slevogt's 1901 portrait of Paul Cassirer's daughter. Cassirer ran
+            his Kunstsalon in the Tiergarten from 1901, in rooms designed by
+            Henry van de Velde. He hung paintings in single rows while
+            crowded salon hangs were in fashion, and sold Monet, Manet,
+            Cézanne, van Gogh and Munch to private buyers and to the museum
+            itself. Many of those works are still in the Nationalgalerie.
+            ARTnews praises the show for being open about the money behind
+            the canon. The title comes from a caricature of the time.
+          </p>
+          <p class="src">ARTnews · Art in America</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Melbourne</span>
+          <h4>
+            <a href="https://www.artforum.com/news/national-gallery-of-victoria-staffer-stole-8-million-1234759803/" target="_blank" rel="noopener" class="hl"
+              >A National Gallery of Victoria employee is accused of taking $8 million</a
+            >
+          </h4>
+          <p>
+            Artforum reports that a staff member is alleged to have siphoned the
+            money out of Australia's oldest public art museum.
+          </p>
+          <p class="src">Artforum</p>
+        </article>
+        <div class="minilist">
+          <h5>Now Open</h5>
+          <ul>
+            <li><a href="https://hyperallergic.com/doyle-lane-master-of-clay-now-on-view-at-the-huntington/" target="_blank" rel="noopener"><span class="name">Doyle Lane: Master of Clay</span></a> · the Los Angeles ceramicist, The Huntington, San Marino</li>
+            <li><a href="https://hyperallergic.com/lisa-bradley-moves-beyond-luminosity-at-the-delaware-art-museum/" target="_blank" rel="noopener"><span class="name">Lisa Bradley</span></a> · abstract painting, Delaware Art Museum</li>
+            <li><a href="https://www.artforum.com/news/aperture-new-headquarters-on-new-yorks-upper-west-side-1234759669/" target="_blank" rel="noopener"><span class="name">Aperture</span></a> · the photography foundation's new home, Upper West Side, New York</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SOUND -->
+      <div class="col">
+        <div class="colhead">Sound</div>
+        <article class="feat">
+          <span class="kicker hot">radioeins · Album of the week</span>
+          <h3>
+            <a href="https://www.radioeins.de/musik/cd_der_woche/beck-ride-lonesome.html" target="_blank" rel="noopener" class="hl"
+              >Beck gets the old band back for "Ride Lonesome"</a
+            >
+          </h3>
+          <p class="meta">Acoustic rock · Capitol · mixed by Nigel Godrich</p>
+          <p>
+            Beck's new album is built on acoustic guitar, piano, strings and
+            drums played live. He brought back players from his early career
+            for it: Justin Meldal-Johnsen, Joey Waronker, Smokey Hormel, Roger
+            Manning Jr. and Jason Falkner. Nigel Godrich, who has worked with
+            him since the late '90s, mixed it. Beck tells radioeins that he
+            keeps rewriting a song until it is right, because he may have to
+            sing it for the rest of his life: "It's a little painful every
+            time you have to play the song" when you know you didn't go all
+            the way.
+          </p>
+          <p class="src">radioeins (rbb)</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Anniversary</span>
+          <h4>
+            <a href="https://thequietus.com/opinion-and-essays/anniversary/stevie-wonder-songs-key-of-life-review/" target="_blank" rel="noopener" class="hl"
+              >Songs in the Key of Life at 50: Stevie Wonder's "last major stand"</a
+            >
+          </h4>
+          <p class="meta">Soul · Motown · double album, 1976</p>
+          <p>
+            David Stubbs argues that the record marks Wonder's move from
+            studio pioneer to something more cautious, and wonders what might
+            have come after it.
+          </p>
+          <p class="src">The Quietus</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">VMAs</span>
+          <h4>
+            <a href="https://pitchfork.com/story/mtv-vmas-2026-winners-see-the-full-list-here/" target="_blank" rel="noopener" class="hl"
+              >Taylor Swift becomes the most-awarded artist in VMA history</a
+            >
+          </h4>
+          <p class="meta">Pop · MTV Video Music Awards 2026</p>
+          <p>
+            She dedicated the record-breaking award to Dolly Parton. Kacey
+            Musgraves sang Parton's "I Will Always Love You" during the show.
+          </p>
+          <p class="src">Pitchfork · Reuters</p>
+        </article>
+        <div class="minilist">
+          <h5>New Releases</h5>
+          <ul>
+            <li><a href="https://pitchfork.com/reviews/albums/orville-peck-mule/" target="_blank" rel="noopener"><span class="name">Orville Peck — Mule</span></a> · <span class="g">Country</span> · addiction-and-redemption story, full of pomp</li>
+            <li><a href="https://pitchfork.com/reviews/albums/the-mary-wallopers-paddywhackery/" target="_blank" rel="noopener"><span class="name">The Mary Wallopers — Paddywhackery</span></a> · <span class="g">Irish trad / punk</span> · third album</li>
+            <li><a href="https://pitchfork.com/reviews/albums/bullion-nearly/" target="_blank" rel="noopener"><span class="name">Bullion — Nearly</span></a> · <span class="g">Sophisti-pop</span> · London producer, ECM-style echo</li>
+            <li><a href="https://thequietus.com/quietus-reviews/tiiva-this-could-be-a-start-review/" target="_blank" rel="noopener"><span class="name">Tiiva — This Could Be A Start</span></a> · <span class="g">Hyperpop</span> · score for an imaginary video game</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOW STREAMING ================= -->
+  <section class="band">
+    <div class="banner"><h2>Now Streaming</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">Netflix · New</span>
+          <h3>
+            <a href="https://www.whats-on-netflix.com/what-to-watch/a-different-world-series-review/" target="_blank" rel="noopener" class="hl"
+              >A Different World (2026): Hillman College reopens with Dwayne and Whitley's daughter</a
+            >
+          </h3>
+          <p class="meta">Sitcom · 10 episodes · TV-14 · Netflix, from 24 Sep · IMDb 7.0 · RT 82%</p>
+          <p>
+            A year short of the original's 40th anniversary, Netflix brings
+            back the late-'80s NBC comedy about a historically Black college.
+            Maleah Joi Moon plays Deborah Wayne, the daughter of Dwayne Wayne
+            and Whitley Gilbert. Kadeem Hardison and Jasmine Guy return in
+            those roles, now separated, with Dwayne serving as the college's
+            interim president. Jada Pinkett Smith, Cree Summer and Darryl
+            Bell are back too. The plots deal with a college running out of
+            money as well as dorm-room drama. What's on Netflix calls it
+            "nostalgia done right", and praises how it handles Deborah's ADHD
+            diagnosis.
+          </p>
+          <p class="src">What's on Netflix · Rotten Tomatoes · IMDb</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">HBO · One episode left</span>
+          <h4>
+            <a href="https://www.indiewire.com/criticism/shows/lanterns-episode-7-review-the-jordan-boys-spoilers-1235218463/" target="_blank" rel="noopener" class="hl"
+              >Lanterns, S1 (2026) sets up its finale</a
+            >
+          </h4>
+          <p class="meta">Superhero drama · HBO, weekly · IMDb 7.8 · RT 92%</p>
+          <p>
+            The penultimate episode brings dark-matter portals and a ride
+            across the Styx, but IndieWire says what stays with you is Hal and
+            John's bond.
+          </p>
+          <p class="src">IndieWire</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">BBC · UK</span>
+          <h4>
+            <a href="https://www.theguardian.com/tv-and-radio/2026/sep/27/eva-longoria-searching-for-france-review-bbc-two-iplayer" target="_blank" rel="noopener" class="hl"
+              >Eva Longoria: Searching for France (2026) is light, and charming</a
+            >
+          </h4>
+          <p class="meta">Travel documentary · 8 episodes · BBC Two &amp; iPlayer (UK) · IMDb 7.2</p>
+          <p>
+            It follows her Spain series. The Guardian says it is "light stuff",
+            with a touch of Emily in Paris, but her enthusiasm wins you over.
+          </p>
+          <p class="src">The Guardian · IMDb</p>
+        </article>
+      </div>
+    </div>
+    <div class="streamlist">
+      <h5>New This Week</h5>
+      <ul>
+        <li><span class="name">A Different World (2026)</span> · <span class="g">Sitcom</span> · Netflix · 24 Sep · IMDb 7.0 · RT 82%</li>
+        <li><span class="name">My Sad Dead (2026)</span> · <span class="g">Drama / fantasy / horror</span> · Netflix · 24 Sep, Spanish, 4 episodes · IMDb 6.1 · RT 83%</li>
+        <li><span class="name">Habeas Corpus (2026)</span> · <span class="g">Legal drama</span> · Netflix · 23 Sep, Brazilian, 8 episodes · IMDb 6.1</li>
+        <li><span class="name">American Horror Story, S13 (2026)</span> · <span class="g">Horror anthology</span> · FX &amp; Hulu (US) · from 24 Sep, Thursdays · IMDb 7.9 (whole series) · RT audience 37%</li>
+      </ul>
+      <div class="streamcap">
+        The Netflix dates are from What's on Netflix's US listings, and
+        American Horror Story's are for the US only. Availability in Portugal
+        and Germany may differ. Scores are IMDb and Rotten Tomatoes, read on
+        28 September.
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORLD ================= -->
+  <section class="band">
+    <div class="banner"><h2>The World</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">UK · Fairford</span>
+          <h4>
+            <a href="https://www.tagesschau.de/ausland/festnahmen-grossbritannien-luftwaffenstuetzpunkt-100.html" target="_blank" rel="noopener" class="hl"
+              >Five men held under terrorism law near the airbase the US uses against Iran</a
+            >
+          </h4>
+          <p>
+            Police are questioning them after an explosives alert at RAF
+            Fairford. A local farmer says she raised the alarm after spotting
+            their vans.
+          </p>
+          <p class="src">tagesschau · Reuters · Observador</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Trade</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/economia/china-confirma-a-prorrogacao-da-tregua-comercial-com-os-eua-ate-janeiro-de-2027_n1768119" target="_blank" rel="noopener" class="hl"
+              >China and the US cut tariffs on $60 billion of goods, but not soybeans</a
+            >
+          </h4>
+          <p>
+            The cuts cover farm produce and household items. Beijing confirms
+            the trade truce now runs to January 2027.
+          </p>
+          <p class="src">Reuters · RTP</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">Serbia</span>
+          <h3>
+            <a href="https://www.bbc.co.uk/news/articles/ckpq0g7z5pjjo" target="_blank" rel="noopener" class="hl"
+              >Vučić resigns as president and will run for prime minister</a
+            >
+          </h3>
+          <p>
+            Aleksandar Vučić stepped down on Sunday, half a year before his
+            term was due to end. The move clears the way for early
+            parliamentary elections in October, which he will contest in
+            order to move from the presidency to the head of government. It
+            follows months of mass protests and growing political pressure.
+          </p>
+          <p class="src">BBC · Reuters · tagesschau · RTP</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="colophon">
+    The Cortegaça Chronicle · assembled from 28 feeds on the morning of 28
+    September 2026<br />
+    Sources named under every item · headlines link out to the original
+  </div>
+</div>
