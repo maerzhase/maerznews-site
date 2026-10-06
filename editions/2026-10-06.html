@@ -1,0 +1,1718 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<title>The Cortegaça Chronicle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+/>
+<style>
+  :root {
+    --paper: #f5f1e6;
+    --paper-2: #efe9da;
+    --ink: #1b1917;
+    --ink-2: #403a34;
+    --ink-3: #6b625a;
+    --rule: #c9bfae;
+    --rule-2: #a89c88;
+    --accent: #9c2b1e;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding-block: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  p {
+    text-wrap: pretty;
+    orphans: 3;
+    widows: 3;
+    margin: 0 0 0.72em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover .hl,
+  a:hover.hl {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  .ear {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 5px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .ear .price {
+    color: var(--accent);
+  }
+  .nameplate {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 10.5vw, 5.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0.26em 0 0.2em;
+    color: var(--ink);
+  }
+  .nameplate .the {
+    display: block;
+    font-size: 0.24em;
+    font-weight: 400;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    color: var(--ink-2);
+  }
+  .strip {
+    border-top: 3px double var(--rule-2);
+    border-bottom: 3px double var(--rule-2);
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 18px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-align: center;
+  }
+  .strip b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .strip .sep {
+    color: var(--rule-2);
+  }
+
+  /* ---------- TOP BAND ---------- */
+  .topband {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 0 26px;
+    margin-top: 22px;
+  }
+  .rail {
+    border: 1px solid var(--rule-2);
+    padding: 14px 14px 16px;
+    align-self: start;
+    background: var(--paper-2);
+  }
+  .rail h3 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .rail p {
+    font-size: 0.845rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .rail .sig {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 14px;
+  }
+  .mixhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-top: 2px solid var(--ink);
+    padding-top: 8px;
+    margin-bottom: 9px;
+    color: var(--ink);
+  }
+  .mix {
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    gap: 5px 8px;
+    align-items: center;
+  }
+  .mix .lab {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.655rem;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    line-height: 1.15;
+  }
+  .mix .lab.focus {
+    color: var(--accent);
+  }
+  .mix .barwrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mix .bar {
+    height: 9px;
+    background: var(--ink);
+    display: block;
+  }
+  .mix .n {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .mix .star {
+    color: var(--accent);
+    font-size: 0.66rem;
+  }
+  .mixcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 9px;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  /* ---------- LEAD ---------- */
+  .eyebrow {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .lead h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5.1vw, 3.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    margin-bottom: 0.22em;
+  }
+  .standfirst {
+    font-size: 1.06rem;
+    color: var(--ink-2);
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.6em;
+    max-width: 60ch;
+  }
+  .byline {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 5px 0;
+    margin-bottom: 16px;
+  }
+  .leadbody {
+    columns: 2;
+    column-gap: 28px;
+    column-rule: 1px solid var(--rule);
+  }
+  .leadbody p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .leadbody p:first-of-type::first-letter {
+    float: left;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 3.55em;
+    line-height: 0.78;
+    padding: 0.06em 0.09em 0 0;
+    color: var(--ink);
+  }
+  .pull {
+    break-inside: avoid;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 9px 0 11px;
+    margin: 6px 0 12px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .pull .who {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-style: normal;
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 7px;
+  }
+
+  /* ---------- FIGURE / CHART ---------- */
+  figure.fig {
+    margin: 0 0 18px;
+    border-top: 2px solid var(--ink);
+    padding-top: 10px;
+  }
+  figure.fig .figtitle {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+  figure.fig .figsub {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .chartbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .chartbox svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 330px;
+  }
+  figcaption {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    color: var(--ink-3);
+    text-align: left;
+    margin-top: 7px;
+    border-top: 1px solid var(--rule);
+    padding-top: 6px;
+  }
+  .barG rect.val {
+    fill: var(--ink);
+  }
+  .barG:hover rect.val {
+    fill: var(--accent);
+  }
+  .barG.win rect.val {
+    fill: var(--accent);
+  }
+  .barG.win:hover rect.val {
+    fill: var(--ink);
+  }
+  .barG rect.valo {
+    fill: var(--paper);
+    stroke: var(--ink);
+    stroke-width: 1.4;
+  }
+  .barG:hover rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win:hover rect.valo {
+    stroke: var(--ink);
+  }
+
+  /* ---------- SECTION BANDS ---------- */
+  .band {
+    margin-top: 30px;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .banner::before,
+  .banner::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-top: 2px;
+  }
+  .banner h2 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: clamp(0.78rem, 2.1vw, 0.95rem);
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .feat h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.38rem, 2.8vw, 1.82rem);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    margin-bottom: 0.3em;
+  }
+  .feat p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    font-size: 1rem;
+  }
+  .brief {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+  .brief h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.045rem;
+    line-height: 1.17;
+    margin-bottom: 0.25em;
+  }
+  .brief p {
+    font-size: 0.915rem;
+    color: var(--ink-2);
+    line-height: 1.46;
+  }
+  .kicker {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .kicker.hot {
+    color: var(--accent);
+  }
+  .src {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 5px;
+  }
+
+  .split-a {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 0 28px;
+  }
+  .split-b {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 0 28px;
+  }
+  .split-c {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 0 24px;
+  }
+  .split-a > .col + .col,
+  .split-b > .col + .col,
+  .split-c > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 28px;
+  }
+  .split-c > .col + .col {
+    padding-left: 24px;
+  }
+  .quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 22px;
+  }
+  .quad > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 22px;
+  }
+  .colhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.67rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .quad .feat h3 {
+    font-size: 1.18rem;
+    line-height: 1.15;
+  }
+  .quad .feat p,
+  .quad .brief p {
+    font-size: 0.875rem;
+    text-align: left;
+    hyphens: none;
+  }
+  .quad .brief h4 {
+    font-size: 0.98rem;
+  }
+
+  /* ---------- LISTS (Now Open / New Releases / Cinemas) ---------- */
+  .minilist {
+    border-top: 2px solid var(--ink);
+    margin-top: 16px;
+    padding-top: 8px;
+  }
+  .minilist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .minilist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .minilist li {
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .minilist li:last-child {
+    border-bottom: 0;
+  }
+  .minilist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .sheet article p.meta {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 0 6px;
+  }
+  .g {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- NOW STREAMING ---------- */
+  .streamlist {
+    border-top: 2px solid var(--ink);
+    margin-top: 18px;
+    padding-top: 8px;
+  }
+  .streamlist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .streamlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3;
+    column-gap: 26px;
+  }
+  .streamlist li {
+    break-inside: avoid;
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .streamlist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .streamcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ---------- AGENDA ---------- */
+  .agenda {
+    border-top: 3px double var(--ink);
+    border-bottom: 3px double var(--ink);
+    margin-top: 26px;
+    padding: 14px 0 16px;
+  }
+  .agenda-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 14px;
+  }
+  .agenda-head h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+    letter-spacing: -0.01em;
+  }
+  .agenda-head .sub {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-3);
+  }
+  .agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 26px;
+  }
+  .ev {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0 14px;
+    border-top: 1px solid var(--rule);
+    padding: 11px 0;
+  }
+  .agenda-grid > .ev:nth-child(1),
+  .agenda-grid > .ev:nth-child(2) {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .agenda-grid > .ev:nth-child(even) {
+    border-left: 1px solid var(--rule);
+    padding-left: 26px;
+  }
+  .ev .date {
+    text-align: center;
+  }
+  .ev .mo {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+  }
+  .ev .dy {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 2.35rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.34em;
+    font-variant-numeric: tabular-nums;
+  }
+  .ev .wd {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+  }
+  .ev .txt {
+    min-width: 0;
+    border-left: 1px solid var(--rule);
+    padding-left: 14px;
+  }
+  .ev .txt h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .ev .venue {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 5px;
+  }
+  .ev .ctx {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    line-height: 1.42;
+    margin: 0;
+  }
+
+  .colophon {
+    border-top: 1px solid var(--rule-2);
+    margin-top: 30px;
+    padding-top: 12px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .quad {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 22px;
+    }
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .quad > .col:nth-child(4) {
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .topband {
+      grid-template-columns: 210px 1fr;
+      gap: 0 22px;
+    }
+    .streamlist ul {
+      columns: 2;
+    }
+  }
+  @media (max-width: 860px) {
+    body {
+      font-size: 15.5px;
+    }
+    .topband {
+      grid-template-columns: 1fr;
+    }
+    .rail {
+      margin-bottom: 22px;
+    }
+    .leadbody {
+      columns: 1;
+    }
+    .split-a,
+    .split-b,
+    .split-c,
+    .quad {
+      grid-template-columns: 1fr;
+    }
+    .split-a > .col + .col,
+    .split-b > .col + .col,
+    .split-c > .col + .col,
+    .quad > .col + .col,
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .agenda-grid {
+      grid-template-columns: 1fr;
+    }
+    .agenda-grid > .ev:nth-child(even) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .agenda-grid > .ev:nth-child(2) {
+      border-top: 1px solid var(--rule);
+      padding-top: 11px;
+    }
+    .streamlist ul {
+      columns: 1;
+    }
+    .leadbody p,
+    .feat p {
+      text-align: left;
+      hyphens: none;
+    }
+    .banner h2 {
+      white-space: normal;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  .seg:hover rect {
+    opacity: 0.82;
+  }
+
+  /* ---------- TIMELINE (lead figure) ---------- */
+  .tl circle.pt {
+    fill: var(--ink);
+    stroke: var(--paper);
+    stroke-width: 2;
+  }
+  .tl g:hover circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win:hover circle.pt {
+    fill: var(--ink);
+  }
+  .tl g {
+    cursor: default;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .archive {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    margin-top: 14px;
+    padding: 6px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .archive a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>
+
+
+<div class="sheet" lang="en">
+  <!-- ================= MASTHEAD ================= -->
+  <header>
+    <div class="ear">
+      Tuesday, 6 October 2026 &nbsp;·&nbsp; No. 16 &nbsp;·&nbsp; Price:
+      <span class="price">one bica</span>
+    </div>
+    <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
+    <div class="strip">
+      <span>Topic today: <b>A Berlin algae researcher wins the Nobel</b></span>
+      <span class="sep">✦</span>
+      <span>Weather · Aveiro <b>22°C</b> high, 18° low, thunderstorms possible (58% chance of rain)</span>
+      <span class="sep">✦</span>
+      <span>Nobel week · announcements run to <b>12 October</b></span>
+    </div>
+  </header>
+
+  <!-- ================= TOP BAND ================= -->
+  <div class="topband">
+    <aside class="rail">
+      <h3>Column One</h3>
+      <p>
+        A green alga that also lives in Brandenburg's lakes won a Nobel
+        Prize yesterday. Peter Hegemann of Humboldt University studied how
+        it swims towards light. Twenty-odd years later, the protein he and
+        Georg Nagel found lets scientists switch brain cells on and off.
+      </p>
+      <p>
+        In Germany, requests to refuse military service have tripled
+        this year. At home, the Barrinha opened to the
+        sea and left fish all over Esmoriz beach.
+      </p>
+      <p class="sig">— The Editor</p>
+
+      <div class="mixhead">Today's edition</div>
+      <div class="mix">
+        <span class="lab">Cortegaça &amp; Ovar</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab focus">✦ Germany · Berlin</span>
+        <span class="barwrap"><span class="bar" style="width: 78%"></span><span class="n">6</span><span class="star">✦</span></span>
+
+        <span class="lab">Portugal</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span></span>
+
+        <span class="lab">Technology</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">Screen</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Arts</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Sound</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Now Streaming</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">The World</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+      </div>
+      <div class="mixcap">✦ today's focus — bar length is the story count (Germany includes the lead)</div>
+    </aside>
+
+    <article class="lead">
+      <div class="eyebrow">Berlin · Nobel Prize in Physiology or Medicine</div>
+      <h1>
+        <a href="https://www.nobelprize.org/prizes/medicine/2026/press-release/" target="_blank" rel="noopener" class="hl"
+          >A Berlin algae researcher shares the Nobel Prize for switching brain cells on with light</a
+        >
+      </h1>
+      <p class="standfirst">
+        Peter Hegemann of Humboldt University, Georg Nagel of Würzburg and
+        Karl Deisseroth of Stanford share the 2026 prize for optogenetics.
+        It began with a single-celled alga and how it finds the light.
+      </p>
+      <div class="byline">Nobel Assembly at Karolinska Institutet · tagesschau · rbb24 · Ars Technica · 5 October</div>
+
+      <figure class="fig">
+        <div class="figtitle">From an alga to the Nobel</div>
+        <div class="figsub">
+          Milestones of optogenetics named by the Nobel Assembly, tagesschau
+          and Hegemann himself. It is 21 years from the first neuron paper
+          to the prize. Red marks the prize. Hover a point for detail.
+        </div>
+        <div class="chartbox">
+<svg class="tl" viewBox="0 0 620 210" role="img" aria-label="Timeline of optogenetics from Crick's idea in the late 1970s to the 2026 Nobel Prize: channelrhodopsin found in the early 2000s, neurons switched by light in 2005, living mice in 2007, first patient in 2021, FDA filing accepted in September 2026, Nobel on 5 October 2026.">
+<title>From an alga to the Nobel: optogenetics, late 1970s to 2026</title>
+<line x1="40.0" y1="112" x2="596.0" y2="112" stroke="#1b1917" stroke-width="1.4"/>
+<line x1="93.5" y1="108" x2="93.5" y2="116" stroke="#a89c88" stroke-width="1"/>
+<text x="93.5" y="128" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="9">1980</text>
+<line x1="200.4" y1="108" x2="200.4" y2="116" stroke="#a89c88" stroke-width="1"/>
+<text x="200.4" y="128" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="9">1990</text>
+<line x1="307.3" y1="108" x2="307.3" y2="116" stroke="#a89c88" stroke-width="1"/>
+<text x="307.3" y="128" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="9">2000</text>
+<line x1="414.2" y1="108" x2="414.2" y2="116" stroke="#a89c88" stroke-width="1"/>
+<text x="414.2" y="128" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="9">2010</text>
+<line x1="521.2" y1="108" x2="521.2" y2="116" stroke="#a89c88" stroke-width="1"/>
+<text x="521.2" y="128" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="9">2020</text>
+<g><title>Late 1970s: Francis Crick proposes controlling individual nerve-cell types, with light as the ideal tool</title>
+<line x1="72.1" y1="112" x2="72.1" y2="103" stroke="#c9bfae" stroke-width="1"/>
+<text x="68.1" y="78" text-anchor="start" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" font-weight="700">late 1970s</text>
+<text x="68.1" y="89" text-anchor="start" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">Francis Crick suggests light</text>
+<text x="68.1" y="100" text-anchor="start" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">could switch single cell types</text>
+<circle class="pt" cx="72.1" cy="112" r="5.5"/></g>
+<g><title>Around 2000: new gene sequences of the alga Chlamydomonas reinhardtii become public; Hegemann's group spots light-sensor genes</title>
+<line x1="307.3" y1="112" x2="307.3" y2="138" stroke="#c9bfae" stroke-width="1"/>
+<text x="311.3" y="150" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" font-weight="700">c. 2000</text>
+<text x="311.3" y="161" text-anchor="end" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">Chlamydomonas gene</text>
+<text x="311.3" y="172" text-anchor="end" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">sequences go public</text>
+<circle class="pt" cx="307.3" cy="112" r="5.5"/></g>
+<g><title>Early 2000s: in frog eggs, Nagel and Hegemann show channelrhodopsin-2 is an ion channel opened directly by blue light</title>
+<line x1="334.0" y1="112" x2="334.0" y2="103" stroke="#c9bfae" stroke-width="1"/>
+<text x="338.0" y="78" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" font-weight="700">early 2000s</text>
+<text x="338.0" y="89" text-anchor="end" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">Hegemann &amp; Nagel find</text>
+<text x="338.0" y="100" text-anchor="end" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">channelrhodopsin</text>
+<circle class="pt" cx="334.0" cy="112" r="5.5"/></g>
+<g><title>2005: Deisseroth, with Nagel, publishes light-triggered nerve signals in mammalian neurons</title>
+<line x1="360.8" y1="112" x2="360.8" y2="172" stroke="#c9bfae" stroke-width="1"/>
+<text x="360.8" y="184" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" font-weight="700">2005</text>
+<text x="360.8" y="195" text-anchor="middle" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">Deisseroth fires</text>
+<text x="360.8" y="206" text-anchor="middle" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">rat neurons with light</text>
+<circle class="pt" cx="360.8" cy="112" r="5.5"/></g>
+<g><title>2007: the light switch works in the brains of living mice</title>
+<line x1="382.2" y1="112" x2="382.2" y2="103" stroke="#c9bfae" stroke-width="1"/>
+<text x="378.2" y="78" text-anchor="start" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" font-weight="700">2007</text>
+<text x="378.2" y="89" text-anchor="start" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">Works in the brains</text>
+<text x="378.2" y="100" text-anchor="start" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">of living mice</text>
+<circle class="pt" cx="382.2" cy="112" r="5.5"/></g>
+<g><title>2021: a first patient regaining a simple form of sight with optogenetic therapy is presented (Hegemann, rbb)</title>
+<line x1="531.8" y1="112" x2="531.8" y2="138" stroke="#c9bfae" stroke-width="1"/>
+<text x="531.8" y="150" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" font-weight="700">2021</text>
+<text x="531.8" y="161" text-anchor="middle" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">First patient with partly</text>
+<text x="531.8" y="172" text-anchor="middle" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">restored sight presented</text>
+<circle class="pt" cx="531.8" cy="112" r="5.5"/></g>
+<g><title>September 2026: the US FDA accepts for review an optogenetic gene therapy for retinitis pigmentosa (not yet approved)</title>
+<line x1="592.8" y1="112" x2="592.8" y2="69" stroke="#c9bfae" stroke-width="1"/>
+<text x="596.8" y="44" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" font-weight="700">Sept 2026</text>
+<text x="596.8" y="55" text-anchor="end" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">FDA accepts a filing</text>
+<text x="596.8" y="66" text-anchor="end" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">for an eye therapy</text>
+<circle class="pt" cx="592.8" cy="112" r="5.5"/></g>
+<g class="win"><title>5 October 2026: Nobel Prize in Physiology or Medicine to Deisseroth, Hegemann and Nagel; 12 million kronor shared equally</title>
+<line x1="593.5" y1="112" x2="593.5" y2="172" stroke="#c9bfae" stroke-width="1"/>
+<text x="597.5" y="184" text-anchor="end" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="10.5" font-weight="700">5 Oct 2026</text>
+<text x="597.5" y="195" text-anchor="end" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">Nobel Prize, shared by</text>
+<text x="597.5" y="206" text-anchor="end" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="9.5">all three</text>
+<circle class="pt" cx="593.5" cy="112" r="7"/></g>
+</svg>
+
+        </div>
+        <figcaption>
+          Sources: Nobel Assembly press release, 5 October 2026 (discovery,
+          2005 and 2007 dates, prize amount); tagesschau, 5 October (Crick in
+          the late 1970s, gene sequences around 2000, FDA filing in September
+          2026); Hegemann to rbb24 (first patient presented in 2021). The
+          Nobel Assembly dates the channelrhodopsin discovery only to "the
+          early 2000s", so it is placed approximately.
+        </figcaption>
+      </figure>
+
+      <div class="leadbody">
+        <p>
+          The Nobel Assembly at Karolinska Institutet gave this year's prize
+          in physiology or medicine to Karl Deisseroth (born 1971) of Stanford
+          University and the Howard Hughes Medical Institute, Peter
+          Hegemann (born 1954) of Humboldt University of Berlin, and Georg
+          Nagel (born 1953) of the University of Würzburg, "for their discoveries
+          concerning light-gated ion channels and optogenetics". The 12
+          million Swedish kronor are shared equally. Hegemann and Nagel did
+          the prize-winning work at Max Planck institutes in Martinsried
+          and Frankfurt.
+        </p>
+        <p>
+          It started with Chlamydomonas reinhardtii, a single-celled green
+          alga that swims towards light. When its gene sequences became
+          public around 2000, Hegemann's group found genes resembling known
+          light-sensing proteins. Nagel put the proteins into frog eggs, and
+          together they showed that one, channelrhodopsin-2, is an ion
+          channel opened directly by light. When blue light hits it,
+          charged particles flow into the cell and create an electrical
+          signal, whatever cell it sits in.
+        </p>
+        <div class="pull">
+          "These algae occur here in Brandenburg's lakes, by the way."
+          <span class="who">Peter Hegemann to rbb24</span>
+        </div>
+        <p>
+          Deisseroth put the gene into rat nerve cells and fired them with
+          short pulses of light, published in 2005. Two years later the
+          switch worked in the brains of living mice. Researchers can now
+          turn chosen neurons on or off and watch what changes, testing
+          whether a group of cells actually causes a movement, a feeling or
+          a memory. Francis Crick had suggested light for exactly this in
+          the late 1970s.
+        </p>
+        <p>
+          The first medical use is in the eye. Hegemann says a first
+          patient who regained a simple kind of sight was presented in
+          2021. In September the US FDA accepted for review a gene therapy
+          for retinitis pigmentosa with severe sight loss; it is not yet
+          approved. Hegemann learned of the prize from an email from the
+          committee chair asking him to call. "Of course I was
+          overwhelmed," he told rbb24. He has also said: "You have to take
+          risks."
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= LOCAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Cortegaça, Ovar &amp; the Coast</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">Esmoriz · Barrinha</span>
+          <h3>
+            <a href="https://www.ovarnews.pt/centenas-de-peixes-aparecem-no-areal-da-praia-de-esmoriz-apos-abertura-da-barrinha/" target="_blank" rel="noopener" class="hl"
+              >The Barrinha opens to the sea and leaves hundreds of fish on Esmoriz beach</a
+            >
+          </h3>
+          <p>
+            Hundreds of small fish lay on the sand at Praia de Esmoriz, next
+            to the Barrinha, on Monday after the lagoon's channel to the sea
+            was opened. Locals say they are pumpkinseed sunfish (perca-sol,
+            Lepomis gibbosus), an invasive species from North America that
+            thrives in calm fresh water. The Barrinha de Esmoriz, or Lagoa
+            de Paramos, lies between Ovar and Espinho and connects to the
+            ocean only from time to time. When the bar opens, the lagoon
+            empties into the sea in a strong surge, and OvarNews says that
+            current probably carried the fish out to the river mouth and
+            onto the beach. Walkers also found many sea hares, known locally
+            as "vinagreiras", on the sand. The lagoon is a Natura 2000 site
+            because of the range of species it holds.
+          </p>
+          <p class="src">OvarNews</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Aveiro · Port</span>
+          <h4>
+            <a href="https://www.noticiasdeaveiro.pt/elaboracao-do-projeto-melhoria-das-acessibilidades-maritimas-do-porto-de-aveiro-concluida/" target="_blank" rel="noopener" class="hl"
+              >Aveiro's port has its plan for a bigger harbour entrance</a
+            >
+          </h4>
+          <p>
+            The design would cut back one breakwater and extend another so
+            larger ships can enter. Port president Teresa Cardoso says an
+            environmental impact study comes next. The 2013 works opened the
+            bar to ships up to 200 m long and 10.5 m draught.
+          </p>
+          <p class="src">Notícias de Aveiro</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Ovar · Books</span>
+          <h4>
+            <a href="https://www.ovarnews.pt/autor-de-ovar-lanca-primeiro-livro-sobre-o-caminho-frances-de-santiago/" target="_blank" rel="noopener" class="hl"
+              >An Ovar walker writes up his Camino de Santiago</a
+            >
+          </h4>
+          <p>
+            Miguel Costa presented his first book, "Quando Menos É Mais", at
+            the municipal library on Friday. It tells of his walk along the
+            French Way to Santiago and is published by Primeiro Capítulo.
+          </p>
+          <p class="src">OvarNews</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GERMANY ================= -->
+  <section class="band">
+    <div class="banner"><h2>Germany · Berlin &amp; Brandenburg</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Berlin · Traffic</span>
+          <h4>
+            <a href="https://www.rbb24.de/panorama/beitrag/2026/10/personalmangel-tiergartentunnel-gesperrt-nachts-oktober-verkehr.html" target="_blank" rel="noopener" class="hl"
+              >The Tiergarten tunnel will close four nights a week for lack of staff</a
+            >
+          </h4>
+          <p>
+            Only five of the eight posts in the control room are filled, and
+            three of those staff are ill or in training. Until further notice
+            the tunnel shuts from about 21:45 to 05:45 on the nights into
+            Tuesday through Friday. Buses M41 and M85 are diverted. Berlin
+            has had to staff the control room itself since federal
+            oversight ended at the end of 2024.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Security · Bundestag</span>
+          <h4>
+            <a href="https://www.tagesschau.de/inland/innenpolitik/nachrichtendienste-praesidenten-bedrohung-100.html" target="_blank" rel="noopener" class="hl"
+              >The BND chief says Russia is waging a "shadow war" on Germany</a
+            >
+          </h4>
+          <p>
+            At their yearly public hearing, Martin Jäger listed intimidation,
+            cyberattacks and prepared sabotage. A year ago he spoke of an
+            "icy peace"; now he warns Germany itself could be drawn into a
+            violent confrontation.
+          </p>
+          <p class="src">tagesschau</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Navy · Emden</span>
+          <h4>
+            <a href="https://www.tagesschau.de/inland/regional/niedersachsen/entscheidung-gefallen-in-emden-entsteht-ein-neuer-marinehafen,marinehafen-104.html" target="_blank" rel="noopener" class="hl"
+              >The navy gets a second North Sea port, in Emden</a
+            >
+          </h4>
+          <p>
+            Boris Pistorius signed for berths for seven frigates, ten
+            minehunters and ten tugs and up to 2,000 posts, ready in the
+            early 2030s. "The smallest navy in the Bundeswehr's history," he
+            said, "must grow."
+          </p>
+          <p class="src">tagesschau · NDR</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Books · Berlin author</span>
+          <h4>
+            <a href="https://www.rbb24.de/kultur/beitrag/2026/10/deutscher-buchpreis-schriftstellerin-shida-bazyar-berlin.html" target="_blank" rel="noopener" class="hl"
+              >Shida Bazyar wins the German Book Prize for "Die Lücken"</a
+            >
+          </h4>
+          <p>
+            The Berlin-based writer, born in 1988, tells nearly 100 years of
+            a small Hunsrück town, from the 1920s on, through a dead
+            narrator. She said she found it hard to feel joy over a book
+            about people who were persecuted and murdered.
+          </p>
+          <p class="src">rbb24 · tagesschau</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">Military service · Figures</span>
+          <h3>
+            <a href="https://www.tagesschau.de/inland/kriegsdienstverweigerer-124.html" target="_blank" rel="noopener" class="hl"
+              >Requests to refuse military service have tripled since the new Wehrdienst law</a
+            >
+          </h3>
+          <p>
+            Between January and August, 12,102 people applied to be
+            recognised as conscientious objectors, the federal office for
+            civil-society tasks (BAFzA) told the RND newspapers. That is
+            already three times as many as in the whole of 2025, when there
+            were 3,879, and more than five times the 2,249 of 2024. At the
+            end of June the count stood at 5,862, so it has doubled in two
+            months. Conscription is still suspended, but the new military
+            service law took effect on 1 January and makes medical screening
+            compulsory for young men born in 2008 or later. If too few
+            volunteers come forward, the Bundestag can vote for "conscription
+            on demand". Applications come from reservists and serving
+            soldiers as well as from people who have never served, and
+            counselling centres report rising demand. The right to refuse is
+            in Article 4 of the Basic Law and applies whether or not
+            conscription is active; it needs a written, personal
+            justification.
+          </p>
+          <p class="src">tagesschau · RND</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTUGAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Portugal &amp; the Coast</h2></div>
+    <div class="split-c">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">Industry · Tramagal</span>
+          <h3>
+            <a href="https://observador.pt/2026/10/05/portugal-recebe-a-nova-base-europeia-da-mitsubishi-fuso/" target="_blank" rel="noopener" class="hl"
+              >Mitsubishi Fuso moves its European headquarters to Portugal</a
+            >
+          </h3>
+          <p>
+            The Japanese truck maker will run imports, sales, after-sales
+            and marketing for 41 European markets from Portugal, along with
+            a European parts distribution centre and development of its
+            Canter and electric eCanter trucks. The new centre replaces the
+            one Daimler Truck ran and will employ 40 people, about 30 of
+            them in new jobs. Its base is the Tramagal plant near Abrantes,
+            for 46 years Fuso's only factory in Europe. It opened in 1964
+            building French Berliet trucks under licence and has made
+            Mitsubishi vehicles since 1980. In April Fuso merged with
+            Toyota's Hino into Archion, in which Daimler Truck and Toyota
+            hold 25% each. The plant restarted production in September with
+            400 workers after a summer lay-off.
+          </p>
+          <p class="src">Observador</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Diplomacy</span>
+          <h4>
+            <a href="https://observador.pt/programas/noticiario/as-noticias-das-00h-2439/" target="_blank" rel="noopener" class="hl"
+              >Marco Rubio visits Portugal on Thursday</a
+            >
+          </h4>
+          <p>
+            The US secretary of state goes to Iceland and Greece first. He
+            said Portugal has "again become a strong ally".
+          </p>
+          <p class="src">Rádio Observador</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Justice · EU funds</span>
+          <h4>
+            <a href="https://observador.pt/programas/conferencia-de-imprensa/amadeu-guerra-extingue-grupo-antifraude-para-fundos-da-ue/" target="_blank" rel="noopener" class="hl"
+              >The attorney-general scraps the EU-funds anti-fraud group</a
+            >
+          </h4>
+          <p>
+            Amadeu Guerra cites the end of the recovery plan, four public
+            bodies pulling out and weak cooperation with the European Public
+            Prosecutor. The DCIAP takes over and must map the riskiest areas
+            by year end.
+          </p>
+          <p class="src">Público via Observador</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Lisbon · São Bento</span>
+          <h4>
+            <a href="https://observador.pt/2026/10/05/aguiar-branco-anuncia-parlamento-aberto-no-ultimo-sabado-de-cada-mes/" target="_blank" rel="noopener" class="hl"
+              >Parliament opens to visitors on the last Saturday of every month</a
+            >
+          </h4>
+          <p>
+            Speaker José Pedro Aguiar-Branco announced it on the Republic's
+            116th anniversary. The first open Saturday is 31 October.
+          </p>
+          <p class="src">Observador</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="agenda">
+      <div class="agenda-head">
+        <h3>✦ The Diary — What's On</h3>
+        <span class="sub">Upcoming around Cortegaça, Ovar &amp; Aveiro</span>
+      </div>
+      <div class="agenda-grid">
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">6</span><span class="wd">Tue</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1858288/o-jacare" target="_blank" rel="noopener" class="hl">O Jacaré</a></h4>
+            <div class="venue">Teatro Aveirense · Aveiro · 20:30 · €4</div>
+            <p class="ctx">Basil da Cunha's film: a €180,000 heist ends in Amadora's Reboleira, the loot vanishes, and an alligator roams the streets. Over-16s.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">7</span><span class="wd">Wed</span></div>
+          <div class="txt">
+            <h4><a href="https://www.noticiasdeaveiro.pt/aveiro-observacao-de-aves/" target="_blank" rel="noopener" class="hl">Observação de Aves</a></h4>
+            <div class="venue">Rua do Sal · Aveiro</div>
+            <p class="ctx">An easy walk along the salt pans, watching the birds that feed there, with a guide explaining the habitat.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">8</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1857232/shortcutz-ovar-sessao-109-noite-longa-mudar-de-vida" target="_blank" rel="noopener" class="hl">Mudar de Vida at 60</a></h4>
+            <div class="venue">Shortcutz Ovar · Centro de Arte de Ovar · 20:30</div>
+            <p class="ctx">Paulo Rocha's 1966 classic in a digitised copy, with actress Isabel Ruth and Cinemateca director Rui Machado present.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">8</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1855935/azemeis-jazz-blues-joao-tavares-quinteto" target="_blank" rel="noopener" class="hl">João Tavares Quinteto</a></h4>
+            <div class="venue">Azeméis Jazz &amp; Blues · TeMA, Oliveira de Azeméis · 20:30 · €3</div>
+            <p class="ctx">Five young players of original jazz, led by a local trumpeter; best ensemble at the University of Aveiro's jazz competition.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">8</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1860431/prisma-art-light-tech" target="_blank" rel="noopener" class="hl">Prisma: Art Light Tech</a></h4>
+            <div class="venue">Escadaria do ATLAS · Aveiro · 8–10 Oct · 20:00–24:00 · free</div>
+            <p class="ctx">The light-art festival's big inflatable "Big Cat" sculpture, with three DJs on the library steps each night.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">9</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1857235/shortcutz-ovar-sessao-110-mare-vaza" target="_blank" rel="noopener" class="hl">Maré Vaza — premiere</a></h4>
+            <div class="venue">Shortcutz Ovar · Escola de Artes e Ofícios · 20:30</div>
+            <p class="ctx">Bruno Carnide's 13-minute fiction set on the Aveiro lagoon, opening the club's tenth season, made with ten local participants.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">10</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.noticiasdeaveiro.pt/encontro-de-museus-da-regiao-de-aveiro/" target="_blank" rel="noopener" class="hl">Encontro de Museus da Região de Aveiro</a></h4>
+            <div class="venue">Museu Marítimo de Ílhavo</div>
+            <p class="ctx">The first meeting of the region's museums, organised by the intermunicipal community CIRA.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">15</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1854428/mafalda-ovar-expande" target="_blank" rel="noopener" class="hl">MAFALDA_</a></h4>
+            <div class="venue">Ovar Expande · Escola de Artes e Ofícios · 20:30</div>
+            <p class="ctx">Mafalda Costa, formerly Mathilda, plays her first album in Portuguese, "Gosto Muito de Estar Aqui": alternative pop meets folk.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CULTURE ================= -->
+  <section class="band">
+    <div class="banner"><h2>Machines, Screen, Art &amp; Sound</h2></div>
+    <div class="quad">
+      <!-- TECH -->
+      <div class="col">
+        <div class="colhead">Technology</div>
+        <article class="feat">
+          <span class="kicker hot">AI agents · Security</span>
+          <h3>
+            <a href="https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/" target="_blank" rel="noopener" class="hl"
+              >One gullible AI agent can pass an attack to every agent it talks to</a
+            >
+          </h3>
+          <p>
+            In the past five months Google and four other organisations have
+            acknowledged a flaw in how their AI agents talk to each other.
+            Independent researcher Syed Anas Mohiuddin tested agents at
+            Google, JPMorgan Chase, Weaviate, Rapid7, the French government's
+            digital directorate and the US federal government. His
+            proof-of-concept attacks use prompt injection against one
+            special-purpose agent, say for translation or data analysis,
+            rather than against the language model. Such agents often have
+            weak guardrails or none, and they pass the instructions down the
+            chain. Because agents connected over MCP, the Model Context
+            Protocol, are built to trust each other, the next agent obeys,
+            and MCP servers hold credentials for each agent. Attacks a model
+            would refuse directly can then exfiltrate database contents.
+          </p>
+          <p class="src">Ars Technica</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">AI · Defence</span>
+          <h4>
+            <a href="https://www.heise.de/news/Anthropic-Pentagon-vollendet-Abschied-Meta-und-Microsoft-schraenken-Nutzung-ein-11476932.html" target="_blank" rel="noopener" class="hl"
+              >The Pentagon has stopped using Anthropic's models</a
+            >
+          </h4>
+          <p>
+            The BBC says the phase-out ordered after the spring dispute over
+            surveillance and weapons limits is complete. Meta and Microsoft
+            are reported to be restricting internal use, weeks before
+            Anthropic's planned IPO.
+          </p>
+          <p class="src">heise online · BBC</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Developers · Outage</span>
+          <h4>
+            <a href="https://www.heise.de/news/Ausfall-bei-GitHub-Actions-Pages-und-Abrechnung-gestoert-11476876.html" target="_blank" rel="noopener" class="hl"
+              >GitHub Actions went down for more than two hours</a
+            >
+          </h4>
+          <p>
+            From about 21:00 German time hosted runners failed with "not
+            acquired by Runner of type hosted"; Pages and billing were hit
+            too. GitHub gave the all-clear at 23:32, with a queue to clear.
+          </p>
+          <p class="src">heise online</p>
+        </article>
+      </div>
+
+      <!-- SCREEN -->
+      <div class="col">
+        <div class="colhead">Screen</div>
+        <article class="feat">
+          <span class="kicker hot">NYFF · Premiere</span>
+          <h3>
+            <a href="https://www.indiewire.com/news/general-news/artificial-movie-first-reactions-1235220341/" target="_blank" rel="noopener" class="hl"
+              >Artificial (2026): Guadagnino's Sam Altman satire wins over its first audience</a
+            >
+          </h3>
+          <p class="meta">Tech satire · Neon · US cinemas 25 Dec</p>
+          <p>
+            Luca Guadagnino's film premiered at the New York Film Festival on
+            Monday, with Andrew Garfield as the OpenAI chief during his brief
+            ousting in 2023. Simon Rich wrote it, Ike Barinholtz plays Elon
+            Musk and Damon Albarn wrote the score. Amazon MGM greenlit it but
+            dropped the finished film this year, soon after Amazon signed a
+            $50 billion cloud deal with OpenAI. Neon picked it up and will
+            release it in US cinemas on 25 December with an Oscar campaign.
+            First reactions call it "savage" and "terrifying". No European
+            date yet.
+          </p>
+          <p class="src">IndieWire · Rotten Tomatoes</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Sequel</span>
+          <h4>
+            <a href="https://www.indiewire.com/news/breaking-news/emily-blunt-returning-sicario-3-1235220252/" target="_blank" rel="noopener" class="hl"
+              >Emily Blunt returns for a third Sicario</a
+            >
+          </h4>
+          <p class="meta">Crime thriller · in development</p>
+          <p>
+            She rejoins Josh Brolin and Benicio Del Toro. Padraic McKinley
+            ("The Weight") directs from a script by Steven Knight.
+          </p>
+          <p class="src">IndieWire · Deadline</p>
+        </article>
+        <div class="minilist">
+          <h5>In Cinemas &amp; Festivals</h5>
+          <ul>
+            <li><span class="name">Verity (2026)</span> · <span class="g">Thriller</span> · in cinemas, No. 1 in the US last weekend · RT 33%</li>
+            <li><span class="name">The Remotes (2026)</span> · <span class="g">Sci-fi neo-noir</span> · John Torres · NYFF Currents</li>
+            <li><span class="name">What Can't Be Mentioned (2026)</span> · <span class="g">Drama</span> · Dan Sallitt's sequel to The Unspeakable Act</li>
+            <li><span class="name">Manhood (2026)</span> · <span class="g">Documentary</span> · Daniel Lombroso · SXSW premiere, trailer out</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ARTS -->
+      <div class="col">
+        <div class="colhead">Arts</div>
+        <article class="feat">
+          <span class="kicker hot">New York · Labour</span>
+          <h3>
+            <a href="https://www.artnews.com/art-news/news/whitney-museum-union-reaches-contract-deal-strike-deadline-1234800995/" target="_blank" rel="noopener" class="hl"
+              >Whitney staff ratify a contract hours before their strike</a
+            >
+          </h3>
+          <p>
+            Unionised workers at the Whitney Museum ratified their second
+            contract on Sunday night, hours before a strike set for Monday,
+            three days before previews of the Roy Lichtenstein retrospective.
+            Every employee gets at least 14.75% more over four years. The
+            lowest-paid get 5% to 23% in the first year, and new-hire minimums
+            go up. The deal adds longevity bonuses after ten years, up to 12
+            weeks of paid parental leave and more bereavement leave. The
+            union, which represents nearly 200 staff, is part of the United
+            Auto Workers.
+          </p>
+          <p class="src">ARTnews · Artforum</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">The Met</span>
+          <h4>
+            <a href="https://hyperallergic.com/the-mets-krasner-and-pollock-show-is-a-breathtaking-upending/" target="_blank" rel="noopener" class="hl"
+              >Krasner and Pollock, side by side at the Met</a
+            >
+          </h4>
+          <p>
+            Hyperallergic calls "Past Continuous" one of the best-installed
+            shows in the museum's history and asks how Lee Krasner made her
+            work, and survived, beside Pollock.
+          </p>
+          <p class="src">Hyperallergic</p>
+        </article>
+        <div class="minilist">
+          <h5>Now Open</h5>
+          <ul>
+            <li><span class="name">Krasner and Pollock: Past Continuous</span> · Metropolitan Museum, New York</li>
+            <li><span class="name">Roy Lichtenstein</span> · retrospective · Whitney, New York · previews from 8 Oct</li>
+            <li><span class="name">Cerith Wyn Evans</span> · 30 wind chimes · JW Anderson, Pimlico Road, London · Frieze week</li>
+            <li><span class="name">Bayeux Tapestry</span> · British Museum, London · opening hours now extended</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SOUND -->
+      <div class="col">
+        <div class="colhead">Sound</div>
+        <article class="feat">
+          <span class="kicker hot">Berlin · Funkhaus</span>
+          <h3>
+            <a href="https://www.radioeins.de/programm/sendungen/modo1619/_/people-festival-zurueck-in-berlin.html" target="_blank" rel="noopener" class="hl"
+              >The PEOPLE festival is back in Berlin, with no line-up at all</a
+            >
+          </h3>
+          <p class="meta">Festival · Funkhaus Nalepastraße · this week</p>
+          <p>
+            Nearly 200 musicians spend a week at the old East German radio
+            centre on Nalepastraße making new music together, and nobody
+            knows yet who will end up on stage with whom. The idea came in
+            2015 from a circle around Bon Iver, Aaron and Bryce Dessner of
+            The National, and Nadine and Tom Michelberger. It is
+            non-commercial, and it last ran in 2016 and 2018. This year Kings
+            of Convenience, members of Arcade Fire, The National and Yeah Yeah
+            Yeahs, and Leonard Cohen's son Adam are taking part. radioeins is
+            reporting from inside.
+          </p>
+          <p class="src">radioeins</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">West Berlin · 1981</span>
+          <h4>
+            <a href="https://thequietus.com/opinion-and-essays/anniversary/einsturzende-neubauten-kollaps-review/" target="_blank" rel="noopener" class="hl"
+              >Einstürzende Neubauten's Kollaps (1981) turns 45</a
+            >
+          </h4>
+          <p class="meta">Industrial · debut album</p>
+          <p>
+            The Quietus revisits a record built from scrap in a ruined West
+            Berlin. The band formed for a gig at the Moon Club on 1 April
+            1980, named on the spot by Blixa Bargeld.
+          </p>
+          <p class="src">The Quietus</p>
+        </article>
+        <div class="minilist">
+          <h5>New Releases</h5>
+          <ul>
+            <li><span class="name">Protomartyr — Hotel Usona</span> · <span class="g">Post-punk</span> · concept album about a cursed American hotel</li>
+            <li><span class="name">Godflesh — Decay</span> · <span class="g">Industrial metal</span> · the band's penultimate album</li>
+            <li><span class="name">Emily A. Sprague — Cyano</span> · <span class="g">Ambient</span> · modular synth</li>
+            <li><span class="name">Jake Xerxes Fussell — The Old Beloved Path</span> · <span class="g">Folk</span> · old ballads and blues</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOW STREAMING ================= -->
+  <section class="band">
+    <div class="banner"><h2>Now Streaming</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">Netflix · Friday</span>
+          <h3>
+            <a href="https://www.whats-on-netflix.com/news/ben-affleck-animals-netflix-movie/" target="_blank" rel="noopener" class="hl"
+              >Animals (2026): Ben Affleck directs and stars as a candidate whose son is kidnapped</a
+            >
+          </h3>
+          <p class="meta">Political crime thriller · R · 1h 46m · Netflix · 9 Oct</p>
+          <p>
+            Affleck plays Milo Bradford, running for mayor of Los Angeles.
+            When his son is taken, he and his wife must find a ransom when
+            nearly all their money has gone into the campaign, and raising it
+            drags them into a criminal underworld and exposes secrets they
+            meant to keep. Gillian Anderson and Kerry Washington co-star.
+            Affleck wrote the original script with Connor O. McIntyre and
+            Billy Ray (Captain Phillips). It is the next film from Affleck
+            and Matt Damon's Artists Equity for Netflix, after The Rip. Damon
+            was first meant to play the lead but had to leave for Christopher
+            Nolan's The Odyssey. It opens worldwide on Netflix on Friday, and
+            in some cinemas. Reviews are under embargo, so there are no
+            scores yet.
+          </p>
+          <p class="src">What's on Netflix · Rotten Tomatoes</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Netflix (US) · Documentary</span>
+          <h4>
+            <a href="https://www.rottentomatoes.com/m/lorne" target="_blank" rel="noopener" class="hl"
+              >Lorne (2026): Morgan Neville's portrait of the SNL founder</a
+            >
+          </h4>
+          <p class="meta">Documentary · Netflix (US) · 5 Oct · RT 74%</p>
+          <p>
+            In cinemas in the US in April, now on Netflix's US service. Tina
+            Fey, Conan O'Brien, Maya Rudolph and Chris Rock talk about Lorne
+            Michaels, who still gives little away.
+          </p>
+          <p class="src">What's on Netflix · Rotten Tomatoes</p>
+        </article>
+        <article class="brief">
+          <span class="kicker">Netflix · K-drama</span>
+          <h4>
+            <a href="https://www.whats-on-netflix.com/coming-soon/whats-coming-to-netflix-in-october-2026/" target="_blank" rel="noopener" class="hl"
+              >Dead-End Job (2026) is a horror show of a workplace</a
+            >
+          </h4>
+          <p class="meta">Fantasy horror · 8 episodes · Netflix · 9 Oct</p>
+          <p>
+            Lee Jae Wook plays a desperate man who takes a suspiciously
+            well-paid job and finds himself in a supernatural, hellish
+            office. Go Min Si co-stars.
+          </p>
+          <p class="src">What's on Netflix</p>
+        </article>
+      </div>
+    </div>
+    <div class="streamlist">
+      <h5>New This Week</h5>
+      <ul>
+        <li><span class="name">Who Is Martin Mull? (2026)</span> · <span class="g">Documentary</span> · Netflix · 7 Oct · by Bob Saget and Neil Berkeley</li>
+        <li><span class="name">Real Men, S2 (2026)</span> · <span class="g">Comedy series</span> · Netflix · 7 Oct · German</li>
+        <li><span class="name">Abbott Elementary, S6 (2026)</span> · <span class="g">Sitcom</span> · ABC (US only) · 7 Oct</li>
+        <li><span class="name">Below (2026)</span> · <span class="g">Supernatural thriller</span> · Netflix · 8 Oct · limited series with Josh Hartnett</li>
+        <li><span class="name">Haunted Hotel, S2 (2026)</span> · <span class="g">Adult animation</span> · Netflix · 9 Oct</li>
+        <li><span class="name">Rumours (2024)</span> · <span class="g">Satirical comedy</span> · Netflix (US) · catalogue · 9 Oct · RT 76%</li>
+      </ul>
+      <div class="streamcap">
+        Dates from What's on Netflix's US listing and Rotten Tomatoes; Netflix
+        Originals are global, availability of other titles in Portugal and
+        Germany may differ. "Catalogue" marks an older title arriving on a
+        service, not a new release. Rotten Tomatoes scores read on 6
+        October; a missing score means none exists yet. IMDb ratings are
+        left out today because imdb.com refused our requests.
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORLD ================= -->
+  <section class="band">
+    <div class="banner"><h2>The World</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Spain</span>
+          <h4>
+            <a href="https://www.tagesschau.de/ausland/europa/spanien-neuwahlen-sanchez-100.html" target="_blank" rel="noopener" class="hl"
+              >Sánchez calls a snap election for 29 November</a
+            >
+          </h4>
+          <p>
+            The call follows Friday's defeat of his housing measures, which
+            the cabinet is now re-approving for a fresh vote in Congress. The CCOO and UGT
+            unions plan a general strike over housing in October, date to be
+            set.
+          </p>
+          <p class="src">tagesschau · Observador · Reuters</p>
+        </article>
+      </div>
+      <div class="col">
+        <article class="feat">
+          <span class="kicker hot">Canada · Quebec</span>
+          <h3>
+            <a href="https://www.bbc.co.uk/news/articles/crly09gz7ew4o" target="_blank" rel="noopener" class="hl"
+              >Quebec separatists win power and promise a third independence vote</a
+            >
+          </h3>
+          <p>
+            Canadian media project a minority win for the sovereigntist
+            Parti Québécois in Monday's provincial election, its first time
+            in power since 2014. Its leader, Paul St-Pierre Plamondon,
+            becomes premier and has pledged a referendum on independence
+            after Quebec's votes of 1980 and 1995, but only after Donald
+            Trump leaves office, which would mean 2029 or 2030. Polls put
+            support for leaving Canada at about 30%. He also promises to
+            fight Ottawa on immigration. Prime Minister Mark Carney may face
+            two unity crises at once: Alberta votes on separation later this
+            month.
+          </p>
+          <p class="src">BBC · RTP</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="colophon">
+    The Cortegaça Chronicle · assembled from 28 feeds on the morning of 6
+    October 2026 · written and edited by Claude (Anthropic)<br />
+    Sources named under every item · headlines link out to the original
+  </div>
+  <div class="archive"><a href="../archive.html">All editions</a></div>
+</div>
