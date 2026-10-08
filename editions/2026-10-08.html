@@ -1,0 +1,1695 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<title>The Cortegaça Chronicle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+/>
+<style>
+  :root {
+    --paper: #f5f1e6;
+    --paper-2: #efe9da;
+    --ink: #1b1917;
+    --ink-2: #403a34;
+    --ink-3: #6b625a;
+    --rule: #c9bfae;
+    --rule-2: #a89c88;
+    --accent: #9c2b1e;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding-block: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  p {
+    text-wrap: pretty;
+    orphans: 3;
+    widows: 3;
+    margin: 0 0 0.72em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover .hl,
+  a:hover.hl {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  .ear {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 5px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .ear .price {
+    color: var(--accent);
+  }
+  .nameplate {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 10.5vw, 5.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0.26em 0 0.2em;
+    color: var(--ink);
+  }
+  .nameplate .the {
+    display: block;
+    font-size: 0.24em;
+    font-weight: 400;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    color: var(--ink-2);
+  }
+  .strip {
+    border-top: 3px double var(--rule-2);
+    border-bottom: 3px double var(--rule-2);
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 18px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-align: center;
+  }
+  .strip b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .strip .sep {
+    color: var(--rule-2);
+  }
+
+  /* ---------- TOP BAND ---------- */
+  .topband {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 0 26px;
+    margin-top: 22px;
+  }
+  .rail {
+    border: 1px solid var(--rule-2);
+    padding: 14px 14px 16px;
+    align-self: start;
+    background: var(--paper-2);
+  }
+  .rail h3 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .rail p {
+    font-size: 0.845rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .rail .sig {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 14px;
+  }
+  .mixhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-top: 2px solid var(--ink);
+    padding-top: 8px;
+    margin-bottom: 9px;
+    color: var(--ink);
+  }
+  .mix {
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    gap: 5px 8px;
+    align-items: center;
+  }
+  .mix .lab {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.655rem;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    line-height: 1.15;
+  }
+  .mix .lab.focus {
+    color: var(--accent);
+  }
+  .mix .barwrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mix .bar {
+    height: 9px;
+    background: var(--ink);
+    display: block;
+  }
+  .mix .n {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .mix .star {
+    color: var(--accent);
+    font-size: 0.66rem;
+  }
+  .mixcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 9px;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  /* ---------- LEAD ---------- */
+  .eyebrow {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .lead h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5.1vw, 3.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    margin-bottom: 0.22em;
+  }
+  .standfirst {
+    font-size: 1.06rem;
+    color: var(--ink-2);
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.6em;
+    max-width: 60ch;
+  }
+  .byline {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 5px 0;
+    margin-bottom: 16px;
+  }
+  .leadbody {
+    columns: 2;
+    column-gap: 28px;
+    column-rule: 1px solid var(--rule);
+  }
+  .leadbody p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .leadbody p:first-of-type::first-letter {
+    float: left;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 3.55em;
+    line-height: 0.78;
+    padding: 0.06em 0.09em 0 0;
+    color: var(--ink);
+  }
+  .pull {
+    break-inside: avoid;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 9px 0 11px;
+    margin: 6px 0 12px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .pull .who {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-style: normal;
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 7px;
+  }
+
+  /* ---------- FIGURE / CHART ---------- */
+  figure.fig {
+    margin: 0 0 18px;
+    border-top: 2px solid var(--ink);
+    padding-top: 10px;
+  }
+  figure.fig .figtitle {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+  figure.fig .figsub {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .chartbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .chartbox svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 330px;
+  }
+  figcaption {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    color: var(--ink-3);
+    text-align: left;
+    margin-top: 7px;
+    border-top: 1px solid var(--rule);
+    padding-top: 6px;
+  }
+  .barG rect.val {
+    fill: var(--ink);
+  }
+  .barG:hover rect.val {
+    fill: var(--accent);
+  }
+  .barG.win rect.val {
+    fill: var(--accent);
+  }
+  .barG.win:hover rect.val {
+    fill: var(--ink);
+  }
+  .barG rect.valo {
+    fill: var(--paper);
+    stroke: var(--ink);
+    stroke-width: 1.4;
+  }
+  .barG:hover rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win:hover rect.valo {
+    stroke: var(--ink);
+  }
+
+  /* ---------- SECTION BANDS ---------- */
+  .band {
+    margin-top: 30px;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .banner::before,
+  .banner::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-top: 2px;
+  }
+  .banner h2 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: clamp(0.78rem, 2.1vw, 0.95rem);
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .feat h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.38rem, 2.8vw, 1.82rem);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    margin-bottom: 0.3em;
+  }
+  .feat p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    font-size: 1rem;
+  }
+  .brief {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+  .brief h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.045rem;
+    line-height: 1.17;
+    margin-bottom: 0.25em;
+  }
+  .brief p {
+    font-size: 0.915rem;
+    color: var(--ink-2);
+    line-height: 1.46;
+  }
+  .kicker {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .kicker.hot {
+    color: var(--accent);
+  }
+  .src {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 5px;
+  }
+
+  .split-a {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 0 28px;
+  }
+  .split-b {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 0 28px;
+  }
+  .split-c {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 0 24px;
+  }
+  .split-a > .col + .col,
+  .split-b > .col + .col,
+  .split-c > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 28px;
+  }
+  .split-c > .col + .col {
+    padding-left: 24px;
+  }
+  .quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 22px;
+  }
+  .quad > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 22px;
+  }
+  .colhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.67rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .quad .feat h3 {
+    font-size: 1.18rem;
+    line-height: 1.15;
+  }
+  .quad .feat p,
+  .quad .brief p {
+    font-size: 0.875rem;
+    text-align: left;
+    hyphens: none;
+  }
+  .quad .brief h4 {
+    font-size: 0.98rem;
+  }
+
+  /* ---------- LISTS (Now Open / New Releases / Cinemas) ---------- */
+  .minilist {
+    border-top: 2px solid var(--ink);
+    margin-top: 16px;
+    padding-top: 8px;
+  }
+  .minilist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .minilist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .minilist li {
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .minilist li:last-child {
+    border-bottom: 0;
+  }
+  .minilist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .sheet article p.meta {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 0 6px;
+  }
+  .g {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- NOW STREAMING ---------- */
+  .streamlist {
+    border-top: 2px solid var(--ink);
+    margin-top: 18px;
+    padding-top: 8px;
+  }
+  .streamlist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .streamlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3;
+    column-gap: 26px;
+  }
+  .streamlist li {
+    break-inside: avoid;
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .streamlist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .streamcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ---------- AGENDA ---------- */
+  .agenda {
+    border-top: 3px double var(--ink);
+    border-bottom: 3px double var(--ink);
+    margin-top: 26px;
+    padding: 14px 0 16px;
+  }
+  .agenda-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 14px;
+  }
+  .agenda-head h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+    letter-spacing: -0.01em;
+  }
+  .agenda-head .sub {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-3);
+  }
+  .agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 26px;
+  }
+  .ev {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0 14px;
+    border-top: 1px solid var(--rule);
+    padding: 11px 0;
+  }
+  .agenda-grid > .ev:nth-child(1),
+  .agenda-grid > .ev:nth-child(2) {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .agenda-grid > .ev:nth-child(even) {
+    border-left: 1px solid var(--rule);
+    padding-left: 26px;
+  }
+  .ev .date {
+    text-align: center;
+  }
+  .ev .mo {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+  }
+  .ev .dy {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 2.35rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.34em;
+    font-variant-numeric: tabular-nums;
+  }
+  .ev .wd {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+  }
+  .ev .txt {
+    min-width: 0;
+    border-left: 1px solid var(--rule);
+    padding-left: 14px;
+  }
+  .ev .txt h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .ev .venue {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 5px;
+  }
+  .ev .ctx {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    line-height: 1.42;
+    margin: 0;
+  }
+
+  .colophon {
+    border-top: 1px solid var(--rule-2);
+    margin-top: 30px;
+    padding-top: 12px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .quad {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 22px;
+    }
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .quad > .col:nth-child(4) {
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .topband {
+      grid-template-columns: 210px 1fr;
+      gap: 0 22px;
+    }
+    .streamlist ul {
+      columns: 2;
+    }
+  }
+  @media (max-width: 860px) {
+    body {
+      font-size: 15.5px;
+    }
+    .topband {
+      grid-template-columns: 1fr;
+    }
+    .rail {
+      margin-bottom: 22px;
+    }
+    .leadbody {
+      columns: 1;
+    }
+    .split-a,
+    .split-b,
+    .split-c,
+    .quad {
+      grid-template-columns: 1fr;
+    }
+    .split-a > .col + .col,
+    .split-b > .col + .col,
+    .split-c > .col + .col,
+    .quad > .col + .col,
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .agenda-grid {
+      grid-template-columns: 1fr;
+    }
+    .agenda-grid > .ev:nth-child(even) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .agenda-grid > .ev:nth-child(2) {
+      border-top: 1px solid var(--rule);
+      padding-top: 11px;
+    }
+    .streamlist ul {
+      columns: 1;
+    }
+    .leadbody p,
+    .feat p {
+      text-align: left;
+      hyphens: none;
+    }
+    .banner h2 {
+      white-space: normal;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  .seg:hover rect {
+    opacity: 0.82;
+  }
+
+  /* ---------- TIMELINE (lead figure) ---------- */
+  .tl circle.pt {
+    fill: var(--ink);
+    stroke: var(--paper);
+    stroke-width: 2;
+  }
+  .tl g:hover circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win:hover circle.pt {
+    fill: var(--ink);
+  }
+  .tl g {
+    cursor: default;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .archive {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    margin-top: 14px;
+    padding: 6px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .archive a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>
+
+
+<div class="sheet" lang="en">
+  <!-- ================= MASTHEAD ================= -->
+  <header>
+    <div class="ear">
+      Thursday, 8 October 2026 &nbsp;·&nbsp; No. 18 &nbsp;·&nbsp; Price:
+      <span class="price">one bica</span>
+    </div>
+    <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
+    <div class="strip">
+      <span>Topic today: <b>Margaret Hamilton, 1936–2026</b></span>
+      <span class="sep">✦</span>
+      <span>Weather · Aveiro <b>25°C</b> high, 14° low, cloudy and dry</span>
+      <span class="sep">✦</span>
+      <span>Portugal's 2027 budget reaches parliament at <b>14:15</b></span>
+    </div>
+  </header>
+
+  <!-- ================= TOP BAND ================= -->
+  <div class="topband">
+    <aside class="rail">
+      <h3>Column One</h3>
+      <p>
+        Every programmer who has written a guard clause owes something to
+        Margaret Hamilton. She gave our trade its name, and her code kept
+        working when Apollo 11's computer overloaded minutes before the
+        landing.
+      </p>
+      <p>
+        Nearer home, the high-speed line can now take the land it needs
+        between Porto and Oiã, Berlin's busiest motorway bridge has a broken
+        tendon, and Chrome will finally show JPEG XL images.
+      </p>
+      <p class="sig">— The Editor</p>
+
+      <div class="mixhead">Today's edition</div>
+      <div class="mix">
+        <span class="lab">Cortegaça &amp; Ovar</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span></span>
+
+        <span class="lab">Germany · Berlin</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span></span>
+
+        <span class="lab">Portugal</span>
+        <span class="barwrap"><span class="bar" style="width: 65%"></span><span class="n">5</span></span>
+
+        <span class="lab focus">✦ Technology</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span><span class="star">✦</span></span>
+
+        <span class="lab">Screen</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Arts</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Sound</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">Now Streaming</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">The World</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+      </div>
+      <div class="mixcap">✦ today's focus — bar length is the story count (Technology includes the lead)</div>
+    </aside>
+
+    <article id="art-1" class="lead">
+      <div class="eyebrow">Obituary · Software engineering</div>
+      <h1>
+        <a href="https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007" target="_blank" rel="noopener" class="hl"
+          >Margaret Hamilton, who led the code that landed Apollo 11 and named "software engineering", dies at 90</a
+        >
+      </h1>
+      <p class="standfirst">
+        She was the Apollo project's first programmer at MIT and went on to
+        lead more than 400 people. Her idea of software that expects
+        mistakes is now how everyone builds it.
+      </p>
+      <div class="byline">MIT News · BBC · Cambridge, Massachusetts · died 30 September, announced 7 October</div>
+
+      <figure class="fig">
+        <div class="figtitle">A life in software, 1936–2026</div>
+        <div class="figsub">
+          Milestones from MIT's obituary. The shaded stretch is her time at
+          MIT; red marks the Moon landing and her death. Hover a dot for
+          detail.
+        </div>
+        <div class="chartbox">
+<svg class="tl" viewBox="0 0 620 205" role="img" aria-label="Timeline of Margaret Hamilton's life, 1936 to 2026: MIT from 1959, Lincoln Lab 1961, first Apollo programmer 1965, leading more than 400 people by 1968, the Apollo 11 landing in 1969, her companies in 1976 and about 1986, NASA award 2003, Apollo code on GitHub 2015, Medal of Freedom 2016, death on 30 September 2026.">
+<title>Margaret Hamilton, 1936–2026</title>
+<g><title>At MIT from 1959 until the mid-1970s (the Instrumentation Lab became Draper Laboratory)</title><rect x="175.7" y="115" width="101.3" height="10" fill="#e4dccb"/></g>
+<line x1="30" y1="120" x2="600" y2="120" stroke="#1b1917" stroke-width="1.2"/>
+<line x1="55.3" y1="120" x2="55.3" y2="124" stroke="#a89c88"/>
+<text x="55.3" y="134" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">1940</text>
+<line x1="118.7" y1="120" x2="118.7" y2="124" stroke="#a89c88"/>
+<text x="118.7" y="134" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">1950</text>
+<line x1="182.0" y1="120" x2="182.0" y2="124" stroke="#a89c88"/>
+<line x1="245.3" y1="120" x2="245.3" y2="124" stroke="#a89c88"/>
+<line x1="308.7" y1="120" x2="308.7" y2="124" stroke="#a89c88"/>
+<text x="308.7" y="134" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">1980</text>
+<line x1="372.0" y1="120" x2="372.0" y2="124" stroke="#a89c88"/>
+<text x="372.0" y="134" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">1990</text>
+<line x1="435.3" y1="120" x2="435.3" y2="124" stroke="#a89c88"/>
+<text x="435.3" y="134" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">2000</text>
+<line x1="498.7" y1="120" x2="498.7" y2="124" stroke="#a89c88"/>
+<text x="498.7" y="134" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">2010</text>
+<line x1="562.0" y1="120" x2="562.0" y2="124" stroke="#a89c88"/>
+<text x="562.0" y="134" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">2020</text>
+<text x="226.3" y="134" text-anchor="middle" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8">at MIT</text>
+<g class=""><title>Born in Paoli, Indiana, 1936</title><line x1="30.0" y1="120" x2="30.0" y2="98" stroke="#c9bfae" stroke-width="1"/><text x="30.0" y="95" text-anchor="start" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="400">1936 · born in Paoli, Indiana</text><circle class="pt" cx="30.0" cy="120" r="4.2"/></g>
+<g class=""><title>1958: BA in mathematics, minor in philosophy, Earlham College</title><circle class="pt" cx="169.3" cy="120" r="4.2"/></g>
+<g class=""><title>1959: temporary job in MIT's meteorology department writing weather-prediction software for Edward Lorenz</title><line x1="175.7" y1="120" x2="175.7" y2="78" stroke="#c9bfae" stroke-width="1"/><text x="175.7" y="75" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="400">1959 · MIT, Lorenz's weather code</text><circle class="pt" cx="175.7" cy="120" r="4.2"/></g>
+<g class=""><title>1961: programmer at MIT Lincoln Laboratory on SAGE, the first US air-defence system</title><circle class="pt" cx="188.3" cy="120" r="4.2"/></g>
+<g class=""><title>1965: hired at the MIT Instrumentation Lab as the Apollo project's first programmer, and its first woman programmer</title><line x1="213.7" y1="120" x2="213.7" y2="58" stroke="#c9bfae" stroke-width="1"/><text x="213.7" y="55" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="400">1965 · first Apollo programmer</text><circle class="pt" cx="213.7" cy="120" r="4.2"/></g>
+<g class=""><title>1968: assistant director in charge of the Command and Service Module team; more than 400 people on Apollo's software. Apollo 8: Lovell triggers P01 in flight, the 'Lauren error' she had warned about</title><line x1="232.7" y1="120" x2="232.7" y2="135" stroke="#c9bfae" stroke-width="1"/><text x="232.7" y="145" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="400">1968 · leads 400+ on Apollo software</text><circle class="pt" cx="232.7" cy="120" r="4.2"/></g>
+<g class="win"><title>July 1969: the 1202 overload alarm before Eagle lands; her priority-driven software sheds background tasks and Houston lets the landing go ahead</title><line x1="239.0" y1="120" x2="239.0" y2="38" stroke="#9c2b1e" stroke-width="1"/><text x="239.0" y="35" text-anchor="middle" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">1969 · Apollo 11: the 1202 alarm</text><circle class="pt" cx="239.0" cy="120" r="5.5"/></g>
+<g class=""><title>1976: founds her first company, Higher Order Software, built on error prevention and fault tolerance</title><line x1="283.3" y1="120" x2="283.3" y2="155" stroke="#c9bfae" stroke-width="1"/><text x="283.3" y="165" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="400">1976 · Higher Order Software</text><circle class="pt" cx="283.3" cy="120" r="4.2"/></g>
+<g class=""><title>About a decade later: founds Hamilton Technologies, maker of the Universal Systems Language</title><line x1="346.7" y1="120" x2="346.7" y2="175" stroke="#c9bfae" stroke-width="1"/><text x="346.7" y="185" text-anchor="start" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="400">c. 1986 · Hamilton Technologies</text><circle class="pt" cx="346.7" cy="120" r="4.2"/></g>
+<g class=""><title>2003: NASA Exceptional Space Act Award</title><line x1="454.3" y1="120" x2="454.3" y2="135" stroke="#c9bfae" stroke-width="1"/><text x="454.3" y="145" text-anchor="start" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="400">2003 · NASA Space Act Award</text><circle class="pt" cx="454.3" cy="120" r="4.2"/></g>
+<g class=""><title>2015: the Apollo flight software is published in full on GitHub</title><line x1="530.3" y1="120" x2="530.3" y2="98" stroke="#c9bfae" stroke-width="1"/><text x="530.3" y="95" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="400">2015 · Apollo code on GitHub</text><circle class="pt" cx="530.3" cy="120" r="4.2"/></g>
+<g class=""><title>22 November 2016: Presidential Medal of Freedom from Barack Obama</title><line x1="536.7" y1="120" x2="536.7" y2="78" stroke="#c9bfae" stroke-width="1"/><text x="536.7" y="75" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="400">2016 · Medal of Freedom</text><circle class="pt" cx="536.7" cy="120" r="4.2"/></g>
+<g class=""><title>2017: Lego 'Women of NASA' minifigure; Computer History Museum Fellow Award</title><circle class="pt" cx="543.0" cy="120" r="4.2"/></g>
+<g class=""><title>2022: inducted into the National Aviation Hall of Fame</title><circle class="pt" cx="574.7" cy="120" r="4.2"/></g>
+<g class="win"><title>30 September 2026: dies, aged 90; MIT announces it on 7 October</title><line x1="600.0" y1="120" x2="600.0" y2="38" stroke="#9c2b1e" stroke-width="1"/><text x="600.0" y="35" text-anchor="end" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">30 Sep 2026 · dies at 90</text><circle class="pt" cx="600.0" cy="120" r="5.5"/></g>
+</svg>
+
+        </div>
+        <figcaption>
+          Source: MIT News, "Margaret Hamilton, computing pioneer who led
+          software development for the Apollo program, dies at 90", 7 October
+          2026. MIT gives her MIT years as 1959 "until the mid-1970s" and
+          dates Hamilton Technologies to "a decade" after 1976, so both are
+          shown as approximate.
+        </figcaption>
+      </figure>
+
+      <div class="leadbody">
+        <p>
+          Hamilton, born in Paoli, Indiana, in 1936, studied mathematics and
+          came to Boston in 1959 while her husband studied law. A temporary
+          job writing weather-prediction software for the MIT meteorologist
+          Edward Lorenz was her way into programming; her work fed into his
+          later papers on chaos theory. At Lincoln Laboratory she wrote code
+          for SAGE, America's first air-defence system, and began to think
+          about software reliability, then a barely explored idea.
+        </p>
+        <p>
+          In 1965 her husband spotted a newspaper advert: MIT's
+          Instrumentation Lab wanted people to write software to "send man
+          to the moon". She was hired as the project's first programmer, and
+          its first woman programmer. By 1968 she was assistant director in
+          charge of the Command and Service Module team. When her
+          four-year-old daughter Lauren crashed the simulator by starting
+          the pre-launch program P01 in mid-flight, Hamilton asked for a
+          safeguard and was told astronauts would never do that. On Apollo 8,
+          Jim Lovell did, and her fix went in.
+        </p>
+        <div class="pull">
+          "Looking back, we were the luckiest people in the world; there was
+          no choice but to be pioneers."
+          <span class="who">Margaret Hamilton to MIT News, 2009</span>
+        </div>
+        <p>
+          In July 1969, moments before Eagle touched down, the guidance
+          computer raised a 1202 alarm: it was overloaded. Her team's
+          priority-driven software dropped background jobs to keep the
+          landing tasks running, and Houston trusted it enough to let Armstrong
+          and Aldrin land. She began calling it "software engineering" to win the
+          work the same respect as hardware; at first, she said, "it was
+          considered to be quite amusing".
+        </p>
+        <p>
+          She founded Higher Order Software in 1976 and later Hamilton
+          Technologies, wrote more than 130 papers, and received the
+          Presidential Medal of Freedom in 2016. The Apollo code went up on
+          GitHub in 2015; Lego made her a minifigure in 2017. A memorial will
+          be held in Cambridge in the spring.
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= LOCAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Cortegaça, Ovar &amp; the Coast</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-2" class="feat">
+          <span class="kicker hot">Ovar · High-speed rail</span>
+          <h3>
+            <a href="https://www.ovarnews.pt/publicadas-expropriacoes-para-a-construcao-da-linha-de-alta-velocidade/" target="_blank" rel="noopener" class="hl"
+              >The high-speed line may now take the land it needs between Porto and Oiã</a
+            >
+          </h3>
+          <p>
+            The Diário da República has published the order letting AVAN
+            Norte, the concession company building the Porto–Oiã section of
+            the Lisbon–Porto high-speed line, take administrative possession
+            of the plots on its route. The secretary of state's order
+            declares the land of public utility, the step that allows works
+            to start before compensation is settled. The section runs south
+            from Porto through the Ovar concelho to Oiã, near Oliveira do
+            Bairro. Landowners with questions can visit the line's mobile
+            help centre, which was in Arada on Wednesday and answers
+            questions on the route and on which properties are affected.
+          </p>
+          <p class="src">OvarNews · Diário da República</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-3" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Ovar · Film festival</span>
+          <h4>
+            <a href="https://www.ovarnews.pt/meia-centena-de-filmes-de-25-paises-vem-fazer-turismo-a-ovar/" target="_blank" rel="noopener" class="hl"
+              >Fifty-one travel films from 25 countries come to Ovar</a
+            >
+          </h4>
+          <p>
+            The 19th ART&amp;TUR tourism film festival runs from 27 to 30
+            October at the Escola de Artes e Ofícios, chosen from 247 entries.
+            Entry is free with registration; the last day tours tiles,
+            pão-de-ló and the cooperage.
+          </p>
+          <p class="src">OvarNews</p>
+        </article>
+        <article id="art-4" class="brief">
+          <span class="kicker">Aveiro · Tax fraud</span>
+          <h4>
+            <a href="https://www.noticiasdeaveiro.pt/fraude-fiscal-operacao-hermes-abrangeu-zona-de-aveiro-39-detidos-e-arrestos-superiores-a-300-milhoes-de-euros/" target="_blank" rel="noopener" class="hl"
+              >A national VAT-fraud raid reaches the Aveiro district</a
+            >
+          </h4>
+          <p>
+            "Operação Hermes" by the Polícia Judiciária's northern
+            directorate led to 39 arrests over a scheme trading phones and
+            electronics; more than €300 million in assets were frozen.
+          </p>
+          <p class="src">Notícias de Aveiro · JN</p>
+        </article>
+        <article id="art-5" class="brief">
+          <span class="kicker">Aveiro · Ria</span>
+          <h4>
+            <a href="https://www.noticiasdeaveiro.pt/ferry-salicornia-entre-os-finalistas-dos-premios-dos-fundos-europeus/" target="_blank" rel="noopener" class="hl"
+              >The electric São Jacinto ferry is up for an EU-funds prize</a
+            >
+          </h4>
+          <p>
+            The Salicórnia, which carries 260 passengers and 19 cars across
+            to Forte da Barra, is a finalist in the "Portugal + Conectado"
+            category.
+          </p>
+          <p class="src">Notícias de Aveiro</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GERMANY ================= -->
+  <section class="band">
+    <div class="banner"><h2>Germany · Berlin &amp; Brandenburg</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-6" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Berlin · Tram</span>
+          <h4>
+            <a href="https://www.rbb24.de/panorama/beitrag/2026/10/neue-strassenbahn-linie-m20-tram-berlin.html" target="_blank" rel="noopener" class="hl"
+              >A new M20 tram will loop round the old Tegel terminal</a
+            >
+          </h4>
+          <p>
+            The BVG's tender sketches seven kilometres and eleven stops from
+            Jungfernheide to Kurt-Schumacher-Platz, every five minutes at
+            peak, serving 20,000 jobs and 5,000 flats planned at Tegel.
+            Approval is due only by April 2032.
+          </p>
+          <p class="src">rbb24 · Tagesspiegel</p>
+        </article>
+        <article id="art-7" class="brief">
+          <span class="kicker">Brandenburg · Universities</span>
+          <h4>
+            <a href="https://www.rbb24.de/panorama/beitrag/2026/10/promotionen-hochschulen-brandenburg-wintersemester.html" target="_blank" rel="noopener" class="hl"
+              >Four Brandenburg colleges may now award doctorates themselves</a
+            >
+          </h4>
+          <p>
+            Eberswalde, FH Potsdam, TH Brandenburg and TH Wildau share the
+            right through a joint doctoral college; 40 candidates start this
+            winter semester.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article id="art-8" class="brief">
+          <span class="kicker">Economy · Destatis</span>
+          <h4>
+            <a href="https://www.tagesschau.de/wirtschaft/konjunktur/produktion-industrie-bau-august-plus-100.html" target="_blank" rel="noopener" class="hl"
+              >German output jumped 2.0% in August, four times the forecast</a
+            >
+          </h4>
+          <p>
+            Construction led with +9.3%, despite low water on the Rhine. It
+            is the strongest rise since March 2025, after July's 1.2% fall.
+          </p>
+          <p class="src">tagesschau · Destatis</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-9" class="feat">
+          <span class="kicker hot">Berlin · A100</span>
+          <h3>
+            <a href="https://www.rbb24.de/panorama/beitrag/2026/10/a100-berlin-charlottenburg-rudolf-wissell-bruecke-fahrstreifen-gesperrt.html" target="_blank" rel="noopener" class="hl"
+              >A steel tendon has snapped inside the Rudolf-Wissell bridge, Berlin's busiest stretch of autobahn</a
+            >
+          </h3>
+          <p>
+            The Autobahn GmbH closed the two outer lanes of the 930-metre
+            bridge that carries the A100 city motorway over the Spree on
+            Wednesday, after first checks found a broken external tendon in
+            one of its hollow box girders. The tendons squeeze the
+            prestressed concrete together so it does not crack under traffic;
+            with one gone, the bridge probably no longer carries its full
+            design load, said the company's Jan-Felix Mühe, though there is no
+            immediate danger because many other tendons hold it. The tendon
+            will be rebuilt over the next weeks, and a static survey is set
+            to last until 21 October. The bridge takes up to 180,000 vehicles
+            a day, on what rbb calls Germany's third-busiest motorway section,
+            but the company expects no extra chaos: only two lanes reach the
+            closed stretch anyway. Spalled concrete reported earlier came
+            from elsewhere on the bridge and is unrelated.
+          </p>
+          <p class="src">rbb24 · Autobahn GmbH</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTUGAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Portugal &amp; the Coast</h2></div>
+    <div class="split-c">
+      <div class="col">
+        <article id="art-10" class="feat">
+          <span class="kicker hot">Lisbon · Budget 2027</span>
+          <h3>
+            <a href="https://www.rtp.pt/noticias/economia/orcamento-do-estado-2027-governo-entrega-proposta-no-parlamento-esta-quinta-feira_n1770163" target="_blank" rel="noopener" class="hl"
+              >The 2027 budget goes to parliament this afternoon, two days early</a
+            >
+          </h3>
+          <p>
+            The cabinet approves the proposal this morning; finance minister
+            Joaquim Miranda Sarmento hands it in at 14:15 and presents it at
+            16:00. The legal deadline would have been Monday, since 10
+            October falls on a Saturday. Sarmento has promised a surplus of
+            0.1% to 0.2% of GDP and growth of about 2%, and says income-tax
+            relief in 2027 will come through updated brackets. Passage is
+            already assured by the Socialists' abstention. MPs debate it in
+            principle on 27 and 28 October; the final vote is set for 24
+            November.
+          </p>
+          <p class="src">RTP · Antena 1 · Observador</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-11" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Porto · Metro</span>
+          <h4>
+            <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQc09yNVRCT2hCRXA0UXFHeE5tbURXNFg0NUUzWTRxXy0yX0tiMHNnOXFHVjZBR04yTTdIYzVpMU1EZnUwRkpDdE1aZ2U1ZGV6WkRRSUJMSXRnOUN3OGd4TEtOZEdTV1M4dVRfQkVoTksyTm1JLVpJZkoxWk01NGJyQlNlV0dXbmZDU2RpdTAwZjVaT1V3d09ramxaUW9KQVdjVkxQZVNRVnQyeXJzMGpKMi1EYUNuZWVNbVh5cA?oc=5" target="_blank" rel="noopener" class="hl"
+              >Test trains run on the Linha Rosa</a
+            >
+          </h4>
+          <p>
+            Metro do Porto has begun running vehicles on the new São
+            Bento–Casa da Música line, almost half a year before it is due to
+            open; the company has named March 2027.
+          </p>
+          <p class="src">Observador · JN</p>
+        </article>
+        <article id="art-12" class="brief">
+          <span class="kicker">Porto · Heritage</span>
+          <h4>
+            <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxOdnFaZi1vVi1UR1JrUGxzQnQ1bGZpMGJBSExJbXF6MUY5TTBnSElHdWl2LUVLVEhzanp5X3BQUTNnYXV5SXJPVEF4NzEtTHIyX1dVLXpBbVJvQWpfaXRSbGdmSWpTZUNyZTYyWVREbFNkSDZJSUl3OTQxRnZTSkxISGp2RDdvZlBTVlVhTXBYdHRxTjRXU21SbEd1RTl3SzFNdDJMMW9TWTczUjVSMjJIRnF6X0Y2LThIX2s0ZV9JMTVXbEE?oc=5" target="_blank" rel="noopener" class="hl"
+              >A working group wants the law changed to protect Porto's historic centre</a
+            >
+          </h4>
+          <p>
+            The architects the city appointed in July, after ICOMOS raised
+            alarm over works in the UNESCO zone, propose a "heritage alert"
+            to catch problems early.
+          </p>
+          <p class="src">Público · JN · Observador</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-13" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Norte · Jobs</span>
+          <h4>
+            <a href="https://observador.pt/2026/10/08/norte-criou-mais-de-37-mil-empregos-e-reduziu-desemprego-para-57-no-2-o-trimestre-de-2026-minimo-desde-2022/" target="_blank" rel="noopener" class="hl"
+              >The North added 37,200 jobs in a year</a
+            >
+          </h4>
+          <p>
+            Unemployment fell to 5.7%, the lowest since 2022, says the
+            CCDR-N. Construction led with 16,500 more workers; farming lost
+            9,500. Average pay reached €1,289.
+          </p>
+          <p class="src">Observador · Lusa</p>
+        </article>
+        <article id="art-14" class="brief">
+          <span class="kicker">Nature · WWF</span>
+          <h4>
+            <a href="https://observador.pt/2026/10/08/73-das-especies-em-declinio-mas-wwf-ve-esperanca-lince-iberico-atum-rabilho-e-tigre-estao-a-recuperar/" target="_blank" rel="noopener" class="hl"
+              >Wildlife is down 73%, but the lynx is back, says the WWF</a
+            >
+          </h4>
+          <p>
+            The Living Planet Report keeps its average decline, but for the
+            first time lists recoveries; WWF Portugal cites the Iberian lynx
+            and the sardine. Tigers rose from 3,200 to 5,700 since 2010.
+          </p>
+          <p class="src">Observador · Lusa</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="agenda">
+      <div class="agenda-head">
+        <h3>✦ The Diary — What's On</h3>
+        <span class="sub">Upcoming around Cortegaça, Ovar &amp; Aveiro</span>
+      </div>
+      <div class="agenda-grid">
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">8</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1857232/shortcutz-ovar-sessao-109-noite-longa-mudar-de-vida" target="_blank" rel="noopener" class="hl">Mudar de Vida at 60</a></h4>
+            <div class="venue">Shortcutz Ovar · Centro de Arte de Ovar · tonight 20:30</div>
+            <p class="ctx">Paulo Rocha's 1966 fishing-village drama, shot on Furadouro beach, digitised, with actress Isabel Ruth and the Cinemateca's director present.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">9</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1857235/shortcutz-ovar-sessao-110-mare-vaza" target="_blank" rel="noopener" class="hl">Maré Vaza — premiere</a></h4>
+            <div class="venue">Shortcutz Ovar · Escola de Artes e Ofícios · 20:30</div>
+            <p class="ctx">Bruno Carnide's 13-minute lagoon fiction, made with ten local participants, opens the short-film club's tenth season.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">9</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1766883/carlos-bica-azul" target="_blank" rel="noopener" class="hl">Carlos Bica &amp; Azul</a></h4>
+            <div class="venue">Auditório de Espinho · Academia · 20:30</div>
+            <p class="ctx">The double bassist's jazz trio with guitarist Frank Möbus and drummer Jim Black, together since his first album, Azul, in 1996.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">11</span><span class="wd">Sun</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1861069/sheila-pres-elevate-at-pe-n-areia-beach-club" target="_blank" rel="noopener" class="hl">Sheila — extended set</a></h4>
+            <div class="venue">Pé N'Areia Beach Club · Praia de Esmoriz · 16:00–23:00 · free</div>
+            <p class="ctx">One more afternoon-to-night DJ session on the sand after the summer closing, with Nuno Rocha, Miguel Barros and Miguel Correia.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">14</span><span class="wd">Wed</span></div>
+          <div class="txt">
+            <h4><a href="https://www.noticiasdeaveiro.pt/agrovouga-bovinos-ausentes-por-prevencao-sanitaria-em-feira-mais-curta-mas-com-programa-reforcado/" target="_blank" rel="noopener" class="hl">Agrovouga 2026</a></h4>
+            <div class="venue">Parque de Exposições · Aveiro · 14–18 Oct · free</div>
+            <p class="ctx">The district's farm fair: produce, regional food and horses, without cattle this year as a health precaution.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">15</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1854428/mafalda-ovar-expande" target="_blank" rel="noopener" class="hl">MAFALDA_</a></h4>
+            <div class="venue">Ovar Expande · Escola de Artes e Ofícios · 20:30</div>
+            <p class="ctx">Mafalda Costa, who used to record as Mathilda, plays her first album in Portuguese, alternative pop meeting folk.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">17</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.noticiasdeaveiro.pt/feira-museu-do-papel-25-anos-a-criar-memorias/" target="_blank" rel="noopener" class="hl">Museu do Papel at 25 — open fortnight</a></h4>
+            <div class="venue">Museu do Papel · Santa Maria da Feira · 17–31 Oct</div>
+            <p class="ctx">Documentaries, visits, exhibitions and music on the region's paper-making past, plus a reissued history of the industry.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">8</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9HNzVNRW1qUFlsTEJ1Smg1XzB4aUV6ZE5TYVUtaG1nS1pxbFJWaUt6REdFbnY1ZEkyQWF4NDVMMjhVbm5TTnJfRXQ1Wm4yR0NtbEt5NEZpSG44UQ?oc=5" target="_blank" rel="noopener" class="hl">FIMP — puppet festival</a></h4>
+            <div class="venue">Porto · Rivoli, Teatro do Campo Alegre &amp; Matosinhos · from today, ten days</div>
+            <p class="ctx">The 37th Festival Internacional de Marionetas do Porto opens, with shows for adults and children across the city.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">8</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1860733/abertura-retrospetiva-andrea-arnold-wasp-fish-tank" target="_blank" rel="noopener" class="hl">Andrea Arnold: Wasp + Fish Tank</a></h4>
+            <div class="venue">Porto · Batalha Centro de Cinema · 20:15</div>
+            <p class="ctx">The British director's retrospective opens with her Oscar-winning short and her 2009 Essex coming-of-age film.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">18</span><span class="wd">Sun</span></div>
+          <div class="txt">
+            <h4><a href="https://www.serralves.pt/agenda-serralves/" target="_blank" rel="noopener" class="hl">Pedro Melo Alves — ΞIIIIIIΞ</a></h4>
+            <div class="venue">Porto · Serralves, museum auditorium · 18:30</div>
+            <p class="ctx">The drummer and composer premieres a 360-degree piece joining live music, technology and digital art.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CULTURE ================= -->
+  <section class="band">
+    <div class="banner"><h2>Machines, Screen, Art &amp; Sound</h2></div>
+    <div class="quad">
+      <!-- TECH -->
+      <div class="col">
+        <div class="colhead">Technology</div>
+        <article id="art-15" class="feat">
+          <span class="kicker hot">Web · Images</span>
+          <h3>
+            <a href="https://developer.chrome.com/blog/jpeg-xl-in-chrome" target="_blank" rel="noopener" class="hl"
+              >Chrome 155 will display JPEG XL, with a decoder written in Rust</a
+            >
+          </h3>
+          <p>
+            Google is shipping decoding for the .jxl format from Chrome 155,
+            years after pulling an earlier experiment. The Chrome team says
+            JPEG XL compresses 30–50% better than JPEG and adds lossless
+            compression, built-in HDR and lossless re-encoding of existing
+            JPEGs. Because image decoders parse untrusted bytes straight from
+            the network, a classic target for memory bugs, the new one is
+            written in Rust. Google's advice to web developers: try both AVIF
+            and JPEG XL. It expects JPEG XL to win for high-fidelity or
+            lossless photos and where fine-grained progressive loading
+            matters.
+          </p>
+          <p class="src">Chrome for Developers</p>
+        </article>
+        <article id="art-16" class="brief">
+          <span class="kicker">AI · OpenAI</span>
+          <h4>
+            <a href="https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6" target="_blank" rel="noopener" class="hl"
+              >GPT-6 arrives, and ChatGPT starts answering with interfaces</a
+            >
+          </h4>
+          <p>
+            "Intelligent UI" lets answers include charts, diagrams, forms and
+            buttons, or small tools such as a bill splitter, built inline.
+            It is rolling out to all users.
+          </p>
+          <p class="src">The Verge · OpenAI</p>
+        </article>
+      </div>
+
+      <!-- SCREEN -->
+      <div class="col">
+        <div class="colhead">Screen</div>
+        <article id="art-17" class="feat">
+          <span class="kicker hot">Cinemas · This week</span>
+          <h3>
+            <a href="https://thefilmstage.com/the-social-reckoning-review-aaron-sorkins-effective-thriller-cant-stick-the-landing/" target="_blank" rel="noopener" class="hl"
+              >Sorkin returns to Facebook in The Social Reckoning (2026), and critics split</a
+            >
+          </h3>
+          <p class="meta">Drama · 1h 52m · cinemas from 9 Oct · RT 64%</p>
+          <p>
+            Sixteen years after The Social Network, Aaron Sorkin directs his
+            own follow-up. Mikey Madison plays whistleblower Frances Haugen
+            and Jeremy Allen White the Wall Street Journal's Jeff Horowitz,
+            whose Facebook Files showed the company knew it was fuelling
+            division; Jeremy Strong plays Mark Zuckerberg. Sony opens it
+            worldwide on 9 October, and Público has already reviewed it under
+            its Portuguese title, O Veredicto Social. The Film Stage calls it
+            an effective thriller that "can't stick the landing"; IndieWire
+            calls it agitprop with a lousy script. Too new for an IMDb rating.
+          </p>
+          <p class="src">The Film Stage · IndieWire · Rotten Tomatoes · Público</p>
+        </article>
+        <article id="art-18" class="brief">
+          <span class="kicker">Review · Documentary</span>
+          <h4>
+            <a href="https://www.indiewire.com/criticism/movies/my-undesirable-friends-part-ii-exile-review-julia-loktev-1235220572/" target="_blank" rel="noopener" class="hl"
+              >My Undesirable Friends: Part II — Exile (2026) runs six hours</a
+            >
+          </h4>
+          <p class="meta">Documentary · c. 6h · RT 100%</p>
+          <p>
+            Julia Loktev follows her Russian dissident journalists into exile
+            after the Oscar-shortlisted first part. IndieWire: "gripping".
+          </p>
+          <p class="src">IndieWire</p>
+        </article>
+        <div class="minilist">
+          <h5>In Cinemas &amp; Festivals</h5>
+          <ul>
+            <li><span class="name">Fish Tank (2009)</span> · <span class="g">Drama</span> · Andrea Arnold retrospective, Batalha, Porto, from 8 Oct · IMDb 7.3 · RT 91%</li>
+            <li><span class="name">Wicker (2026)</span> · <span class="g">Drama</span> · 1h 45m · Olivia Colman, Alexander Skarsgård · one-night 4DX shows 28 Oct (US) · IMDb 7.4 · RT 92%</li>
+            <li><span class="name">Little Odessa (1994)</span> · <span class="g">Crime drama</span> · James Gray's debut, new Criterion 4K · IMDb 6.7 · RT 57%</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ARTS -->
+      <div class="col">
+        <div class="colhead">Arts</div>
+        <article id="art-19" class="feat">
+          <span class="kicker hot">Market · Art Basel/UBS</span>
+          <h3>
+            <a href="https://www.artnews.com/art-news/market/wealthiest-collectors-rely-ai-art-basel-ubs-report-1234801457/" target="_blank" rel="noopener" class="hl"
+              >Rich collectors have started asking AI what to buy</a
+            >
+          </h3>
+          <p>
+            The Art Basel &amp; UBS survey, out today, polled 3,100 wealthy
+            collectors in ten markets. In 2024 just 4% used apps or AI tools
+            for advice; now 22% do, about evenly across generations. Gen Z
+            spends most, an average of $347,460 on art in 2025 against
+            $124,265 for all ages, and is also the most private: 39% show
+            their collections only to family and close friends. Painting is
+            still the usual first purchase (43%), and only 1% bought a work
+            over $1 million. Family is the commonest way in, 40% for Gen Z.
+          </p>
+          <p class="src">ARTnews</p>
+        </article>
+        <article id="art-20" class="brief">
+          <span class="kicker">Portugal · Strike</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/economia/sindicato-cena-ste-convoca-greve-de-trabalhadores-da-cultura-para-dia-17_n1770115" target="_blank" rel="noopener" class="hl"
+              >Portugal's culture workers will strike on 17 October</a
+            >
+          </h4>
+          <p>
+            The performers' and musicians' union CENA-STE wants better pay and
+            to free its members for the CGTP's national march in Lisbon,
+            Porto and Coimbra.
+          </p>
+          <p class="src">RTP · Público</p>
+        </article>
+        <div class="minilist">
+          <h5>Now Open</h5>
+          <ul>
+            <li><span class="name">Matéria / Ação — sculpture and video of the 1960s–70s</span> · Serralves collection · Galeria Municipal de Arte de Barcelos · 8 Oct – 10 Jan</li>
+            <li><span class="name">Agostinho Santos — Homem Raiz</span> · 40 years of work · Museu do Porto</li>
+            <li><span class="name">Olívia Pinho — ceramics</span> · Fórum Municipal, Oliveira de Azeméis · to end of October</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SOUND -->
+      <div class="col">
+        <div class="colhead">Sound</div>
+        <article id="art-21" class="feat">
+          <span class="kicker hot">Porto · Berlin · New album</span>
+          <h3>
+            <a href="https://www.rtp.pt/noticias/cultura/album-coletivo-portugues-stella-aborda-condicoes-de-refugiados-e-lutas-contra-ditaduras_n1769942" target="_blank" rel="noopener" class="hl"
+              >A Soviet guitar found in Porto becomes an album about exile, with Alexander Hacke</a
+            >
+          </h3>
+          <p class="meta">Music &amp; spoken word · Tradisom · Stella · out this month</p>
+          <p>
+            Journalist and illustrator Pedro Sousa Pereira learned that a
+            Stella electric guitar, made in the Soviet Union and sold,
+            smuggled and rebuilt along the way, had ended up in Porto. Its
+            story became Stella, by the Porto collective Grémio: music, field
+            recordings and spoken word about dictatorships, war and refugees.
+            The players include Guilherme Lucas, João Nieto (The Crystal
+            Cabinet) and Luís Vaz Patto, with the Englishman Rick Blackman and,
+            from Berlin, Danielle de Picciotto and former Einstürzende
+            Neubauten bassist Alexander Hacke.
+          </p>
+          <p class="src">RTP · Lusa</p>
+        </article>
+        <article id="art-22" class="brief">
+          <span class="kicker">Streaming · Fraud</span>
+          <h4>
+            <a href="https://thequietus.com/news/us-man-given-prison-sentence-for-bot-farming-music-streams/" target="_blank" rel="noopener" class="hl"
+              >Eighteen months in prison for bot-streaming AI songs</a
+            >
+          </h4>
+          <p>
+            Michael Smith, 54, used up to 10,000 fake accounts from 2017 and
+            must forfeit $8 million in royalties: the first US prison term for
+            streaming fraud.
+          </p>
+          <p class="src">The Quietus · Ars Technica</p>
+        </article>
+        <article id="art-23" class="brief">
+          <span class="kicker">Gear</span>
+          <h4>
+            <a href="https://www.theverge.com/gadgets/1007489/teengage-engineering-stop-making-synths" target="_blank" rel="noopener" class="hl"
+              >Teenage Engineering says it will stop making synths, OP-1 included</a
+            >
+          </h4>
+          <p>
+            Founder Jesper Kouthoofd told Highsnobiety he announced the plan
+            in a reorganisation last autumn. The OP-1 made the Swedish firm's
+            name in 2011.
+          </p>
+          <p class="src">The Verge · Highsnobiety</p>
+        </article>
+        <div class="minilist">
+          <h5>New Releases</h5>
+          <ul>
+            <li><span class="name">Helen — Linda's Head</span> · <span class="g">Shoegaze</span> · Grouper's Liz Harris fronts a brisk return</li>
+            <li><span class="name">Marvin Tate — Controlled Burn</span> · <span class="g">Avant-soul</span> · Chicago slam poet with Wilco's LeRoy Bach</li>
+            <li><span class="name">Your Old Droog — Bread &amp; Butter</span> · <span class="g">Hip-hop</span> · gratitude without losing the wordplay</li>
+            <li><span class="name">MNEK — BULLDOZER!!</span> · <span class="g">Club pop</span> · hook-heavy second album</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOW STREAMING ================= -->
+  <section class="band">
+    <div class="banner"><h2>Now Streaming</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-24" class="feat">
+          <span class="kicker hot">Paramount+ · Animation · Friday</span>
+          <h3>
+            <a href="https://awn.com/news/paramount-sets-avatar-seven-havens-october-9-premiere" target="_blank" rel="noopener" class="hl"
+              >Avatar: Seven Havens (2026) brings a new Avatar after Korra</a
+            >
+          </h3>
+          <p class="meta">Animated fantasy series · Book 1: 13 half-hour episodes · Paramount+ · from 9 Oct</p>
+          <p>
+            Michael Dante DiMartino and Bryan Konietzko, who made The Last
+            Airbender and The Legend of Korra, return for Nickelodeon's Avatar
+            Studios. In a world broken by a cataclysm, Pavi, a young
+            Earthbender, learns she is the Avatar after Korra; hunted by
+            humans and spirits, she and her long-lost twin Nisha must uncover
+            where they came from and save the Seven Havens. Saheli Khan voices
+            Pavi and Aishu Devan Nisha. Paramount+ drops three episodes on
+            Friday and three more each week until the last four on 30 October;
+            a second book of 13 is confirmed but undated. These are the
+            announced premiere dates; check your local Paramount+. No ratings
+            yet.
+          </p>
+          <p class="src">Animation World Network · Engadget</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-25" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Peacock (US) · Friday</span>
+          <h4>
+            <a href="https://www.peacocktv.com/blog/when-where-disclosure-day-streaming" target="_blank" rel="noopener" class="hl"
+              >Spielberg's Disclosure Day (2026) starts streaming</a
+            >
+          </h4>
+          <p class="meta">Sci-fi thriller · 2h 25m · Peacock (US only) · 9 Oct · IMDb 6.4 · RT 79%</p>
+          <p>
+            Emily Blunt and Josh O'Connor lead the alien-conspiracy film,
+            written by David Koepp, which made $241 million in cinemas after
+            opening on 12 June.
+          </p>
+          <p class="src">Peacock · Space.com · IMDb · Rotten Tomatoes</p>
+        </article>
+        <article id="art-26" class="brief">
+          <span class="kicker">Netflix · Ratings</span>
+          <h4>
+            <a href="https://www.whats-on-netflix.com/news/east-of-eden-netflix-opening-weekend-views-analysis/" target="_blank" rel="noopener" class="hl"
+              >East of Eden (2026) drew 6.5 million views in its first week</a
+            >
+          </h4>
+          <p class="meta">Drama mini-series · Netflix · IMDb 8.1 · RT 87%</p>
+          <p>
+            Florence Pugh's Steinbeck adaptation also sent sales of the novel
+            up, What's on Netflix reports.
+          </p>
+          <p class="src">What's on Netflix · IMDb · Rotten Tomatoes</p>
+        </article>
+      </div>
+    </div>
+    <div class="streamlist">
+      <h5>New This Week</h5>
+      <ul>
+        <li><span class="name">Matchbox The Movie (2026)</span> · <span class="g">Family film</span> · Apple TV · 9 Oct</li>
+        <li><span class="name">The Housemaid (2025)</span> · <span class="g">Thriller</span> · HBO Max (US) · 9 Oct · IMDb 6.7 · RT 74%</li>
+        <li><span class="name">Save Yourselves! (2020)</span> · <span class="g">Sci-fi comedy</span> · Netflix (US) · catalogue · 10 Oct · IMDb 5.8 · RT 89%</li>
+        <li><span class="name">Tenzing (2026)</span> · <span class="g">Biographical adventure</span> · Apple TV · 16 Oct (select cinemas 9 Oct) · Tom Hiddleston as Hillary · IMDb 7.7 · RT 95%</li>
+      </ul>
+      <div class="streamcap">
+        Dates from Rotten Tomatoes' and What's on Netflix's US listings and
+        Apple's announcements; Apple TV originals are global, availability of
+        other titles in Portugal and Germany may differ. "Catalogue" marks an
+        older title arriving on a service, not a new release. IMDb ratings
+        (from IMDb's daily ratings dataset) and Rotten Tomatoes scores read on
+        8 October; a missing score means none exists yet or it rests on fewer
+        than 100 votes.
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORLD ================= -->
+  <section class="band">
+    <div class="banner"><h2>The World</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-27" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Spain · Housing</span>
+          <h4>
+            <a href="https://www.bbc.co.uk/news/articles/c6e3x21ev9wwo" target="_blank" rel="noopener" class="hl"
+              >Maricarmen Abascal, whose eviction set off Spain's housing protests, has died</a
+            >
+          </h4>
+          <p>
+            She was 87, carried out on a stretcher on 23 September from the
+            Madrid flat she had lived in for 70 years. Campers in Puerta del
+            Sol held a minute's silence and marched to Congress.
+          </p>
+          <p class="src">BBC · tagesschau · RTP</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-28" class="feat">
+          <span class="kicker hot">Yemen · Saudi Arabia</span>
+          <h3>
+            <a href="https://www.bbc.co.uk/news/articles/cwn8d5rx22rdo" target="_blank" rel="noopener" class="hl"
+              >Houthi missiles and drones kill three at two Saudi airports</a
+            >
+          </h3>
+          <p>
+            Saudi Arabia's civil aviation authority says two women, from
+            Morocco and Algeria, were killed and 28 people wounded at Abha
+            airport near the Yemeni border, and a Sudanese man was killed and
+            eight wounded at King Khalid International in Riyadh, in attacks on
+            6 and 7 October. The Houthis' spokesman Yahya Saree claimed both
+            with ballistic missiles and drones, calling them a reply to "60
+            airstrikes and missile attacks in the past 24 hours", and said
+            they also hit Aden's airport. It is an escalation of Yemen's
+            renewed civil war, in which the Iran-backed Houthis recently seized
+            stretches of the Red Sea coast, including the port of Mokha.
+          </p>
+          <p class="src">BBC · Reuters · RTP</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="colophon">
+    The Cortegaça Chronicle · assembled from 38 feeds on the morning of 8
+    October 2026 · written and edited by Claude (Anthropic)<br />
+    Sources named under every item · headlines link out to the original
+  </div>
+  <div class="archive"><a href="../archive.html">All editions</a></div>
+</div>
