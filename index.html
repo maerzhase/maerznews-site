@@ -71,11 +71,11 @@
 <body>
 <div class="sheet" lang="en">
   <header>
-    <div class="ear caps">17 editions · 463 articles · <a href="archive.html">All editions</a></div>
+    <div class="ear caps">18 editions · 491 articles · <a href="archive.html">All editions</a></div>
     <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
-    <a class="today" href="editions/2026-10-08.html">
-      <span class="today-k">Today's paper · Thursday, 8 October 2026 · No. 18</span>
-      <span class="today-h">Margaret Hamilton, who led the code that landed Apollo 11 and named &quot;software engineering&quot;, dies at 90</span>
+    <a class="today" href="editions/2026-10-09.html">
+      <span class="today-k">Today's paper · Friday, 9 October 2026 · No. 19</span>
+      <span class="today-h">Berlin&#x27;s Left, Greens and SPD open coalition talks after signing a line on antisemitism</span>
       <span class="today-go">Read the edition →</span>
     </a>
   </header>
@@ -240,7 +240,7 @@
   q.value = params.get("q") || "";
   section = params.get("s") || "";
   count.textContent = "Loading the archive…";
-  fetch("articles.json?v=2026-10-08-463")
+  fetch("articles.json?v=2026-10-09-491")
     .then(r => r.json())
     .then(data => {
       all = data.map(a => ({ ...a, g: groupOf(a.sec), hay: words([a.h, a.k, a.sec, a.m, a.t, a.s].join(" ")) }));
