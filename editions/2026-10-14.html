@@ -1,0 +1,1712 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<title>The Cortegaça Chronicle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+/>
+<style>
+  :root {
+    --paper: #f5f1e6;
+    --paper-2: #efe9da;
+    --ink: #1b1917;
+    --ink-2: #403a34;
+    --ink-3: #6b625a;
+    --rule: #c9bfae;
+    --rule-2: #a89c88;
+    --accent: #9c2b1e;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding-block: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  p {
+    text-wrap: pretty;
+    orphans: 3;
+    widows: 3;
+    margin: 0 0 0.72em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover .hl,
+  a:hover.hl {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  .ear {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 5px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .ear .price {
+    color: var(--accent);
+  }
+  .nameplate {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 10.5vw, 5.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0.26em 0 0.2em;
+    color: var(--ink);
+  }
+  .nameplate .the {
+    display: block;
+    font-size: 0.24em;
+    font-weight: 400;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    color: var(--ink-2);
+  }
+  .strip {
+    border-top: 3px double var(--rule-2);
+    border-bottom: 3px double var(--rule-2);
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 18px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-align: center;
+  }
+  .strip b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .strip .sep {
+    color: var(--rule-2);
+  }
+
+  /* ---------- TOP BAND ---------- */
+  .topband {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 0 26px;
+    margin-top: 22px;
+  }
+  .rail {
+    border: 1px solid var(--rule-2);
+    padding: 14px 14px 16px;
+    align-self: start;
+    background: var(--paper-2);
+  }
+  .rail h3 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .rail p {
+    font-size: 0.845rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .rail .sig {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 14px;
+  }
+  .mixhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-top: 2px solid var(--ink);
+    padding-top: 8px;
+    margin-bottom: 9px;
+    color: var(--ink);
+  }
+  .mix {
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    gap: 5px 8px;
+    align-items: center;
+  }
+  .mix .lab {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.655rem;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    line-height: 1.15;
+  }
+  .mix .lab.focus {
+    color: var(--accent);
+  }
+  .mix .barwrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mix .bar {
+    height: 9px;
+    background: var(--ink);
+    display: block;
+  }
+  .mix .n {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .mix .star {
+    color: var(--accent);
+    font-size: 0.66rem;
+  }
+  .mixcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 9px;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  /* ---------- LEAD ---------- */
+  .eyebrow {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .lead h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5.1vw, 3.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    margin-bottom: 0.22em;
+  }
+  .standfirst {
+    font-size: 1.06rem;
+    color: var(--ink-2);
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.6em;
+    max-width: 60ch;
+  }
+  .byline {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 5px 0;
+    margin-bottom: 16px;
+  }
+  .leadbody {
+    columns: 2;
+    column-gap: 28px;
+    column-rule: 1px solid var(--rule);
+  }
+  .leadbody p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .leadbody p:first-of-type::first-letter {
+    float: left;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 3.55em;
+    line-height: 0.78;
+    padding: 0.06em 0.09em 0 0;
+    color: var(--ink);
+  }
+  .pull {
+    break-inside: avoid;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 9px 0 11px;
+    margin: 6px 0 12px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .pull .who {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-style: normal;
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 7px;
+  }
+
+  /* ---------- FIGURE / CHART ---------- */
+  figure.fig {
+    margin: 0 0 18px;
+    border-top: 2px solid var(--ink);
+    padding-top: 10px;
+  }
+  figure.fig .figtitle {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+  figure.fig .figsub {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .chartbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .chartbox svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 330px;
+  }
+  figcaption {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    color: var(--ink-3);
+    text-align: left;
+    margin-top: 7px;
+    border-top: 1px solid var(--rule);
+    padding-top: 6px;
+  }
+  .barG rect.val {
+    fill: var(--ink);
+  }
+  .barG:hover rect.val {
+    fill: var(--accent);
+  }
+  .barG.win rect.val {
+    fill: var(--accent);
+  }
+  .barG.win:hover rect.val {
+    fill: var(--ink);
+  }
+  .barG rect.valo {
+    fill: var(--paper);
+    stroke: var(--ink);
+    stroke-width: 1.4;
+  }
+  .barG:hover rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win:hover rect.valo {
+    stroke: var(--ink);
+  }
+
+  /* ---------- SECTION BANDS ---------- */
+  .band {
+    margin-top: 30px;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .banner::before,
+  .banner::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-top: 2px;
+  }
+  .banner h2 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: clamp(0.78rem, 2.1vw, 0.95rem);
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .feat h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.38rem, 2.8vw, 1.82rem);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    margin-bottom: 0.3em;
+  }
+  .feat p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    font-size: 1rem;
+  }
+  .brief {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+  .brief h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.045rem;
+    line-height: 1.17;
+    margin-bottom: 0.25em;
+  }
+  .brief p {
+    font-size: 0.915rem;
+    color: var(--ink-2);
+    line-height: 1.46;
+  }
+  .kicker {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .kicker.hot {
+    color: var(--accent);
+  }
+  .src {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 5px;
+  }
+
+  .split-a {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 0 28px;
+  }
+  .split-b {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 0 28px;
+  }
+  .split-c {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 0 24px;
+  }
+  .split-a > .col + .col,
+  .split-b > .col + .col,
+  .split-c > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 28px;
+  }
+  .split-c > .col + .col {
+    padding-left: 24px;
+  }
+  .quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 22px;
+  }
+  .quad > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 22px;
+  }
+  .colhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.67rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .quad .feat h3 {
+    font-size: 1.18rem;
+    line-height: 1.15;
+  }
+  .quad .feat p,
+  .quad .brief p {
+    font-size: 0.875rem;
+    text-align: left;
+    hyphens: none;
+  }
+  .quad .brief h4 {
+    font-size: 0.98rem;
+  }
+
+  /* ---------- LISTS (Now Open / New Releases / Cinemas) ---------- */
+  .minilist {
+    border-top: 2px solid var(--ink);
+    margin-top: 16px;
+    padding-top: 8px;
+  }
+  .minilist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .minilist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .minilist li {
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .minilist li:last-child {
+    border-bottom: 0;
+  }
+  .minilist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .sheet article p.meta {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 0 6px;
+  }
+  .g {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- NOW STREAMING ---------- */
+  .streamlist {
+    border-top: 2px solid var(--ink);
+    margin-top: 18px;
+    padding-top: 8px;
+  }
+  .streamlist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .streamlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3;
+    column-gap: 26px;
+  }
+  .streamlist li {
+    break-inside: avoid;
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .streamlist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .streamcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ---------- AGENDA ---------- */
+  .agenda {
+    border-top: 3px double var(--ink);
+    border-bottom: 3px double var(--ink);
+    margin-top: 26px;
+    padding: 14px 0 16px;
+  }
+  .agenda-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 14px;
+  }
+  .agenda-head h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+    letter-spacing: -0.01em;
+  }
+  .agenda-head .sub {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-3);
+  }
+  .agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 26px;
+  }
+  .ev {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0 14px;
+    border-top: 1px solid var(--rule);
+    padding: 11px 0;
+  }
+  .agenda-grid > .ev:nth-child(1),
+  .agenda-grid > .ev:nth-child(2) {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .agenda-grid > .ev:nth-child(even) {
+    border-left: 1px solid var(--rule);
+    padding-left: 26px;
+  }
+  .ev .date {
+    text-align: center;
+  }
+  .ev .mo {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+  }
+  .ev .dy {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 2.35rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.34em;
+    font-variant-numeric: tabular-nums;
+  }
+  .ev .wd {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+  }
+  .ev .txt {
+    min-width: 0;
+    border-left: 1px solid var(--rule);
+    padding-left: 14px;
+  }
+  .ev .txt h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .ev .venue {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 5px;
+  }
+  .ev .ctx {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    line-height: 1.42;
+    margin: 0;
+  }
+
+  .colophon {
+    border-top: 1px solid var(--rule-2);
+    margin-top: 30px;
+    padding-top: 12px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .quad {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 22px;
+    }
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .quad > .col:nth-child(4) {
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .topband {
+      grid-template-columns: 210px 1fr;
+      gap: 0 22px;
+    }
+    .streamlist ul {
+      columns: 2;
+    }
+  }
+  @media (max-width: 860px) {
+    body {
+      font-size: 15.5px;
+    }
+    .topband {
+      grid-template-columns: 1fr;
+    }
+    .rail {
+      margin-bottom: 22px;
+    }
+    .leadbody {
+      columns: 1;
+    }
+    .split-a,
+    .split-b,
+    .split-c,
+    .quad {
+      grid-template-columns: 1fr;
+    }
+    .split-a > .col + .col,
+    .split-b > .col + .col,
+    .split-c > .col + .col,
+    .quad > .col + .col,
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .agenda-grid {
+      grid-template-columns: 1fr;
+    }
+    .agenda-grid > .ev:nth-child(even) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .agenda-grid > .ev:nth-child(2) {
+      border-top: 1px solid var(--rule);
+      padding-top: 11px;
+    }
+    .streamlist ul {
+      columns: 1;
+    }
+    .leadbody p,
+    .feat p {
+      text-align: left;
+      hyphens: none;
+    }
+    .banner h2 {
+      white-space: normal;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  .seg:hover rect {
+    opacity: 0.82;
+  }
+
+  /* ---------- TIMELINE (lead figure) ---------- */
+  .tl circle.pt {
+    fill: var(--ink);
+    stroke: var(--paper);
+    stroke-width: 2;
+  }
+  .tl g:hover circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win:hover circle.pt {
+    fill: var(--ink);
+  }
+  .tl g {
+    cursor: default;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .archive {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    margin-top: 14px;
+    padding: 6px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .archive a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  code {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.86em;
+    background: var(--paper-2);
+    color: var(--ink);
+    padding: 0 3px;
+    hyphens: none;
+    word-break: break-word;
+  }
+</style>
+
+
+<div class="sheet" lang="en">
+  <!-- ================= MASTHEAD ================= -->
+  <header>
+    <div class="ear">
+      Wednesday, 14 October 2026 &nbsp;·&nbsp; No. 24 &nbsp;·&nbsp; Price:
+      <span class="price">one bica</span>
+    </div>
+    <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
+    <div class="strip">
+      <span>Topic today: <b>SPD and Greens pause Berlin's red-green-red talks</b></span>
+      <span class="sep">✦</span>
+      <span>Weather · Aveiro <b>24°C</b> high, 13° low, morning fog, then dry and calm</span>
+      <span class="sep">✦</span>
+      <span>Portugal's inflation hits <b>3.6%</b>, a three-year high</span>
+    </div>
+  </header>
+
+  <!-- ================= TOP BAND ================= -->
+  <div class="topband">
+    <aside class="rail">
+      <h3>Column One</h3>
+      <p>
+        A week after Berlin's Left, Greens and SPD signed a joint line on
+        antisemitism, the Left's new parliamentary group signed a
+        declaration of its own, and the other two stopped the talks.
+        Today's lead charts the arithmetic if the three-way deal fails.
+      </p>
+      <p>
+        Also in the paper: 318 jobs gone at a car-parts plant next door in
+        Oliveira de Azeméis, Berlin's €84 billion debt horizon, JPEG XL
+        landing in Firefox, and a Portuguese composer turning the
+        Philharmonie foyer into a forest.
+      </p>
+      <p class="sig">— The Editor</p>
+
+      <div class="mixhead">Today's edition</div>
+      <div class="mix">
+        <span class="lab">Cortegaça &amp; Ovar</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span></span>
+
+        <span class="lab focus">✦ Germany · Berlin</span>
+        <span class="barwrap"><span class="bar" style="width: 65%"></span><span class="n">5</span><span class="star">✦</span></span>
+
+        <span class="lab">Portugal</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span></span>
+
+        <span class="lab">Technology</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">Screen</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Arts</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Sound</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Now Streaming</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">The World</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+      </div>
+      <div class="mixcap">✦ today's focus — bar length is the story count (Germany includes the lead)</div>
+    </aside>
+
+    <article id="art-1" class="lead">
+      <div class="eyebrow">Germany · Berlin after the election</div>
+      <h1>
+        <a href="https://www.rbb24.de/politik/berlin-wahl-2026/beitraege/berlin-sondierungen-unterbrochen-gruene-spd-linke-fraktion-emde-israel.html" target="_blank" rel="noopener" class="hl"
+          >SPD and Greens stop Berlin's coalition talks after the Left's MPs sign a declaration of their own</a
+        >
+      </h1>
+      <p class="standfirst">
+        The Left's new group pledged itself to Israel's right to exist, but
+        on the basis of its own party resolutions, not the joint paper
+        agreed last week. The other two want to know whether that deal
+        still holds.
+      </p>
+      <div class="byline">rbb24 · tagesschau · Berlin, 13–14 October 2026</div>
+
+      <figure class="fig">
+        <div class="figtitle">If red-green-red breaks, what is left?</div>
+        <div class="figsub">
+          Every combination in the new 153-seat Abgeordnetenhaus, built from
+          the final result of 20 September. The dashed line is the 77-seat
+          majority. Hover a bar for the detail.
+        </div>
+        <div class="chartbox">
+<svg viewBox="0 0 570 226" role="img" aria-label="Majorities in the 153-seat Berlin Abgeordnetenhaus, 77 needed: Left, Greens and SPD 91 seats; CDU, Greens and SPD 79; Left and Greens 70; CDU and AfD 62; CDU and SPD 54. Seats: Left 45, CDU 33, AfD 29, Greens 25, SPD 21.">
+<title>Coalition arithmetic in the Berlin Abgeordnetenhaus, final result of the 20 September 2026 election (rbb24)</title>
+<line x1="176.0" y1="30" x2="176.0" y2="178" stroke="#e4dccb" stroke-width="1"/><text x="176.0" y="190" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">0</text>
+<line x1="244.0" y1="30" x2="244.0" y2="178" stroke="#e4dccb" stroke-width="1"/><text x="244.0" y="190" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">20</text>
+<line x1="312.0" y1="30" x2="312.0" y2="178" stroke="#e4dccb" stroke-width="1"/><text x="312.0" y="190" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">40</text>
+<line x1="380.0" y1="30" x2="380.0" y2="178" stroke="#e4dccb" stroke-width="1"/><text x="380.0" y="190" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">60</text>
+<line x1="448.0" y1="30" x2="448.0" y2="178" stroke="#e4dccb" stroke-width="1"/><text x="448.0" y="190" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">80</text>
+<line x1="516.0" y1="30" x2="516.0" y2="178" stroke="#e4dccb" stroke-width="1"/><text x="516.0" y="190" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">100</text>
+<text x="0" y="18" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="8.5" letter-spacing="1.2">SEATS EACH COMBINATION WOULD HOLD · 153 IN ALL</text>
+<g class="barG win"><title>Left · Greens · SPD: Left 45 + Greens 25 + SPD 21 = 91 seats. The coalition in talks, now paused: 91 seats, 14 above the 77 needed.</title>
+<text x="168" y="47" text-anchor="end" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="10">✦ Left · Greens · SPD</text>
+<rect x="176.0" y="36" width="151.5" height="15" fill="#1b1917"/>
+<text x="180.0" y="47" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">Left 45</text>
+<rect x="329.0" y="36" width="83.5" height="15" fill="#5a524a"/>
+<text x="333.0" y="47" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">Greens 25</text>
+<rect x="414.0" y="36" width="69.9" height="15" fill="#8f8577"/>
+<text x="418.0" y="47" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">SPD 21</text>
+<text x="490.4" y="47" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">91</text></g>
+<g class="barG"><title>CDU · Greens · SPD: CDU 33 + Greens 25 + SPD 21 = 79 seats. The fallback rbb names: 79 seats, two above a majority.</title>
+<text x="168" y="75" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10">CDU · Greens · SPD</text>
+<rect x="176.0" y="64" width="110.7" height="15" fill="#1b1917"/>
+<text x="180.0" y="75" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">CDU 33</text>
+<rect x="288.2" y="64" width="83.5" height="15" fill="#5a524a"/>
+<text x="292.2" y="75" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">Greens 25</text>
+<rect x="373.2" y="64" width="69.9" height="15" fill="#8f8577"/>
+<text x="377.2" y="75" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">SPD 21</text>
+<text x="449.6" y="75" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">79</text></g>
+<g class="barG"><title>Left · Greens: Left 45 + Greens 25 = 70 seats. Without the SPD: 70 seats, seven short.</title>
+<text x="168" y="103" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10">Left · Greens</text>
+<rect x="176.0" y="92" width="151.5" height="15" fill="#1b1917"/>
+<text x="180.0" y="103" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">Left 45</text>
+<rect x="329.0" y="92" width="83.5" height="15" fill="#5a524a"/>
+<text x="333.0" y="103" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">Greens 25</text>
+<text x="419.0" y="103" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">70</text></g>
+<g class="barG"><title>CDU · AfD: CDU 33 + AfD 29 = 62 seats. 62 seats, 15 short, and ruled out by the CDU.</title>
+<text x="168" y="131" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10">CDU · AfD</text>
+<rect x="176.0" y="120" width="110.7" height="15" fill="#1b1917"/>
+<text x="180.0" y="131" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">CDU 33</text>
+<rect x="288.2" y="120" width="97.1" height="15" fill="#5a524a"/>
+<text x="292.2" y="131" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">AfD 29</text>
+<text x="391.8" y="131" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">62</text></g>
+<g class="barG"><title>CDU · SPD (outgoing): CDU 33 + SPD 21 = 54 seats. The outgoing black-red Senate: 54 seats, 23 short.</title>
+<text x="168" y="159" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10">CDU · SPD (outgoing)</text>
+<rect x="176.0" y="148" width="110.7" height="15" fill="#1b1917"/>
+<text x="180.0" y="159" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">CDU 33</text>
+<rect x="288.2" y="148" width="69.9" height="15" fill="#5a524a"/>
+<text x="292.2" y="159" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8">SPD 21</text>
+<text x="364.6" y="159" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">54</text></g>
+<line x1="437.8" y1="28" x2="437.8" y2="180" stroke="#9c2b1e" stroke-width="1.2" stroke-dasharray="3 2"/><text x="440.8" y="205" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="8">77 = majority</text>
+<text x="560" y="220" text-anchor="end" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8">seats · final result, 20 September 2026 election</text></svg>
+        </div>
+        <figcaption>
+          Source: final result as declared by Berlin's state electoral
+          committee on 12 October 2026, reported by rbb24: Left 45, CDU 33,
+          AfD 29, Greens 25, SPD 21. The CDU and the other parties exclude
+          working with the AfD; the line is shown only to complete the
+          arithmetic.
+        </figcaption>
+      </figure>
+
+      <div class="leadbody">
+        <p>
+          Berlin's three-way exploratory talks were suspended on Tuesday
+          evening. At its constituent meeting that afternoon, the Left's
+          new group in the Abgeordnetenhaus had every member sign a
+          declaration that includes a commitment to Israel's right to
+          exist. The trouble for its partners is the footnote: the text
+          names the Left's own party-congress resolutions as its basis, not
+          the joint red-green-red paper on fighting antisemitism that the
+          three leaderships agreed last week, and which has been attacked
+          inside the Left ever since.
+        </p>
+        <p>
+          "We have noted that the Left has reached other arrangements in its
+          group," the SPD and Greens said in a joint statement. "That means
+          we must interrupt the talks at this point to assess whether our
+          agreement of last week still applies." They expect the Left "to
+          make clear how far it means to take seriously and implement" what
+          was agreed, and turned down rbb's interview requests. How close
+          the talks are to collapse was unclear overnight.
+        </p>
+        <div class="pull">
+          "From our point of view, last week's agreement stands. Why this
+          step now, I cannot understand."
+          <span class="who">Tobias Schulze, Left co-group leader, in the rbb24 Abendschau</span>
+        </div>
+        <p>
+          Schulze said the group's declaration was in parts word for word
+          the same as the joint paper. The same evening the group, led by
+          Elif Eralp and Schulze, admitted the contested Neukölln member
+          Vanessa Emde after a long internal debate; she too signed. Emde
+          has made remarks that critics read as antisemitic, which she
+          denies, and on Saturday she joined a "United4Palestine" march.
+        </p>
+        <p>
+          Pressure had been building from outside: on Monday Chancellor
+          Friedrich Merz told Berlin's SPD and Greens to end the talks and
+          called it a "radical-left party", which Eralp rejected as meddling.
+          The Left has already postponed its state congress to 31 October,
+          when members were to vote on moving to coalition negotiations.
+          The fallback rbb names, CDU, Greens and SPD, would hold just two
+          seats more than a majority.
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= LOCAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Cortegaça, Ovar &amp; the Coast</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-2" class="feat">
+          <span class="kicker hot">Oliveira de Azeméis · Industry</span>
+          <h3>
+            <a href="https://www.ovarnews.pt/empresa-de-componentes-automoveis-encerra-em-oliveira-de-azemeis/" target="_blank" rel="noopener" class="hl"
+              >Schmidt Light Metal closes, and 318 workers lose their jobs</a
+            >
+          </h3>
+          <p>
+            The historic car-components foundry in Oliveira de Azeméis, a
+            neighbouring concelho to Ovar, is shutting down its production.
+            It was declared insolvent last year and bought in March for €8.5
+            million by its own managers, but seven months on the order book
+            ran too thin. Workers were warned of the collective dismissal in
+            August, all labour processes stopped on 30 September, and the
+            administration has said the plant will be closed by the end of
+            the year; Notícias de Aveiro expects the 318 staff to be out of
+            work in early December.
+          </p>
+          <p class="src">OvarNews · Jornal de Notícias · Notícias de Aveiro · RTP</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-3" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Esmoriz · Dunes</span>
+          <h4>
+            <a href="https://www.ovarnews.pt/associacao-pinhal-obtem-estatuto-de-equiparada-a-onga/" target="_blank" rel="noopener" class="hl"
+              >The group guarding Ovar's dune pine forest wins official environmental status</a
+            >
+          </h4>
+          <p>
+            +Pinhal, founded in Esmoriz in March 2025 to defend the
+            Perímetro Florestal das Dunas de Ovar, passed 100 members and is
+            now registered as an environmental NGO, so it can demand official
+            plans for any work in the forest.
+          </p>
+          <p class="src">OvarNews · Lusa</p>
+        </article>
+        <article id="art-4" class="brief">
+          <span class="kicker">High-speed rail · Jobs</span>
+          <h4>
+            <a href="https://www.noticiasdeaveiro.pt/loureiro-acolhera-centro-de-operacoes-de-manutencao-de-alta-velocidade/" target="_blank" rel="noopener" class="hl"
+              >Loureiro will host the TGV maintenance centre, with 70 jobs</a
+            >
+          </h4>
+          <p>
+            Oliveira de Azeméis gets the operations centre for the Porto–Oiã
+            stretch, 71 km of new line for up to 300 km/h through ten
+            municipalities, Ovar's neighbours among them.
+          </p>
+          <p class="src">Notícias de Aveiro</p>
+        </article>
+        <article id="art-5" class="brief">
+          <span class="kicker">Ovar · Theatre</span>
+          <h4>
+            <a href="https://www.ovarnews.pt/festovar-regressa-a-ovar-com-oito-espetaculos-e-sete-semanas-de-teatro/" target="_blank" rel="noopener" class="hl"
+              >Festovar runs seven weeks of theatre, to 21 November</a
+            >
+          </h4>
+          <p>
+            The 33rd festival has eight shows at the Casa da Contacto and the
+            Centro de Arte, with companies from Feira, Barcelos, Braga and
+            Lisbon and a premiere by host group Contacto.
+          </p>
+          <p class="src">OvarNews</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GERMANY ================= -->
+  <section class="band">
+    <div class="banner"><h2>Germany · Berlin &amp; Brandenburg</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-6" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Hamburg · Trial</span>
+          <h4>
+            <a href="https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo" target="_blank" rel="noopener" class="hl"
+              >The Nord Stream trial opens today, with a Ukrainian in the dock</a
+            >
+          </h4>
+          <p>
+            Serhii K., extradited from Italy, is the first suspect tried for
+            the 2022 blasts that wrecked three of four pipes; he denies it.
+            AfD and BSW want Ukraine aid stopped over the case.
+          </p>
+          <p class="src">BBC · tagesschau</p>
+        </article>
+        <article id="art-7" class="brief">
+          <span class="kicker">BER · Airport</span>
+          <h4>
+            <a href="https://www.rbb24.de/wirtschaft/beitrag/2026/10/ber-flughafen-hohe-kosten-chefin-ryanair-rueckzug-schoenefeld.html" target="_blank" rel="noopener" class="hl"
+              >BER expects to shrink to about 25 million passengers after Ryanair leaves</a
+            >
+          </h4>
+          <p>
+            Ryanair closes its seven-plane base on 24 October, cutting 2.5
+            million seats a year; BER now sees 25.7 million this year and
+            25–25.2 million in 2027, not the 27 million planned.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article id="art-8" class="brief">
+          <span class="kicker">Rail · Timetable</span>
+          <h4>
+            <a href="https://www.rbb24.de/panorama/beitrag/2026/10/berlin-brandenburg-bahn-fahrplanwechsel-zuege-fernverkehr-sprinter.html" target="_blank" rel="noopener" class="hl"
+              >Berlin–Hamburg goes back to every 30 minutes in December</a
+            >
+          </h4>
+          <p>
+            The new timetable from 13 December, bookable from today, adds
+            three daily Berlin–Stuttgart sprinters (4h45), restores Berlin–Jena
+            and two Berlin–Vienna trains via Passau.
+          </p>
+          <p class="src">rbb24 · tagesschau</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-9" class="feat">
+          <span class="kicker hot">Berlin · Budget</span>
+          <h3>
+            <a href="https://www.rbb24.de/politik/beitrag/2026/10/geld-finanzen-berlin-sparen-finanzplanung-evers-haushalt.html" target="_blank" rel="noopener" class="hl"
+              >Berlin spends €5 billion a year more than it takes in, and its reserves run out next year</a
+            >
+          </h3>
+          <p>
+            Presenting the outgoing CDU-SPD Senate's financial plan to 2030,
+            finance senator Stefan Evers announced a hard savings course for
+            whoever governs next. The city's gap is about €5 billion, over 11%
+            of the budget; its debt stands at around €69 billion and interest
+            alone costs more than €1 billion this year. Within three years
+            Evers expects interest above €2 billion and total debt near €84
+            billion. Transfer payments such as basic income support and
+            housing benefit take about €10 billion a year, a quarter of
+            adjusted spending, and the constitutional court's ruling on civil
+            servants' pay means back-payments of at least €1.2 billion to
+            2020 alone. Spending has to fall in 2027 and 2028, he says;
+            otherwise the federal-state stability council could force EU debt
+            rules on Berlin, letting states like Bavaria and Hesse have a say
+            in what the capital may afford.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTUGAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Portugal &amp; the Coast</h2></div>
+    <div class="split-c">
+      <div class="col">
+        <article id="art-10" class="feat">
+          <span class="kicker hot">Economy · Prices</span>
+          <h3>
+            <a href="https://www.rtp.pt/noticias/economia/taxa-de-inflacao-e-a-mais-alta-dos-ultimos-tres-anos-subiu-para-36_v1771491" target="_blank" rel="noopener" class="hl"
+              >Inflation climbs to 3.6%, its highest in three years, on fuel</a
+            >
+          </h3>
+          <p>
+            Consumer prices in September were 3.6% higher than a year
+            earlier, the national statistics institute INE confirmed on
+            Tuesday, up from 3.3% in August and the steepest rise since
+            September 2023. Fuels and other energy products, up more than 15%
+            on the year, did most of the work: in the month, according to the
+            energy directorate DGEG, unleaded 95 rose 6.2% to about €2.07 a
+            litre and diesel 5.1% to €2.13. Core inflation, without energy and
+            unprocessed food, was 2.7%. The figure lands as the government
+            argues over the 2027 budget, and the same day it announced that
+            IRS withholding will be cut by half in November to pass on the
+            mid-year income-tax reduction.
+          </p>
+          <p class="src">RTP · INE · Observador · Público</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-11" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Porto · Streets</span>
+          <h4>
+            <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOeHVDNGNQUWs5NkgxMHk1NWk0TngyQ1QzRHI5akNBZmhLY2pSbExSSE1EZnhKd21vRHFLOHI1cW84S0hfYTBPTF8xVTBGTTBBbWJjSWFSWVZVZHJaVkJrQWZ6c0ZMVzlMenl2bFBESEItSkFKa3V1RVBucjJ2d3lxcFcyWjdWSEVyZEZHM3ByZVJfWmJVdGs1LWE2WHN5RDRPcVJXYjI5cnBjWU9KY2tHWnhXdVhwN041c1V3WUZkdlJWQ1dV?oc=5" target="_blank" rel="noopener" class="hl"
+              >Porto halts the Rua de Guerra Junqueiro works and will redesign the street with residents</a
+            >
+          </h4>
+          <p>
+            The council suspended the contract award and promised to rethink
+            the street with the people who use it; parents and pupils there
+            have asked for it to be "greener and with less noise".
+          </p>
+          <p class="src">Público · Jornal de Notícias</p>
+        </article>
+        <article id="art-12" class="brief">
+          <span class="kicker">Families · Law</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/pais/psd-e-ps-aprovam-alargamento-da-licenca-parental_n1771469" target="_blank" rel="noopener" class="hl"
+              >Fully paid parental leave is set to stretch to six months</a
+            >
+          </h4>
+          <p>
+            PSD and PS agreed 150 days at 100% pay, or 180 if both parents
+            share; the working group approved it and it moves to the labour
+            committee.
+          </p>
+          <p class="src">RTP · Lusa</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-13" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Lisbon · Strike</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/economia/metropolitano-de-lisboa-considera-greve-de-quarta-feira-desproporcional-e-desajustada_n1771487" target="_blank" rel="noopener" class="hl"
+              >No Lisbon Metro trains today</a
+            >
+          </h4>
+          <p>
+            A 24-hour strike over control-room staff's working hours stops
+            the network used by 600,000 people a day; service returns at
+            06:30 on Thursday. The company calls it disproportionate.
+          </p>
+          <p class="src">RTP · Lusa</p>
+        </article>
+      </div>
+    </div>
+    <div class="agenda">
+      <div class="agenda-head">
+        <h3>✦ The Diary — What's On</h3>
+        <span class="sub">Upcoming around Cortegaça, Ovar &amp; Aveiro</span>
+      </div>
+      <div class="agenda-grid">
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">15</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1843122/mafalda" target="_blank" rel="noopener" class="hl">Mafalda</a></h4>
+            <div class="venue">Centro de Arte · Ovar · Ovar Expande</div>
+            <p class="ctx">The singer presents her debut album, sung entirely in Portuguese, about identity, belonging and starting over.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">15</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1856311/azemeis-jazz-blues-gabriela-soares" target="_blank" rel="noopener" class="hl">Gabriela Soares Quartet</a></h4>
+            <div class="venue">TeMA · Oliveira de Azeméis · €3</div>
+            <p class="ctx">The young local singer leads a jazz quartet in the town's Jazz &amp; Blues season.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">16</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1843126/ray" target="_blank" rel="noopener" class="hl">Ray</a></h4>
+            <div class="venue">Escola de Artes e Ofícios · Ovar · Ovar Expande</div>
+            <p class="ctx">Alone with an acoustic guitar, he plays "Buffalo", his new album produced by The Legendary Tigerman's Paulo Furtado.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">16</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1843125/homem-em-catarse" target="_blank" rel="noopener" class="hl">Homem em Catarse</a></h4>
+            <div class="venue">Centro de Arte · Ovar · Ovar Expande</div>
+            <p class="ctx">Afonso Dorido's new record "Catarse Natural" mixes folk, shoegaze and post-fado, three years after his piano album.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">17</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.noticiasdeaveiro.pt/vagos-aldeia-do-boco-jante-no-arraial/" target="_blank" rel="noopener" class="hl">Jante no Arraial</a></h4>
+            <div class="venue">Aldeia do Boco · Vagos · from 19:30</div>
+            <p class="ctx">A village dinner of Carneiro de Santo Inácio and Broa Mimosa with music, recalling the community's old festas.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">23</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1842429/sozinho-em-casa-23-pedro-martins" target="_blank" rel="noopener" class="hl">Sozinho em Casa #23: Pedro Martins</a></h4>
+            <div class="venue">Museu Júlio Dinis · Ovar</div>
+            <p class="ctx">The Ovar lutenist improvises a live soundtrack to a walk through the town, streamed into the museum auditorium.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">24</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1843131/cambedo-1946" target="_blank" rel="noopener" class="hl">Cambedo, 1946</a></h4>
+            <div class="venue">Centro de Arte · Ovar</div>
+            <p class="ctx">Teatro de Balugas on the border village near Chaves that sheltered Galician refugees and was shelled by both dictatorships.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">14</span><span class="wd">Wed</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1835877/boca-livre-convida-edu-lobo" target="_blank" rel="noopener" class="hl">Boca Livre convida Edu Lobo</a></h4>
+            <div class="venue">Porto · Casa da Música · tonight</div>
+            <p class="ctx">The Brazilian vocal quartet sings Edu Lobo's songbook with Lobo himself as guest, after almost 50 years of friendship.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">14</span><span class="wd">Wed</span></div>
+          <div class="txt">
+            <h4><a href="https://www.ovarnews.pt/paulo-duarte-a-partir-de-uma-casa-na-escuridao-de-jose-luis-peixoto/" target="_blank" rel="noopener" class="hl">Uma Casa na Escuridão</a></h4>
+            <div class="venue">Porto · Teatro do Campo Alegre · 22:00</div>
+            <p class="ctx">Ovar-born Paulo Duarte's puppet, shadow and light piece after José Luís Peixoto's novel, for Teatro de Marionetas do Porto.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">17</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.serralves.pt/agenda-serralves/" target="_blank" rel="noopener" class="hl">História de um Fotógrafo</a></h4>
+            <div class="venue">Porto · Casa do Cinema Manoel de Oliveira, Serralves · 17:00</div>
+            <p class="ctx">A screening in the cinema house's series on film under the influence of painting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CULTURE QUAD ================= -->
+  <section class="band">
+    <div class="banner"><h2>Machines, Screen, Art &amp; Sound</h2></div>
+    <div class="quad">
+      <div class="col">
+        <div class="colhead">Technology</div>
+        <article id="art-14" class="feat">
+          <span class="kicker hot">Web · Images</span>
+          <h3>
+            <a href="https://www.heise.de/news/Firefox-158-JPEG-XL-und-bessere-PDFs-11486725.html" target="_blank" rel="noopener" class="hl"
+              >Firefox 158 renders JPEG XL, and with Chrome 155 the format is in both big engines</a
+            >
+          </h3>
+          <p>
+            Mozilla's new release displays JPEG XL images, which it says
+            usually compress better than WebP, JPEG, PNG and GIF. Chrome 155
+            already supports the format by default, so a <code>&lt;picture&gt;</code>
+            source in JXL now reaches far more readers than a year ago.
+            Firefox also stops rounding scroll positions to whole screen
+            pixels, for smoother scrolling on high-density displays and
+            zoomed pages, writes more accessible PDFs when saving or printing
+            on Linux and macOS, and fixes PDFs that dropped maths symbols.
+            Its "Smart Window" starts suggesting form entries from open tabs
+            and saved autofill data, rolled out gradually. Mozilla has also
+            launched Firefox Enterprise, with a central admin console, first
+            in Germany, Austria, Switzerland and France.
+          </p>
+          <p class="src">heise</p>
+        </article>
+        <article id="art-15" class="brief">
+          <span class="kicker">AI · Models</span>
+          <h4>
+            <a href="https://arstechnica.com/ai/2026/10/gemini-4-argon-begins-rolling-out-in-gemini-app-and-antigravity-but-only-if-you-pay/" target="_blank" rel="noopener" class="hl"
+              >Gemini 4 Argon reaches paying users</a
+            >
+          </h4>
+          <p>
+            Only AI Pro ($20/month) and Ultra subscribers get it, in the app
+            and the Antigravity coding tool; Google says it found bugs in a
+            drone simulator dating to 2018.
+          </p>
+          <p class="src">Ars Technica · Reuters</p>
+        </article>
+        <article id="art-16" class="brief">
+          <span class="kicker">AI · Bankruptcy</span>
+          <h4>
+            <a href="https://www.heise.de/news/KI-Firma-Character-ai-ist-insolvent-11487116.html" target="_blank" rel="noopener" class="hl"
+              >Character.ai files for Chapter 11; Disney bids $20 million</a
+            >
+          </h4>
+          <p>
+            Sued by parents over children's suicides, the chatbot maker seeks
+            a buyer; Disney, which once sent it a cease-and-desist, offers
+            $20m for a licence to some of its technology.
+          </p>
+          <p class="src">heise · Ars Technica</p>
+        </article>
+      </div>
+      <div class="col">
+        <div class="colhead">Screen</div>
+        <article id="art-17" class="feat">
+          <span class="kicker hot">Trailer · Fantasy</span>
+          <h3>
+            <a href="https://thefilmstage.com/first-trailer-for-greta-gerwigs-narnia-the-magicians-nephew-imagines-a-fantastical-world/" target="_blank" rel="noopener" class="hl"
+              >Narnia: The Magician's Nephew (2027): Greta Gerwig's first trailer, and seven weeks in cinemas before Netflix</a
+            >
+          </h3>
+          <p class="meta">Fantasy adventure · Netflix · IMAX from 12 Feb 2027, streaming 2 Apr 2027</p>
+          <p>
+            Gerwig's adaptation of C.S. Lewis's prequel, about a lion that
+            sings Narnia into being, opens in IMAX and cinemas worldwide on
+            12 February 2027 and reaches Netflix on 2 April, a longer
+            theatrical window than some studios give their own films. The
+            cast includes Emma Mackey, Carey Mulligan, Daniel Craig, Ciarán
+            Hinds and Meryl Streep; Seamus McGarvey shot it, and the first
+            trailer, out on Tuesday, is scored to Led Zeppelin. "A universe
+            built out of music is an idea that always lived in my heart,"
+            Gerwig says. No ratings yet.
+          </p>
+          <p class="src">The Film Stage · IndieWire · What's on Netflix</p>
+        </article>
+        <article id="art-18" class="brief">
+          <span class="kicker hot">Portugal · Comedy</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/cultura/humorista-miguel-gois-estreia-em-novembro-filme-feito-com-telemovel-e-sete-euros-e-meio_n1771460" target="_blank" rel="noopener" class="hl"
+              >Conversa-Açorda (2026): a Gato Fedorento feature shot on a phone for €7.50</a
+            >
+          </h4>
+          <p class="meta">Comedy · NOS Audiovisuais · in Portuguese cinemas 26 Nov</p>
+          <p>
+            Miguel Góis calls it "indigent cinema": a look at the Portuguese
+            soul with Ricardo Araújo Pereira, Nuno Markl, Joana Marques and
+            Lúcia Moniz.
+          </p>
+          <p class="src">RTP · Lusa</p>
+        </article>
+        <div class="minilist">
+          <h5>In Cinemas &amp; Festivals</h5>
+          <ul>
+            <li><span class="name">You Can See Everything (2026)</span> · <span class="g">Documentary</span> · Nathan Fielder and Lance Oppenheim; The Film Stage invokes Kiarostami · IMDb 7.8 · RT 100%</li>
+            <li><span class="name">Sense and Sensibility (2026)</span> · <span class="g">Period romance</span> · Georgia Oakley, with Daisy Edgar-Jones · IMDb 7.2 · RT 78%</li>
+            <li><span class="name">La Bola Negra (2026)</span> · <span class="g">Drama</span> · Spain's Oscar entry, 47 days in US cinemas before Netflix · IMDb 8.1 · RT 91%</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="colhead">Arts</div>
+        <article id="art-19" class="feat">
+          <span class="kicker hot">Paris · Opening</span>
+          <h3>
+            <a href="https://www.artnews.com/art-news/news/le-large-ile-seguin-museum-opening-cecilia-alemani-1234802305/" target="_blank" rel="noopener" class="hl"
+              >Le Large opens on Île Seguin, where Renault built cars</a
+            >
+          </h3>
+          <p>
+            Paris's newest contemporary art centre, at the end of Métro line
+            9 in Boulogne-Billancourt, is part of the €450 million Pointe des
+            Arts on the island Renault's factory filled for most of the 20th
+            century. RCR Arquitectes' building widens from 500 m² at its base
+            to 1,500 m² on the fifth floor under copper-coloured aluminium
+            scales. There is no collection: collector Laurent Dumas's centre
+            runs on about €5 million a year, with 40% of its public space
+            free. Cecilia Alemani's opening show "Moteur Imaginaire" follows
+            the car "from the factory floor into the algorithm": over 100
+            works by 55 artists from 23 countries, from Renault's commissions
+            to Dubuffet and Tinguely, plus 17 new pieces such as Clément
+            Cogitore's film on the 1947 strike.
+          </p>
+          <p class="src">ARTnews</p>
+        </article>
+        <article id="art-20" class="brief">
+          <span class="kicker">Architecture · Prize</span>
+          <h4>
+            <a href="https://www.artforum.com/news/architect-junya-ishigami-wins-inaugural-barragan-prize-1234761314/" target="_blank" rel="noopener" class="hl"
+              >Junya Ishigami wins the first $100,000 Barragán Prize</a
+            >
+          </h4>
+          <p>
+            Half the money goes to the Japanese architect, half to a year of
+            mentoring; it was presented on 9 October at La Cuadra outside
+            Mexico City.
+          </p>
+          <p class="src">Artforum</p>
+        </article>
+        <div class="minilist">
+          <h5>Now Open</h5>
+          <ul>
+            <li><span class="name">Moteur Imaginaire</span> · Le Large, Île Seguin, Paris · 55 artists, curated by Cecilia Alemani</li>
+            <li><span class="name">Lee Ufan — Fragmentos do Infinito</span> · Casa de Serralves, Porto · from Fri 16 Oct to March 2027</li>
+            <li><span class="name">Claudia Rocha — Ecos da Vida Moderna</span> · Serralves museum, Porto · to 29 Nov</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="colhead">Sound</div>
+        <article id="art-21" class="feat">
+          <span class="kicker hot">Berlin · Portugal · New music</span>
+          <h3>
+            <a href="https://www.rtp.pt/noticias/cultura/compositor-nuno-lobo-estreia-peca-com-participacao-do-publico-na-filarmonica-de-berlim_n1771397" target="_blank" rel="noopener" class="hl"
+              >Nuno Lobo will turn the Berlin Philharmonie's foyer into a Bosch forest</a
+            >
+          </h3>
+          <p class="meta">Contemporary classical · premiere Wed 21 Oct, 13:00 · Philharmonie Berlin</p>
+          <p>
+            The 30-year-old Portuguese composer, who teaches at the
+            Amsterdam Conservatory, premieres "Leshy", a piece built on the
+            right-hand panel of Hieronymus Bosch's Garden of Earthly Delights
+            in which the audience takes part. Saxophonist Aina Font and
+            percussionist Agostinho Sequeira play, and Lobo stands among the
+            listeners giving them their cues. The work is meant to be
+            recorded for an album linked to Bosch's painting; the hard part,
+            he told Lusa, was writing one piece for a picture with so many
+            details.
+          </p>
+          <p class="src">RTP · Lusa</p>
+        </article>
+        <article id="art-22" class="brief">
+          <span class="kicker">Rock · Solo debut</span>
+          <h4>
+            <a href="https://pitchfork.com/story/michael-stipe-reveals-debut-solo-album-release-date/" target="_blank" rel="noopener" class="hl"
+              >Michael Stipe's solo album: first single on New Year's Eve, LP in May</a
+            >
+          </h4>
+          <p class="meta">Rock · untitled · May 2027</p>
+          <p>
+            Made with Andrew Watt and Andy LeMaster, the record is "not
+            political at all", he says, then admits that coming from him it
+            will be.
+          </p>
+          <p class="src">Pitchfork · LA Times</p>
+        </article>
+        <div class="minilist">
+          <h5>New Releases</h5>
+          <ul>
+            <li><span class="name">Troye Sivan — She's the Best</span> · <span class="g">Pop</span> · fourth album, looser off the dancefloor</li>
+            <li><span class="name">Jon Hassell — Music Is Invisible</span> · <span class="g">Ambient · Fourth World</span> · posthumous Pentimento finale, from his last concert in 2015</li>
+            <li><span class="name">Wishy — Nature's Pill</span> · <span class="g">Indie pop</span> · Indianapolis twee with a deep ache</li>
+            <li><span class="name">Ovrkast — STRIKING</span> · <span class="g">Hip-hop</span> · Bay Area character studies over live instruments</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOW STREAMING ================= -->
+  <section class="band">
+    <div class="banner"><h2>Now Streaming</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-23" class="feat">
+          <span class="kicker hot">Disney+ · Series</span>
+          <h3>
+            <a href="https://editorial.rottentomatoes.com/article/visionquest-first-reviews/" target="_blank" rel="noopener" class="hl"
+              >VisionQuest (2026): Marvel closes the WandaVision trilogy, and critics call it one of the MCU's best</a
+            >
+          </h3>
+          <p class="meta">Superhero sci-fi · limited series · Disney+, from Wed 14 Oct · RT 82%</p>
+          <p>
+            Paul Bettany returns as the synthezoid Vision, continuing his
+            story after WandaVision and completing the run that included
+            Agatha All Along; James Spader comes back as Ultron. Showrunner
+            Terry Matalas, behind 12 Monkeys and the third season of Star
+            Trek: Picard, has kept it largely apart from the rest of the
+            Marvel universe, which some fans may mind and newcomers will
+            not: Solzy at the Movies notes you need not have watched "a
+            gazillion movies" first. TheWrap calls it "among the more humane
+            and hopeful things Marvel has produced"; Variety's Alison Herman
+            is the dissenter, saying it "doesn't leave a lasting mark".
+            IMDb has no rating yet.
+          </p>
+          <p class="src">Rotten Tomatoes · IndieWire</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-24" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Netflix · Documentary</span>
+          <h4>
+            <a href="https://www.whats-on-netflix.com/what-to-watch/tyson-netflix-documentary-review/" target="_blank" rel="noopener" class="hl"
+              >Tyson (2026): four parts, candid until it matters</a
+            >
+          </h4>
+          <p class="meta">Sports documentary · 4 episodes · Netflix original, from 13 Oct</p>
+          <p>
+            Floyd Russ follows Mike Tyson from Brownsville to now; What's on
+            Netflix finds it detailed but evasive on the rape conviction and
+            domestic violence.
+          </p>
+          <p class="src">What's on Netflix</p>
+        </article>
+        <article id="art-25" class="brief">
+          <span class="kicker">HBO · Revival</span>
+          <h4>
+            <a href="https://www.indiewire.com/news/breaking-news/girls-back-lena-dunham-full-cast-reunite-episode-revival-1235221747/" target="_blank" rel="noopener" class="hl"
+              >Girls returns for five episodes about turning forty</a
+            >
+          </h4>
+          <p class="meta">Comedy-drama · 5 episodes · HBO, no date yet · original series (2012) IMDb 7.4 · RT 89%</p>
+          <p>
+            Lena Dunham, Allison Williams, Jemima Kirke, Zosia Mamet and
+            Andrew Rannells all return, a decade after the 2017 finale.
+          </p>
+          <p class="src">IndieWire · BBC</p>
+        </article>
+      </div>
+    </div>
+    <div class="streamlist">
+      <h5>New This Week</h5>
+      <ul>
+        <li><span class="name">VisionQuest (2026)</span> · <span class="g">Superhero sci-fi</span> · Disney+ · 14 Oct · RT 82%</li>
+        <li><span class="name">Tyson (2026)</span> · <span class="g">Documentary series</span> · Netflix original · 13 Oct</li>
+        <li><span class="name">The Disciple (2026)</span> · <span class="g">Drama</span> · the man who talked his way into Wu-Tang's one-copy album · Netflix original · 16 Oct · RT 100%</li>
+        <li><span class="name">Free Leonard Peltier (2025)</span> · <span class="g">Documentary</span> · Netflix · 12 Oct · RT 83%</li>
+        <li><span class="name">Heat (1995)</span> · <span class="g">Crime epic</span> · Netflix (US) · catalogue · 16 Oct · IMDb 8.3 · RT 84%</li>
+        <li><span class="name">Wayne, S1 (2019)</span> · <span class="g">Action comedy</span> · Netflix (US) · catalogue · 12 Oct · IMDb 8.3 (series) · RT 100%</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= WORLD ================= -->
+  <section class="band">
+    <div class="banner"><h2>The World</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-26" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">EU · Ukraine</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/guerra-na-ucrania/ue-abre-mais-dois-grupos-de-capitulos-nas-negociacoes-de-adesao-de-kiev_n1771474" target="_blank" rel="noopener" class="hl"
+              >The EU opens two more blocks of Ukraine's accession talks</a
+            >
+          </h4>
+          <p>
+            With Hungary's objections dropped, the single-market and
+            competitiveness clusters, 17 chapters, are open; only two
+            clusters remain.
+          </p>
+          <p class="src">RTP · Reuters</p>
+        </article>
+        <article id="art-27" class="brief">
+          <span class="kicker">Ukraine · Energy</span>
+          <h4>
+            <a href="https://www.bbc.co.uk/news/articles/ck20r9qpw505o" target="_blank" rel="noopener" class="hl"
+              >A Russian missile hits Kyiv's Darnytsia heat and power plant</a
+            >
+          </h4>
+          <p>
+            Two people died in a struck apartment block; Zelensky says no
+            ally warned of the ballistic launch, two days after Trump
+            announced an energy ceasefire.
+          </p>
+          <p class="src">BBC · tagesschau</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-28" class="feat">
+          <span class="kicker hot">Vatican · Health</span>
+          <h3>
+            <a href="https://www.bbc.co.uk/news/articles/ck1wvd9dvv22o" target="_blank" rel="noopener" class="hl"
+              >Pope Leo has lung cancer; surgeons removed the lower lobe of his right lung</a
+            >
+          </h3>
+          <p>
+            The Vatican confirmed on Tuesday night that the lump found in a
+            routine check was a lung adenocarcinoma. The 71-year-old had a
+            90-minute operation at Rome's Gemelli hospital, in which the
+            whole lower lobe of the right lung was removed "to ensure the
+            procedure was radical"; there were no complications, and he woke
+            normally. He is expected to stay in hospital for about a week,
+            and further tests will show whether the cancer has spread. Leo
+            XIV had announced the operation himself on Sunday, and crowds
+            waited for hours outside the Gemelli to see him arrive.
+          </p>
+          <p class="src">BBC · tagesschau · Reuters</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="colophon">
+    The Cortegaça Chronicle · assembled from 38 feeds on the morning of 14
+    October 2026 · written and edited by Claude (Anthropic)<br />
+    Sources named under every item · headlines link out to the original
+  </div>
+  <div class="archive"><a href="../archive.html">All editions</a></div>
+</div>
