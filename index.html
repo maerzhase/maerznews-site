@@ -71,11 +71,11 @@
 <body>
 <div class="sheet" lang="en">
   <header>
-    <div class="ear caps">23 editions · 624 articles · <a href="archive.html">All editions</a></div>
+    <div class="ear caps">24 editions · 652 articles · <a href="archive.html">All editions</a></div>
     <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
-    <a class="today" href="editions/2026-10-14.html">
-      <span class="today-k">Today's paper · Wednesday, 14 October 2026 · No. 24</span>
-      <span class="today-h">SPD and Greens stop Berlin&#x27;s coalition talks after the Left&#x27;s MPs sign a declaration of their own</span>
+    <a class="today" href="editions/2026-10-16.html">
+      <span class="today-k">Today's paper · Friday, 16 October 2026 · No. 25</span>
+      <span class="today-h">After a 3 a.m. police charge, Porto&#x27;s housing protest grew into a march of thousands, then stood down over armed infiltrators</span>
       <span class="today-go">Read the edition →</span>
     </a>
   </header>
@@ -240,7 +240,7 @@
   q.value = params.get("q") || "";
   section = params.get("s") || "";
   count.textContent = "Loading the archive…";
-  fetch("articles.json?v=2026-10-14-624")
+  fetch("articles.json?v=2026-10-16-652")
     .then(r => r.json())
     .then(data => {
       all = data.map(a => ({ ...a, g: groupOf(a.sec), hay: words([a.h, a.k, a.sec, a.m, a.t, a.s].join(" ")) }));
