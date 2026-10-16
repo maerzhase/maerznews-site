@@ -71,7 +71,7 @@
 <body>
 <div class="sheet" lang="en">
   <header>
-    <div class="ear caps">24 editions · 652 articles · <a href="archive.html">All editions</a></div>
+    <div class="ear caps">25 editions · 679 articles · <a href="archive.html">All editions</a></div>
     <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
     <a class="today" href="editions/2026-10-16.html">
       <span class="today-k">Today's paper · Friday, 16 October 2026 · No. 25</span>
@@ -240,7 +240,7 @@
   q.value = params.get("q") || "";
   section = params.get("s") || "";
   count.textContent = "Loading the archive…";
-  fetch("articles.json?v=2026-10-16-652")
+  fetch("articles.json?v=2026-10-16-679")
     .then(r => r.json())
     .then(data => {
       all = data.map(a => ({ ...a, g: groupOf(a.sec), hay: words([a.h, a.k, a.sec, a.m, a.t, a.s].join(" ")) }));
