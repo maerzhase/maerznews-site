@@ -1,0 +1,1706 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<title>The Cortegaça Chronicle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+/>
+<style>
+  :root {
+    --paper: #f5f1e6;
+    --paper-2: #efe9da;
+    --ink: #1b1917;
+    --ink-2: #403a34;
+    --ink-3: #6b625a;
+    --rule: #c9bfae;
+    --rule-2: #a89c88;
+    --accent: #9c2b1e;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding-block: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  p {
+    text-wrap: pretty;
+    orphans: 3;
+    widows: 3;
+    margin: 0 0 0.72em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover .hl,
+  a:hover.hl {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  .ear {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 5px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .ear .price {
+    color: var(--accent);
+  }
+  .nameplate {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 10.5vw, 5.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0.26em 0 0.2em;
+    color: var(--ink);
+  }
+  .nameplate .the {
+    display: block;
+    font-size: 0.24em;
+    font-weight: 400;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    color: var(--ink-2);
+  }
+  .strip {
+    border-top: 3px double var(--rule-2);
+    border-bottom: 3px double var(--rule-2);
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 18px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-align: center;
+  }
+  .strip b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .strip .sep {
+    color: var(--rule-2);
+  }
+
+  /* ---------- TOP BAND ---------- */
+  .topband {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 0 26px;
+    margin-top: 22px;
+  }
+  .rail {
+    border: 1px solid var(--rule-2);
+    padding: 14px 14px 16px;
+    align-self: start;
+    background: var(--paper-2);
+  }
+  .rail h3 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .rail p {
+    font-size: 0.845rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .rail .sig {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 14px;
+  }
+  .mixhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-top: 2px solid var(--ink);
+    padding-top: 8px;
+    margin-bottom: 9px;
+    color: var(--ink);
+  }
+  .mix {
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    gap: 5px 8px;
+    align-items: center;
+  }
+  .mix .lab {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.655rem;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    line-height: 1.15;
+  }
+  .mix .lab.focus {
+    color: var(--accent);
+  }
+  .mix .barwrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mix .bar {
+    height: 9px;
+    background: var(--ink);
+    display: block;
+  }
+  .mix .n {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .mix .star {
+    color: var(--accent);
+    font-size: 0.66rem;
+  }
+  .mixcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 9px;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  /* ---------- LEAD ---------- */
+  .eyebrow {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .lead h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5.1vw, 3.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    margin-bottom: 0.22em;
+  }
+  .standfirst {
+    font-size: 1.06rem;
+    color: var(--ink-2);
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.6em;
+    max-width: 60ch;
+  }
+  .byline {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 5px 0;
+    margin-bottom: 16px;
+  }
+  .leadbody {
+    columns: 2;
+    column-gap: 28px;
+    column-rule: 1px solid var(--rule);
+  }
+  .leadbody p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .leadbody p:first-of-type::first-letter {
+    float: left;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 3.55em;
+    line-height: 0.78;
+    padding: 0.06em 0.09em 0 0;
+    color: var(--ink);
+  }
+  .pull {
+    break-inside: avoid;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 9px 0 11px;
+    margin: 6px 0 12px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .pull .who {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-style: normal;
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 7px;
+  }
+
+  /* ---------- FIGURE / CHART ---------- */
+  figure.fig {
+    margin: 0 0 18px;
+    border-top: 2px solid var(--ink);
+    padding-top: 10px;
+  }
+  figure.fig .figtitle {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+  figure.fig .figsub {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .chartbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .chartbox svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 330px;
+  }
+  figcaption {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    color: var(--ink-3);
+    text-align: left;
+    margin-top: 7px;
+    border-top: 1px solid var(--rule);
+    padding-top: 6px;
+  }
+  .barG rect.val {
+    fill: var(--ink);
+  }
+  .barG:hover rect.val {
+    fill: var(--accent);
+  }
+  .barG.win rect.val {
+    fill: var(--accent);
+  }
+  .barG.win:hover rect.val {
+    fill: var(--ink);
+  }
+  .barG rect.valo {
+    fill: var(--paper);
+    stroke: var(--ink);
+    stroke-width: 1.4;
+  }
+  .barG:hover rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win:hover rect.valo {
+    stroke: var(--ink);
+  }
+
+  /* ---------- SECTION BANDS ---------- */
+  .band {
+    margin-top: 30px;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .banner::before,
+  .banner::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-top: 2px;
+  }
+  .banner h2 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: clamp(0.78rem, 2.1vw, 0.95rem);
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .feat h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.38rem, 2.8vw, 1.82rem);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    margin-bottom: 0.3em;
+  }
+  .feat p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    font-size: 1rem;
+  }
+  .brief {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+  .brief h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.045rem;
+    line-height: 1.17;
+    margin-bottom: 0.25em;
+  }
+  .brief p {
+    font-size: 0.915rem;
+    color: var(--ink-2);
+    line-height: 1.46;
+  }
+  .kicker {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .kicker.hot {
+    color: var(--accent);
+  }
+  .src {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 5px;
+  }
+
+  .split-a {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 0 28px;
+  }
+  .split-b {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 0 28px;
+  }
+  .split-c {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 0 24px;
+  }
+  .split-a > .col + .col,
+  .split-b > .col + .col,
+  .split-c > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 28px;
+  }
+  .split-c > .col + .col {
+    padding-left: 24px;
+  }
+  .quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 22px;
+  }
+  .quad > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 22px;
+  }
+  .colhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.67rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .quad .feat h3 {
+    font-size: 1.18rem;
+    line-height: 1.15;
+  }
+  .quad .feat p,
+  .quad .brief p {
+    font-size: 0.875rem;
+    text-align: left;
+    hyphens: none;
+  }
+  .quad .brief h4 {
+    font-size: 0.98rem;
+  }
+
+  /* ---------- LISTS (Now Open / New Releases / Cinemas) ---------- */
+  .minilist {
+    border-top: 2px solid var(--ink);
+    margin-top: 16px;
+    padding-top: 8px;
+  }
+  .minilist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .minilist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .minilist li {
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .minilist li:last-child {
+    border-bottom: 0;
+  }
+  .minilist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .sheet article p.meta {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 0 6px;
+  }
+  .g {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- NOW STREAMING ---------- */
+  .streamlist {
+    border-top: 2px solid var(--ink);
+    margin-top: 18px;
+    padding-top: 8px;
+  }
+  .streamlist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .streamlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3;
+    column-gap: 26px;
+  }
+  .streamlist li {
+    break-inside: avoid;
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .streamlist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .streamcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ---------- AGENDA ---------- */
+  .agenda {
+    border-top: 3px double var(--ink);
+    border-bottom: 3px double var(--ink);
+    margin-top: 26px;
+    padding: 14px 0 16px;
+  }
+  .agenda-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 14px;
+  }
+  .agenda-head h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+    letter-spacing: -0.01em;
+  }
+  .agenda-head .sub {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-3);
+  }
+  .agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 26px;
+  }
+  .ev {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0 14px;
+    border-top: 1px solid var(--rule);
+    padding: 11px 0;
+  }
+  .agenda-grid > .ev:nth-child(1),
+  .agenda-grid > .ev:nth-child(2) {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .agenda-grid > .ev:nth-child(even) {
+    border-left: 1px solid var(--rule);
+    padding-left: 26px;
+  }
+  .ev .date {
+    text-align: center;
+  }
+  .ev .mo {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+  }
+  .ev .dy {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 2.35rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.34em;
+    font-variant-numeric: tabular-nums;
+  }
+  .ev .wd {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+  }
+  .ev .txt {
+    min-width: 0;
+    border-left: 1px solid var(--rule);
+    padding-left: 14px;
+  }
+  .ev .txt h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .ev .venue {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 5px;
+  }
+  .ev .ctx {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    line-height: 1.42;
+    margin: 0;
+  }
+
+  .colophon {
+    border-top: 1px solid var(--rule-2);
+    margin-top: 30px;
+    padding-top: 12px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .quad {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 22px;
+    }
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .quad > .col:nth-child(4) {
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .topband {
+      grid-template-columns: 210px 1fr;
+      gap: 0 22px;
+    }
+    .streamlist ul {
+      columns: 2;
+    }
+  }
+  @media (max-width: 860px) {
+    body {
+      font-size: 15.5px;
+    }
+    .topband {
+      grid-template-columns: 1fr;
+    }
+    .rail {
+      margin-bottom: 22px;
+    }
+    .leadbody {
+      columns: 1;
+    }
+    .split-a,
+    .split-b,
+    .split-c,
+    .quad {
+      grid-template-columns: 1fr;
+    }
+    .split-a > .col + .col,
+    .split-b > .col + .col,
+    .split-c > .col + .col,
+    .quad > .col + .col,
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .agenda-grid {
+      grid-template-columns: 1fr;
+    }
+    .agenda-grid > .ev:nth-child(even) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .agenda-grid > .ev:nth-child(2) {
+      border-top: 1px solid var(--rule);
+      padding-top: 11px;
+    }
+    .streamlist ul {
+      columns: 1;
+    }
+    .leadbody p,
+    .feat p {
+      text-align: left;
+      hyphens: none;
+    }
+    .banner h2 {
+      white-space: normal;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  .seg:hover rect {
+    opacity: 0.82;
+  }
+
+  /* ---------- TIMELINE (lead figure) ---------- */
+  .tl circle.pt {
+    fill: var(--ink);
+    stroke: var(--paper);
+    stroke-width: 2;
+  }
+  .tl g:hover circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win:hover circle.pt {
+    fill: var(--ink);
+  }
+  .tl g {
+    cursor: default;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .archive {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    margin-top: 14px;
+    padding: 6px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .archive a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  code {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.86em;
+    background: var(--paper-2);
+    color: var(--ink);
+    padding: 0 3px;
+    hyphens: none;
+    word-break: break-word;
+  }
+</style>
+
+
+
+<div class="sheet" lang="en">
+  <!-- ================= MASTHEAD ================= -->
+  <header>
+    <div class="ear">
+      Saturday, 17 October 2026 &nbsp;·&nbsp; No. 26 &nbsp;·&nbsp; Price:
+      <span class="price">one bica</span>
+    </div>
+    <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
+    <div class="strip">
+      <span>Topic today: <b>Berlin and Paris loosen the 2035 combustion ban</b></span>
+      <span class="sep">✦</span>
+      <span>Weather · Aveiro <b>22°C</b> high, 17° low, morning fog, then dry</span>
+      <span class="sep">✦</span>
+      <span>Berlin's Left breaks with MP <b>Vanessa Emde</b></span>
+    </div>
+  </header>
+
+  <!-- ================= TOP BAND ================= -->
+  <div class="topband">
+    <aside class="rail">
+      <h3>Column One</h3>
+      <p>
+        Germany and France have agreed that new cars need only cut their
+        CO2 by 90% in 2035, not 100%. The chancellor calls the combustion
+        ban "history"; the Greens call it a mistake. The lead charts what
+        the change does to the EU's targets.
+      </p>
+      <p>
+        Also in the paper: CINANIMA turns 50 next door in Espinho, Porto's
+        police charge goes to the prosecutors, Linux stops asking who used
+        AI, a lost Portuguese cartoon from 1931 bought for €25 at the Feira
+        da Ladra, and the Amazon's best year on record.
+      </p>
+      <p class="sig">— The Editor</p>
+
+      <div class="mixhead">Today's edition</div>
+      <div class="mix">
+        <span class="lab">Cortegaça &amp; Ovar</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span></span>
+
+        <span class="lab focus">✦ Germany · Berlin</span>
+        <span class="barwrap"><span class="bar" style="width: 65%"></span><span class="n">5</span><span class="star">✦</span></span>
+
+        <span class="lab">Portugal · Porto</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span></span>
+
+        <span class="lab">Technology</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">Screen</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Arts</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Sound</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">Now Streaming</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">The World</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+      </div>
+      <div class="mixcap">✦ today's focus — bar length is the story count (Germany includes the lead)</div>
+    </aside>
+
+    <article id="art-1" class="lead">
+      <div class="eyebrow">Germany · Europe · Cars</div>
+      <h1>
+        <a href="https://www.tagesschau.de/ausland/europa/verbrenner-aus-paris-berlin-100.html" target="_blank" rel="noopener" class="hl"
+          >"The combustion ban is history": Berlin and Paris agree new cars need only cut CO2 by 90% in 2035</a
+        >
+      </h1>
+      <p class="standfirst">
+        Chancellor Merz and his SPD environment minister back a Franco-German
+        position that leaves carmakers a tenth of their 2021 emissions after
+        2035, in return for building cars and batteries in Europe. The Greens
+        and Transport &amp; Environment call it a historic mistake.
+      </p>
+      <div class="byline">tagesschau · heise · Brussels and Berlin, 16 October 2026</div>
+
+      <figure class="fig">
+        <div class="figtitle">What 90% instead of 100% means for the EU's car targets</div>
+        <div class="figsub">
+          Average CO2 per kilometre a carmaker's new cars may emit, as a share
+          of its 2021 level. Hover a bar for the detail.
+        </div>
+        <div class="chartbox">
+<svg viewBox="0 0 570 182" role="img" aria-label="Average CO2 allowed for new cars as a share of the 2021 level: 2021 100 percent, 2025 85, 2030 45, 2035 under current law 0, 2035 under the Berlin-Paris position 10.">
+<title>EU CO2 targets for new cars against 2021, and the Franco-German proposal for 2035</title>
+<text x="0" y="16" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="8.5" letter-spacing="1.2">FLEET-AVERAGE CO2 ALLOWED · SHARE OF THE 2021 LEVEL</text>
+<line x1="176.0" y1="24" x2="176.0" y2="162" stroke="#a89c88" stroke-width="1"/><text x="176.0" y="174" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">0%</text>
+<line x1="261.0" y1="24" x2="261.0" y2="162" stroke="#e4dccb" stroke-width="1"/><text x="261.0" y="174" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">25%</text>
+<line x1="346.0" y1="24" x2="346.0" y2="162" stroke="#e4dccb" stroke-width="1"/><text x="346.0" y="174" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">50%</text>
+<line x1="431.0" y1="24" x2="431.0" y2="162" stroke="#e4dccb" stroke-width="1"/><text x="431.0" y="174" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">75%</text>
+<line x1="516.0" y1="24" x2="516.0" y2="162" stroke="#e4dccb" stroke-width="1"/><text x="516.0" y="174" text-anchor="middle" fill="#a89c88" font-family="'Old Standard TT',Georgia,serif" font-size="8">100%</text>
+<g class="barG"><title>2021: the reference year. Every EU target is a cut in the average CO2 per km of a maker's new cars against its 2021 level.</title><text x="168" y="41" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10">2021</text><rect class="val" x="176" y="30" width="340.0" height="15"/><text x="521.0" y="41" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">100%</text></g>
+<g class="barG"><title>2025: fleets must average 15% below 2021 (a 2025 amendment lets makers average 2025–27).</title><text x="168" y="67" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10">2025</text><rect class="val" x="176" y="56" width="289.0" height="15"/><text x="470.0" y="67" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">85%</text><text x="501.0" y="67" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="9">−15%</text></g>
+<g class="barG"><title>2030: 55% below 2021 under the regulation in force.</title><text x="168" y="93" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10">2030</text><rect class="val" x="176" y="82" width="153.0" height="15"/><text x="334.0" y="93" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">45%</text><text x="365.0" y="93" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="9">−55%</text></g>
+<g class="barG"><title>2035 under the law in force: a 100% cut, so every new car sold must be emission-free.</title><text x="168" y="119" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10">2035 · law now</text><rect x="176" y="108" width="2" height="15" fill="#1b1917"/><text x="184" y="119" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">0%</text><text x="206" y="119" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8.5" font-style="italic">only zero-emission new cars</text></g>
+<g class="barG win"><title>2035 under the Franco-German position: a 90% cut. Carmakers would not have to make up the remaining 10%; Berlin says it will offset it elsewhere.</title><text x="168" y="145" text-anchor="end" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="10">✦ 2035 · Berlin–Paris</text><rect class="val" x="176" y="134" width="34.0" height="15"/><text x="215.0" y="145" fill="#403a34" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">10%</text><text x="246.0" y="145" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="9">−90%</text></g>
+</svg>
+        </div>
+        <figcaption>
+          Sources: EU CO2 standards for new cars, Regulation (EU) 2019/631 as
+          amended in 2023 (−15% in 2025, −55% in 2030, −100% in 2035, all
+          against 2021); the Franco-German position as described by
+          environment minister Carsten Schneider to tagesschau, 16 October
+          2026. The proposal still has to pass through the EU.
+        </figcaption>
+      </figure>
+
+      <div class="leadbody">
+        <p>
+          Germany and France settled their joint line on the end of the
+          combustion engine on the sidelines of Friday's EU summit in
+          Brussels. "Let me put it quite simply: the combustion ban is then
+          history," Friedrich Merz told reporters. "We are getting a lot of
+          agreement for it." Under the law in force, the average emissions of
+          each maker's new cars must fall to zero in 2035, which in practice
+          rules out selling new petrol and diesel cars.
+        </p>
+        <p>
+          The Franco-German position lowers that to a 90% cut against 2021,
+          and the carmakers would not have to compensate for the remaining
+          10%. Carsten Schneider (SPD), the federal environment minister,
+          says Berlin will make up the extra emissions itself, chiefly by
+          getting more low-carbon steel into car-building and more recycled
+          steel into new railway investment. In return, European makers are
+          to be favoured in subsidy schemes such as purchase premiums, and
+          vehicles and their parts, "batteries in particular", would have to
+          be made in Europe rather than mostly in China.
+        </p>
+        <div class="pull">
+          "Whoever weakens the 2035 targets now creates new uncertainty and
+          puts the German car industry's competitiveness at risk."
+          <span class="who">Swantje Michaelsen, Greens transport spokeswoman in the Bundestag</span>
+        </div>
+        <p>
+          Finance minister and SPD leader Lars Klingbeil welcomed the
+          declaration: Germany should not end up merely bolting together
+          components from Asia, and battery-cell production belongs here
+          too. Now, he said, the industry must invest in German plants and
+          secure jobs. The environmental group Transport &amp; Environment
+          says the decision endangers Europe's place in the global race for
+          car and battery technology. Both governments now have to carry the
+          proposal through the EU; heise reports that the two are also
+          preparing a wider initiative to shore up Europe's carmakers
+          against Chinese competition.
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= LOCAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Cortegaça, Ovar &amp; the Coast</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-2" class="feat">
+          <span class="kicker hot">Espinho · Animation</span>
+          <h3>
+            <a href="https://www.ovarnews.pt/cinanima-celebra-50-anos-com-17-dias-de-cinema-memoria-e-criacao/" target="_blank" rel="noopener" class="hl"
+              >CINANIMA turns 50 next door: 17 days of animation in Espinho from 6 November</a
+            >
+          </h3>
+          <p>
+            The international animated-film festival in Espinho, just up the
+            coast from Esmoriz, runs its 50th edition from 6 to 22 November
+            under the motto "O Sonho Comanda a Vida", from António Gedeão's
+            poem. More than 2,400 films were submitted from 110 countries for
+            the national and international competitions.
+          </p>
+          <p>
+            New this year is the Pequeno Golfinho prize: 38 films for young
+            audiences, judged by a jury of children and teenagers. The
+            anniversary programme adds a curated "50 years of CINANIMA"
+            strand, tributes to João Machado and Henrique Alves Costa,
+            retrospectives, cine-concerts and masterclasses, and a residency
+            in which pupils from 11 secondary schools will make three short
+            animated films. The festival also travels to universities,
+            schools and social-housing neighbourhoods.
+          </p>
+          <p class="src">OvarNews</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-3" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Esmoriz · Poetry</span>
+          <h4>
+            <a href="https://www.ovarnews.pt/passaram-cem-anos-mas-esmoriz-nao-esquece-florbela-espanca/" target="_blank" rel="noopener" class="hl"
+              >Esmoriz puts up a plaque for Florbela Espanca, a century after she lived there</a
+            >
+          </h4>
+          <p>
+            The parish unveiled the plaque in the gardens of the Junta de
+            Freguesia, marking the poet's stay in Esmoriz between 1924 and
+            1926, within the centenary programme running from 2024 to 2026.
+          </p>
+          <p class="src">OvarNews</p>
+        </article>
+        <article id="art-4" class="brief">
+          <span class="kicker">Aveiro · Roads &amp; hospital</span>
+          <h4>
+            <a href="https://www.noticiasdeaveiro.pt/ministro-castro-almeida-renova-compromissos-do-governo-com-hospital-e-aveiro-agueda/" target="_blank" rel="noopener" class="hl"
+              >Aveiro–Águeda road bids are due on 17 November; the minister says the money follows the price</a
+            >
+          </h4>
+          <p>
+            At the region's inter-municipal anniversary, economy minister
+            Castro Almeida said the government will fix the financing once
+            the tender shows cost and timing, and that the health minister
+            "is taking very good care" of the Aveiro hospital expansion, the
+            region's "priority number one".
+          </p>
+          <p class="src">Notícias de Aveiro · Rádio Ria</p>
+        </article>
+        <article id="art-5" class="brief">
+          <span class="kicker">Águeda · Railway</span>
+          <h4>
+            <a href="https://www.noticiasdeaveiro.pt/linha-do-vouga-ip-adjudicou-obras-de-renovacao-na-estacao-de-sernada/" target="_blank" rel="noopener" class="hl"
+              >€670,000 to renew Sernada station on the Vouga line</a
+            >
+          </h4>
+          <p>
+            Infraestruturas de Portugal has awarded 120 days of work on track,
+            platforms and drainage at the Águeda junction, to cut the risk of
+            derailments and give the historic tourist train better access.
+          </p>
+          <p class="src">Notícias de Aveiro</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GERMANY ================= -->
+  <section class="band">
+    <div class="banner"><h2>Germany · Berlin &amp; Brandenburg</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-6" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Berlin · Universities</span>
+          <h4>
+            <a href="https://www.rbb24.de/politik/beitrag/2026/10/berlin-hauptstadtzulage-humboldt-universitaet-mitarbeitende.html" target="_blank" rel="noopener" class="hl"
+              >Humboldt University must pay its 4,000 staff the €150 capital-city bonus</a
+            >
+          </h4>
+          <p>
+            The Berlin-Brandenburg labour court upheld December's ruling and
+            allowed no appeal. Verdi wants the money backdated to April 2025;
+            the university says it has no funding promise from the Senate and
+            no reserves left to pay it.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article id="art-7" class="brief">
+          <span class="kicker">Kreuzberg · Memory</span>
+          <h4>
+            <a href="https://www.rbb24.de/panorama/beitrag/2026/10/umbenennung-bluecherplatz-eva-mamlok-platz-berlin-kreuzberg.html" target="_blank" rel="noopener" class="hl"
+              >Blücherplatz is now Eva-Mamlok-Platz</a
+            >
+          </h4>
+          <p>
+            The square in front of the library is named after a young Jewish
+            Kreuzbergerin who defied the Nazis as a teenager and was later
+            murdered. Blücherstraße keeps its name.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article id="art-8" class="brief">
+          <span class="kicker">AI · Industry</span>
+          <h4>
+            <a href="https://www.tagesschau.de/wirtschaft/technologie/nvidia-bundesregierung-ki-100.html" target="_blank" rel="noopener" class="hl"
+              >Berlin plans an industrial-AI partnership with Nvidia</a
+            >
+          </h4>
+          <p>
+            It is expected at Monday and Tuesday's "Invest in Germany"
+            conference in Berlin, with some 200 companies; Merz meets Jensen
+            Huang on Monday evening.
+          </p>
+          <p class="src">tagesschau · heise</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-9" class="feat">
+          <span class="kicker hot">Berlin · Coalition</span>
+          <h3>
+            <a href="https://www.rbb24.de/politik/berlin-wahl-2026/beitraege/linke-fraktion-sondersitzung-emde-sondierung.html" target="_blank" rel="noopener" class="hl"
+              >Berlin's Left sees "no common basis" with its MP Vanessa Emde, as red-green-red talks head for the finish</a
+            >
+          </h3>
+          <p>
+            After an emergency meeting on Friday, the Left's group leadership
+            in the Abgeordnetenhaus said Emde, who won Neukölln's first
+            constituency outright, had in effect withdrawn her signature from
+            the group's founding declaration, which commits every member to
+            Israel's right to exist. In a new Instagram video she stood by her
+            claim that states, unlike people, have no right to exist, and
+            said she would not take back a single statement, whatever the
+            threats of expulsion.
+          </p>
+          <p>
+            Co-leader Tobias Schulze said she cannot speak for the group in
+            public; its board decides on Tuesday what happens next. SPD
+            leaders Bettina König and Steffen Krach and the Greens' Werner
+            Graf said they were relieved. The exploratory talks, which ran
+            into Thursday night and resumed on Friday, have reached the
+            socialisation of big landlords' flats and the widening budget
+            hole, and could be wrapped up this weekend; the Left may bring
+            forward its 31 October party congress.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTUGAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Portugal &amp; the Coast</h2></div>
+    <div class="split-c">
+      <div class="col">
+        <article id="art-10" class="feat">
+          <span class="kicker hot">Porto · Housing</span>
+          <h3>
+            <a href="https://www.rtp.pt/noticias/pais/movimento-decide-nao-passar-a-madrugada-na-praca-d-joao-i-no-porto_n1772228" target="_blank" rel="noopener" class="hl"
+              >The police charge goes to the prosecutors; Porto's housing movement joins today's national marches</a
+            >
+          </h3>
+          <p>
+            The interior ministry's inspectorate, IGAI, has opened an inquiry
+            into Thursday's 3 a.m. charge on the camp in Praça D. João I, and
+            the PSP has sent its video and CCTV footage to the Public
+            Prosecutor. Mayor Pedro Duarte welcomed the inquiry; Livre wants
+            to know who gave the order.
+          </p>
+          <p>
+            On Friday night, after an assembly of several hundred people, the
+            movement chose not to sleep in the square, citing a lack of
+            material conditions. Today it joins the CGTP union march from
+            Praça da Batalha at 10:30 and holds the square, with council
+            permission, until its 19:00 assembly, one of several
+            cost-of-living protests across the country this weekend.
+            Prime Minister Montenegro denied calling protesters selfish and
+            said he was worried by threats made against his home.
+          </p>
+          <p class="src">RTP · Jornal de Notícias · Público · Observador</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-11" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Press · Obituary</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/cultura/morreu-aos-82-anos-o-jornalista-joaquim-letria_n1772084" target="_blank" rel="noopener" class="hl"
+              >Joaquim Letria, founder of O Jornal and Tal&amp;Qual, dies at 82</a
+            >
+          </h4>
+          <p>
+            The journalist and writer also launched the magazines Sábado and
+            Tempo Livre; O Jornal lives on as Visão. Montenegro said
+            journalism had lost "a striking figure".
+          </p>
+          <p class="src">RTP · Público</p>
+        </article>
+        <article id="art-12" class="brief">
+          <span class="kicker">Health · Parliament</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/pais/turismo-de-saude-ar-aprova-novas-limitacoes-a-estrangeiros_v1772218" target="_blank" rel="noopener" class="hl"
+              >Parliament tightens SNS access for foreigners over "health tourism"</a
+            >
+          </h4>
+          <p>
+            The bills approved require proof of address and health insurance,
+            and stronger collection of fees.
+          </p>
+          <p class="src">RTP</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-13" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Lisbon · 25 de Abril</span>
+          <h4>
+            <a href="https://observador.pt/2026/10/17/centro-interpretativo-do-25-de-abril-vai-ficar-junto-ao-campo-das-cebolas-em-lisboa-govern" target="_blank" rel="noopener" class="hl"
+              >The Carnation Revolution centre will go beside Campo das Cebolas</a
+            >
+          </h4>
+          <p>
+            After a year's stand-off, the Associação 25 de Abril says a city
+            building in Rua Instituto Virgílio Machado will house it; the
+            government is to pay for the "deep" refurbishment.
+          </p>
+          <p class="src">Observador · Lusa</p>
+        </article>
+      </div>
+    </div>
+    <div class="agenda">
+      <div class="agenda-head">
+        <h3>✦ The Diary — What's On</h3>
+        <span class="sub">Upcoming around Cortegaça, Ovar &amp; Aveiro</span>
+      </div>
+      <div class="agenda-grid">
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">17</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1843128/paus" target="_blank" rel="noopener" class="hl">PAUS</a></h4>
+            <div class="venue">Escola de Artes e Ofícios · Ovar · 22:30 · Ovar Expande</div>
+            <p class="ctx">The twin-drummer Lisbon quartet's farewell tour for "Enterro" closes the festival; the band ends for good on 5 December.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">18</span><span class="wd">Sun</span></div>
+          <div class="txt">
+            <h4><a href="https://www.ovarnews.pt/ccr-maceda-voleibol-apresenta-equipas-para-a-nova-epoca-desportiva/" target="_blank" rel="noopener" class="hl">CCR Maceda volleyball season opener</a></h4>
+            <div class="venue">Pavilhão Gimnodesportivo · Maceda · from 10:00</div>
+            <p class="ctx">Every team in the club plays a presentation match for 2026/27; the squads are introduced the day before, 16:00, at the Blue Bar.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">21</span><span class="wd">Wed</span></div>
+          <div class="txt">
+            <h4><a href="https://www.noticiasdeaveiro.pt/25-anos-da-renovacao-do-museu-maritimo-de-ilhavo/" target="_blank" rel="noopener" class="hl">Museu Marítimo de Ílhavo at 25</a></h4>
+            <div class="venue">Museu Marítimo · Ílhavo · 17:30</div>
+            <p class="ctx">A ceremony for the enlarged museum, the exhibition "Visto bom para Portugal" and, at 19:00, a violin-and-piano recital on music and refugees.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">22</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1866403/shortcutz-ovar-sessao-111" target="_blank" rel="noopener" class="hl">Shortcutz Ovar #111</a></h4>
+            <div class="venue">Escola de Artes e Ofícios · Ovar · 20:30 · free</div>
+            <p class="ctx">Three short films from the season's official selection, with their directors present; book by Instagram or email.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">23</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1842429/sozinho-em-casa-23-pedro-martins" target="_blank" rel="noopener" class="hl">Sozinho em Casa #23 — Pedro Martins</a></h4>
+            <div class="venue">Museu Júlio Dinis · Ovar · 20:30 · free</div>
+            <p class="ctx">A walk through Ovar streamed live into the auditorium, with the lutenist improvising its soundtrack as it happens.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">24</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.ovarnews.pt/cortegaca-asas-promove-espetaculo-solidario-para-angariar-fundos-para-visitar-o-papa/" target="_blank" rel="noopener" class="hl">ASAS benefit show with Pamy</a></h4>
+            <div class="venue">Auditório de Cortegaça · 21:30 · €5</div>
+            <p class="ctx">The parish youth group raises money for its trip to Rome, with music from the Ovar singer Pamy.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">24</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1843131/cambedo-1946" target="_blank" rel="noopener" class="hl">Cambedo, 1946</a></h4>
+            <div class="venue">Centro de Arte · Ovar · 20:30 · Teatro de Balugas</div>
+            <p class="ctx">Theatre about the border village near Chaves that sheltered Galician refugees and was shelled by both Iberian dictatorships.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">24</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.noticiasdeaveiro.pt/voz-de-cama-no-cineteatro-alba/" target="_blank" rel="noopener" class="hl">Voz de Cama, live</a></h4>
+            <div class="venue">Cineteatro Alba · Albergaria-a-Velha · 21:30</div>
+            <p class="ctx">Ana Markl and Tânia Graça take their Antena 3 podcast about sex and relationships out of the studio and onto the stage.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">18</span><span class="wd">Sun</span></div>
+          <div class="txt">
+            <h4><a href="https://www.serralves.pt/agenda-serralves/" target="_blank" rel="noopener" class="hl">O Gebo e a Sombra</a></h4>
+            <div class="venue">Porto · Casa do Cinema Manoel de Oliveira, Serralves · 17:00</div>
+            <p class="ctx">Oliveira's 2012 film screens in the house's season on Manoel de Oliveira and Portuguese cinema.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">24</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.serralves.pt/agenda-serralves/" target="_blank" rel="noopener" class="hl">Gustavo Ciríaco — Névoa-Nada</a></h4>
+            <div class="venue">Porto · Serralves museum auditorium · 19:00 · also Sun 25</div>
+            <p class="ctx">The choreographer's stage piece on two evenings, in the museum's performing-arts programme.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CULTURE QUAD ================= -->
+  <section class="band">
+    <div class="banner"><h2>Machines, Screen, Art &amp; Sound</h2></div>
+    <div class="quad">
+      <div class="col">
+        <div class="colhead">Technology</div>
+        <article id="art-14" class="feat">
+          <span class="kicker hot">Linux · AI</span>
+          <h3>
+            <a href="https://www.heise.de/news/Linux-Kennzeichnung-von-KI-Code-soll-entfallen-auch-Torvalds-nutzt-LLMs-11490345.html" target="_blank" rel="noopener" class="hl"
+              >Linux drops the "Assisted-by" tag for AI-written patches: only one commit in ten carried it</a
+            >
+          </h3>
+          <p>
+            A majority of the roughly 30 developers at the Maintainers Summit
+            in Prague on 8 October voted to stop requiring the tag. Sasha
+            Levin, the Nvidia engineer and stable-kernel co-maintainer who
+            wrote the rule in the first place, filed the patch to remove it
+            the next day, and Jonathan Corbet has taken it into docs-next.
+            Linus Torvalds and Greg Kroah-Hartman back it; a first attempt
+            failed in July.
+          </p>
+          <p>
+            Levin's numbers: of the 18,533 non-merge commits in Linux 7.3 up
+            to rc7, only about 10% carry the tag, though AI is used far more
+            often. Some developers never heard of the rule, others skip it,
+            and maintainers rarely ask, so its absence proves nothing.
+            Contributors will instead describe how they used AI tools in the
+            patch series' cover letter.
+          </p>
+          <p class="src">heise · LKML</p>
+        </article>
+        <article id="art-15" class="brief">
+          <span class="kicker">Web · Images</span>
+          <h4>
+            <a href="https://jakearchibald.com/2026/jpeg-xl-vs-avif/" target="_blank" rel="noopener" class="hl"
+              >Jake Archibald: now that every browser has JPEG XL, AVIF still wins on the web</a
+            >
+          </h4>
+          <p>
+            For lossy photos the best JPEG XL is typically 15–25% larger than
+            AVIF at default effort; for screenshots and illustrations 30–90%
+            larger, and AVIF decodes faster. His advice: keep AVIF at 4:4:4,
+            not 4:2:0.
+          </p>
+          <p class="src">jakearchibald.com</p>
+        </article>
+        <article id="art-16" class="brief">
+          <span class="kicker">Security · OpenBSD</span>
+          <h4>
+            <a href="https://calif.io/research/big-fish" target="_blank" rel="noopener" class="hl"
+              >A 37-year-old 16-bit counter gave root on OpenBSD</a
+            >
+          </h4>
+          <p>
+            Calif found that the shared-memory attach count, a signed short
+            since the original BSD sources, wraps past 32,767 when a process
+            forks enough; chained with an out-of-bounds write it beat KARL,
+            SMAP and SMEP. Errata 026 and 018 fix it.
+          </p>
+          <p class="src">Calif · heise</p>
+        </article>
+      </div>
+      <div class="col">
+        <div class="colhead">Screen</div>
+        <article id="art-17" class="feat">
+          <span class="kicker hot">Lisbon · Lost film</span>
+          <h3>
+            <a href="https://www.rtp.pt/noticias/cultura/cinemateca-exibe-animacao-portuguesa-de-1931-encontrada-na-feira-da-ladra_n1772154" target="_blank" rel="noopener" class="hl"
+              >A lost Portuguese cartoon from 1931, bought for €25 at the Feira da Ladra, returns to the screen</a
+            >
+          </h3>
+          <p class="meta">A Lenda de Miragaia (1931) · Silhouette animation · short, 28,400 frames · Cinemateca, Lisbon, 27 Oct</p>
+          <p>
+            Raúl Faria da Fonseca and António Cunhal's film, one of the first
+            animations in Portuguese cinema, had been given up for lost until
+            a regular at the Cinemateca, Duarte Veloso, and his father spotted
+            two film cans with its name on the label at Lisbon's flea market.
+            Inside was the nitrate negative; they donated it in May.
+          </p>
+          <p>
+            The Cinemateca restored it by analogue means and rebuilt the
+            original intertitles and edit from handwritten notes on the
+            negative, period sources and Almeida Garrett's version of the
+            legend. It screens on 27 October, World Day for Audiovisual
+            Heritage, in a programme of animated shorts that also closes the
+            recovery-fund project that digitised more than 1,000 Portuguese
+            films.
+          </p>
+          <p class="src">RTP · Lusa · Cinemateca</p>
+        </article>
+        <article id="art-18" class="brief">
+          <span class="kicker">US · Box office</span>
+          <h4>
+            <a href="https://www.indiewire.com/news/box-office/you-can-see-everything-a24-elizabeth-holmes-previews-gross-1235222385/" target="_blank" rel="noopener" class="hl"
+              >You Can See Everything (2026) takes $1.75 million in Thursday previews</a
+            >
+          </h4>
+          <p class="meta">Documentary · A24 · US cinemas from 16 Oct · IMDb 9.3 · RT 99%</p>
+          <p>
+            Nathan Fielder and Lance Oppenheim's secretive film about Elizabeth
+            Holmes played on 855 screens and is heading for $7–8 million over
+            the weekend, huge for a documentary that isn't a concert film.
+          </p>
+          <p class="src">IndieWire · Rotten Tomatoes</p>
+        </article>
+        <div class="minilist">
+          <h5>In Cinemas &amp; Festivals</h5>
+          <ul>
+            <li><span class="name">Esta Vida de Marinheiro (2026)</span> · <span class="g">Music documentary</span> · Paulo Miguel Antunes on João Aguardela of Sitiados and A Naifa; premieres at Doclisboa today</li>
+            <li><span class="name">Whalefall (2026)</span> · <span class="g">Survival thriller</span> · Austin Abrams trapped inside a whale; US cinemas now · IMDb 6.8 · RT 71%</li>
+            <li><span class="name">The Devils (1971)</span> · <span class="g">Historical drama</span> · Ken Russell's reconstructed cut back in UK cinemas and on 35mm in New York · IMDb 7.7 · RT 56%</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="colhead">Arts</div>
+        <article id="art-19" class="feat">
+          <span class="kicker hot">Egypt · Archaeology</span>
+          <h3>
+            <a href="https://hyperallergic.com/massive-king-ramses-ii-statues-unearthed-in-egypt/" target="_blank" rel="noopener" class="hl"
+              >A farmer's inscribed stone leads to two colossal statues of Ramses II in the Nile Delta</a
+            >
+          </h3>
+          <p>
+            Egypt's antiquities ministry says the remains of two enormous
+            statues of the pharaoh came out of the ground at Behbeit
+            Al-Hagar, the village best known for the ruined Iseion, a temple
+            of Isis, after a resident reported a stone with hieroglyphs on
+            his land.
+          </p>
+          <p>
+            The dig produced a carved head of Ramses wearing the double crown
+            of Upper and Lower Egypt. At about 1.6 metres, it implies a
+            standing figure of more than 8.5 metres. Nearby lay the upper part
+            of the statue's back pillar, inscribed with the king's Horus
+            name, "Hor-Ka-Nakht-Mery-Maat".
+          </p>
+          <p class="src">Hyperallergic · Egyptian Ministry of Tourism and Antiquities</p>
+        </article>
+        <article id="art-20" class="brief">
+          <span class="kicker">Restitution · Courts</span>
+          <h4>
+            <a href="https://www.artnews.com/art-news/news/norton-simon-museum-countersues-jewish-heirs-looted-cranach-1234802779/" target="_blank" rel="noopener" class="hl"
+              >The Norton Simon countersues to keep Cranach's Adam and Eve</a
+            >
+          </h4>
+          <p>
+            Göring acquired the diptych in the Nazis' forced sale of the
+            Goudstikker gallery; the museum won in court in 2016. The heir has now passed her claim to the
+            Jewish Federation of Los Angeles, which is suing under the amended
+            HEAR Act, and the museum has gone back to court.
+          </p>
+          <p class="src">ARTnews</p>
+        </article>
+        <div class="minilist">
+          <h5>Now Open</h5>
+          <ul>
+            <li><span class="name">ASTUTAS — Salinas do século XXI</span> · Capitania (Casa dos Arcos), Aveiro · an immersive show on the salt pans, to 11 Dec</li>
+            <li><span class="name">Visto bom para Portugal</span> · Museu Marítimo de Ílhavo · opens 21 Oct with the museum's 25th-anniversary programme</li>
+            <li><span class="name">Simetrias ocultas em muros de vidro</span> · Serralves Park, Porto · diatoms between science and art, 30 Oct to 31 Jan</li>
+            <li><span class="name">Cannupa Hanska Luger — American Traditional</span> · Garth Greenan Gallery, New York · wood, ink and archive on the bison slaughter</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="colhead">Sound</div>
+        <article id="art-21" class="feat">
+          <span class="kicker hot">Australia · New album</span>
+          <h3>
+            <a href="https://thequietus.com/quietus-reviews/the-avalanches-no-bad-memories-review/" target="_blank" rel="noopener" class="hl"
+              >The Avalanches turn their sampler on brands and tech in "No Bad Memories"</a
+            >
+          </h3>
+          <p class="meta">Plunderphonics · sample-based pop · fourth album · out now</p>
+          <p>
+            The Australian crew, now Robbie Chater, Tony Di Blasi and new
+            member Andrew Szekeres, stay home this time: the record sends up
+            the way brands and gadgets have moved into our lives, with fake
+            adverts from Mike Patton and Haley Joel Osment, start-up chimes
+            and VCR clunks between the songs.
+          </p>
+          <p>
+            Karen O and Rivers Cuomo return from the last album, Haruomi
+            Hosono builds "a sci-fi jazz club", and John Glacier meets the
+            Tunisian footwork producer Khadija Al Hanafi on a drum'n'bass
+            ballad. The Quietus calls it a delightful, if frenetic,
+            technicolour wash.
+          </p>
+          <p class="src">The Quietus · Pitchfork</p>
+        </article>
+        <article id="art-22" class="brief">
+          <span class="kicker">Games · Score</span>
+          <h4>
+            <a href="https://pitchfork.com/story/justice-composed-the-score-for-grand-theft-auto-vi/" target="_blank" rel="noopener" class="hl"
+              >Justice scored Grand Theft Auto VI</a
+            >
+          </h4>
+          <p class="meta">Electronic · game score · Rockstar Games, 19 Nov</p>
+          <p>
+            Their song for the 34-track soundtrack, "Flower in a Hurricane",
+            brings in Tame Impala, SZA and King Gizzard &amp; the Lizard
+            Wizard.
+          </p>
+          <p class="src">Pitchfork</p>
+        </article>
+        <article id="art-23" class="brief">
+          <span class="kicker hot">Cape Verde · Posthumous</span>
+          <h4>
+            <a href="https://www.publico.pt/2026/10/16/culturaipsilon/noticia/quinze-anos-reencontramos-cesaria-evora-ultima-despedida-2191658" target="_blank" rel="noopener" class="hl"
+              >Cesária Évora's unreleased songs become "Reina da Morna"</a
+            >
+          </h4>
+          <p class="meta">Morna · posthumous album</p>
+          <p>
+            Fifteen years after her death, her manager and producer Djô da
+            Silva gathers the songs she left unissued; he walks Ípsilon
+            through the record's history.
+          </p>
+          <p class="src">Público</p>
+        </article>
+        <div class="minilist">
+          <h5>New Releases</h5>
+          <ul>
+            <li><span class="name">Djrum — DJ-Kicks</span> · <span class="g">Electronic</span> · an 82-minute mix from ambient to breakcore</li>
+            <li><span class="name">@ — Autosmile</span> · <span class="g">Psych-folk</span> · the Philadelphia duo's second album</li>
+            <li><span class="name">Jon Hassell — Music Is Invisible</span> · <span class="g">Ambient jazz</span> · Pentimento Vol. 3, from his last live show</li>
+            <li><span class="name">Gabriel Ferrandini — Romance</span> · <span class="g">Experimental</span> · the Portuguese jazz drummer's third, rebuilt from years of recordings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOW STREAMING ================= -->
+  <section class="band">
+    <div class="banner"><h2>Now Streaming</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-24" class="feat">
+          <span class="kicker hot">MUBI · Film</span>
+          <h3>
+            <a href="https://thefilmstage.com/new-to-streaming-hope-buddy-rose-of-nevada-the-sun-never-sets-more/" target="_blank" rel="noopener" class="hl"
+              >Rose of Nevada (2025): Mark Jenkin's hypnotic Cornwall drama arrives on MUBI</a
+            >
+          </h3>
+          <p class="meta">Drama · MUBI (US; check your local catalogue) · new this week · IMDb 6.2 · RT 92%</p>
+          <p>
+            The director of "Bait" and "Enys Men" again turns his home turf of
+            Cornwall into a suspended world where facts and visions collide,
+            jumping through time and space to the tick of a clock, gusts of
+            wind and the distant roar of waves. The Film Stage calls his films
+            hypnotic and seasick, more ambient than plotted, with the story
+            often hiding in the objects at the edge of the frame.
+          </p>
+          <p>
+            Critics are with it (92% on the Tomatometer); audiences less so,
+            at 53%. The 2025 film reached MUBI in the United States this week;
+            availability in Portugal and Germany may differ.
+          </p>
+          <p class="src">The Film Stage · Rotten Tomatoes</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-25" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">HBO Max · Film</span>
+          <h4>
+            <a href="https://www.rottentomatoes.com/m/the_death_of_robin_hood" target="_blank" rel="noopener" class="hl"
+              >The Death of Robin Hood (2026) goes back to the bloody ballads</a
+            >
+          </h4>
+          <p class="meta">Medieval drama · HBO Max (US), new this week · IMDb 6.0 · RT 69%</p>
+          <p>
+            Michael Sarnoski's film goes back to the earliest ballads, in
+            which the outlaw gives nothing to the poor, takes pleasure in
+            killing the rich and beheads Guy of Gisborne.
+          </p>
+          <p class="src">The Film Stage · Rotten Tomatoes</p>
+        </article>
+      </div>
+    </div>
+    <div class="streamlist">
+      <h5>New This Week</h5>
+      <ul>
+        <li><span class="name">100 Days of Deception (2026)</span> · <span class="g">Period action drama</span> · Korean, weekly · Netflix · from 10 Oct · IMDb 8.3</li>
+        <li><span class="name">Michael Che: Shot in Minnesota (2026)</span> · <span class="g">Stand-up comedy</span> · Netflix · week to 16 Oct · IMDb 7.3</li>
+        <li><span class="name">Instadocs: AI Gone Wild (2026)</span> · <span class="g">Documentary</span> · Netflix · week to 16 Oct · IMDb 6.7</li>
+        <li><span class="name">Hope (2026)</span> · <span class="g">Sci-fi creature feature</span> · Na Hong-jin · US digital rental (VOD) · this week · IMDb 6.7 · RT 79%</li>
+        <li><span class="name">Doctor Sleep (2019)</span> · <span class="g">Horror</span> · Netflix UK · catalogue · 15 Oct · IMDb 7.3 · RT 79%</li>
+        <li><span class="name">Wicked (2024)</span> · <span class="g">Musical fantasy</span> · Netflix UK · catalogue · week to 16 Oct · IMDb 7.3 · RT 88%</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= WORLD ================= -->
+  <section class="band">
+    <div class="banner"><h2>The World</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-26" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">US · Russia</span>
+          <h4>
+            <a href="https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o" target="_blank" rel="noopener" class="hl"
+              >Trump waives much of the new Russia sanctions law before it takes effect</a
+            >
+          </h4>
+          <p>
+            An executive order withholds parts of the Graham law, which allows
+            tariffs of up to 100% on the biggest buyers of Russian oil and
+            gas, calling them against US interests; 20 lawmakers of both
+            parties had asked him to apply it in full.
+          </p>
+          <p class="src">BBC · RTP</p>
+        </article>
+        <article id="art-27" class="brief">
+          <span class="kicker">UN · Leadership</span>
+          <h4>
+            <a href="https://www.tagesschau.de/ausland/amerika/un-generalsekretaer-wahl-100.html" target="_blank" rel="noopener" class="hl"
+              >Sixth straw poll, still no successor to Guterres</a
+            >
+          </h4>
+          <p>
+            Rebeca Grynspan led again with 9 of 15 votes, but two of the five
+            veto powers, voting with red ballots for the first time, said no.
+          </p>
+          <p class="src">tagesschau</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-28" class="feat">
+          <span class="kicker hot">Brazil · Climate</span>
+          <h3>
+            <a href="https://www.bbc.co.uk/news/articles/cqe8rzg6zl00o" target="_blank" rel="noopener" class="hl"
+              >Amazon deforestation falls 41.8% in a year, the steepest drop since records began in 1988</a
+            >
+          </h3>
+          <p>
+            Satellite data for the year to July 2026 show the record fall in
+            the Brazilian Amazon, and a 23.8% fall in the Cerrado savanna.
+            Environment minister João Paulo Capobianco called it "absolutely
+            stratospheric"; Lula, who has pledged zero illegal deforestation
+            by 2030, faces Flávio Bolsonaro in the run-off on 25 October,
+            with the polls neck and neck.
+          </p>
+          <p>
+            Under Jair Bolsonaro, from 2019 to 2022, the Amazon lost nearly
+            60% more forest than in the four years before, AFP reported from
+            official data. Lula tightened monitoring and penalties for illegal
+            logging. Flávio Bolsonaro is expected to continue his father's
+            policies, though he promises to fight organised crime in the
+            region.
+          </p>
+          <p class="src">BBC · tagesschau · RTP</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <div class="colophon">
+    The Cortegaça Chronicle · assembled from 38 feeds on the morning of 17
+    October 2026 · written and edited by Claude (Anthropic)<br />
+    Sources named under every item · headlines link out to the original
+  </div>
+  <div class="archive"><a href="../archive.html">All editions</a></div>
+</div>
