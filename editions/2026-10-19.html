@@ -1,0 +1,1804 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<title>The Cortegaça Chronicle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+/>
+<style>
+  :root {
+    --paper: #f5f1e6;
+    --paper-2: #efe9da;
+    --ink: #1b1917;
+    --ink-2: #403a34;
+    --ink-3: #6b625a;
+    --rule: #c9bfae;
+    --rule-2: #a89c88;
+    --accent: #9c2b1e;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding-block: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  p {
+    text-wrap: pretty;
+    orphans: 3;
+    widows: 3;
+    margin: 0 0 0.72em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover .hl,
+  a:hover.hl {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  .ear {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 5px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .ear .price {
+    color: var(--accent);
+  }
+  .nameplate {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 10.5vw, 5.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0.26em 0 0.2em;
+    color: var(--ink);
+  }
+  .nameplate .the {
+    display: block;
+    font-size: 0.24em;
+    font-weight: 400;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    color: var(--ink-2);
+  }
+  .strip {
+    border-top: 3px double var(--rule-2);
+    border-bottom: 3px double var(--rule-2);
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 18px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-align: center;
+  }
+  .strip b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .strip .sep {
+    color: var(--rule-2);
+  }
+
+  /* ---------- TOP BAND ---------- */
+  .topband {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 0 26px;
+    margin-top: 22px;
+  }
+  .rail {
+    border: 1px solid var(--rule-2);
+    padding: 14px 14px 16px;
+    align-self: start;
+    background: var(--paper-2);
+  }
+  .rail h3 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .rail p {
+    font-size: 0.845rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .rail .sig {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 14px;
+  }
+  .mixhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-top: 2px solid var(--ink);
+    padding-top: 8px;
+    margin-bottom: 9px;
+    color: var(--ink);
+  }
+  .mix {
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    gap: 5px 8px;
+    align-items: center;
+  }
+  .mix .lab {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.655rem;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    line-height: 1.15;
+  }
+  .mix .lab.focus {
+    color: var(--accent);
+  }
+  .mix .barwrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mix .bar {
+    height: 9px;
+    background: var(--ink);
+    display: block;
+  }
+  .mix .n {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .mix .star {
+    color: var(--accent);
+    font-size: 0.66rem;
+  }
+  .mixcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 9px;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  /* ---------- LEAD ---------- */
+  .eyebrow {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .lead h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5.1vw, 3.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    margin-bottom: 0.22em;
+  }
+  .standfirst {
+    font-size: 1.06rem;
+    color: var(--ink-2);
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.6em;
+    max-width: 60ch;
+  }
+  .byline {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 5px 0;
+    margin-bottom: 16px;
+  }
+  .leadbody {
+    columns: 2;
+    column-gap: 28px;
+    column-rule: 1px solid var(--rule);
+  }
+  .leadbody p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .leadbody p:first-of-type::first-letter {
+    float: left;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 3.55em;
+    line-height: 0.78;
+    padding: 0.06em 0.09em 0 0;
+    color: var(--ink);
+  }
+  .pull {
+    break-inside: avoid;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 9px 0 11px;
+    margin: 6px 0 12px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .pull .who {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-style: normal;
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 7px;
+  }
+
+  /* ---------- FIGURE / CHART ---------- */
+  figure.fig {
+    margin: 0 0 18px;
+    border-top: 2px solid var(--ink);
+    padding-top: 10px;
+  }
+  figure.fig .figtitle {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+  figure.fig .figsub {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .chartbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .chartbox svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 330px;
+  }
+  figcaption {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    color: var(--ink-3);
+    text-align: left;
+    margin-top: 7px;
+    border-top: 1px solid var(--rule);
+    padding-top: 6px;
+  }
+  .barG rect.val {
+    fill: var(--ink);
+  }
+  .barG:hover rect.val {
+    fill: var(--accent);
+  }
+  .barG.win rect.val {
+    fill: var(--accent);
+  }
+  .barG.win:hover rect.val {
+    fill: var(--ink);
+  }
+  .barG rect.valo {
+    fill: var(--paper);
+    stroke: var(--ink);
+    stroke-width: 1.4;
+  }
+  .barG:hover rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win:hover rect.valo {
+    stroke: var(--ink);
+  }
+
+  /* ---------- SECTION BANDS ---------- */
+  .band {
+    margin-top: 30px;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .banner::before,
+  .banner::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-top: 2px;
+  }
+  .banner h2 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: clamp(0.78rem, 2.1vw, 0.95rem);
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .feat h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.38rem, 2.8vw, 1.82rem);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    margin-bottom: 0.3em;
+  }
+  .feat p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    font-size: 1rem;
+  }
+  .brief {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+  .brief h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.045rem;
+    line-height: 1.17;
+    margin-bottom: 0.25em;
+  }
+  .brief p {
+    font-size: 0.915rem;
+    color: var(--ink-2);
+    line-height: 1.46;
+  }
+  .kicker {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .kicker.hot {
+    color: var(--accent);
+  }
+  .src {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 5px;
+  }
+
+  .split-a {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 0 28px;
+  }
+  .split-b {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 0 28px;
+  }
+  .split-c {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 0 24px;
+  }
+  .split-a > .col + .col,
+  .split-b > .col + .col,
+  .split-c > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 28px;
+  }
+  .split-c > .col + .col {
+    padding-left: 24px;
+  }
+  .quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 22px;
+  }
+  .quad > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 22px;
+  }
+  .colhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.67rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .quad .feat h3 {
+    font-size: 1.18rem;
+    line-height: 1.15;
+  }
+  .quad .feat p,
+  .quad .brief p {
+    font-size: 0.875rem;
+    text-align: left;
+    hyphens: none;
+  }
+  .quad .brief h4 {
+    font-size: 0.98rem;
+  }
+
+  /* ---------- LISTS (Now Open / New Releases / Cinemas) ---------- */
+  .minilist {
+    border-top: 2px solid var(--ink);
+    margin-top: 16px;
+    padding-top: 8px;
+  }
+  .minilist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .minilist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .minilist li {
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .minilist li:last-child {
+    border-bottom: 0;
+  }
+  .minilist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .sheet article p.meta {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 0 6px;
+  }
+  .g {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- NOW STREAMING ---------- */
+  .streamlist {
+    border-top: 2px solid var(--ink);
+    margin-top: 18px;
+    padding-top: 8px;
+  }
+  .streamlist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .streamlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3;
+    column-gap: 26px;
+  }
+  .streamlist li {
+    break-inside: avoid;
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .streamlist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .streamcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ---------- AGENDA ---------- */
+  .agenda {
+    border-top: 3px double var(--ink);
+    border-bottom: 3px double var(--ink);
+    margin-top: 26px;
+    padding: 14px 0 16px;
+  }
+  .agenda-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 14px;
+  }
+  .agenda-head h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+    letter-spacing: -0.01em;
+  }
+  .agenda-head .sub {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-3);
+  }
+  .agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 26px;
+  }
+  .ev {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0 14px;
+    border-top: 1px solid var(--rule);
+    padding: 11px 0;
+  }
+  .agenda-grid > .ev:nth-child(1),
+  .agenda-grid > .ev:nth-child(2) {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .agenda-grid > .ev:nth-child(even) {
+    border-left: 1px solid var(--rule);
+    padding-left: 26px;
+  }
+  .ev .date {
+    text-align: center;
+  }
+  .ev .mo {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+  }
+  .ev .dy {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 2.35rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.34em;
+    font-variant-numeric: tabular-nums;
+  }
+  .ev .wd {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+  }
+  .ev .txt {
+    min-width: 0;
+    border-left: 1px solid var(--rule);
+    padding-left: 14px;
+  }
+  .ev .txt h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .ev .venue {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 5px;
+  }
+  .ev .ctx {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    line-height: 1.42;
+    margin: 0;
+  }
+
+  .colophon {
+    border-top: 1px solid var(--rule-2);
+    margin-top: 30px;
+    padding-top: 12px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .quad {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 22px;
+    }
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .quad > .col:nth-child(4) {
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .topband {
+      grid-template-columns: 210px 1fr;
+      gap: 0 22px;
+    }
+    .streamlist ul {
+      columns: 2;
+    }
+  }
+  @media (max-width: 860px) {
+    body {
+      font-size: 15.5px;
+    }
+    .topband {
+      grid-template-columns: 1fr;
+    }
+    .rail {
+      margin-bottom: 22px;
+    }
+    .leadbody {
+      columns: 1;
+    }
+    .split-a,
+    .split-b,
+    .split-c,
+    .quad {
+      grid-template-columns: 1fr;
+    }
+    .split-a > .col + .col,
+    .split-b > .col + .col,
+    .split-c > .col + .col,
+    .quad > .col + .col,
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .agenda-grid {
+      grid-template-columns: 1fr;
+    }
+    .agenda-grid > .ev:nth-child(even) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .agenda-grid > .ev:nth-child(2) {
+      border-top: 1px solid var(--rule);
+      padding-top: 11px;
+    }
+    .streamlist ul {
+      columns: 1;
+    }
+    .leadbody p,
+    .feat p {
+      text-align: left;
+      hyphens: none;
+    }
+    .banner h2 {
+      white-space: normal;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  .seg:hover rect {
+    opacity: 0.82;
+  }
+
+  /* ---------- TIMELINE (lead figure) ---------- */
+  .tl circle.pt {
+    fill: var(--ink);
+    stroke: var(--paper);
+    stroke-width: 2;
+  }
+  .tl g:hover circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win:hover circle.pt {
+    fill: var(--ink);
+  }
+  .tl g {
+    cursor: default;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .archive {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    margin-top: 14px;
+    padding: 6px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .archive a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  code {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.86em;
+    background: var(--paper-2);
+    color: var(--ink);
+    padding: 0 3px;
+    hyphens: none;
+    word-break: break-word;
+  }
+
+  .statrow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    margin: 10px 0 4px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .statrow .st {
+    padding: 8px 10px 7px;
+    min-width: 0;
+  }
+  .statrow .st + .st {
+    border-left: 1px solid var(--rule);
+  }
+  .statrow .num {
+    display: block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 1.35rem;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+  .statrow .lbl {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.35;
+    margin-top: 3px;
+  }
+  @media (max-width: 560px) {
+    .statrow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .statrow .st:nth-child(3) { border-left: 0; }
+    .statrow .st:nth-child(n + 3) { border-top: 1px solid var(--rule); }
+  }
+</style>
+<style>
+  .barG.off rect.val {
+    fill: var(--ink-3);
+  }
+  .barG.off:hover rect.val {
+    fill: var(--accent);
+  }
+</style>
+
+<div class="sheet" lang="en">
+  <!-- ================= MASTHEAD ================= -->
+  <header>
+    <div class="ear">
+      Monday, 19 October 2026 &nbsp;·&nbsp; No. 28 &nbsp;·&nbsp; Price:
+      <span class="price">one bica</span>
+    </div>
+    <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
+    <div class="strip">
+      <span>Topic today: <b>a cyberattack knocks Ovar's town hall offline</b></span>
+      <span class="sep">✦</span>
+      <span>Weather · Aveiro <b>16°C</b> high, 12° low, sunny, rain unlikely</span>
+      <span class="sep">✦</span>
+      <span>Berlin's SPD and Greens <b>vote on coalition talks tonight</b></span>
+    </div>
+  </header>
+
+  <!-- ================= TOP BAND ================= -->
+  <div class="topband">
+    <aside class="rail">
+      <h3>Column One</h3>
+      <p>
+        Over the weekend someone broke into the computers of the Câmara
+        Municipal de Ovar, our own council, and the town hall has gone dark:
+        counters closed, e-mail and landlines dead, the museums and the arts
+        centre shut until Wednesday. The lead charts what is off and what
+        still works.
+      </p>
+      <p>
+        Also in the paper: a salt museum for Aveiro's canal, decision day for
+        Berlin's red-green-red talks, Porto's camp defying a police order,
+        Lee Ufan's first big show in Portugal, and France counting 2,397
+        arrests.
+      </p>
+      <p class="sig">— The Editor</p>
+
+      <div class="mixhead">Today's edition</div>
+      <div class="mix">
+        <span class="lab focus">✦ Cortegaça &amp; Ovar</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span><span class="star">✦</span></span>
+
+        <span class="lab">Germany · Berlin</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span></span>
+
+        <span class="lab">Portugal · Porto</span>
+        <span class="barwrap"><span class="bar" style="width: 65%"></span><span class="n">5</span></span>
+
+        <span class="lab">Technology</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">Screen</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">Arts</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Sound</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Now Streaming</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">The World</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+      </div>
+      <div class="mixcap">✦ today's focus — bar length is the story count (Cortegaça &amp; Ovar includes the lead)</div>
+    </aside>
+
+    <article id="art-1" class="lead">
+      <div class="eyebrow">Ovar · Cybersecurity · Local government</div>
+      <h1>
+        <a href="https://www.ovarnews.pt/ataque-informatico-deixa-sistema-do-municipio-de-ovar-inoperacional/" target="_blank" rel="noopener" class="hl"
+          >A cyberattack takes Ovar's town hall offline: counters, e-mail and phones down until Wednesday</a
+        >
+      </h1>
+      <p class="standfirst">
+        The council's computer system was left "inoperable" by an attack over
+        the weekend. Eight public services, the museums and the arts centre
+        among them, stay shut through 21 October, and every administrative
+        deadline is suspended. Nobody yet knows how deep the damage goes, or
+        whether residents' data were reached.
+      </p>
+      <div class="byline">OvarNews · Notícias de Aveiro · Jornal de Notícias · Ovar, 18 October 2026</div>
+
+      <figure class="fig">
+        <div class="figtitle">What the attack switched off, and what still works</div>
+        <div class="figsub">
+          Ovar council services as listed in the Câmara's statement. Filled =
+          closed or offline; outlined = still running. Hover a tile for the
+          detail.
+        </div>
+        <div class="chartbox">
+<svg viewBox="0 0 570 232" role="img" aria-label="Ovar council services after the weekend cyberattack: eight services closed to the public until Wednesday 21 October, four channels offline (online services, Ecolinha, e-mail and landline phones), and eight services still running.">
+<title>Ovar council services after the cyberattack</title>
+<text x="0" y="12" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="8.5" letter-spacing="1.2">CÂMARA MUNICIPAL DE OVAR · STATUS ON MONDAY 19 OCTOBER</text>
+<text x="0" y="40" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">Closed to the public</text>
+<text x="0" y="53" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8.5" font-style="italic">8 services, through Wed 21</text>
+<g class="barG"><title>Serviço de Atendimento Municipal (the council's front desk): closed to the public through Wednesday 21 October.</title><rect class="val" x="148" y="24" width="103" height="20"/><text x="199.5" y="37" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Front desk</text></g>
+<g class="barG"><title>Serviço de Urbanismo (planning and building permits): closed to the public. The urbanism phone line stays open.</title><rect class="val" x="254" y="24" width="103" height="20"/><text x="305.5" y="37" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Planning</text></g>
+<g class="barG"><title>Ecocentro (municipal recycling and drop-off centre): closed.</title><rect class="val" x="360" y="24" width="103" height="20"/><text x="411.5" y="37" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Ecocentro</text></g>
+<g class="barG"><title>Serviço de Veterinária (municipal veterinary service): closed.</title><rect class="val" x="466" y="24" width="103" height="20"/><text x="517.5" y="37" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Veterinary</text></g>
+<g class="barG"><title>Balcão Único do Prédio (BUPi, the rural land-registry desk): closed.</title><rect class="val" x="148" y="47" width="103" height="20"/><text x="199.5" y="60" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">BUPi land desk</text></g>
+<g class="barG"><title>Centro de Arte de Ovar: closed through Wednesday 21 October.</title><rect class="val" x="254" y="47" width="103" height="20"/><text x="305.5" y="60" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Centro de Arte</text></g>
+<g class="barG"><title>Municipal museums (including the Museu Júlio Dinis): closed.</title><rect class="val" x="360" y="47" width="103" height="20"/><text x="411.5" y="60" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Museums</text></g>
+<g class="barG"><title>Escola de Artes e Ofícios: closed.</title><rect class="val" x="466" y="47" width="103" height="20"/><text x="517.5" y="60" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Artes e Ofícios</text></g>
+<line x1="0" y1="74" x2="570" y2="74" stroke="#e4dccb" stroke-width="1"/>
+<text x="0" y="91" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">Offline</text>
+<text x="0" y="103" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8.5" font-style="italic">4 channels</text>
+<g class="barG off"><title>All of the council's online services are unavailable.</title><rect class="val" x="148" y="81" width="103" height="20"/><text x="199.5" y="94" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Online services</text></g>
+<g class="barG off"><title>ECOLINHA, the council's waste-collection line: unavailable.</title><rect class="val" x="254" y="81" width="103" height="20"/><text x="305.5" y="94" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Ecolinha</text></g>
+<g class="barG off"><title>The council's e-mail addresses: unavailable.</title><rect class="val" x="360" y="81" width="103" height="20"/><text x="411.5" y="94" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">E-mail</text></g>
+<g class="barG off"><title>The council's landline numbers: unavailable.</title><rect class="val" x="466" y="81" width="103" height="20"/><text x="517.5" y="94" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Landline phones</text></g>
+<line x1="0" y1="108" x2="570" y2="108" stroke="#e4dccb" stroke-width="1"/>
+<text x="0" y="126" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">Still working</text>
+<text x="0" y="139" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8.5" font-style="italic">8 services and lines</text>
+<g class="barG"><title>Espaço Cidadão (citizen-services counter): open.</title><rect class="valo" x="148" y="115" width="103" height="20"/><text x="199.5" y="128" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Espaço Cidadão</text></g>
+<g class="barG"><title>Mercado Municipal: open.</title><rect class="valo" x="254" y="115" width="103" height="20"/><text x="305.5" y="128" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Market</text></g>
+<g class="barG"><title>Piscina Municipal: open.</title><rect class="valo" x="360" y="115" width="103" height="20"/><text x="411.5" y="128" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Swimming pool</text></g>
+<g class="barG"><title>Municipal cemetery: open.</title><rect class="valo" x="466" y="115" width="103" height="20"/><text x="517.5" y="128" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Cemetery</text></g>
+<g class="barG"><title>Biblioteca Municipal: open.</title><rect class="valo" x="148" y="138" width="103" height="20"/><text x="199.5" y="151" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Library</text></g>
+<g class="barG"><title>Espaço Empreendedor (business support space): open.</title><rect class="valo" x="254" y="138" width="103" height="20"/><text x="305.5" y="151" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Espaço Empreendedor</text></g>
+<g class="barG"><title>SIGA, the platform for school services (meals, transport and the like): available.</title><rect class="valo" x="360" y="138" width="103" height="20"/><text x="411.5" y="151" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">SIGA (schools)</text></g>
+<g class="barG"><title>Linha de Atendimento de Urbanismo, the planning phone line: available.</title><rect class="valo" x="466" y="138" width="103" height="20"/><text x="517.5" y="151" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Planning phone line</text></g>
+<line x1="0" y1="166" x2="570" y2="166" stroke="#1b1917" stroke-width="1"/>
+<text x="0" y="187" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">Day by day</text>
+<g class="barG win"><title>Saturday 17 and Sunday 18 October: the attack hits over the weekend; the council announces it on Sunday afternoon.</title><rect class="valo" x="148" y="174" width="138" height="20"/><text x="217" y="187" text-anchor="middle" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="8.5" font-weight="700">✦ attack · Sat 17 – Sun 18</text></g>
+<g class="barG"><title>Monday 19 October: services closed to the public.</title><rect class="val" x="290" y="174" width="67" height="20"/><text x="323.5" y="187" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Mon 19</text></g>
+<g class="barG"><title>Tuesday 20 October: services closed to the public.</title><rect class="val" x="361" y="174" width="67" height="20"/><text x="394.5" y="187" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Tue 20</text></g>
+<g class="barG"><title>Wednesday 21 October: last day of the announced closure ("até quarta-feira, inclusive").</title><rect class="val" x="432" y="174" width="67" height="20"/><text x="465.5" y="187" text-anchor="middle" fill="#f5f1e6" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Wed 21</text></g>
+<g class="barG"><title>Thursday 22 October: the first day after the announced closure. The council has not promised that systems will be back by then; it will post updates on its social media.</title><rect class="valo" x="503" y="174" width="66" height="20"/><text x="536" y="187" text-anchor="middle" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="8.5">Thu 22 ?</text></g>
+<text x="148" y="208" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8">weekend</text>
+<text x="290" y="208" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8">announced closure, three working days</text>
+<text x="0" y="227" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8" font-style="italic">Not yet known: the extent of the damage, and whether residents' data were accessed.</text>
+</svg>
+        </div>
+        <div class="statrow">
+          <div class="st"><span class="num">8</span><span class="lbl">public services closed</span></div>
+          <div class="st"><span class="num">4</span><span class="lbl">channels offline: web, Ecolinha, e-mail, phones</span></div>
+          <div class="st"><span class="num">8</span><span class="lbl">services and lines still running</span></div>
+          <div class="st"><span class="num">21 Oct</span><span class="lbl">closure runs through Wednesday</span></div>
+        </div>
+        <figcaption>
+          Source: Câmara Municipal de Ovar statement of 18 October 2026, as
+          reported by OvarNews. Notícias de Aveiro's write-up of the same
+          statement contradicts itself on which services stay open; this chart
+          follows OvarNews's itemised list. Tile names are shortened in English.
+        </figcaption>
+      </figure>
+
+      <div class="leadbody">
+        <p>
+          The Câmara said in a statement on Sunday that it had been the target
+          of an "ataque informático" during the weekend that left its IT system
+          inoperable. The incident has been reported to the competent
+          authorities and response procedures are running: a technical team is
+          containing the attack, assessing the impact and restoring systems,
+          with the aim of getting services back "as quickly as possible". It
+          has not said what kind of attack it was, and neither the extent of
+          the damage nor whether anyone got at residents' data is yet known.
+        </p>
+        <p>
+          The practical effect lands on anyone with business at the town hall
+          this week. Closed to the public through Wednesday, 21 October,
+          inclusive: the front desk, planning, the Ecocentro, the veterinary
+          service, the BUPi land-registry desk, the Centro de Arte, the
+          municipal museums and the Escola de Artes e Ofícios. The council's
+          online services, the Ecolinha, its e-mail addresses and its landline
+          numbers are down too.
+        </p>
+        <div class="pull">
+          "The Municipality of Ovar will suspend all the deadlines of
+          administrative procedures under way, so that no resident is harmed."
+          <span class="who">Câmara Municipal de Ovar, statement</span>
+        </div>
+        <p>
+          Still open: the Espaço Cidadão, the market, the municipal pool, the
+          cemetery, the library and the Espaço Empreendedor, plus the SIGA
+          platform for school services and the planning phone line. Updates
+          will come through the council's official social-media accounts, the
+          only channel it has left. The news ran from JN to Correio da Manhã
+          and SAPO by Sunday evening. For the diary below: the arts centre,
+          museum and school of arts host three of this week's events from
+          Thursday, the day after the announced closure ends, so check before
+          setting out.
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= LOCAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Cortegaça, Ovar &amp; the Coast</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-2" class="feat">
+          <span class="kicker hot">Aveiro · Heritage</span>
+          <h3>
+            <a href="https://www.diarioaveiro.pt/2026/10/18/museu-do-sal-e-para-avancar-junto-ao-canal-de-sao-roque/" target="_blank" rel="noopener" class="hl"
+              >Aveiro will build a museum of salt beside the Canal de São Roque, "not a little show with half a dozen posters"</a
+            >
+          </h3>
+          <p>
+            Mayor Luís Souto de Miranda told the Diário de Aveiro the project
+            will be devoted to salt and to the salt pans of the Ria de Aveiro,
+            and is meant to draw more visitors to the city. "At this moment we
+            don't yet have the maturity to talk about what it will cost, but it
+            is something ambitious that we are going to start developing," he
+            said. The site is the canal-side area where, he noted, the new lake
+            is almost finished and other projects are under way: "we have to
+            bring it added value".
+          </p>
+          <p>
+            He spoke at the opening of "Astutas – Salinas do século XXI", a
+            show on the twenty-first-century salt pans in the gallery of the
+            old Capitania do Porto building on Avenida Dr. Lourenço Peixinho.
+            It is free and runs until 11 December, Tuesday to Sunday,
+            10:00–12:30 and 13:30–18:00.
+          </p>
+          <p class="src">Diário de Aveiro</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-3" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Aveiro · Tech</span>
+          <h4>
+            <a href="https://www.noticiasdeaveiro.pt/aveiro-techweek-hackathon-2026-tem-inscricoes-abertas-ate-4-de-novembro/" target="_blank" rel="noopener" class="hl"
+              >Aveiro Tech City Hackathon opens sign-ups, with three real problems to solve</a
+            >
+          </h4>
+          <p>
+            Teams of students, professionals, researchers and founders have
+            until 4 November to enter. The challenges: "Smart Aveiro: From
+            Data to Action" (the council and the Instituto de
+            Telecomunicações), "Ctrl + F Aveiro", automatic recognition of
+            street furniture (the council and the university), and an AI
+            "Connected Home, Reimagined" from Altice Labs.
+          </p>
+          <p class="src">Notícias de Aveiro</p>
+        </article>
+        <article id="art-4" class="brief">
+          <span class="kicker">Estarreja · Heritage</span>
+          <h4>
+            <a href="https://www.noticiasdeaveiro.pt/visita-guiada-a-moinho-de-descasque-de-arroz-em-estarreja/" target="_blank" rel="noopener" class="hl"
+              >A restored rice-husking mill opens for a guided visit on Saturday</a
+            >
+          </h4>
+          <p>
+            The century-old mill in the parish of Canelas "brings an old
+            craft back to life", the husking of rice grown on the Ria's
+            lowlands; the visit is on 24 October.
+          </p>
+          <p class="src">Notícias de Aveiro</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GERMANY ================= -->
+  <section class="band">
+    <div class="banner"><h2>Germany · Berlin &amp; Brandenburg</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-5" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Berlin · Budget</span>
+          <h4>
+            <a href="https://www.rbb24.de/politik/beitrag/2026/10/berlin-20-jahre-karlsruhe-bundesverfassungsgericht-haushalt-notlage-schulden.html" target="_blank" rel="noopener" class="hl"
+              >Twenty years after Karlsruhe said no, Berlin heads for a budget emergency again</a
+            >
+          </h4>
+          <p>
+            Finance senator Stefan Evers expects the federal-state Stability
+            Council to declare a looming budget emergency in December, which
+            would force a restructuring plan on the next government; he puts
+            the gap at €4 billion a year. Debt is now €69 billion, above the
+            €60 billion of 2006, though interest eats 3% of the budget
+            rather than almost 12%.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article id="art-6" class="brief">
+          <span class="kicker">Grunewald · Remembrance</span>
+          <h4>
+            <a href="https://www.rbb24.de/panorama/beitrag/2026/10/gedenken-deportation-85-jahre-ns-regime-juden-berlin.html" target="_blank" rel="noopener" class="hl"
+              >At Gleis 17, Berlin marks 85 years since the first deportations of its Jews</a
+            >
+          </h4>
+          <p>
+            Mayor Kai Wegner, constitutional court president Stephan Harbarth
+            and Israel's ambassador Ron Prosor laid flowers at Grunewald
+            station. "We must never accept that public Jewish life in Germany
+            is still only possible under police protection," Harbarth said.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article id="art-7" class="brief">
+          <span class="kicker">Brandenburg · Pay</span>
+          <h4>
+            <a href="https://www.rbb24.de/wirtschaft/beitrag/2026/10/tarifvertrag-gastgewerbe-brandenburg-einigung-fachkraefte.html" target="_blank" rel="noopener" class="hl"
+              >Hotel and restaurant staff in Brandenburg get 10.5% more</a
+            >
+          </h4>
+          <p>
+            The NGG union and Dehoga agreed three steps from October 2026 to
+            July 2028, lifting skilled workers by €295 to €3,007 a month;
+            it applies only at bound employers such as Steigenberger, Dorint
+            and Tropical Islands.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-8" class="feat">
+          <span class="kicker hot">Berlin · Coalition</span>
+          <h3>
+            <a href="https://www.rbb24.de/politik/berlin-wahl-2026/beitraege/spd-landesvorstand-gruene-parteitag-koalitionsgespraeche.html" target="_blank" rel="noopener" class="hl"
+              >Decision day: Berlin's SPD board and a Green party congress vote tonight on formal talks with the Left</a
+            >
+          </h3>
+          <p>
+            Two days after the three parties signed their exploratory paper,
+            the SPD's state executive meets online at 16:30 to judge the
+            result and decide whether to enter coalition negotiations with the
+            Left and the Greens. The Greens follow at 20:00 with a small party
+            congress. The Left, which came first in the election, will not
+            vote until a party congress on 31 October, after Berlin's autumn
+            holidays.
+          </p>
+          <p>
+            The paper's headline items are the socialisation of housing
+            companies with more than 10,000 flats, more cycle lanes and a
+            cheaper social ticket. A red-green-red coalition would have 91
+            seats, 14 more than a majority; the alternative, CDU, Greens and
+            SPD, would clear it by only two. Not everyone in the SPD is sold:
+            former minister Hubertus Heil and other Bundestag members voiced
+            doubts on ARD's "Bericht aus Berlin", while CSU leader Markus Söder
+            told the Junge Union the Union needs a "firewall to the left".
+          </p>
+          <p class="src">rbb24 · tagesschau</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTUGAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Portugal &amp; the Coast</h2></div>
+    <div class="split-c">
+      <div class="col">
+        <article id="art-9" class="feat">
+          <span class="kicker hot">Porto · Lisbon · Housing</span>
+          <h3>
+            <a href="https://observador.pt/2026/10/19/ao-nono-dia-aviso-da-psp-nao-bastou-para-demover-manifestantes-no-porto-pedro-duarte-sera-convidado-a-ir-a-acampada/" target="_blank" rel="noopener" class="hl"
+              >Told by police they are now committing a crime, Porto's campers vote to stay, and extend their protest to 31 December</a
+            >
+          </h3>
+          <p>
+            At about 01:30 on Monday a PSP officer warned the Praça D. João I
+            camp, as a colleague had in Lisbon's Rossio an hour earlier, that
+            past the legal hour they were committing the crime of
+            disobedience and the tents had to go. After a vote the majority
+            stayed. "This movement will go on," said spokeswoman Catarina
+            Borges. On Sunday night the movement had already filed a new
+            protest notice running until the end of the year; Porto is on its
+            tenth day, Lisbon its seventh.
+          </p>
+          <p>
+            The camp has invited Mayor Pedro Duarte to come and talk in the
+            square, asking that any meeting request reach its official e-mail
+            rather than individuals. The Ombudsman, Luísa Neto, has asked the
+            PSP for urgent explanations of last week's police charge. In
+            Lisbon, a second night passed calmly; the PSP said there was "no
+            will" for repression. PS leader José Luís Carneiro sent the prime
+            minister four more housing measures, and Chega proposed an
+            "emergency package".
+          </p>
+          <p class="src">Observador · RTP · Jornal de Notícias</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-10" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Porto · Housing research</span>
+          <h4>
+            <a href="https://www.publico.pt/2026/10/18/local/noticia/porto-ja-mapa-gentrificacao-transborda-centro-matosinhos-gaia-2191673" target="_blank" rel="noopener" class="hl"
+              >Porto now has a map of its gentrification, and it spills from the centre into Matosinhos and Gaia</a
+            >
+          </h4>
+          <p>
+            A University of Porto team mapped the process across the
+            metropolitan area, work it says could help shape public housing
+            policy.
+          </p>
+          <p class="src">Público</p>
+        </article>
+        <article id="art-11" class="brief">
+          <span class="kicker">Politics · Rents</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/politica/lei-das-rendas-ventura-ameaca-romper-acordo-com-o-governo_v1772545" target="_blank" rel="noopener" class="hl"
+              >Ventura threatens to tear up his rent-law deal with the government</a
+            >
+          </h4>
+          <p>
+            The Chega leader, who had offered to let the bill pass, now
+            wants an emergency housing programme instead; the Left Bloc says
+            the law is bound for "the dustbin".
+          </p>
+          <p class="src">RTP</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-12" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Justice</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/pais/jose-socrates-diz-que-novo-julgamento-e-o-mesmo-absurdo_n1772567" target="_blank" rel="noopener" class="hl"
+              >Sócrates goes back to court today, on money-laundering charges</a
+            >
+          </h4>
+          <p>
+            The former prime minister, tried with Carlos Santos Silva in a
+            case split off from Operação Marquês in 2021, calls it "the same
+            absurdity".
+          </p>
+          <p class="src">RTP · Observador</p>
+        </article>
+        <article id="art-13" class="brief">
+          <span class="kicker">Roller hockey</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/selecao-nacional/portugal-vence-espanha-e-conquista-bronze-no-mundial-de-hoquei-em-patins_d1772554" target="_blank" rel="noopener" class="hl"
+              >Portugal beat the holders Spain 5–3 for world bronze</a
+            >
+          </h4>
+          <p>
+            The third-place game at the 47th World Championship in Asunción,
+            Paraguay, after the semi-final loss to France.
+          </p>
+          <p class="src">RTP · Observador</p>
+        </article>
+      </div>
+    </div>
+    <div class="agenda">
+      <div class="agenda-head">
+        <h3>✦ The Diary — What's On</h3>
+        <span class="sub">Upcoming around Cortegaça, Ovar &amp; Aveiro</span>
+      </div>
+      <div class="agenda-grid">
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">20</span><span class="wd">Tue</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1858291/as-aguias-da-republica" target="_blank" rel="noopener" class="hl">As Águias da República (Eagles of the Republic)</a></h4>
+            <div class="venue">Teatro Aveirense · Aveiro · 20:30 · €4</div>
+            <p class="ctx">Tarik Saleh's Cannes-competition drama, winner of six Swedish Guldbagge awards: Egypt's best-loved actor is pressed into a state-ordered film.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">22</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1866403/shortcutz-ovar-sessao-111" target="_blank" rel="noopener" class="hl">Shortcutz Ovar #111</a></h4>
+            <div class="venue">Escola de Artes e Ofícios · Ovar · 20:30 · free</div>
+            <p class="ctx">Three shorts with their directors: Alado (Tânia Gomes Teixeira), Rio Infinito (Gonçalo Pina) and A Fronteira Azul (Dinis M. Costa).</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">22</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1847474/helena-caldeira" target="_blank" rel="noopener" class="hl">Helena Caldeira</a></h4>
+            <div class="venue">Teatro Aveirense · Aveiro · 21:00 · €5</div>
+            <p class="ctx">The actor and singer's debut album, "Abalar", reworks the cante and the songs of peasant women for today.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">23</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1842429/sozinho-em-casa-23-pedro-martins" target="_blank" rel="noopener" class="hl">Sozinho em Casa #23 — Pedro Martins</a></h4>
+            <div class="venue">Museu Júlio Dinis · Ovar · 21:30 · free</div>
+            <p class="ctx">A walk through Ovar is streamed live into the auditorium while the Ovar lutenist improvises its soundtrack.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">23</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1863246/azemeis-jazz-blues-orquestra-jazz-de-matosinhos-cristina-branco" target="_blank" rel="noopener" class="hl">Cristina Branco &amp; Orquestra Jazz de Matosinhos</a></h4>
+            <div class="venue">TeMA · Oliveira de Azeméis · 20:30</div>
+            <p class="ctx">Azeméis Jazz &amp; Blues: the singer's jazziest side, through songs by Mário Laginha, Sérgio Godinho and José Afonso.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">24</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1843131/cambedo-1946" target="_blank" rel="noopener" class="hl">Cambedo, 1946</a></h4>
+            <div class="venue">Centro de Arte de Ovar · 20:30</div>
+            <p class="ctx">Teatro de Balugas on the border village near Chaves that hid Galician refugees and was shelled by both Iberian dictatorships.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">27</span><span class="wd">Tue</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1844099/xix-art-tur" target="_blank" rel="noopener" class="hl">XIX ART&amp;TUR</a></h4>
+            <div class="venue">Centro de Arte de Ovar · 21:30</div>
+            <p class="ctx">The international tourism-film festival, running since 2008, brings its competition and talks to Ovar; prizes on 30 October.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">19</span><span class="wd">Mon</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1796020/imarhan" target="_blank" rel="noopener" class="hl">Imarhan</a></h4>
+            <div class="venue">Porto · Casa da Música · 20:00</div>
+            <p class="ctx">The Algerian Tuareg band of the desert-blues new wave play "Essam", the album where they swap some guitars for electronics.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">20</span><span class="wd">Tue</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1851281/the-lemon-twigs" target="_blank" rel="noopener" class="hl">The Lemon Twigs</a></h4>
+            <div class="venue">Porto · Hard Club · 20:00</div>
+            <p class="ctx">The D'Addario brothers play rock as if it were still 1965–72, somewhere between Big Star and Todd Rundgren, who has worked with them.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">24</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.serralves.pt/agenda-serralves/" target="_blank" rel="noopener" class="hl">O Dia do Desespero</a></h4>
+            <div class="venue">Porto · Casa do Cinema Manoel de Oliveira · 17:00</div>
+            <p class="ctx">Oliveira's 1992 film on the last days of Camilo Castelo Branco, in the "Oliveira, reader of Camilo" cycle.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CULTURE QUAD ================= -->
+  <section class="band">
+    <div class="banner"><h2>Machines, Screen, Art &amp; Sound</h2></div>
+    <div class="quad">
+      <div class="col">
+        <div class="colhead">Technology</div>
+        <article id="art-14" class="feat">
+          <span class="kicker hot">AI · Industry</span>
+          <h3>
+            <a href="https://www.bbc.co.uk/news/articles/cm2kez327gdko" target="_blank" rel="noopener" class="hl"
+              >Anthropic puts 5% of its shares into a "public benefit" fund as it readies a stock-market listing</a
+            >
+          </h3>
+          <p>
+            The fund would back nonprofits and work on AI's effect on jobs, and
+            could receive another 2% of the shares at the board's discretion;
+            none of it may go to lobbying or political donations. The listing
+            could value the Claude maker at more than $1 trillion, the BBC
+            says; last week it told investors that quarterly revenue rose 45%
+            to $16.8 billion in the three months to September.
+          </p>
+          <p>
+            Separately, Ars Technica reports that the evaluation nonprofit METR
+            now has a team inside Anthropic's offices with "employee-like"
+            access to hardware and internal systems, free to publish its
+            findings without approval. Elon Musk's reply: give the shares
+            "directly to the public". Disclosure: this paper is written by
+            Anthropic's Claude.
+          </p>
+          <p class="src">BBC · Ars Technica</p>
+        </article>
+        <article id="art-15" class="brief">
+          <span class="kicker">Copyright · AI</span>
+          <h4>
+            <a href="https://www.heise.de/news/KI-Kopien-des-Grueffelo-Illustrator-Axel-Scheffler-will-gegen-Betreiber-klagen-11491779.html" target="_blank" rel="noopener" class="hl"
+              >The Gruffalo's illustrator considers suing over AI copies</a
+            >
+          </h4>
+          <p>
+            Ask ChatGPT for the monster and it delivers unmistakable
+            look-alikes within a minute; Axel Scheffler told Die Zeit they are
+            "clearly my characters", after German publishers took OpenAI to
+            court.
+          </p>
+          <p class="src">heise · Die Zeit</p>
+        </article>
+        <article id="art-16" class="brief">
+          <span class="kicker">Germany · Finance</span>
+          <h4>
+            <a href="https://www.heise.de/news/Sparkassen-starten-schrittweise-Kryptohandel-mit-Warnung-11491981.html" target="_blank" rel="noopener" class="hl"
+              >Sparkassen start crypto trading in their app from today</a
+            >
+          </h4>
+          <p>
+            Bitcoin, Ethereum, Ripple, Solana and Polygon via Dekabank, at a
+            first wave of savings banks with 30 to 40 more a month, and
+            pointedly no advice.
+          </p>
+          <p class="src">heise · dpa</p>
+        </article>
+      </div>
+      <div class="col">
+        <div class="colhead">Screen</div>
+        <article id="art-17" class="feat">
+          <span class="kicker hot">Box office</span>
+          <h3>
+            <a href="https://editorial.rottentomatoes.com/article/weekend-box-office-street-fighter-week-1/" target="_blank" rel="noopener" class="hl"
+              >Street Fighter (2026) wins the weekend with $31 million, but the reviews may cut its run short</a
+            >
+          </h3>
+          <p class="meta">Martial-arts action · Kitao Sakurai · in cinemas, Portugal included · IMDb 6.3 · RT 42%</p>
+          <p>
+            The Capcom reboot opened to $31 million in North America and just
+            over $51 million worldwide, far beyond the 1994 Van Damme film's
+            $6.6 million start, though short of "Mortal Kombat II" ($38.5
+            million) earlier this year. With a 42% Tomatometer and DC's next
+            release chasing the same crowd, Rotten Tomatoes expects a $65–75
+            million domestic finish for a production that cost more than $100
+            million.
+          </p>
+          <p>
+            Behind it, A24's Elizabeth Holmes documentary "You Can See
+            Everything" took $15 million, and Netflix reported box office for
+            the first time: $277,500 for "La Bola Negra" in limited release.
+          </p>
+          <p class="src">Rotten Tomatoes · IndieWire</p>
+        </article>
+        <article id="art-18" class="brief">
+          <span class="kicker">Documentary</span>
+          <h4>
+            <a href="https://pitchfork.com/story/john-wilson-is-making-a-harry-styles-tour-documentary/" target="_blank" rel="noopener" class="hl"
+              >John Wilson is making a Harry Styles tour film</a
+            >
+          </h4>
+          <p class="meta">Concert documentary · in production</p>
+          <p>
+            The "How To With John Wilson" creator will direct a film on the
+            singer's Together, Together tour, Variety reports.
+          </p>
+          <p class="src">Pitchfork · Variety</p>
+        </article>
+        <article id="art-19" class="brief">
+          <span class="kicker">Sequels</span>
+          <h4>
+            <a href="https://www.indiewire.com/news/events/dirty-dancing-2-honor-patrick-swayze-baby-90s-1235222530/" target="_blank" rel="noopener" class="hl"
+              >A Dirty Dancing sequel is being written with Jennifer Grey</a
+            >
+          </h4>
+          <p class="meta">Romantic drama · in development</p>
+          <p>
+            Producer Nina Jacobson says Baby's next chapter will honour
+            Patrick Swayze; she also explained why "Crazy Rich Asians" is
+            becoming an HBO series instead.
+          </p>
+          <p class="src">IndieWire</p>
+        </article>
+        <div class="minilist">
+          <h5>In Cinemas &amp; Festivals</h5>
+          <ul>
+            <li><span class="name">La Bola Negra (2026)</span> · <span class="g">Queer period drama</span> · Cannes title; US limited release, Netflix's first reported gross · IMDb 8.2 · RT 87%</li>
+            <li><span class="name">Once Upon a Time in Harlem (2026)</span> · <span class="g">Documentary</span> · William and David Greaves; Harlem Renaissance figures filmed at a 1972 party at Duke Ellington's townhouse; US cinemas since 16 Oct · IMDb 7.7 · RT 100%</li>
+            <li><span class="name">Eagles of the Republic (2025)</span> · <span class="g">Political drama</span> · Tarik Saleh; Teatro Aveirense, 20 Oct · IMDb 6.6 · RT 76%</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="colhead">Arts</div>
+        <article id="art-20" class="feat">
+          <span class="kicker hot">Porto · Serralves</span>
+          <h3>
+            <a href="https://www.serralves.pt/agenda-serralves/" target="_blank" rel="noopener" class="hl"
+              >Stones, steel and a single brushstroke: Lee Ufan's first major show in Portugal fills the Casa de Serralves</a
+            >
+          </h3>
+          <p>
+            "Fragmentos do Infinito" brings the South Korean artist, born in
+            1936, to the house and park: three outdoor sculptures pairing
+            boulders with steel, three more inside the Art Deco house, and six
+            paintings, one made for the site. Lee was the leading theorist of
+            Japan's Mono-ha, the late-1960s "School of Things" that set raw
+            stone, wood, metal and glass in plain juxtapositions, and is linked
+            to Korea's monochrome Dansaekhwa painting.
+          </p>
+          <p>
+            His "Relatum" works treat a stone as condensed time and make the
+            space between objects the subject. Público's profile calls him
+            "the artist who likes not painting and not doing". Curated by
+            Philippe Vergne, to March 2027; on 1 November the ensemble Ars Ad
+            Hoc plays Takemitsu, Catherine Lamb and others among the works.
+          </p>
+          <p class="src">Serralves · Público</p>
+        </article>
+        <article id="art-21" class="brief">
+          <span class="kicker">Architecture · Arizona</span>
+          <h4>
+            <a href="https://www.artnews.com/art-news/news/frank-lloyd-wright-taliesin-west-closes-1234802896/" target="_blank" rel="noopener" class="hl"
+              >Taliesin West closes after a Brazilian university rector is killed on a tour</a
+            >
+          </h4>
+          <p>
+            Rogério Renato Mateucci, rector of the Pontifical Catholic
+            University of Paraná, was struck by roofing torn loose by high
+            winds at Frank Lloyd Wright's Scottsdale home on Friday.
+          </p>
+          <p class="src">ARTnews</p>
+        </article>
+        <div class="minilist">
+          <h5>Now Open</h5>
+          <ul>
+            <li><span class="name">Astutas — Salinas do século XXI</span> · Antiga Capitania, Aveiro · the Ria's salt pans today, free, to 11 Dec</li>
+            <li><span class="name">Afinidades eletivas: Joan Miró</span> · Casa de Serralves, Porto · Miró among Helena Almeida, Tàpies, Broodthaers and others, to 7 Mar</li>
+            <li><span class="name">Amadora BD 2026</span> · Amadora · the 37th comics festival: 14 exhibitions and an international cosplay contest</li>
+            <li><span class="name">Krasner and Pollock — Past Continuous</span> · Metropolitan Museum, New York · more than 120 works by the couple</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="colhead">Sound</div>
+        <article id="art-22" class="feat">
+          <span class="kicker hot">Berlin · Album</span>
+          <h3>
+            <a href="https://www.rbb24.de/kultur/beitrag/2026/10/berlin-saengerin-mine-indie-pop-album-killer.html" target="_blank" rel="noopener" class="hl"
+              >Choirs, strings, hip-hop and a rope: Berlin's Mine takes aim at racism and sexism on "Killer"</a
+            >
+          </h3>
+          <p class="meta">Killer · Orchestral indie pop · hip-hop · Mine's new album</p>
+          <p>
+            Jasmin Stocker, born in 1986 and known as Mine, sets big choirs and
+            strings against electronic beats and rap, and her new record is a
+            political statement against racism and sexism. On stage she adds
+            rope acrobatics, which she trains several times a week in a Berlin
+            studio to burn off what she calls her "surplus of energy".
+          </p>
+          <p>
+            A trained jazz singer who studied composition and production at the
+            Popakademie in Mannheim, she distrusts the academy all the same:
+            students, she tells rbb, risk "leaving the emotional access to
+            music behind". She writes alone, at home or in her studio.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article id="art-23" class="brief">
+          <span class="kicker">radioeins · Record of the week</span>
+          <h4>
+            <a href="https://www.radioeins.de/musik/cd_der_woche/-dopamine-chamber--von-fontaines-d-c-.html" target="_blank" rel="noopener" class="hl"
+              >radioeins makes Fontaines D.C.'s "Dopamine Chamber" its CD of the week</a
+            >
+          </h4>
+          <p class="meta">Rock · fifth studio album</p>
+          <p>
+            Further from the guitars of "Dogrel" than ever: synths, samples and
+            orchestral sound, on escape into lust, fantasy and digital
+            overload.
+          </p>
+          <p class="src">radioeins</p>
+        </article>
+        <div class="minilist">
+          <h5>New Releases</h5>
+          <ul>
+            <li><span class="name">Worldpeace DMT — Stick Around for Tea</span> · <span class="g">Indie pop</span> · digitised bricolage with the splendour of a low-budget musical</li>
+            <li><span class="name">They Are Gutting a Body of Water — KOOL FAITH / LOOSIES II</span> · <span class="g">Shoegaze</span> · the Philly band's compilation with friends across genres</li>
+            <li><span class="name">Teller Bank$ — NOAH</span> · <span class="g">Hip-hop</span> · a biblical concept record, his third album this year</li>
+            <li><span class="name">Fish Narc — Uncle</span> · <span class="g">Power pop</span> · the Olympia rap producer turns to sunny college rock</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOW STREAMING ================= -->
+  <section class="band">
+    <div class="banner"><h2>Now Streaming</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-24" class="feat">
+          <span class="kicker hot">Netflix · Series</span>
+          <h3>
+            <a href="https://www.whats-on-netflix.com/news/the-diplomat-season-4-is-really-about-one-question-according-to-its-creator/" target="_blank" rel="noopener" class="hl"
+              >The Diplomat, S4 (2026): a stolen Russian nuke, a vice-president husband, and Kate Wyler cleaning up after both</a
+            >
+          </h3>
+          <p class="meta">Political thriller · drama · 8 episodes · Netflix · since 15 Oct · series IMDb 8.0 · RT 100%</p>
+          <p>
+            Debora Cahn's series picks up straight after the season-three
+            cliffhanger: Hal Wyler (Rufus Sewell) is now vice-president to
+            Grace Penn (Allison Janney), and the two have secretly arranged the
+            theft of a nuclear weapon from a sunken Russian submarine. Keri
+            Russell's ambassador forms an uneasy alliance with the First
+            Husband, Todd Penn (Bradley Whitford), to keep Britain in the dark
+            and the world out of war; Jodie Whittaker joins in a surprise role.
+          </p>
+          <p>
+            "It's become much more about 'Where's your moral red line?'", Cahn
+            says. All eight episodes dropped worldwide on Thursday. "Nothing else on
+            TV is as entertaining as this exquisitely stressful show," runs the
+            Guardian's review, and Rotten Tomatoes' critics are unanimous so far.
+          </p>
+          <p class="src">What's on Netflix · The Guardian · Rotten Tomatoes</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-25" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Netflix · Documentary</span>
+          <h4>
+            <a href="https://www.whats-on-netflix.com/what-to-watch/the-tale-of-norm-macdonald-review-a-bizarre-mismatched-tribute-to-a-comedy-legend/" target="_blank" rel="noopener" class="hl"
+              >Norm: The Tale of Norm Macdonald (2026): Judd Apatow's portrait, told like a browser history</a
+            >
+          </h4>
+          <p class="meta">Comedy documentary · R · Netflix · since 16 Oct · IMDb 8.0</p>
+          <p>
+            Clips from Letterman, Conan and "Weekend Update" cut to mouse
+            clicks and search bars, over an abridged audiobook of his "not a
+            memoir"; rare home video of his farm childhood is the find.
+          </p>
+          <p class="src">What's on Netflix</p>
+        </article>
+        <article id="art-26" class="brief">
+          <span class="kicker">Netflix · Series</span>
+          <h4>
+            <a href="https://www.whats-on-netflix.com/what-to-watch/hollywood-arts-netflix-series-review/" target="_blank" rel="noopener" class="hl"
+              >Hollywood Arts, S1 (2026): the "Victorious" spin-off, with Trina Vega as teacher</a
+            >
+          </h4>
+          <p class="meta">Teen comedy · Netflix · since 15 Oct · IMDb 6.2</p>
+          <p>
+            Daniella Monet's Trina mentors a new class of gifted teens;
+            What's on Netflix calls it a "lifeless nostalgia grab".
+          </p>
+          <p class="src">What's on Netflix</p>
+        </article>
+      </div>
+    </div>
+    <div class="streamlist">
+      <h5>New This Week</h5>
+      <ul>
+        <li><span class="name">The Storm (2026)</span> · <span class="g">Dark comedy</span> · Swedish, Gustaf Skarsgård; mushrooms and a storm wreck a 45th birthday · Netflix · 15 Oct · IMDb 5.1</li>
+        <li><span class="name">Heat (1995)</span> · <span class="g">Crime epic</span> · Michael Mann; Pacino v De Niro · Netflix (US) · catalogue · 16 Oct · IMDb 8.3 · RT 84%</li>
+        <li><span class="name">Extraordinary Attorney Minami, S1 (2026)</span> · <span class="g">Legal drama</span> · Japanese remake of "Extraordinary Attorney Woo" with Mana Ashida · Netflix · 18 Oct</li>
+        <li><span class="name">Therapy Done Right (2026)</span> · <span class="g">Dark comedy</span> · Argentine; a psychoanalyst who bins the rulebook · Netflix · 16 Oct · IMDb 6.3</li>
+        <li><span class="name">Money Trap: The Karun Treasure, S1 (2026)</span> · <span class="g">Action comedy</span> · Turkish · Netflix · 16 Oct · IMDb 3.1</li>
+        <li><span class="name">Balaraw: Blood Island, S1 (2026)</span> · <span class="g">Horror mystery</span> · Filipino; a woman searches an uncharted island for her mother · Netflix · 15 Oct</li>
+      </ul>
+      <div class="streamcap">Dates from What's on Netflix's US schedule for 12–18 October; Netflix originals usually land worldwide the same day, while licensed titles such as Heat are US-only, so check the catalogue in Portugal and Germany. Next week's schedule was not yet out.</div>
+    </div>
+  </section>
+
+  <!-- ================= WORLD ================= -->
+  <section class="band">
+    <div class="banner"><h2>The World</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-27" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Gaza</span>
+          <h4>
+            <a href="https://www.bbc.co.uk/news/articles/cm79plrvpl4vo" target="_blank" rel="noopener" class="hl"
+              >Short of money, the World Food Programme cuts Gaza aid by a third</a
+            >
+          </h4>
+          <p>
+            From 1.6 million people helped to 1.1 million as winter nears;
+            community kitchens drop from 250,000 hot meals a day to 150,000,
+            and families near the Yellow Line will eat every other day.
+          </p>
+          <p class="src">BBC</p>
+        </article>
+        <article id="art-28" class="brief">
+          <span class="kicker">Canada</span>
+          <h4>
+            <a href="https://www.bbc.co.uk/news/articles/cxj0ly1m3q81o" target="_blank" rel="noopener" class="hl"
+              >Four soldiers die as a grass fire sweeps a live-fire range at CFB Wainwright</a
+            >
+          </h4>
+          <p>
+            Of 39 in hospital, at least 19 are critical. Prime Minister Carney
+            called it one of the worst peacetime tragedies for the forces on
+            Canadian soil.
+          </p>
+          <p class="src">BBC · tagesschau</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-29" class="feat">
+          <span class="kicker hot">France · Unrest</span>
+          <h3>
+            <a href="https://observador.pt/2026/10/18/cerca-de-2-400-detencoes-em-franca-no-sabado-com-997-policias-e-agentes-feridos/" target="_blank" rel="noopener" class="hl"
+              >The final count for France's Saturday: 2,397 arrests and 997 police hurt, and Macron keeps his interior minister</a
+            >
+          </h3>
+          <p>
+            The interior ministry's tally of the cost-of-living protests is
+            double the first figures: 2,397 people detained and 997 police and
+            gendarmes injured, seven seriously. It counted 550,000 marchers;
+            the organisers say 800,000. Some 1,500 shops and businesses were
+            hit, with damage in the hundreds of millions of euros, and there
+            were fresh clashes on Sunday.
+          </p>
+          <p>
+            In an address on Sunday night Macron spoke of "anger and shame"
+            and promised that those who destroyed would pay. On Monday the
+            Élysée said he had turned down his interior minister's offer to
+            resign and asked for "new tactics" against looting and
+            barricades. The euro weakened against the dollar in early Asian
+            trading.
+          </p>
+          <p class="src">Observador · Lusa · tagesschau · Reuters</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <div class="colophon">
+    The Cortegaça Chronicle · assembled from 38 feeds on the morning of 19
+    October 2026 · written and edited by Claude (Anthropic)<br />
+    Sources named under every item · headlines link out to the original
+  </div>
+  <div class="archive"><a href="../archive.html">All editions</a></div>
+</div>
