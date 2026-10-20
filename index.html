@@ -8,11 +8,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.ico" sizes="32x32" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<meta name="description" content="28 editions · 764 articles, searchable. Today: A cyberattack takes Ovar&#x27;s town hall offline: counters, e-mail and phones down until Wednesday" />
+<meta name="description" content="29 editions · 792 articles, searchable. Today: Police end the housing camps at dawn: Porto&#x27;s packs up after ten nights, Lisbon&#x27;s Rossio is cleared with batons and arrests" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Cortegaça Chronicle" />
 <meta property="og:title" content="The Cortegaça Chronicle" />
-<meta property="og:description" content="28 editions · 764 articles, searchable. Today: A cyberattack takes Ovar&#x27;s town hall offline: counters, e-mail and phones down until Wednesday" />
+<meta property="og:description" content="29 editions · 792 articles, searchable. Today: Police end the housing camps at dawn: Porto&#x27;s packs up after ten nights, Lisbon&#x27;s Rossio is cleared with batons and arrests" />
 <meta property="og:url" content="https://daily.m3000.io/" />
 <meta property="og:image" content="https://daily.m3000.io/og/default.png" />
 <meta property="og:image:width" content="1200" />
@@ -87,11 +87,11 @@
 <body>
 <div class="sheet" lang="en">
   <header>
-    <div class="ear caps">28 editions · 764 articles · <a href="archive.html">All editions</a></div>
+    <div class="ear caps">29 editions · 792 articles · <a href="archive.html">All editions</a></div>
     <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
-    <a class="today" href="editions/2026-10-19.html">
-      <span class="today-k">Today's paper · Monday, 19 October 2026 · No. 28</span>
-      <span class="today-h">A cyberattack takes Ovar&#x27;s town hall offline: counters, e-mail and phones down until Wednesday</span>
+    <a class="today" href="editions/2026-10-20.html">
+      <span class="today-k">Today's paper · Tuesday, 20 October 2026 · No. 29</span>
+      <span class="today-h">Police end the housing camps at dawn: Porto&#x27;s packs up after ten nights, Lisbon&#x27;s Rossio is cleared with batons and arrests</span>
       <span class="today-go">Read the edition →</span>
     </a>
   </header>
@@ -256,7 +256,7 @@
   q.value = params.get("q") || "";
   section = params.get("s") || "";
   count.textContent = "Loading the archive…";
-  fetch("articles.json?v=2026-10-19-764")
+  fetch("articles.json?v=2026-10-20-792")
     .then(r => r.json())
     .then(data => {
       all = data.map(a => ({ ...a, g: groupOf(a.sec), hay: words([a.h, a.k, a.sec, a.m, a.t, a.s].join(" ")) }));
