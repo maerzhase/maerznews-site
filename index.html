@@ -8,11 +8,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.ico" sizes="32x32" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<meta name="description" content="30 editions · 823 articles, searchable. Today: Berlin&#x27;s hacked Senate: the transport senator&#x27;s ID card is on the darknet, and attack detection covered 5% of devices" />
+<meta name="description" content="31 editions · 854 articles, searchable. Today: php2shell: two 20-year-old PHP flaws found with AI knock government sites offline, and Berlin&#x27;s police stations are still dark" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Cortegaça Chronicle" />
 <meta property="og:title" content="The Cortegaça Chronicle" />
-<meta property="og:description" content="30 editions · 823 articles, searchable. Today: Berlin&#x27;s hacked Senate: the transport senator&#x27;s ID card is on the darknet, and attack detection covered 5% of devices" />
+<meta property="og:description" content="31 editions · 854 articles, searchable. Today: php2shell: two 20-year-old PHP flaws found with AI knock government sites offline, and Berlin&#x27;s police stations are still dark" />
 <meta property="og:url" content="https://daily.m3000.io/" />
 <meta property="og:image" content="https://daily.m3000.io/og/default.png" />
 <meta property="og:image:width" content="1200" />
@@ -87,11 +87,11 @@
 <body>
 <div class="sheet" lang="en">
   <header>
-    <div class="ear caps">30 editions · 823 articles · <a href="archive.html">All editions</a></div>
+    <div class="ear caps">31 editions · 854 articles · <a href="archive.html">All editions</a></div>
     <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
-    <a class="today" href="editions/2026-10-21.html">
-      <span class="today-k">Today's paper · Wednesday, 21 October 2026 · No. 30</span>
-      <span class="today-h">Berlin&#x27;s hacked Senate: the transport senator&#x27;s ID card is on the darknet, and attack detection covered 5% of devices</span>
+    <a class="today" href="editions/2026-10-22.html">
+      <span class="today-k">Today's paper · Thursday, 22 October 2026 · No. 31</span>
+      <span class="today-h">php2shell: two 20-year-old PHP flaws found with AI knock government sites offline, and Berlin&#x27;s police stations are still dark</span>
       <span class="today-go">Read the edition →</span>
     </a>
   </header>
@@ -256,7 +256,7 @@
   q.value = params.get("q") || "";
   section = params.get("s") || "";
   count.textContent = "Loading the archive…";
-  fetch("articles.json?v=2026-10-21-823")
+  fetch("articles.json?v=2026-10-22-854")
     .then(r => r.json())
     .then(data => {
       all = data.map(a => ({ ...a, g: groupOf(a.sec), hay: words([a.h, a.k, a.sec, a.m, a.t, a.s].join(" ")) }));
