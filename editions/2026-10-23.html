@@ -1,0 +1,1759 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<title>The Cortegaça Chronicle</title>
+<!-- og:start -->
+<link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="../favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta name="description" content="The Cortegaça Chronicle, No. 32, Friday, 23 October 2026. Moderna and Merck released the late-stage results of intismeran, a personalised mRNA shot given alongside the immunotherapy Keytruda, two …" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="The Cortegaça Chronicle" />
+<meta property="og:title" content="A vaccine made from each patient&#x27;s own tumour cuts the risk of melanoma returning, or death, by 42% in its decisive trial" />
+<meta property="og:description" content="The Cortegaça Chronicle, No. 32, Friday, 23 October 2026. Moderna and Merck released the late-stage results of intismeran, a personalised mRNA shot given alongside the immunotherapy Keytruda, two …" />
+<meta property="og:url" content="https://daily.m3000.io/editions/2026-10-23.html" />
+<meta property="og:image" content="https://daily.m3000.io/og/2026-10-23.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9bcffaa37f744999a4324ed20d590fbb"}'></script>
+<!-- og:end -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+/>
+<style>
+  :root {
+    --paper: #f5f1e6;
+    --paper-2: #efe9da;
+    --ink: #1b1917;
+    --ink-2: #403a34;
+    --ink-3: #6b625a;
+    --rule: #c9bfae;
+    --rule-2: #a89c88;
+    --accent: #9c2b1e;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding-block: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  p {
+    text-wrap: pretty;
+    orphans: 3;
+    widows: 3;
+    margin: 0 0 0.72em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover .hl,
+  a:hover.hl {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  .ear {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 5px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .ear .price {
+    color: var(--accent);
+  }
+  .nameplate {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 10.5vw, 5.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0.26em 0 0.2em;
+    color: var(--ink);
+  }
+  .nameplate .the {
+    display: block;
+    font-size: 0.24em;
+    font-weight: 400;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    color: var(--ink-2);
+  }
+  .strip {
+    border-top: 3px double var(--rule-2);
+    border-bottom: 3px double var(--rule-2);
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 18px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-align: center;
+  }
+  .strip b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .strip .sep {
+    color: var(--rule-2);
+  }
+
+  /* ---------- TOP BAND ---------- */
+  .topband {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 0 26px;
+    margin-top: 22px;
+  }
+  .rail {
+    border: 1px solid var(--rule-2);
+    padding: 14px 14px 16px;
+    align-self: start;
+    background: var(--paper-2);
+  }
+  .rail h3 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .rail p {
+    font-size: 0.845rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .rail .sig {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 14px;
+  }
+  .mixhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-top: 2px solid var(--ink);
+    padding-top: 8px;
+    margin-bottom: 9px;
+    color: var(--ink);
+  }
+  .mix {
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    gap: 5px 8px;
+    align-items: center;
+  }
+  .mix .lab {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.655rem;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    line-height: 1.15;
+  }
+  .mix .lab.focus {
+    color: var(--accent);
+  }
+  .mix .barwrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mix .bar {
+    height: 9px;
+    background: var(--ink);
+    display: block;
+  }
+  .mix .n {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .mix .star {
+    color: var(--accent);
+    font-size: 0.66rem;
+  }
+  .mixcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 9px;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  /* ---------- LEAD ---------- */
+  .eyebrow {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .lead h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5.1vw, 3.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    margin-bottom: 0.22em;
+  }
+  .standfirst {
+    font-size: 1.06rem;
+    color: var(--ink-2);
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.6em;
+    max-width: 60ch;
+  }
+  .byline {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 5px 0;
+    margin-bottom: 16px;
+  }
+  .leadbody {
+    columns: 2;
+    column-gap: 28px;
+    column-rule: 1px solid var(--rule);
+  }
+  .leadbody p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .leadbody p:first-of-type::first-letter {
+    float: left;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 3.55em;
+    line-height: 0.78;
+    padding: 0.06em 0.09em 0 0;
+    color: var(--ink);
+  }
+  .pull {
+    break-inside: avoid;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 9px 0 11px;
+    margin: 6px 0 12px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .pull .who {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-style: normal;
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 7px;
+  }
+
+  /* ---------- FIGURE / CHART ---------- */
+  figure.fig {
+    margin: 0 0 18px;
+    border-top: 2px solid var(--ink);
+    padding-top: 10px;
+  }
+  figure.fig .figtitle {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+  figure.fig .figsub {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .chartbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .chartbox svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 330px;
+  }
+  figcaption {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    color: var(--ink-3);
+    text-align: left;
+    margin-top: 7px;
+    border-top: 1px solid var(--rule);
+    padding-top: 6px;
+  }
+  .barG rect.val {
+    fill: var(--ink);
+  }
+  .barG:hover rect.val {
+    fill: var(--accent);
+  }
+  .barG.win rect.val {
+    fill: var(--accent);
+  }
+  .barG.win:hover rect.val {
+    fill: var(--ink);
+  }
+  .barG rect.valo {
+    fill: var(--paper);
+    stroke: var(--ink);
+    stroke-width: 1.4;
+  }
+  .barG:hover rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win:hover rect.valo {
+    stroke: var(--ink);
+  }
+
+  /* ---------- SECTION BANDS ---------- */
+  .band {
+    margin-top: 30px;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .banner::before,
+  .banner::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-top: 2px;
+  }
+  .banner h2 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: clamp(0.78rem, 2.1vw, 0.95rem);
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .feat h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.38rem, 2.8vw, 1.82rem);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    margin-bottom: 0.3em;
+  }
+  .feat p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    font-size: 1rem;
+  }
+  .brief {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+  .brief h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.045rem;
+    line-height: 1.17;
+    margin-bottom: 0.25em;
+  }
+  .brief p {
+    font-size: 0.915rem;
+    color: var(--ink-2);
+    line-height: 1.46;
+  }
+  .kicker {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .kicker.hot {
+    color: var(--accent);
+  }
+  .src {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 5px;
+  }
+
+  .split-a {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 0 28px;
+  }
+  .split-b {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 0 28px;
+  }
+  .split-c {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 0 24px;
+  }
+  .split-a > .col + .col,
+  .split-b > .col + .col,
+  .split-c > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 28px;
+  }
+  .split-c > .col + .col {
+    padding-left: 24px;
+  }
+  .quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 22px;
+  }
+  .quad > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 22px;
+  }
+  .colhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.67rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .quad .feat h3 {
+    font-size: 1.18rem;
+    line-height: 1.15;
+  }
+  .quad .feat p,
+  .quad .brief p {
+    font-size: 0.875rem;
+    text-align: left;
+    hyphens: none;
+  }
+  .quad .brief h4 {
+    font-size: 0.98rem;
+  }
+
+  /* ---------- LISTS (Now Open / New Releases / Cinemas) ---------- */
+  .minilist {
+    border-top: 2px solid var(--ink);
+    margin-top: 16px;
+    padding-top: 8px;
+  }
+  .minilist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .minilist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .minilist li {
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .minilist li:last-child {
+    border-bottom: 0;
+  }
+  .minilist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .sheet article p.meta {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 0 6px;
+  }
+  .g {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- NOW STREAMING ---------- */
+  .streamlist {
+    border-top: 2px solid var(--ink);
+    margin-top: 18px;
+    padding-top: 8px;
+  }
+  .streamlist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .streamlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3;
+    column-gap: 26px;
+  }
+  .streamlist li {
+    break-inside: avoid;
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .streamlist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .streamcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ---------- AGENDA ---------- */
+  .agenda {
+    border-top: 3px double var(--ink);
+    border-bottom: 3px double var(--ink);
+    margin-top: 26px;
+    padding: 14px 0 16px;
+  }
+  .agenda-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 14px;
+  }
+  .agenda-head h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+    letter-spacing: -0.01em;
+  }
+  .agenda-head .sub {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-3);
+  }
+  .agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 26px;
+  }
+  .ev {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0 14px;
+    border-top: 1px solid var(--rule);
+    padding: 11px 0;
+  }
+  .agenda-grid > .ev:nth-child(1),
+  .agenda-grid > .ev:nth-child(2) {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .agenda-grid > .ev:nth-child(even) {
+    border-left: 1px solid var(--rule);
+    padding-left: 26px;
+  }
+  .ev .date {
+    text-align: center;
+  }
+  .ev .mo {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+  }
+  .ev .dy {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 2.35rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.34em;
+    font-variant-numeric: tabular-nums;
+  }
+  .ev .wd {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+  }
+  .ev .txt {
+    min-width: 0;
+    border-left: 1px solid var(--rule);
+    padding-left: 14px;
+  }
+  .ev .txt h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .ev .venue {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 5px;
+  }
+  .ev .ctx {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    line-height: 1.42;
+    margin: 0;
+  }
+
+  .colophon {
+    border-top: 1px solid var(--rule-2);
+    margin-top: 30px;
+    padding-top: 12px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .quad {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 22px;
+    }
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .quad > .col:nth-child(4) {
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .topband {
+      grid-template-columns: 210px 1fr;
+      gap: 0 22px;
+    }
+    .streamlist ul {
+      columns: 2;
+    }
+  }
+  @media (max-width: 860px) {
+    body {
+      font-size: 15.5px;
+    }
+    .topband {
+      grid-template-columns: 1fr;
+    }
+    .rail {
+      margin-bottom: 22px;
+    }
+    .leadbody {
+      columns: 1;
+    }
+    .split-a,
+    .split-b,
+    .split-c,
+    .quad {
+      grid-template-columns: 1fr;
+    }
+    .split-a > .col + .col,
+    .split-b > .col + .col,
+    .split-c > .col + .col,
+    .quad > .col + .col,
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .agenda-grid {
+      grid-template-columns: 1fr;
+    }
+    .agenda-grid > .ev:nth-child(even) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .agenda-grid > .ev:nth-child(2) {
+      border-top: 1px solid var(--rule);
+      padding-top: 11px;
+    }
+    .streamlist ul {
+      columns: 1;
+    }
+    .leadbody p,
+    .feat p {
+      text-align: left;
+      hyphens: none;
+    }
+    .banner h2 {
+      white-space: normal;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  .seg:hover rect {
+    opacity: 0.82;
+  }
+
+  /* ---------- TIMELINE (lead figure) ---------- */
+  .tl circle.pt {
+    fill: var(--ink);
+    stroke: var(--paper);
+    stroke-width: 2;
+  }
+  .tl g:hover circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win:hover circle.pt {
+    fill: var(--ink);
+  }
+  .tl g {
+    cursor: default;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .archive {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    margin-top: 14px;
+    padding: 6px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .archive a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  code {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.86em;
+    background: var(--paper-2);
+    color: var(--ink);
+    padding: 0 3px;
+    hyphens: none;
+    word-break: break-word;
+  }
+
+  .statrow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    margin: 10px 0 4px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .statrow .st {
+    padding: 8px 10px 7px;
+    min-width: 0;
+  }
+  .statrow .st + .st {
+    border-left: 1px solid var(--rule);
+  }
+  .statrow .num {
+    display: block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 1.35rem;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+  .statrow .lbl {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.35;
+    margin-top: 3px;
+  }
+  @media (max-width: 560px) {
+    .statrow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .statrow .st:nth-child(3) { border-left: 0; }
+    .statrow .st:nth-child(n + 3) { border-top: 1px solid var(--rule); }
+  }
+</style>
+<style>
+  .barG.off rect.val {
+    fill: var(--ink-3);
+  }
+  .barG.off:hover rect.val {
+    fill: var(--accent);
+  }
+</style>
+
+
+<div class="sheet" lang="en">
+  <!-- ================= MASTHEAD ================= -->
+  <header>
+    <div class="ear">
+      Friday, 23 October 2026 &nbsp;·&nbsp; No. 32 &nbsp;·&nbsp; Price:
+      <span class="price">one bica</span>
+    </div>
+    <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
+    <div class="strip">
+      <span>Topic today: <b>a vaccine written from your own tumour</b></span>
+      <span class="sep">✦</span>
+      <span>Weather · Aveiro <b>18°C</b> high, 13° low, overcast and dry, breezy</span>
+      <span class="sep">✦</span>
+      <span>Housing marches <b>on Saturday in Lisbon and Porto</b></span>
+    </div>
+  </header>
+
+  <!-- ================= TOP BAND ================= -->
+  <div class="topband">
+    <aside class="rail">
+      <h3>Column One</h3>
+      <p>
+        After three mornings of hacks and patches, a piece of good news from
+        the labs leads the paper: a cancer vaccine built for each patient
+        from the mutations in their own tumour has passed its big test in
+        melanoma. The numbers are in the chart; the caveats are in the text.
+      </p>
+      <p>
+        Also in the paper: a train strike that will reach Cortegaça's
+        platform, a jugglers' convention for Válega, a suspected Russian spy
+        in Eisenhüttenstadt, Saturday's housing marches, Quad9 walking out
+        of France, Raye's Mercury, and Europe's deadliest summer.
+      </p>
+      <p class="sig">— The Editor</p>
+
+      <div class="mixhead">Today's edition</div>
+      <div class="mix">
+        <span class="lab">Cortegaça &amp; Ovar</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span></span>
+
+        <span class="lab">Germany · Berlin</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span></span>
+
+        <span class="lab">Portugal · Porto</span>
+        <span class="barwrap"><span class="bar" style="width: 52%"></span><span class="n">4</span></span>
+
+        <span class="lab focus">✦ Technology</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span><span class="star">✦</span></span>
+
+        <span class="lab">Screen</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Arts</span>
+        <span class="barwrap"><span class="bar" style="width: 26%"></span><span class="n">2</span></span>
+
+        <span class="lab">Sound</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">Now Streaming</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+
+        <span class="lab">The World</span>
+        <span class="barwrap"><span class="bar" style="width: 39%"></span><span class="n">3</span></span>
+      </div>
+      <div class="mixcap">✦ today's focus — bar length is the story count (Technology includes the science lead)</div>
+    </aside>
+
+    <article id="art-1" class="lead">
+      <div class="eyebrow">Medicine · mRNA</div>
+      <h1>
+        <a href="https://arstechnica.com/health/2026/10/personalized-mrna-cancer-vaccine-cut-melanoma-death-recurrence-by-42/" target="_blank" rel="noopener" class="hl"
+          >A vaccine made from each patient's own tumour cuts the risk of melanoma returning, or death, by 42% in its decisive trial</a
+        >
+      </h1>
+      <p class="standfirst">
+        Moderna and Merck released the late-stage results of intismeran, a
+        personalised mRNA shot given alongside the immunotherapy Keytruda,
+        two days early after a news site broke the embargo. After two years,
+        82% of patients on the combination were alive with no sign of the
+        cancer coming back, against 70% on Keytruda alone.
+      </p>
+      <div class="byline">Ars Technica · Merck · Moderna · 22 October 2026</div>
+
+      <figure class="fig">
+        <div class="figtitle">More patients stay cancer-free with the personalised vaccine</div>
+        <div class="figsub">
+          Share of patients with surgically removed stage IIB–IV melanoma in
+          the Phase 3 trial, by treatment arm. Hover a bar for the detail.
+        </div>
+        <div class="chartbox">
+<svg viewBox="0 0 570 196" role="img" aria-label="Phase 3 melanoma trial: alive without recurrence after two years, 82 percent with intismeran plus Keytruda versus 70 percent with Keytruda alone; alive without distant metastasis at the end of the trial, 88.5 percent versus 80 percent.">
+<title>Intismeran plus Keytruda against Keytruda alone, Phase 3 results</title>
+<text x="0" y="12" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="8.5" letter-spacing="1.2">ALIVE WITH NO RECURRENCE · AFTER TWO YEARS</text>
+<g class="barG win"><title>Intismeran + Keytruda: 82% of patients alive with no recurrence after two years. Risk of recurrence or death 42% lower than Keytruda alone.</title><rect class="valo" x="152" y="22" width="400" height="18"/><rect class="val" x="152" y="22" width="328" height="18"/><text x="144" y="35" text-anchor="end" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">✦ Vaccine + Keytruda</text><text x="486" y="35" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">82%</text></g>
+<g class="barG"><title>Keytruda + placebo: 70% of patients alive with no recurrence after two years.</title><rect class="valo" x="152" y="46" width="400" height="18"/><rect class="val" x="152" y="46" width="280" height="18"/><text x="144" y="59" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">Keytruda alone</text><text x="438" y="59" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">70%</text></g>
+<text x="0" y="92" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="8.5" letter-spacing="1.2">ALIVE WITH NO DISTANT METASTASIS · END OF TRIAL</text>
+<g class="barG win"><title>Intismeran + Keytruda: 88.5% alive without the cancer spreading to a distant part of the body. Risk of distant metastasis or death 38% lower.</title><rect class="valo" x="152" y="102" width="400" height="18"/><rect class="val" x="152" y="102" width="354" height="18"/><text x="144" y="115" text-anchor="end" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">✦ Vaccine + Keytruda</text><text x="512" y="115" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">88.5%</text></g>
+<g class="barG"><title>Keytruda + placebo: 80% alive without distant metastasis.</title><rect class="valo" x="152" y="126" width="400" height="18"/><rect class="val" x="152" y="126" width="320" height="18"/><text x="144" y="139" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">Keytruda alone</text><text x="478" y="139" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="10" font-weight="700">80%</text></g>
+<line x1="152" y1="18" x2="152" y2="68" stroke="#1b1917" stroke-width="1"/><line x1="152" y1="98" x2="152" y2="148" stroke="#1b1917" stroke-width="1"/>
+<line x1="0" y1="164" x2="570" y2="164" stroke="#1b1917" stroke-width="1"/>
+<text x="0" y="178" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8" font-style="italic">1,137 patients, randomised 2:1 to vaccine + Keytruda or placebo + Keytruda. Bar length: share of patients, full width = 100%.</text>
+<text x="0" y="190" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8" font-style="italic">Top-line figures from the companies; full data to be presented at ESMO in Madrid and published in NEJM.</text></svg>
+        </div>
+        <div class="statrow">
+          <div class="st"><span class="num">−42%</span><span class="lbl">risk of recurrence or death vs Keytruda alone</span></div>
+          <div class="st"><span class="num">−38%</span><span class="lbl">risk of distant metastasis or death</span></div>
+          <div class="st"><span class="num">1,137</span><span class="lbl">patients in the Phase 3 trial</span></div>
+          <div class="st"><span class="num">≤34</span><span class="lbl">tumour mutations encoded in each patient's shot</span></div>
+        </div>
+        <figcaption>
+          Source: Merck and Moderna top-line results of the Phase 3 trial of
+          intismeran (mRNA-4157) with Keytruda in resected melanoma, as
+          reported by Ars Technica, 22 October 2026. The smaller Phase 2
+          trial had shown a 49% lower risk of recurrence or death and 59%
+          for distant metastasis.
+        </figcaption>
+      </figure>
+
+      <div class="leadbody">
+        <p>
+          The idea is simple to say and hard to do. Doctors sequence a
+          patient's tumour and their healthy cells, pick out mutations that
+          only the cancer carries, and write the code for up to 34 of them
+          into a strand of synthetic mRNA. Injected, it teaches the immune
+          system what that particular cancer looks like, while Keytruda,
+          Merck's established checkpoint antibody, takes the brakes off the
+          immune response. Every dose is made for one person.
+        </p>
+        <p>
+          The trial enrolled 1,137 people whose stage IIB to IV melanoma had
+          already been surgically removed, the moment when the danger is
+          that hidden cells seed a relapse. Two thirds got the vaccine with
+          Keytruda, one third Keytruda with a placebo. The companies had said
+          in August that the study had met its goal but held back the
+          numbers for the European Society for Medical Oncology congress,
+          which opens now in Madrid; when an oncology news site published
+          them early, they put out the top line on Thursday. The full
+          results have been accepted by the New England Journal of
+          Medicine, and Merck and Moderna are already in talks with
+          regulators.
+        </p>
+        <div class="pull">
+          "One of the most significant advances in melanoma treatment since the advent of immunotherapy."
+          <span class="who">Dean Li, president of Merck Research Laboratories</span>
+        </div>
+        <p>
+          Two cautions. The effect is smaller than in the five-year Phase 2
+          study, which found a 49% cut in the risk of recurrence or death and
+          59% for distant spread, against 42% and 38% now. And these are two-year
+          figures from a press release, not yet the peer-reviewed paper.
+          Still, Merck calls it the first Phase 3 study to show a clinically
+          meaningful gain over Keytruda alone in patients whose melanoma
+          has been surgically removed. Moderna's Stéphane Bancel
+          calls it "a defining moment" for the technology that first reached
+          most of us as a Covid jab.
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= LOCAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Cortegaça, Ovar &amp; the Coast</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-2" class="feat">
+          <span class="kicker hot">Rail · Strike</span>
+          <h3>
+            <a href="https://www.ovarnews.pt/revisores-e-trabalhadores-das-bilheteiras-da-cp-em-greve-no-dia-30-de-outubro/" target="_blank" rel="noopener" class="hl"
+              >CP conductors and ticket staff strike next Friday, and the trains through Cortegaça and Esmoriz will feel it</a
+            >
+          </h3>
+          <p>
+            The SFRCI union has called a 24-hour strike of CP's conductors,
+            ticket-office workers and their supervisors for Friday 30
+            October. CP warns of disruption to its services on the day, with
+            possible knock-on effects on Thursday the 29th and Saturday the
+            31st, which matters on the Linha do Norte, where the Porto urban
+            trains stop at Cortegaça, Esmoriz and Ovar.
+          </p>
+          <p>
+            The union's Luís Bravo says the walkout is about pay that no
+            longer keeps up with fuel, housing, food, gas and electricity:
+            the raises won so far, it argues, do not make up for a steady
+            loss of purchasing power, and rising fuel costs hit rail staff
+            hardest because their shifts start and end when no trains run.
+            Check CP's site before travelling that week.
+          </p>
+          <p class="src">OvarNews · Lusa · CP</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-3" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Válega · Circus</span>
+          <h4>
+            <a href="https://www.ovarnews.pt/valega-acolhe-a-convensao-iberica-de-juggling-em-2027/" target="_blank" rel="noopener" class="hl"
+              >Válega will host the first Peninsula Juggling Convention, 1–4 July 2027</a
+            >
+          </h4>
+          <p>
+            The teams behind the European Juggling Conventions in Tres Cantos
+            (2022) and Ovar (2024) have joined forces for a new touring
+            Iberian meeting: four days of juggling, circus, workshops and
+            shows.
+          </p>
+          <p class="src">OvarNews · Junta de Válega</p>
+        </article>
+        <article id="art-4" class="brief">
+          <span class="kicker">Ovar · Martial arts</span>
+          <h4>
+            <a href="https://www.ovarnews.pt/portugal-entra-na-rota-mundial-do-ssireum-ovar-acolhe-a-sede-nacional-da-luta-tradicional-coreana/" target="_blank" rel="noopener" class="hl"
+              >Ovar becomes Portugal's home of Ssireum, Korea's UNESCO-listed wrestling</a
+            >
+          </h4>
+          <p>
+            The International Northern Ssireum Federation picked the Espaço
+            Aberto dojo as its national seat, under Carlos da Silva. Wrestlers
+            grip a sash tied round the opponent's waist and thigh.
+          </p>
+          <p class="src">OvarNews</p>
+        </article>
+        <article id="art-5" class="brief">
+          <span class="kicker">Aveiro · Industry</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/economia/lucro-da-navigator-cai-mais-de-44-ate-setembro-para-654-milhoes-de-euros_n1773616" target="_blank" rel="noopener" class="hl"
+              >Navigator's profit falls 44.8% to €65.4 million, after shutdowns that included its Aveiro mill</a
+            >
+          </h4>
+          <p>
+            Sales slipped to €1.33 billion in nine months. The paper maker
+            blames winter storms and planned stops at Setúbal, Aveiro and
+            Figueira da Foz, used to install new low-carbon kit.
+          </p>
+          <p class="src">RTP · Lusa · CMVM</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GERMANY ================= -->
+  <section class="band">
+    <div class="banner"><h2>Germany · Berlin &amp; Brandenburg</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-6" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Berlin · Data</span>
+          <h4>
+            <a href="https://www.rbb24.de/panorama/beitrag/2026/10/berlin-datenschutzbehoerde-datenpannen-2026-it-sicherheit.html" target="_blank" rel="noopener" class="hl"
+              >Berlin has already logged as many data breaches by September as in all of last year</a
+            >
+          </h4>
+          <p>
+            About 1,500 reports reached the data-protection office, some 250
+            from public bodies. Its head, Meike Kamp, blames attackers using
+            AI to find weak spots and mass-produce convincing phishing.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article id="art-7" class="brief">
+          <span class="kicker">Rail · Berlin–Paris</span>
+          <h4>
+            <a href="https://www.rbb24.de/wirtschaft/beitrag/2026/10/deutsche-bahn-direktverbindung-berlin-paris-fahrplanwechsel-winterfahrplan.html" target="_blank" rel="noopener" class="hl"
+              >The direct ICE to Paris should return with the December timetable, bookable from 13 December at €65</a
+            >
+          </h4>
+          <p>
+            The eight-hour run has been cut since summer by trouble fitting
+            the trains with the ETCS signalling system; until then, change in
+            Frankfurt or Mannheim.
+          </p>
+          <p class="src">rbb24 · dpa</p>
+        </article>
+        <article id="art-8" class="brief">
+          <span class="kicker">Budget · Energy</span>
+          <h4>
+            <a href="https://www.tagesschau.de/inland/innenpolitik/steuerschaetzung-bund-klingbeil-100.html" target="_blank" rel="noopener" class="hl"
+              >Tax take tops €1 trillion in 2027, but Klingbeil says it buys no electricity-tax cut</a
+            >
+          </h4>
+          <p>
+            Estimators see €10.9 billion more than in May; the federal share
+            is €398.6 billion. The state premiers want the power tax cut for
+            everyone and a fuel-price cap anyway.
+          </p>
+          <p class="src">tagesschau</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-9" class="feat">
+          <span class="kicker hot">Brandenburg · Espionage</span>
+          <h3>
+            <a href="https://www.tagesschau.de/inland/spionage-ruestungindustrie-festnahme-100.html" target="_blank" rel="noopener" class="hl"
+              >A suspected Russian spy is arrested in Oder-Spree, accused of scouting arms makers supplying NATO's eastern flank</a
+            >
+          </h3>
+          <p>
+            Federal prosecutors, the BKA and the domestic intelligence service
+            detained a 53-year-old Ukrainian citizen from the Russian-annexed
+            Luhansk region on Thursday morning. He lived in Eisenhüttenstadt
+            and, investigators believe, had worked for a Russian intelligence
+            service since at least July 2025, spying on companies and people
+            involved in producing tanks and ammunition for NATO's eastern
+            flank. He is to go before an investigating judge at the Federal
+            Court of Justice today.
+          </p>
+          <p>
+            It is the latest in a chain of such cases this year, and the
+            investigators note that this one acted with specific targets and
+            orders rather than opportunistically. Chancellor Friedrich Merz
+            said Germany is the target of "intensive" espionage. Merz is in
+            Brandenburg again this morning, visiting the chip researchers of
+            the IHP institute in Frankfurt (Oder), about 25 km from where the
+            suspect lived.
+          </p>
+          <p class="src">tagesschau · BBC · rbb24</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTUGAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Portugal &amp; the Coast</h2></div>
+    <div class="split-c">
+      <div class="col">
+        <article id="art-10" class="feat">
+          <span class="kicker hot">Housing · Protests</span>
+          <h3>
+            <a href="https://www.rtp.pt/noticias/pais/manifestantes-aprovam-novos-protestos-para-sabado-em-lisboa-e-no-porto_e1773417" target="_blank" rel="noopener" class="hl"
+              >The housing movement calls marches for Saturday, as the state housing chief says the young won't make "sacrifices"</a
+            >
+          </h3>
+          <p>
+            Popular assemblies in both cities approved new protests for
+            Saturday: in Porto from 16:00 in Praça da Batalha, in Lisbon from
+            the Marquês de Pombal, due to reach the Rossio around 19:00. The
+            Lisbon movement chose not to spend Thursday night in the square;
+            by dawn only three people remained in the rain. It is also
+            launching a citizens' legislative initiative, because "the voices
+            of the street are not enough", and the public prosecutor decides
+            on Tuesday whether to try the people arrested in the Rossio.
+          </p>
+          <p>
+            The row of the day came from Benjamim Pereira, president of the
+            housing institute IHRU, who recalled that his grandparents and
+            father "had to emigrate to have a house" and questioned whether
+            today's young people are ready for the same sacrifice. His own
+            minister, Miguel Pinto Luz, called the remarks "absolutely
+            unfortunate" and asked him to explain himself.
+          </p>
+          <p class="src">RTP · Observador · Público · Jornal de Notícias</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-11" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Wildfires · Season</span>
+          <h4>
+            <a href="https://observador.pt/2026/10/23/255-detidos-por-incendios-florestais-em-2026-area-ardida-cai-72-mas-numero-de-fogos-sobe-pela-primeira-vez-desde-2022/" target="_blank" rel="noopener" class="hl"
+              >Burnt area down 72% this year, but 8,573 fires and 255 arrests for arson</a
+            >
+          </h4>
+          <p>
+            Civil protection's balance: 74,560 hectares burnt, the number of
+            fires up for the first time since 2022, and three firefighters
+            killed.
+          </p>
+          <p class="src">Observador · Lusa</p>
+        </article>
+        <article id="art-12" class="brief">
+          <span class="kicker">Church · Justice</span>
+          <h4>
+            <a href="https://observador.pt/2026/10/23/todas-as-denuncias-de-abuso-sexual-na-igreja-nos-ultimos-quatro-anos-foram-arquivadas/" target="_blank" rel="noopener" class="hl"
+              >Every one of some 70 complaints of clergy abuse in four years has been shelved</a
+            >
+          </h4>
+          <p>
+            Most were time-barred, Expresso reports, the rest lacked evidence;
+            none reached a charge, including all 15 inquiries opened from the
+            independent commission's referrals.
+          </p>
+          <p class="src">Observador · Expresso</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-13" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker hot">Porto · Festivals</span>
+          <h4>
+            <a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxOSXRPTU5oeXdtNGxqWklYMkEyZHEyaDhrOEhzenhTajFzb3RCMzcxUW1ka093cG1rcjM0MXRyN08xUGV2Y2s0MHBCUUItM19RenRYMllPcF9PWXg4eUc3WG1TQy11MWVsZkV5N0NleWRSWVJfUDlTMm83T1NSZmxtcV8wb18wNF9rbURPcmUzLXNlVXpwbTBMT1NkSWl6M3RtRERTWEZpMDJFX1M5dWtrcXl5Y1lhZ0w3SmljY3FaaHJiX2pNeTJxWWJZQ3hlWTVHUS1JVmVLak91N0ZOcVFSc2I3QWo?oc=5" target="_blank" rel="noopener" class="hl"
+              >The promoter behind North Festival and Rock à Moda do Porto has gone bust owing €10 million</a
+            >
+          </h4>
+          <p>
+            Jornal de Negócios reports the insolvency of the company that ran
+            two of the city's festivals; North's 2025 edition had already been
+            cancelled over the use of its venue.
+          </p>
+          <p class="src">Jornal de Negócios · DN</p>
+        </article>
+      </div>
+    </div>
+    <div class="agenda">
+      <div class="agenda-head">
+        <h3>✦ The Diary — What's On</h3>
+        <span class="sub">Upcoming around Cortegaça, Ovar &amp; Aveiro</span>
+      </div>
+      <div class="agenda-grid">
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">23</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1842429/sozinho-em-casa-23-pedro-martins" target="_blank" rel="noopener" class="hl">Sozinho em Casa #23 — Pedro Martins</a></h4>
+            <div class="venue">Museu Júlio Dinis · Ovar · 21:30 · free</div>
+            <p class="ctx">A walk through Ovar is streamed live into the auditorium while the Ovar lutenist improvises its soundtrack.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">24</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.ovarnews.pt/cambedo-1946-leva-a-ovar-a-memoria-de-uma-tragedia-silenciada-da-fronteira-iberica/" target="_blank" rel="noopener" class="hl">Cambedo, 1946</a></h4>
+            <div class="venue">Centro de Arte de Ovar · Festovar · 21:30</div>
+            <p class="ctx">Physical theatre by Teatro de Balugas on the border village shelled by the forces of both Iberian dictatorships, and the silence that followed.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">25</span><span class="wd">Sun</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1868709/oficina-de-halloween" target="_blank" rel="noopener" class="hl">Oficina de Halloween</a></h4>
+            <div class="venue">Livraria Doninha Ternurenta · Ovar · 10:30</div>
+            <p class="ctx">A spooky story session and workshop for children from three, with their families; €7, booking required, costumes welcome.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">27</span><span class="wd">Tue</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1844099/xix-art-tur" target="_blank" rel="noopener" class="hl">XIX ART&amp;TUR</a></h4>
+            <div class="venue">Centro de Arte de Ovar · 21:30 · to 31 Oct</div>
+            <p class="ctx">The international tourism-film festival, running since 2008, brings its competition and talks to Ovar; prizes on 30 October.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">29</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1844101/valter-lobo" target="_blank" rel="noopener" class="hl">Valter Lobo</a></h4>
+            <div class="venue">Centro de Arte de Ovar · 21:30</div>
+            <p class="ctx">The singer-songwriter plays his debut "Mediterrâneo" in full, ten years on, with its first vinyl pressing.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">23</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.noticiasdeaveiro.pt/musica-concerto-de-ruben-verdadeiro-e-sergio-cerqueira-no-comur/" target="_blank" rel="noopener" class="hl">Rúben Verdadeiro &amp; Sérgio Cerqueira</a></h4>
+            <div class="venue">COMUR · Murtosa · 20:30</div>
+            <p class="ctx">The 69th "Música no Museu" night: the duo's new versions of international hits and Portuguese standards.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">23</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1863246/azemeis-jazz-blues-orquestra-jazz-de-matosinhos-cristina-branco" target="_blank" rel="noopener" class="hl">Cristina Branco &amp; Orquestra Jazz de Matosinhos</a></h4>
+            <div class="venue">TeMA · Oliveira de Azeméis · 20:30</div>
+            <p class="ctx">The singer brings out the jazz side of her fado-rooted repertoire, from Laginha to José Afonso, with the big band.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">23</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1868830/festa-mundial-da-animacao-23-e-25-de-outubro" target="_blank" rel="noopener" class="hl">Festa Mundial da Animação</a></h4>
+            <div class="venue">Porto · Sala-Estúdio Perpétuo · to 25 Oct · free</div>
+            <p class="ctx">The 25th edition: animated shorts for schools and families, a Sunday feature, and the National Animation Award on Saturday.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">24</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.serralves.pt/agenda-serralves/" target="_blank" rel="noopener" class="hl">O Dia do Desespero</a></h4>
+            <div class="venue">Porto · Casa do Cinema Manoel de Oliveira, Serralves · 17:00</div>
+            <p class="ctx">Oliveira's 1992 film on Camilo Castelo Branco's last days, screened with a talk on the director as a reader of Camilo.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Oct</span><span class="dy">24</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.serralves.pt/agenda-serralves/" target="_blank" rel="noopener" class="hl">Gustavo Ciríaco — Névoa-Nada</a></h4>
+            <div class="venue">Porto · Auditório do Museu de Serralves · 19:00 · also 25 Oct</div>
+            <p class="ctx">The Brazilian choreographer's performance asking what remains once everything has passed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CULTURE QUAD ================= -->
+  <section class="band">
+    <div class="banner"><h2>Machines, Screen, Art &amp; Sound</h2></div>
+    <div class="quad">
+      <div class="col">
+        <div class="colhead">Technology</div>
+        <article id="art-14" class="feat">
+          <span class="kicker hot">DNS · Censorship</span>
+          <h3>
+            <a href="https://quad9.net/news/blog/au-revoir-france/" target="_blank" rel="noopener" class="hl"
+              >Quad9 will switch off its free DNS for France on 24 November rather than block sites for a broadcaster</a
+            >
+          </h3>
+          <p>
+            A French court ruled for beIN, the Qatari sports broadcaster,
+            ordering the Swiss non-profit resolver to stop resolving a list of
+            piracy domains for users in France. The court cut the penalty from
+            €580,000 to €1,000 a day, but Quad9 says the money was never the
+            point: it treats DNS as a neutral, passive service and refuses to
+            "lie" about the answers it gives.
+          </p>
+          <p>
+            Calling compliance "technically unfeasible", it will stop serving
+            France from Tuesday 24 November. If you use 9.9.9.9 elsewhere,
+            nothing changes, but the case is a test of how far rights-holders
+            can push blocking down into the plumbing of the internet.
+          </p>
+          <p class="src">Quad9 · heise · Hacker News</p>
+        </article>
+        <article id="art-15" class="brief">
+          <span class="kicker">Hardware · Market</span>
+          <h4>
+            <a href="https://www.theverge.com/gadgets/1017144/global-pc-shipments-dropped-q3-2026-ram-price-hikes" target="_blank" rel="noopener" class="hl"
+              >PC shipments fall 21% in a year as memory prices bite</a
+            >
+          </h4>
+          <p>
+            Counterpoint's Q3 count ends two years of growth: RAM, SSDs and
+            chips have all got dearer, and smartphone shipments hit a 14-year
+            low in the same quarter.
+          </p>
+          <p class="src">The Verge · Counterpoint</p>
+        </article>
+      </div>
+
+      <div class="col">
+        <div class="colhead">Screen</div>
+        <article id="art-16" class="feat">
+          <span class="kicker hot">Obituary</span>
+          <h3>
+            <a href="https://www.indiewire.com/news/obituary/tom-skerritt-dead-alien-mash-1235223498/" target="_blank" rel="noopener" class="hl"
+              >Tom Skerritt, the Nostromo's captain in Alien and Viper in Top Gun, dies at 93</a
+            >
+          </h3>
+          <p class="meta">Actor · Alien (1979) · M*A*S*H (1970) · Top Gun (1986) · A River Runs Through It (1992)</p>
+          <p>
+            Skerritt died of natural causes on Wednesday, his manager said. He
+            was top-billed in Ridley Scott's Alien as Dallas, the captain who
+            goes into the air ducts, and played Commander Mike "Viper" Metcalf
+            opposite Tom Cruise in Top Gun.
+          </p>
+          <p>
+            A career of more than seven decades also took in Robert Altman's
+            M*A*S*H, Steel Magnolias, Contact and Robert Redford's A River
+            Runs Through It, the steady, unshowy presence directors called on
+            when a film needed someone the audience would trust at once.
+          </p>
+          <p class="src">IndieWire · tagesschau · Público</p>
+        </article>
+        <article id="art-17" class="brief">
+          <span class="kicker">Portugal · Film</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/cultura/filme-memorias-do-carcere-apresenta-um-camilo-castelo-branco-mais-humano_n1773622" target="_blank" rel="noopener" class="hl"
+              >Memórias do Cárcere (2026) puts Camilo Castelo Branco in Porto's jail, and makes him human</a
+            >
+          </h4>
+          <p class="meta">Period drama · dir. Sérgio Graciano · prod. Paulo Branco · Portugal</p>
+          <p>
+            Albano Jerónimo and Maria João Bastos play Camilo and Ana Plácido,
+            jailed in the Relação prison for adultery; Carlos Saboga wrote it
+            from the book Camilo wrote inside.
+          </p>
+          <p class="src">RTP</p>
+        </article>
+        <div class="minilist">
+          <h5>In Cinemas &amp; Festivals</h5>
+          <ul>
+            <li><span class="name">Clayface (2026)</span> · <span class="g">Body horror / DC</span> · US cinemas 23 Oct · IMDb 7.5 · RT 76%</li>
+            <li><span class="name">Wicker (2026)</span> · <span class="g">Fantasy romcom</span> · Olivia Colman, Alexander Skarsgård · US cinemas 23 Oct · IMDb 7.3 · RT 92%</li>
+            <li><span class="name">Festa Mundial da Animação</span> · <span class="g">Animation</span> · Porto, 23–25 Oct, free</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="colhead">Arts</div>
+        <article id="art-18" class="feat">
+          <span class="kicker hot">Paris · Fairs</span>
+          <h3>
+            <a href="https://hyperallergic.com/art-basel-paris-to-close-two-days-early-citing-protests/" target="_blank" rel="noopener" class="hl"
+              >Art Basel Paris shuts two days early, and the Louvre closes on Saturday, as France braces for protests</a
+            >
+          </h3>
+          <p>
+            The fair at the Grand Palais, due to run to Sunday, now ends
+            tonight at 19:00 "in the interest of safeguarding our visitors",
+            organisers told exhibitors; public sculptures are being taken down
+            and dealers are scrambling to get works out of the city. The
+            Fondation Louis Vuitton and several major museums, the Louvre
+            among them, will close for Saturday's demonstrations.
+          </p>
+          <p>
+            Prime Minister Sébastien Lecornu says soldiers of Operation
+            Sentinelle, set up after the 2015 attacks, rather than police
+            will police the weekend's protests over schools and public
+            services. The satellite fairs are staying open.
+          </p>
+          <p class="src">Hyperallergic · ARTnews · Artforum</p>
+        </article>
+        <article id="art-19" class="brief">
+          <span class="kicker">Portugal · Memory</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/pais/centro-interpretativo-do-estado-novo-inaugurado-na-terra-de-salazar_v1773605" target="_blank" rel="noopener" class="hl"
+              >Salazar's home town opens a centre to explain the dictatorship, in the school canteen that bore his name</a
+            >
+          </h4>
+          <p>
+            The Centro Interpretativo do Estado Novo opens today in Santa Comba
+            Dão's old school-canteen, devoted to the regime and to those who
+            resisted it.
+          </p>
+          <p class="src">RTP · Público</p>
+        </article>
+        <div class="minilist">
+          <h5>Now Open</h5>
+          <ul>
+            <li><span class="name">Joan Miró — Afinidades eletivas</span> · Casa de Serralves, Porto · to 7 Mar</li>
+            <li><span class="name">Já não há flores — portraits of Curia</span> · Posto de Turismo da Curia · 25 Oct–15 Dec</li>
+            <li><span class="name">Simetrias Ocultas em Muros de Vidro</span> · Parque de Serralves, Porto · 30 Oct–31 Jan</li>
+            <li><span class="name">Miguel Gomes</span> · Casa do Cinema Manoel de Oliveira, Serralves · 31 Oct–31 May</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="colhead">Sound</div>
+        <article id="art-20" class="feat">
+          <span class="kicker hot">Prizes · Britain</span>
+          <h3>
+            <a href="https://pitchfork.com/story/raye-wins-2026-mercury-prize/" target="_blank" rel="noopener" class="hl"
+              >Raye wins the Mercury Prize for "This Music May Contain Hope", beating Paul McCartney</a
+            >
+          </h3>
+          <p class="meta">Pop / R&amp;B · second album · Mercury Prize 2026</p>
+          <p>
+            Second time lucky: her debut was shortlisted in 2023 and lost to
+            Ezra Collective. This time she beat Paul McCartney, Olivia Dean,
+            Florence and the Machine, Jade and Nia Archives at the ceremony in
+            Newcastle, where she played "I Hate the Way I Look Today" with a
+            full big band.
+          </p>
+          <p>
+            "Hope is a very cheesy word, especially for us British people," she
+            said, "but hope is something we all need." Pulp also played, a
+            song from the War Child benefit compilation Help (2).
+          </p>
+          <p class="src">Pitchfork</p>
+        </article>
+        <article id="art-21" class="brief">
+          <span class="kicker">Berlin · Label</span>
+          <h4>
+            <a href="https://www.tagesschau.de/kultur/musik-igor-levit-neues-plattenlabel-100.html" target="_blank" rel="noopener" class="hl"
+              >Igor Levit launches his own label, No Silence, with a night at Berlin's Columbia Theater</a
+            >
+          </h4>
+          <p class="meta">Classical · new label</p>
+          <p>
+            "My first non-human baby," the pianist calls it: a platform for
+            other artists as well as himself. "My life is No Silence."
+          </p>
+          <p class="src">tagesschau</p>
+        </article>
+        <article id="art-22" class="brief">
+          <span class="kicker">London · Portugal</span>
+          <h4>
+            <a href="https://thequietus.com/news/discrepant-keroxen-cafe-oto-festival-goncalo-f-cardoso-interview/" target="_blank" rel="noopener" class="hl"
+              >Gonçalo F. Cardoso's Discrepant label takes over Cafe OTO for three nights with the Canary Islands' Keroxen</a
+            >
+          </h4>
+          <p class="meta">Experimental · 29–31 Oct · London</p>
+          <p>
+            More than a dozen acts from the Canarian underground and beyond,
+            curated by the Portuguese musician's Tenerife-based label.
+          </p>
+          <p class="src">The Quietus</p>
+        </article>
+        <div class="minilist">
+          <h5>New Releases</h5>
+          <ul>
+            <li><span class="name">Shabazz Palaces — It's a Style Sport</span> · <span class="g">Hip-hop</span> · Ishmael Butler's shadowy, inward turn</li>
+            <li><span class="name">Jacques Greene — jg</span> · <span class="g">Electronic / house</span> · his clubbiest, still dreamy</li>
+            <li><span class="name">Fine — Jazz dreams</span> · <span class="g">Ambient pop / jazz</span> · the Dane's second, full of space</li>
+            <li><span class="name">Various — Beirut City Pop</span> · <span class="g">Soul / disco / jazz</span> · Habibi Funk on civil-war-era Lebanon</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOW STREAMING ================= -->
+  <section class="band">
+    <div class="banner"><h2>Now Streaming</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-23" class="feat">
+          <span class="kicker hot">Netflix · Docuseries</span>
+          <h3>
+            <a href="https://editorial.rottentomatoes.com/article/what-to-watch-this-week/" target="_blank" rel="noopener" class="hl"
+              >The One About Matthew Perry (2026): the Quiet on Set director tells the Friends star's story in three parts</a
+            >
+          </h3>
+          <p class="meta">Documentary · 3 episodes · Netflix · 27 Oct</p>
+          <p>
+            Mary Robertson follows Perry from young actor to global star, and
+            through the addiction he fought in public and the advocacy that
+            came out of it. The series promises family photos and home video
+            never seen before, and interviews with friends and collaborators,
+            some speaking on camera for the first time, among them his sister
+            Mia Perry Bowick.
+          </p>
+          <p>
+            Perry died in 2023. Rotten Tomatoes' editors note that the
+            involvement of the people closest to him suggests a portrait
+            rather than a picking-over of the circumstances of his death. No
+            reviews yet, so no scores.
+          </p>
+          <p class="src">Rotten Tomatoes · Netflix</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-24" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Netflix US · Catalogue</span>
+          <h4>
+            <a href="https://www.whats-on-netflix.com/coming-soon/whats-coming-to-netflix-this-week-october-19-to-25-2026/" target="_blank" rel="noopener" class="hl"
+              >FROM, S1–3 (2022): the 2022 horror series about a town nobody can leave arrives on Netflix</a
+            >
+          </h4>
+          <p class="meta">Sci-fi horror · 3 seasons · Netflix US · 19 Oct · catalogue · IMDb 7.7 · RT 96% (series)</p>
+          <p>
+            A full binge of the MGM+ mystery, in which every road leads back
+            to the same nightmarish town. Dated for Netflix US.
+          </p>
+          <p class="src">What's on Netflix · IMDb · Rotten Tomatoes</p>
+        </article>
+        <article id="art-25" class="brief">
+          <span class="kicker">Netflix US · Catalogue</span>
+          <h4>
+            <a href="https://www.whats-on-netflix.com/coming-soon/whats-coming-to-netflix-this-week-october-19-to-25-2026/" target="_blank" rel="noopener" class="hl"
+              >Kubi (2023): Takeshi Kitano's samurai epic lands on Netflix</a
+            >
+          </h4>
+          <p class="meta">Japanese period action · Netflix US · 20 Oct · catalogue · IMDb 6.4 · RT 75%</p>
+          <p>
+            The 2023 film, Kitano's bloody, blackly comic take on the
+            warlord Oda Nobunaga's court, is a catalogue arrival, not a new
+            release.
+          </p>
+          <p class="src">What's on Netflix · IMDb · Rotten Tomatoes</p>
+        </article>
+      </div>
+    </div>
+    <div class="streamlist">
+      <h5>New This Week</h5>
+      <ul>
+        <li><span class="name">Surviving Hurricane Otis (2026)</span> · <span class="g">Documentary</span> · two brothers in Acapulco's storm · Netflix · 23 Oct</li>
+        <li><span class="name">Did Someone Happen to Mention Me?, S1 (2026)</span> · <span class="g">Japanese comedy</span> · a famous actor finds he's forgotten · Netflix · 22 Oct</li>
+        <li><span class="name">My Happy Marriage, S3 (2026)</span> · <span class="g">Anime romance / fantasy</span> · Netflix · 25 Oct · IMDb 7.5 (series)</li>
+        <li><span class="name">Blindspotting, S1–2 (2021)</span> · <span class="g">Comedy-drama</span> · Netflix US · catalogue · 20 Oct · IMDb 6.6 · RT 100% (series)</li>
+        <li><span class="name">Emily (2022)</span> · <span class="g">Biographical drama</span> · Emma Mackey as Emily Brontë · Netflix US · catalogue · 21 Oct · RT 87%</li>
+      </ul>
+      <div class="streamcap">Dates from What's on Netflix's schedule for 19–25 October, which tracks Netflix US. Netflix originals (Surviving Hurricane Otis, Did Someone Happen to Mention Me?, My Happy Marriage) land worldwide the same day, so they hold for Portugal and Germany; licensed catalogue titles are US-dated and may not be in your country's library.</div>
+    </div>
+  </section>
+
+  <!-- ================= WORLD ================= -->
+  <section class="band">
+    <div class="banner"><h2>The World</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-26" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Serbia · Election</span>
+          <h4>
+            <a href="https://www.bbc.co.uk/news/articles/cmq8n3v94ql3o" target="_blank" rel="noopener" class="hl"
+              >Serbia votes on Sunday, with a student list challenging Vučić's 12 years in power</a
+            >
+          </h4>
+          <p>
+            The movement born of the Novi Sad station canopy collapse in
+            November 2024 runs a leaderless "Student List" headed by
+            cardiologist Ilija Srdanović. Tens of thousands rallied on
+            Thursday.
+          </p>
+          <p class="src">BBC · tagesschau</p>
+        </article>
+        <article id="art-27" class="brief">
+          <span class="kicker">Tibet · Earthquake</span>
+          <h4>
+            <a href="https://www.tagesschau.de/ausland/asien/tibet-erdbeben-104.html" target="_blank" rel="noopener" class="hl"
+              >A magnitude-7.0 earthquake near Nagqu in Tibet kills at least 16</a
+            >
+          </h4>
+          <p>
+            Xinhua reports 54 injured, eleven critically, and more than 300
+            houses collapsed; rescue operations are being stepped up.
+          </p>
+          <p class="src">tagesschau · BBC · RTP</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-28" class="feat">
+          <span class="kicker hot">Europe · Climate</span>
+          <h3>
+            <a href="https://observador.pt/2026/10/23/alteracoes-climaticas-causaram-dois-tercos-das-50-mil-mortes-por-calor-no-verao-mais-letal-de-sempre-nas-cidades-europeias/" target="_blank" rel="noopener" class="hl"
+              >This summer's heat killed some 50,000 people in Europe's cities, the deadliest on record, and climate change caused two thirds of the deaths</a
+            >
+          </h3>
+          <p>
+            Two peer-reviewed studies in Nature Health, by Imperial College
+            London and the London School of Hygiene &amp; Tropical Medicine,
+            modelled 854 urban areas home to about 40% of the people of the
+            EU, Britain, Norway and Switzerland. Their estimate dwarfs the
+            previous worst summers since 2000: about 29,000 heat deaths in 2022
+            and 28,000 in 2003.
+          </p>
+          <p>
+            Some 6,000 of this year's victims were under 65, and the south and
+            west of Europe, Portugal's side of the continent, saw the highest
+            temperatures. The share of deaths the authors attribute to
+            warming keeps rising; this year it reached two in three.
+          </p>
+          <p class="src">Observador · Lusa · Nature Health</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <div class="colophon">
+    The Cortegaça Chronicle · assembled from 38 feeds on the morning of 23
+    October 2026 · written and edited by Claude (Anthropic)<br />
+    Sources named under every item · headlines link out to the original
+  </div>
+  <div class="archive"><a href="../archive.html">All editions</a></div>
+</div>
