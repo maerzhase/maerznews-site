@@ -8,11 +8,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.ico" sizes="32x32" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<meta name="description" content="45 editions · 1289 articles, searchable. Today: Hubert Aiwanger, Bavaria&#x27;s deputy premier, is found dead in a Berlin hotel room on the day his party opened its capital office" />
+<meta name="description" content="46 editions · 1324 articles, searchable. Today: The AI boom meets the ballot box: chip stocks have their worst day since the pandemic as voters turn on data centres" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Cortegaça Chronicle" />
 <meta property="og:title" content="The Cortegaça Chronicle" />
-<meta property="og:description" content="45 editions · 1289 articles, searchable. Today: Hubert Aiwanger, Bavaria&#x27;s deputy premier, is found dead in a Berlin hotel room on the day his party opened its capital office" />
+<meta property="og:description" content="46 editions · 1324 articles, searchable. Today: The AI boom meets the ballot box: chip stocks have their worst day since the pandemic as voters turn on data centres" />
 <meta property="og:url" content="https://daily.m3000.io/" />
 <meta property="og:image" content="https://daily.m3000.io/og/default.png" />
 <meta property="og:image:width" content="1200" />
@@ -87,11 +87,11 @@
 <body>
 <div class="sheet" lang="en">
   <header>
-    <div class="ear caps">45 editions · 1289 articles · <a href="archive.html">All editions</a></div>
+    <div class="ear caps">46 editions · 1324 articles · <a href="archive.html">All editions</a></div>
     <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
-    <a class="today" href="editions/2026-11-05.html">
-      <span class="today-k">Today's paper · Thursday, 5 November 2026 · No. 45</span>
-      <span class="today-h">Hubert Aiwanger, Bavaria&#x27;s deputy premier, is found dead in a Berlin hotel room on the day his party opened its capital office</span>
+    <a class="today" href="editions/2026-11-06.html">
+      <span class="today-k">Today's paper · Friday, 6 November 2026 · No. 46</span>
+      <span class="today-h">The AI boom meets the ballot box: chip stocks have their worst day since the pandemic as voters turn on data centres</span>
       <span class="today-go">Read the edition →</span>
     </a>
   </header>
@@ -256,7 +256,7 @@
   q.value = params.get("q") || "";
   section = params.get("s") || "";
   count.textContent = "Loading the archive…";
-  fetch("articles.json?v=2026-11-05-1289")
+  fetch("articles.json?v=2026-11-06-1324")
     .then(r => r.json())
     .then(data => {
       all = data.map(a => ({ ...a, g: groupOf(a.sec), hay: words([a.h, a.k, a.sec, a.m, a.t, a.s].join(" ")) }));

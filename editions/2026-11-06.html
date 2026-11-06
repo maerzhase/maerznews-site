@@ -1,0 +1,1823 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<title>The Cortegaça Chronicle</title>
+<!-- og:start -->
+<link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="../favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta name="description" content="The Cortegaça Chronicle, No. 46, Friday, 6 November 2026. The Nasdaq lost 5.5% and the US chip index more than 12% on Thursday; Tokyo, Seoul and Taipei followed this morning. Investors now expect a …" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="The Cortegaça Chronicle" />
+<meta property="og:title" content="The AI boom meets the ballot box: chip stocks have their worst day since the pandemic as voters turn on data centres" />
+<meta property="og:description" content="The Cortegaça Chronicle, No. 46, Friday, 6 November 2026. The Nasdaq lost 5.5% and the US chip index more than 12% on Thursday; Tokyo, Seoul and Taipei followed this morning. Investors now expect a …" />
+<meta property="og:url" content="https://daily.m3000.io/editions/2026-11-06.html" />
+<meta property="og:image" content="https://daily.m3000.io/og/2026-11-06.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9bcffaa37f744999a4324ed20d590fbb"}'></script>
+<!-- og:end -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+/>
+<style>
+  :root {
+    --paper: #f5f1e6;
+    --paper-2: #efe9da;
+    --ink: #1b1917;
+    --ink-2: #403a34;
+    --ink-3: #6b625a;
+    --rule: #c9bfae;
+    --rule-2: #a89c88;
+    --accent: #9c2b1e;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding-block: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  p {
+    text-wrap: pretty;
+    orphans: 3;
+    widows: 3;
+    margin: 0 0 0.72em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover .hl,
+  a:hover.hl {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  .ear {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 5px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .ear .price {
+    color: var(--accent);
+  }
+  .nameplate {
+    text-align: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 10.5vw, 5.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin: 0.26em 0 0.2em;
+    color: var(--ink);
+  }
+  .nameplate .the {
+    display: block;
+    font-size: 0.24em;
+    font-weight: 400;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    color: var(--ink-2);
+  }
+  .strip {
+    border-top: 3px double var(--rule-2);
+    border-bottom: 3px double var(--rule-2);
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 18px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-align: center;
+  }
+  .strip b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .strip .sep {
+    color: var(--rule-2);
+  }
+
+  /* ---------- TOP BAND ---------- */
+  .topband {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 0 26px;
+    margin-top: 22px;
+  }
+  .rail {
+    border: 1px solid var(--rule-2);
+    padding: 14px 14px 16px;
+    align-self: start;
+    background: var(--paper-2);
+  }
+  .rail h3 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .rail p {
+    font-size: 0.845rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .rail .sig {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 14px;
+  }
+  .mixhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-top: 2px solid var(--ink);
+    padding-top: 8px;
+    margin-bottom: 9px;
+    color: var(--ink);
+  }
+  .mix {
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    gap: 5px 8px;
+    align-items: center;
+  }
+  .mix .lab {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.655rem;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    line-height: 1.15;
+  }
+  .mix .lab.focus {
+    color: var(--accent);
+  }
+  .mix .barwrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mix .bar {
+    height: 9px;
+    background: var(--ink);
+    display: block;
+  }
+  .mix .n {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .mix .star {
+    color: var(--accent);
+    font-size: 0.66rem;
+  }
+  .mixcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 9px;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  /* ---------- LEAD ---------- */
+  .eyebrow {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .lead h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5.1vw, 3.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    margin-bottom: 0.22em;
+  }
+  .standfirst {
+    font-size: 1.06rem;
+    color: var(--ink-2);
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.6em;
+    max-width: 60ch;
+  }
+  .byline {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 5px 0;
+    margin-bottom: 16px;
+  }
+  .leadbody {
+    columns: 2;
+    column-gap: 28px;
+    column-rule: 1px solid var(--rule);
+  }
+  .leadbody p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .leadbody p:first-of-type::first-letter {
+    float: left;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 3.55em;
+    line-height: 0.78;
+    padding: 0.06em 0.09em 0 0;
+    color: var(--ink);
+  }
+  .pull {
+    break-inside: avoid;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    padding: 9px 0 11px;
+    margin: 6px 0 12px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .pull .who {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-style: normal;
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 7px;
+  }
+
+  /* ---------- FIGURE / CHART ---------- */
+  figure.fig {
+    margin: 0 0 18px;
+    border-top: 2px solid var(--ink);
+    padding-top: 10px;
+  }
+  figure.fig .figtitle {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+  figure.fig .figsub {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .chartbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .chartbox svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 330px;
+  }
+  figcaption {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    color: var(--ink-3);
+    text-align: left;
+    margin-top: 7px;
+    border-top: 1px solid var(--rule);
+    padding-top: 6px;
+  }
+  .barG rect.val {
+    fill: var(--ink);
+  }
+  .barG:hover rect.val {
+    fill: var(--accent);
+  }
+  .barG.win rect.val {
+    fill: var(--accent);
+  }
+  .barG.win:hover rect.val {
+    fill: var(--ink);
+  }
+  .barG rect.valo {
+    fill: var(--paper);
+    stroke: var(--ink);
+    stroke-width: 1.4;
+  }
+  .barG:hover rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win rect.valo {
+    stroke: var(--accent);
+  }
+  .barG.win:hover rect.valo {
+    stroke: var(--ink);
+  }
+
+  /* ---------- SECTION BANDS ---------- */
+  .band {
+    margin-top: 30px;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .banner::before,
+  .banner::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-top: 2px;
+  }
+  .banner h2 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: clamp(0.78rem, 2.1vw, 0.95rem);
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .feat h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.38rem, 2.8vw, 1.82rem);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    margin-bottom: 0.3em;
+  }
+  .feat p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    font-size: 1rem;
+  }
+  .brief {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+  .brief h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.045rem;
+    line-height: 1.17;
+    margin-bottom: 0.25em;
+  }
+  .brief p {
+    font-size: 0.915rem;
+    color: var(--ink-2);
+    line-height: 1.46;
+  }
+  .kicker {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .kicker.hot {
+    color: var(--accent);
+  }
+  .src {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 5px;
+  }
+
+  .split-a {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 0 28px;
+  }
+  .split-b {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 0 28px;
+  }
+  .split-c {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 0 24px;
+  }
+  .split-a > .col + .col,
+  .split-b > .col + .col,
+  .split-c > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 28px;
+  }
+  .split-c > .col + .col {
+    padding-left: 24px;
+  }
+  .quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 22px;
+  }
+  .quad > .col + .col {
+    border-left: 1px solid var(--rule);
+    padding-left: 22px;
+  }
+  .colhead {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.67rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .quad .feat h3 {
+    font-size: 1.18rem;
+    line-height: 1.15;
+  }
+  .quad .feat p,
+  .quad .brief p {
+    font-size: 0.875rem;
+    text-align: left;
+    hyphens: none;
+  }
+  .quad .brief h4 {
+    font-size: 0.98rem;
+  }
+
+  /* ---------- LISTS (Now Open / New Releases / Cinemas) ---------- */
+  .minilist {
+    border-top: 2px solid var(--ink);
+    margin-top: 16px;
+    padding-top: 8px;
+  }
+  .minilist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .minilist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .minilist li {
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .minilist li:last-child {
+    border-bottom: 0;
+  }
+  .minilist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .sheet article p.meta {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 0 6px;
+  }
+  .g {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- NOW STREAMING ---------- */
+  .streamlist {
+    border-top: 2px solid var(--ink);
+    margin-top: 18px;
+    padding-top: 8px;
+  }
+  .streamlist h5 {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .streamlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3;
+    column-gap: 26px;
+  }
+  .streamlist li {
+    break-inside: avoid;
+    border-bottom: 1px dotted var(--rule-2);
+    padding: 6px 0;
+    font-size: 0.845rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .streamlist .name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .streamcap {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.61rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ---------- AGENDA ---------- */
+  .agenda {
+    border-top: 3px double var(--ink);
+    border-bottom: 3px double var(--ink);
+    margin-top: 26px;
+    padding: 14px 0 16px;
+  }
+  .agenda-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 14px;
+  }
+  .agenda-head h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+    letter-spacing: -0.01em;
+  }
+  .agenda-head .sub {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-3);
+  }
+  .agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 26px;
+  }
+  .ev {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0 14px;
+    border-top: 1px solid var(--rule);
+    padding: 11px 0;
+  }
+  .agenda-grid > .ev:nth-child(1),
+  .agenda-grid > .ev:nth-child(2) {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .agenda-grid > .ev:nth-child(even) {
+    border-left: 1px solid var(--rule);
+    padding-left: 26px;
+  }
+  .ev .date {
+    text-align: center;
+  }
+  .ev .mo {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+  }
+  .ev .dy {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 2.35rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.34em;
+    font-variant-numeric: tabular-nums;
+  }
+  .ev .wd {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+  }
+  .ev .txt {
+    min-width: 0;
+    border-left: 1px solid var(--rule);
+    padding-left: 14px;
+  }
+  .ev .txt h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .ev .venue {
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 5px;
+  }
+  .ev .ctx {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    line-height: 1.42;
+    margin: 0;
+  }
+
+  .colophon {
+    border-top: 1px solid var(--rule-2);
+    margin-top: 30px;
+    padding-top: 12px;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1000px) {
+    .quad {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 22px;
+    }
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .quad > .col:nth-child(4) {
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .topband {
+      grid-template-columns: 210px 1fr;
+      gap: 0 22px;
+    }
+    .streamlist ul {
+      columns: 2;
+    }
+  }
+  @media (max-width: 860px) {
+    body {
+      font-size: 15.5px;
+    }
+    .topband {
+      grid-template-columns: 1fr;
+    }
+    .rail {
+      margin-bottom: 22px;
+    }
+    .leadbody {
+      columns: 1;
+    }
+    .split-a,
+    .split-b,
+    .split-c,
+    .quad {
+      grid-template-columns: 1fr;
+    }
+    .split-a > .col + .col,
+    .split-b > .col + .col,
+    .split-c > .col + .col,
+    .quad > .col + .col,
+    .quad > .col:nth-child(3) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+    .agenda-grid {
+      grid-template-columns: 1fr;
+    }
+    .agenda-grid > .ev:nth-child(even) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .agenda-grid > .ev:nth-child(2) {
+      border-top: 1px solid var(--rule);
+      padding-top: 11px;
+    }
+    .streamlist ul {
+      columns: 1;
+    }
+    .leadbody p,
+    .feat p {
+      text-align: left;
+      hyphens: none;
+    }
+    .banner h2 {
+      white-space: normal;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  .seg:hover rect {
+    opacity: 0.82;
+  }
+
+  /* ---------- TIMELINE (lead figure) ---------- */
+  .tl circle.pt {
+    fill: var(--ink);
+    stroke: var(--paper);
+    stroke-width: 2;
+  }
+  .tl g:hover circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win circle.pt {
+    fill: var(--accent);
+  }
+  .tl g.win:hover circle.pt {
+    fill: var(--ink);
+  }
+  .tl g {
+    cursor: default;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .archive {
+    border-top: 1px solid var(--rule-2);
+    border-bottom: 1px solid var(--rule-2);
+    margin-top: 14px;
+    padding: 6px 0;
+    text-align: center;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .archive a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  code {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.86em;
+    background: var(--paper-2);
+    color: var(--ink);
+    padding: 0 3px;
+    hyphens: none;
+    word-break: break-word;
+  }
+
+  .statrow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    margin: 10px 0 4px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .statrow .st {
+    padding: 8px 10px 7px;
+    min-width: 0;
+  }
+  .statrow .st + .st {
+    border-left: 1px solid var(--rule);
+  }
+  .statrow .num {
+    display: block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 1.35rem;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+  .statrow .lbl {
+    display: block;
+    font-family: "Old Standard TT", Georgia, serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.35;
+    margin-top: 3px;
+  }
+  @media (max-width: 560px) {
+    .statrow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .statrow .st:nth-child(3) { border-left: 0; }
+    .statrow .st:nth-child(n + 3) { border-top: 1px solid var(--rule); }
+  }
+</style>
+<div class="sheet" lang="en">
+  <!-- ================= MASTHEAD ================= -->
+  <header>
+    <div class="ear">
+      Friday, 6 November 2026 &nbsp;·&nbsp; No. 46 &nbsp;·&nbsp; Price:
+      <span class="price">one bica</span>
+    </div>
+    <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
+    <div class="strip">
+      <span>Topic today: <b>The AI boom hits the ballot box and the markets tumble; Feira's council is hacked weeks after Ovar's</b></span>
+      <span class="sep">✦</span>
+      <span>Weather · Aveiro <b>14°C</b> high, 8° low, rain from mid-afternoon (yellow warning 15:00–midnight)</span>
+      <span class="sep">✦</span>
+      <span>Berlin 1–7°, fog, dry</span>
+    </div>
+  </header>
+
+  <!-- ================= TOP BAND ================= -->
+  <div class="topband">
+    <aside class="rail">
+      <h3>Column One</h3>
+      <p>
+        Two days late, the money noticed the election. On Thursday the
+        markets read Tuesday's Democratic sweep as a vote against the
+        data-centre building boom, and the chipmakers that feed it had
+        their worst day since the pandemic began. Asia followed this
+        morning. The paper leads on it because it is the AI story,
+        told in share prices.
+      </p>
+      <p>
+        Closer to home: the council in Santa Maria da Feira, next door,
+        lost every computer, email and phone line to a cyberattack
+        overnight, three weeks after Ovar's. Also in the paper: a 5.4%
+        deal for Charité doctors, the end of the bus from Frankfurt (Oder)
+        to Słubice, a decade-old way into Alpine Linux over SSH, and the
+        series about the Breitscheidplatz attack.
+      </p>
+      <p class="sig">— The Editor</p>
+
+      <div class="mixhead">Today's edition</div>
+      <div class="mix">
+        <span class="lab">Cortegaça &amp; Ovar</span>
+        <span class="barwrap"><span class="bar" style="width: 64%"></span><span class="n">4</span></span>
+
+        <span class="lab">Germany · Berlin</span>
+        <span class="barwrap"><span class="bar" style="width: 96%"></span><span class="n">6</span></span>
+
+        <span class="lab">Portugal · Porto</span>
+        <span class="barwrap"><span class="bar" style="width: 64%"></span><span class="n">4</span></span>
+
+        <span class="lab focus">✦ Technology</span>
+        <span class="barwrap"><span class="bar" style="width: 80%"></span><span class="n">5</span><span class="star">✦</span></span>
+
+        <span class="lab">Screen</span>
+        <span class="barwrap"><span class="bar" style="width: 48%"></span><span class="n">3</span></span>
+
+        <span class="lab">Arts</span>
+        <span class="barwrap"><span class="bar" style="width: 48%"></span><span class="n">3</span></span>
+
+        <span class="lab">Sound</span>
+        <span class="barwrap"><span class="bar" style="width: 48%"></span><span class="n">3</span></span>
+
+        <span class="lab">Now Streaming</span>
+        <span class="barwrap"><span class="bar" style="width: 48%"></span><span class="n">3</span></span>
+
+        <span class="lab">The World</span>
+        <span class="barwrap"><span class="bar" style="width: 64%"></span><span class="n">4</span></span>
+      </div>
+      <div class="mixcap">✦ today's focus — bar length is the story count (Technology includes the lead)</div>
+    </aside>
+
+    <article id="art-1" class="lead">
+      <div class="eyebrow">Markets · AI · After the midterms</div>
+      <h1>
+        <a href="https://www.bbc.co.uk/news/articles/cmn04705rd8jo" target="_blank" rel="noopener" class="hl"
+          >The AI boom meets the ballot box: chip stocks have their worst day since the pandemic as voters turn on data centres</a
+        >
+      </h1>
+      <p class="standfirst">
+        The Nasdaq lost 5.5% and the US chip index more than 12% on
+        Thursday; Tokyo, Seoul and Taipei followed this morning. Investors
+        now expect a Democratic Congress, and Democratic governors, to slow
+        the building of the data centres AI runs on.
+      </p>
+      <div class="byline">BBC · heise online · tagesschau · 5–6 November 2026</div>
+
+      <figure class="fig">
+        <div class="figtitle">A one-day rout, from Santa Clara to Tokyo</div>
+        <div class="figsub">
+          How far the main indexes and the hardest-hit AI and chip stocks
+          fell in a single session: US and European markets on Thursday,
+          Asian markets on Friday. Hover the bars for detail.
+        </div>
+        <div class="chartbox">
+<svg viewBox="0 0 570 350" role="img" aria-label="One-day falls: Nasdaq 5.5 percent, S&amp;P 500 4.4, Philadelphia semiconductor index 12, SanDisk 22.3, Micron 17.5, AMD 17.3, Marvell 16.4, Tesla 10.8, Intel 10.3, Nvidia 9.3, Infineon 8.5, ASML 6.5, Nikkei 6.3, Taiex 4.5.">
+<title>One-day falls after the US midterms, Thursday 5 and Friday 6 November 2026</title>
+<text x="0" y="11" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="8.5" letter-spacing="1.2">ONE-DAY FALL, % · US &amp; EUROPE THURSDAY 5 NOV · ASIA FRIDAY 6 NOV</text>
+<g class="barG"><title>Nasdaq Composite: −5.5%. Thursday close. About $2.5tn of market value lost (Dow Jones data, via BBC).</title><rect class="val" x="130" y="26" width="94" height="15"/><text x="122" y="37" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">Nasdaq Composite</text><text x="230" y="37" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−5.5%</text></g>
+<g class="barG"><title>S&P 500: −4.4%. Thursday close (heise).</title><rect class="val" x="130" y="47" width="75" height="15"/><text x="122" y="58" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">S&P 500</text><text x="211" y="58" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−4.4%</text></g>
+<g class="barG win"><title>PHLX Semiconductor: −12.0%. The 30-stock US chip index fell more than 12%, its worst day since the start of the pandemic (heise, BBC).</title><rect class="val" x="130" y="68" width="204" height="15"/><text x="122" y="79" text-anchor="end" fill="#9c2b1e" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">PHLX Semiconductor</text><text x="340" y="79" fill="#9c2b1e" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−12.0%</text></g>
+<g class="barG"><title>SanDisk: −22.3%. −22.3% on Thursday (heise).</title><rect class="val" x="130" y="89" width="379" height="15"/><text x="122" y="100" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">SanDisk</text><text x="515" y="100" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−22.3%</text></g>
+<g class="barG"><title>Micron: −17.5%. −17.5% on Thursday (heise).</title><rect class="val" x="130" y="110" width="298" height="15"/><text x="122" y="121" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">Micron</text><text x="434" y="121" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−17.5%</text></g>
+<g class="barG"><title>AMD: −17.3%. −17.3% on Thursday (heise).</title><rect class="val" x="130" y="131" width="294" height="15"/><text x="122" y="142" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">AMD</text><text x="430" y="142" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−17.3%</text></g>
+<g class="barG"><title>Marvell: −16.4%. −16.4% on Thursday (heise).</title><rect class="val" x="130" y="152" width="279" height="15"/><text x="122" y="163" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">Marvell</text><text x="415" y="163" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−16.4%</text></g>
+<g class="barG"><title>Tesla: −10.8%. −10.8% on Thursday (heise).</title><rect class="val" x="130" y="173" width="184" height="15"/><text x="122" y="184" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">Tesla</text><text x="320" y="184" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−10.8%</text></g>
+<g class="barG"><title>Intel: −10.3%. −10.3% on Thursday (heise, BBC).</title><rect class="val" x="130" y="194" width="175" height="15"/><text x="122" y="205" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">Intel</text><text x="311" y="205" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−10.3%</text></g>
+<g class="barG"><title>Nvidia: −9.3%. −9.3%, more than $400bn of market value (heise, BBC).</title><rect class="val" x="130" y="215" width="158" height="15"/><text x="122" y="226" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">Nvidia</text><text x="294" y="226" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−9.3%</text></g>
+<g class="barG"><title>Infineon: −8.5%. Frankfurt, Thursday: down more than 8.5% (BBC).</title><rect class="val" x="130" y="236" width="144" height="15"/><text x="122" y="247" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">Infineon</text><text x="280" y="247" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−8.5%</text></g>
+<g class="barG"><title>ASML: −6.5%. Amsterdam, Thursday: down 6.5% (BBC).</title><rect class="val" x="130" y="257" width="110" height="15"/><text x="122" y="268" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">ASML</text><text x="246" y="268" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−6.5%</text></g>
+<g class="barG"><title>Nikkei 225: −6.3%. Tokyo, Friday afternoon: −6.3%; Kioxia −11.5% (BBC).</title><rect class="val" x="130" y="278" width="107" height="15"/><text x="122" y="289" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">Nikkei 225</text><text x="243" y="289" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−6.3%</text></g>
+<g class="barG"><title>Taiex: −4.5%. Taipei, Friday: −4.5%, the worst week since 2001 (BBC, LSEG).</title><rect class="val" x="130" y="299" width="76" height="15"/><text x="122" y="310" text-anchor="end" fill="#1b1917" font-family="'Old Standard TT',Georgia,serif" font-size="9.5" font-weight="700">Taiex</text><text x="212" y="310" fill="#1b1917" font-family="'PT Serif',Georgia,serif" font-size="9.5" font-weight="700">−4.5%</text></g>
+<text x="0" y="342" fill="#6b625a" font-family="'Old Standard TT',Georgia,serif" font-size="8">Scale: 17 px per percentage point. Red = the chip index, the day's headline number.</text>
+</svg>
+        </div>
+        <div class="statrow">
+          <div class="st"><span class="num">−12%</span><span class="lbl">US chip index, worst day since early 2020</span></div>
+          <div class="st"><span class="num">$2.5tn</span><span class="lbl">Wiped off the Nasdaq in one session</span></div>
+          <div class="st"><span class="num">$400bn+</span><span class="lbl">Lost from Nvidia alone</span></div>
+          <div class="st"><span class="num">−8%</span><span class="lbl">Kospi at worst on Friday; trading halted</span></div>
+        </div>
+        <figcaption>
+          Sources: heise online (US closing falls for the indexes and
+          SanDisk, Micron, AMD, Marvell, Tesla, Intel, Nvidia, citing
+          Bloomberg and Reuters); BBC (Infineon, ASML, Nikkei and Taiex,
+          and the Nasdaq's $2.5tn, from Dow Jones data). Asian figures are
+          intraday on Friday and may change by the close.
+        </figcaption>
+      </figure>
+
+      <div class="leadbody">
+        <p>
+          The markets shrugged on Wednesday, the day after the midterms;
+          Frankfurt's DAX even touched a record early on Thursday. Then the
+          mood turned. By the New York close the Nasdaq was down 5.5% and
+          the S&amp;P 500 4.4%, their worst day since 2025, and the
+          Philadelphia Semiconductor Index, the 30 biggest chip companies,
+          had lost more than 12%, a fall last seen at the start of the
+          pandemic. SanDisk dropped 22.3%, Micron 17.5%, AMD 17.3%, Nvidia
+          9.3%. In Europe, Infineon lost more than 8.5% and ASML 6.5%.
+        </p>
+        <p>
+          The reason is on the ballot papers. Democrats ran on slowing AI
+          down, and dozens of local votes on new data centres went
+          against them, all but one, in Harwood, North Dakota, heise
+          reports. Texas's governor-elect Gina Hinojosa has promised a
+          moratorium on new construction; Bernie Sanders called on X for a
+          national one. With both houses of Congress and a string of
+          governor's offices now in Democratic hands, investors are
+          pricing in a slower build-out, on top of older doubts about
+          whether the vast AI spending will ever pay off.
+        </p>
+        <div class="pull">
+          "The Stock Market crashed today because the Dumocrats had a big Tuesday — So sad to see, you only have yourselves to blame!"
+          <span class="who">Donald Trump, on Truth Social</span>
+        </div>
+        <p>
+          Asia opened lower on Friday. The Nikkei was 6.3% down in the
+          afternoon, with the memory maker Kioxia off 11.5%; Seoul's Kospi
+          fell more than 8% in the morning and set off a circuit breaker
+          that briefly halted trading; Taiwan's Taiex is heading for its
+          worst week since 2001. The rout reaches the AI companies
+          themselves: the Wall Street Journal reports that big investors
+          now doubt Anthropic can float at the $1.5 trillion once hoped
+          for, with one putting it nearer $1 trillion.
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= LOCAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Cortegaça, Ovar &amp; the Ria</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-2" class="feat">
+          <span class="kicker hot">Santa Maria da Feira · Cyberattack</span>
+          <h3>
+            <a href="https://www.ovarnews.pt/camara-da-feira-foi-alvo-de-ataque-informatico/" target="_blank" rel="noopener" class="hl"
+              >Feira's council is knocked offline by a cyberattack overnight, three weeks after the one that hit Ovar</a
+            >
+          </h3>
+          <p>
+            Santa Maria da Feira's town hall says it was the target of "a
+            computer crime" during the night into Thursday, 5 November.
+            All of its IT systems are affected, and its email addresses and
+            landline numbers are down too. The national cybersecurity
+            centre (CNCS) has been told, technicians are working out how
+            far the attack reached, and the council will post updates on
+            its social media while its own channels are dark.
+          </p>
+          <p>
+            "They may try to disrupt our work, but they will not shake our
+            determination," said the mayor, Amadeu Albergaria. Feira is
+            the concelho on Ovar's eastern side, and the pattern is
+            familiar here: Ovar's council was hit on 18 October, its
+            website is still offline, and only this week did it get its
+            email working again. Whether the two attacks are linked has
+            not been said.
+          </p>
+          <p class="src">OvarNews · Câmara Municipal de Santa Maria da Feira · SAPO</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-3" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Ovar · Weather</span>
+          <h4>
+            <a href="https://www.ovarnews.pt/ipma-emite-aviso-amarelo-para-precipitacao/" target="_blank" rel="noopener" class="hl"
+              >Yellow rain warning from 15:00 today, then a week of storm Bruna from Sunday</a
+            >
+          </h4>
+          <p>
+            Heavy showers and thunder until midnight; Bruna brings rain,
+            gusts to 70 km/h on the coast and 4–5 m waves by Monday, until
+            at least 13 November.
+          </p>
+          <p class="src">OvarNews · IPMA · RTP</p>
+        </article>
+        <article id="art-4" class="brief">
+          <span class="kicker">Ovar · Students</span>
+          <h4>
+            <a href="https://www.ovarnews.pt/ovar-atribui-bolsas-de-estudo-a-estudantes-do-ensino-superior-para-o-ano-letivo-2026-2027/" target="_blank" rel="noopener" class="hl"
+              >Ovar opens its university scholarships for 2026/27: apply from 9 to 20 November</a
+            >
+          </h4>
+          <p>
+            The council's grants for students from the concelho in higher
+            education, under its social-action rules.
+          </p>
+          <p class="src">OvarNews</p>
+        </article>
+        <article id="art-5" class="brief">
+          <span class="kicker">São João da Madeira · Museums</span>
+          <h4>
+            <a href="https://www.ovarnews.pt/chapeus-ha-muitos-mas-museu-ha-so-um/" target="_blank" rel="noopener" class="hl"
+              >The hat museum in São João da Madeira is Portugal's Museum of the Year</a
+            >
+          </h4>
+          <p>
+            The APOM prize goes to the Museu da Chapelaria, the only museum
+            in Iberia devoted to industrial hat-making, founded in 2005.
+          </p>
+          <p class="src">OvarNews · Lusa</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GERMANY ================= -->
+  <section class="band">
+    <div class="banner"><h2>Germany · Berlin &amp; Brandenburg</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-6" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Berlin · Health</span>
+          <h4>
+            <a href="https://www.rbb24.de/wirtschaft/beitrag/2026/11/tarifabschluss-charite-aerzte-geld.html" target="_blank" rel="noopener" class="hl"
+              >Charité doctors win 5.4% in two steps, and 40 new posts next year</a
+            >
+          </h4>
+          <p>
+            2.95% backdated to July, 2.45% in December 2027, better night
+            and weekend pay; the deal runs to October 2028.
+          </p>
+          <p class="src">rbb24 · Marburger Bund</p>
+        </article>
+        <article id="art-7" class="brief">
+          <span class="kicker">Frankfurt (Oder) · Border</span>
+          <h4>
+            <a href="https://www.rbb24.de/politik/beitrag/2026/11/grenzueberschreitend-buslinie-ffo-eingestellt-983-slubice.html" target="_blank" rel="noopener" class="hl"
+              >The 983, the bus across the Oder to Słubice, stops on 13 December</a
+            >
+          </h4>
+          <p>
+            More than 1,000 riders a day since 2012, but the two towns
+            never agreed who pays.
+          </p>
+          <p class="src">rbb24</p>
+        </article>
+        <article id="art-8" class="brief">
+          <span class="kicker">Federal · Presidency</span>
+          <h4>
+            <a href="https://www.rbb24.de/politik/beitrag/2026/11/aigner-bundespraesidentin-berlin-brandenburg-woidke-evers.html" target="_blank" rel="noopener" class="hl"
+              >Berlin's Evers and Brandenburg's Woidke back the CSU's Ilse Aigner as the first woman president</a
+            >
+          </h4>
+          <p>
+            "The perfect candidate," says Woidke, an SPD premier backing a
+            Bavarian conservative.
+          </p>
+          <p class="src">rbb24 · dpa · Politico</p>
+        </article>
+        <article id="art-9" class="brief">
+          <span class="kicker">Berlin · Aiwanger</span>
+          <h4>
+            <a href="https://www.tagesschau.de/inland/innenpolitik/aiwanger-tod-ermittlungen-100.html" target="_blank" rel="noopener" class="hl"
+              >The autopsy finds no sign that anyone else was involved in Hubert Aiwanger's death</a
+            >
+          </h4>
+          <p>
+            Berlin prosecutors say more forensic tests will follow; Bavaria
+            has ordered flags at half-mast.
+          </p>
+          <p class="src">tagesschau · rbb24</p>
+        </article>
+        <article id="art-10" class="brief">
+          <span class="kicker">Bundestag · Driving</span>
+          <h4>
+            <a href="https://www.tagesschau.de/inland/innenpolitik/bundestag-fuehrerschein-reform-100.html" target="_blank" rel="noopener" class="hl"
+              >The Bundestag passes the first part of a cheaper driving licence: online theory, fewer special lessons</a
+            >
+          </h4>
+          <p>
+            A class-B licence averages about €3,400; the minister promises
+            savings of up to €1,000 from early 2027.
+          </p>
+          <p class="src">tagesschau</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-11" class="feat">
+          <span class="kicker hot">Berlin · Youth welfare</span>
+          <h3>
+            <a href="https://www.rbb24.de/politik/beitrag/2026/11/personalmangel-ueberlastung-berlin-jugendaemter.html" target="_blank" rel="noopener" class="hl"
+              >One post in ten is empty at Berlin's youth offices, and each caseworker carries 30 families against a recommended 27</a
+            >
+          </h3>
+          <p>
+            Berlin's Jugendämter, the district offices that step in when
+            children are at risk, had 421 of their 4,180 full-time posts
+            unfilled at the end of last year, the education and youth
+            senate department says in an answer to the SPD. The gap varies
+            wildly by district: Friedrichshain-Kreuzberg reported just 1.5%
+            vacant, Steglitz-Zehlendorf almost 17%.
+          </p>
+          <p>
+            The workload shows it. A caseworker in the regional social
+            services handles about 30 cases a month on average across the
+            city, against a recommended 27; in Pankow it is more than 35,
+            in Mitte and Steglitz-Zehlendorf just over 33. The number of
+            formal overload notices, staff warning their managers they can
+            no longer do the job properly, has been rising for years,
+            rbb24 reports, and it rose again last year. The new red-green-red
+            coalition, now negotiating its contract, inherits the problem.
+          </p>
+          <p class="src">rbb24 · Senatsverwaltung für Bildung, Jugend und Familie</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTUGAL ================= -->
+  <section class="band">
+    <div class="banner"><h2>Portugal &amp; the Coast</h2></div>
+    <div class="split-c">
+      <div class="col">
+        <article id="art-12" class="feat">
+          <span class="kicker hot">Lisbon · Housing</span>
+          <h3>
+            <a href="https://www.rtp.pt/noticias/politica/lei-das-rendas-carneiro-lamenta-intransigencia-do-governo-e-ad-acusa-ps-de-negar-realidade_n1777212" target="_blank" rel="noopener" class="hl"
+              >The President's housing truce lasts two days: Montenegro meets the PS and Chega, and nobody agrees on anything</a
+            >
+          </h3>
+          <p>
+            Answering President Seguro's call for a deal on housing, the
+            prime minister received the PS leader José Luís Carneiro and
+            Chega's André Ventura in São Bento on Thursday. Carneiro left
+            after an hour and 45 minutes saying there was no agreement on
+            the two points that mattered to him, writing a new rent law
+            "from zero" and defining a "moderate rent", and accused the
+            government of "intransigence". No further meetings are planned.
+          </p>
+          <p>
+            The rent changes the PS objects to were approved in principle
+            on 30 September with the AD, the IL and an abstaining Chega,
+            after a PSD–Chega pact on amendments. That pact now looks
+            dead too, Observador reports: Ventura complained of the PS's
+            "lack of shame", the AD side spoke of childishness, and its
+            sources say Carneiro "has two faces". Meanwhile the protest
+            camps that started it all are in their fourth week.
+          </p>
+          <p class="src">RTP · Lusa · Observador</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-13" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Porto · Housing protest</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/pais/acampada-no-porto-recusa-sair-da-praca-d-joao-i-para-dar-lugar-a-mercado-de-natal_n1777246" target="_blank" rel="noopener" class="hl"
+              >Porto's housing camp votes to stay in Praça D. João I, though the council wants the square for Christmas</a
+            >
+          </h4>
+          <p>
+            The council's email mentioned "Christmas events"; Lisbon's camp
+            likewise refuses to leave the Rossio. "Rain won't stop us,"
+            says spokesman Henrique Teixeira.
+          </p>
+          <p class="src">RTP · Lusa · Jornal de Notícias</p>
+        </article>
+        <article id="art-14" class="brief">
+          <span class="kicker">Spain · Nuclear</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/economia/apa-acompanha-paragem-de-reator-na-central-nuclear-espanhola-de-almaraz_n1777260" target="_blank" rel="noopener" class="hl"
+              >A reactor at Almaraz, near the border, shut itself down on Thursday; Portugal's APA sees no risk here</a
+            >
+          </h4>
+          <p>
+            The turbine protection systems tripped Unit I; the RADNET
+            network keeps watch on radiation levels.
+          </p>
+          <p class="src">RTP · Lusa</p>
+        </article>
+        <article id="art-15" class="brief">
+          <span class="kicker">Defence · Navy</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/economia/governo-quer-novo-submarino-e-vai-inclui-lo-na-lei-de-programacao-militar_n1777222" target="_blank" rel="noopener" class="hl"
+              >The navy is to get a third submarine in the new military spending law, says Nuno Melo</a
+            >
+          </h4>
+          <p>
+            No date yet on replacing the F-16s; that waits for the law,
+            due by the end of the year.
+          </p>
+          <p class="src">RTP · Lusa</p>
+        </article>
+      </div>
+    </div>
+    <div class="agenda">
+      <div class="agenda-head">
+        <h3>✦ The Diary — What's On</h3>
+        <span class="sub">Upcoming around Cortegaça, Ovar &amp; Aveiro</span>
+      </div>
+      <div class="agenda-grid">
+        <div class="ev">
+          <div class="date"><span class="mo">Nov</span><span class="dy">6</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1862446/this-is-not-a-protest-de-sao-castro-epme" target="_blank" rel="noopener" class="hl">This Is Not a Protest</a></h4>
+            <div class="venue">Auditório de Espinho – Academia · 21:30</div>
+            <p class="ctx">Tonight: live percussion and dance built around the idea of impact, by São Castro with the Espinho music school's percussion group.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Nov</span><span class="dy">6</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1862003/samuel-uria" target="_blank" rel="noopener" class="hl">Samuel Úria</a></h4>
+            <div class="venue">CAA Centro de Artes de Águeda · 21:30</div>
+            <p class="ctx">The songwriter from between the Caramulo and the Estrela, whose songs Ana Moura and António Zambujo sing; he calls it the blues of the Dão delta.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Nov</span><span class="dy">7</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1844935/o-giraffo" target="_blank" rel="noopener" class="hl">O Giraffo</a></h4>
+            <div class="venue">Museu Escolar Oliveira Lopes · Válega · 16:00</div>
+            <p class="ctx">A children's show about a giraffe who walks differently from the herd, a way into talking about gender and equality.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Nov</span><span class="dy">11</span><span class="wd">Wed</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1844936/avesso-as-avessas" target="_blank" rel="noopener" class="hl">Avesso às Avessas</a></h4>
+            <div class="venue">Ovar</div>
+            <p class="ctx">Adriana Campos's show-and-workshop for schoolchildren: a winged heroine starts a poetic revolution in a rusted, upside-down world.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Nov</span><span class="dy">13</span><span class="wd">Fri</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1844104/ana-lua-caiano" target="_blank" rel="noopener" class="hl">Ana Lua Caiano</a></h4>
+            <div class="venue">Centro de Arte de Ovar · 21:30</div>
+            <p class="ctx">Folk-meets-electronics protest songs from her new Glitterbeat album "Devagar Que a Vida É Curta".</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Nov</span><span class="dy">14</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1870034/vinil-fest" target="_blank" rel="noopener" class="hl">Vinil Fest</a></h4>
+            <div class="venue">Lugar · Landescape · Ovar · 15:00–19:00</div>
+            <p class="ctx">The third record fair hosted by João Palavra's dISCOSLAGENS label, with crates from Wasser Bassin and guest artists.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Nov</span><span class="dy">14</span><span class="wd">Sat</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1844107/magusto-a-moda-antiga" target="_blank" rel="noopener" class="hl">Magusto à Moda Antiga</a></h4>
+            <div class="venue">Museu Escolar Oliveira Lopes · Válega · 16:00</div>
+            <p class="ctx">An old-school São Martinho chestnut roast, as the village school once held it, with the games of the time.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Nov</span><span class="dy">22</span><span class="wd">Sun</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1844555/xxv-comcordas-2026-encontro-de-cordas-de-esmoriz" target="_blank" rel="noopener" class="hl">XXV ComCordas</a></h4>
+            <div class="venue">Centro de Arte de Ovar · 17:00 · €4</div>
+            <p class="ctx">Esmoriz's mandolin orchestra hosts its 25th annual gathering of string ensembles.</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Nov</span><span class="dy">8</span><span class="wd">Sun</span></div>
+          <div class="txt">
+            <h4><a href="https://www.viralagenda.com/pt/events/1867136/fredrik-rasten-six-moving-guitars" target="_blank" rel="noopener" class="hl">Fredrik Rasten — Six Moving Guitars</a></h4>
+            <div class="venue">Porto · Serralves Museum · 18:10</div>
+            <p class="ctx">Six acoustic guitars in just intonation, carried around the room so the microtonal harmony moves with the players; part of "O Museu como Performance" (7–8 Nov).</p>
+          </div>
+        </div>
+        <div class="ev">
+          <div class="date"><span class="mo">Nov</span><span class="dy">12</span><span class="wd">Thu</span></div>
+          <div class="txt">
+            <h4><a href="https://www.serralves.pt/atividades-serralves/1211-siza-talks/" target="_blank" rel="noopener" class="hl">Siza Talks</a></h4>
+            <div class="venue">Porto · Serralves, museum auditorium · 12–14 Nov</div>
+            <p class="ctx">Three days of talks on architecture as a meeting of cultures, starting from Álvaro Siza's work abroad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================= CULTURE QUAD ================= -->
+  <section class="band">
+    <div class="banner"><h2>Machines, Screen, Art &amp; Sound</h2></div>
+    <div class="quad">
+      <div class="col">
+        <div class="colhead">Technology</div>
+        <article id="art-16" class="feat">
+          <span class="kicker hot">Linux · Security</span>
+          <h3>
+            <a href="https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/" target="_blank" rel="noopener" class="hl"
+              >"*sshole": type more than 256 characters and walk into some Alpine Linux machines over SSH, no password needed</a
+            >
+          </h3>
+          <p>
+            A decade-old flaw sits where OpenSSH meets musl, the slim C
+            library Alpine uses instead of glibc. It bites when sshd runs
+            without PAM, at least one account has a SHA-256 or SHA-512
+            password hash, and the target account is passwordless, marked
+            "*" in /etc/shadow, as accounts meant for key-based login often
+            are. "It takes one connection, works every time, and needs no
+            retries," Alpine's maintainers say.
+          </p>
+          <p>
+            OpenSSH and Alpine shipped updates on Thursday, while each side
+            says the root cause lies with the other. The reach is the
+            worry: Alpine's Docker base image has passed a billion pulls,
+            and it runs inside routers, TVs and industrial controllers that
+            may never be patched. Shodan lists about 22 million machines
+            with port 22 open.
+          </p>
+          <p class="src">Ars Technica · heise online</p>
+        </article>
+        <article id="art-17" class="brief">
+          <span class="kicker">EU · Privacy law</span>
+          <h4>
+            <a href="https://www.heise.de/news/EU-Generalanwalt-Google-Fonts-Abmahnwellen-sind-oft-rechtsmissbraeuchlich-11514000.html" target="_blank" rel="noopener" class="hl"
+              >The EU court's advocate general calls the Google Fonts letter-writing racket an abuse</a
+            >
+          </h4>
+          <p>
+            Crawling for sites that load the fonts, then demanding damages
+            under the GDPR, earns no compensation, says Maciej Szpunar.
+          </p>
+          <p class="src">heise online</p>
+        </article>
+        <article id="art-18" class="brief">
+          <span class="kicker">Space · NASA</span>
+          <h4>
+            <a href="https://www.heise.de/news/Kurz-vor-historischem-Meilenstein-Kontakt-zu-Voyager-1-steht-wieder-11513463.html" target="_blank" rel="noopener" class="hl"
+              >Voyager 1 went silent for two days, then called back, just before it becomes one light-day from Earth</a
+            >
+          </h4>
+          <p>
+            About 25.9 billion km; soon every "hello" will take two days
+            for an answer.
+          </p>
+          <p class="src">heise online · NASA</p>
+        </article>
+        <article id="art-19" class="brief">
+          <span class="kicker">Web · Media</span>
+          <h4>
+            <a href="https://www.theverge.com/news/1028281/salon-dot-com-shuts-down" target="_blank" rel="noopener" class="hl"
+              >Salon, one of the first online-only magazines, closes after 31 years</a
+            >
+          </h4>
+          <p>
+            Its model is "no longer sustainable", says an unsigned farewell.
+          </p>
+          <p class="src">The Verge</p>
+        </article>
+      </div>
+      <div class="col">
+        <div class="colhead">Screen</div>
+        <article id="art-20" class="feat">
+          <span class="kicker hot">Industry · Film fans</span>
+          <h3>
+            <a href="https://www.theverge.com/news/1028375/the-new-york-times-letterboxd-acquisition-report" target="_blank" rel="noopener" class="hl"
+              >The New York Times is in exclusive talks to buy Letterboxd, the film diarists' social network, for about $330 million</a
+            >
+          </h3>
+          <p>
+            The Times reports on its own deal: Letterboxd's founders would
+            stay in charge, reporting to a Times executive, and the site
+            would remain standalone "for the foreseeable future", though it
+            would take the Times's ad technology. Sony Pictures and A24 had
+            been rumoured as rival bidders for the app, whose current parent
+            is the holding company Tiny.
+          </p>
+          <p>
+            It would be the Times's latest buy of a cult habit, after
+            Wordle (low seven figures), Wirecutter (just over $30 million)
+            and The Athletic ($550 million). Neither side has commented.
+          </p>
+          <p class="src">The Verge · IndieWire · The New York Times</p>
+        </article>
+        <article id="art-21" class="brief">
+          <span class="kicker">UK · Mike Leigh</span>
+          <h4>
+            <a href="https://thefilmstage.com/tender-loving-care-trailer-mike-leighs-final-feature-arrives-this-december/" target="_blank" rel="noopener" class="hl"
+              >Tender Loving Care (2026): the trailer for what Mike Leigh says is likely his last film</a
+            >
+          </h4>
+          <p class="meta">Family drama · post-Brexit England · US cinemas 11 Dec · IMDb 7.6 · RT 100%</p>
+          <p>
+            Leigh, who has myositis, follows a child-protection worker back
+            in her best friend's spare room.
+          </p>
+          <p class="src">The Film Stage</p>
+        </article>
+        <article id="art-22" class="brief">
+          <span class="kicker">Festivals · Spain</span>
+          <h4>
+            <a href="https://www.indiewire.com/news/festivals/denver-film-festival-2026-award-winners-1235225777/" target="_blank" rel="noopener" class="hl"
+              >La Bola Negra (2026), Los Javis' Lorca epic, takes Denver's top prize</a
+            >
+          </h4>
+          <p class="meta">Period drama · Spain/France · dir. Javier Ambrossi, Javier Calvo · IMDb 8.1 · RT 85%</p>
+          <p>
+            After Cannes (best director) and audience awards in Toronto
+            and London.
+          </p>
+          <p class="src">IndieWire</p>
+        </article>
+        <div class="minilist">
+          <h5>In Cinemas &amp; Festivals</h5>
+          <ul>
+            <li><span class="name">I Play Rocky (2026)</span> · <span class="g">Biopic</span> · Peter Farrelly on Stallone writing "Rocky"; Denver audience award · US select cinemas now, wide 20 Nov · IMDb 7.9 · RT 88%</li>
+            <li><span class="name">Club Kid (2026)</span> · <span class="g">Drama</span> · a "bittersweet, tremendously moving" debut (The Film Stage) · US cinemas this week · IMDb 8.2 · RT 100%</li>
+            <li><span class="name">Everytime (2026)</span> · <span class="g">Drama</span> · Sandra Wollner on grief in the digital age · IMDb 7.3 · RT 96%</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="colhead">Arts</div>
+        <article id="art-23" class="feat">
+          <span class="kicker hot">Restitution · Benin</span>
+          <h3>
+            <a href="https://www.artnews.com/art-news/news/sweden-returns-benin-bronze-nigeria-indigenous-remains-bolivia-1234804791/" target="_blank" rel="noopener" class="hl"
+              >Sweden hands 40 Benin Bronzes back to Nigeria, one of the largest returns yet</a
+            >
+          </h3>
+          <p>
+            A delegation from the Benin Palace was to receive the sacred
+            objects in Lagos on Thursday. The Oba of Benin, Ewuare II, has
+            campaigned for them since taking the throne: "My grandfather
+            succeeded, my father succeeded more," he said. British troops
+            looted some 5,000 royal and religious objects from Benin City
+            in 1897, and they scattered into museums and private
+            collections worldwide. Sweden is also returning Indigenous
+            human remains to Bolivia.
+          </p>
+          <p class="src">ARTnews</p>
+        </article>
+        <article id="art-24" class="brief">
+          <span class="kicker">Bragança · Collections</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/cultura/quase-200-obras-da-colecao-alberto-caetano-no-centro-de-arte-contemporanea-de-braganca_n1777197" target="_blank" rel="noopener" class="hl"
+              >186 works from Alberto Caetano's gift to the Museu do Chiado go on show in Bragança</a
+            >
+          </h4>
+          <p>
+            The collector died last month; this is the first show since,
+            from early 20th-century art to now.
+          </p>
+          <p class="src">RTP · Lusa</p>
+        </article>
+        <article id="art-25" class="brief">
+          <span class="kicker">New York · Market</span>
+          <h4>
+            <a href="https://www.artnews.com/art-news/market/georgia-okeeffe-painting-found-closet-after-40-years-christies-1234804764/" target="_blank" rel="noopener" class="hl"
+              >An O'Keeffe found behind the fur coats in an East Village closet heads to Christie's at $3 million</a
+            >
+          </h4>
+          <p>
+            "Near Abiquiu, New Mexico I" (1930), unseen for nearly 40
+            years, sells in two weeks.
+          </p>
+          <p class="src">ARTnews · Artforum</p>
+        </article>
+        <div class="minilist">
+          <h5>Now Open</h5>
+          <ul>
+            <li><span class="name">Coleção Alberto Caetano</span> · Centro de Arte Contemporânea Graça Morais, Bragança · opened 5 Nov</li>
+            <li><span class="name">O Museu como Performance</span> · Serralves, Porto · 7–8 Nov · twelfth edition, galleries, park and car park</li>
+            <li><span class="name">Josef Kaiser — Bauen für die DDR</span> · Berlinische Galerie, Berlin · first show on the architect of the Kino International</li>
+            <li><span class="name">Life as You See It</span> · Fujifilm House of Photography, Porto · first-anniversary show</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="colhead">Sound</div>
+        <article id="art-26" class="feat">
+          <span class="kicker hot">London · Jungle</span>
+          <h3>
+            <a href="https://thequietus.com/news/tim-reapers-debut-solo-album-set-for-release-via-hyperdub/" target="_blank" rel="noopener" class="hl"
+              >Tim Reaper, jungle's busiest producer, finally makes a solo album: World's End, on Hyperdub in February</a
+            >
+          </h3>
+          <p class="meta">Jungle / drum &amp; bass · 11 tracks · Hyperdub · February 2027</p>
+          <p>
+            After a run of EPs for FABRICLIVE, Rinse, Astrophonica and his
+            own Future Retro London, and a 2024 album with Kloke, the
+            producer stretches out into footwork, drill and gqom. The push
+            came from a friend asking him to define jungle: "mainly about
+            the breakbeats and the tempo," he decided, "but it could have
+            anything else going on within."
+          </p>
+          <p class="src">The Quietus · Pitchfork</p>
+        </article>
+        <article id="art-27" class="brief">
+          <span class="kicker">Portugal · New album</span>
+          <h4>
+            <a href="https://www.rtp.pt/noticias/cultura/david-fonseca-edita-hoje-novo-album-radiante-estrela-cadente_n1777029" target="_blank" rel="noopener" class="hl"
+              >David Fonseca's "Radiante Estrela Cadente", only his second album sung in Portuguese</a
+            >
+          </h4>
+          <p class="meta">Pop rock · 11 songs · independent · out now</p>
+          <p>
+            The ex-Silence 4 singer plays most instruments himself.
+          </p>
+          <p class="src">RTP · Lusa</p>
+        </article>
+        <article id="art-28" class="brief">
+          <span class="kicker">Berlin · radioeins</span>
+          <h4>
+            <a href="https://www.radioeins.de/programm/sendungen/mofr1013/lokalmatador-in/bulgarian-cartrader0.html" target="_blank" rel="noopener" class="hl"
+              >Bulgarian Cartrader takes "Greetings from Soulgaria" to the Columbia Theater on 19 November</a
+            >
+          </h4>
+          <p class="meta">Indie soul · expanded edition, +6 tracks · live with band</p>
+          <p>
+            The tour is called "How to sell tickets online fast".
+          </p>
+          <p class="src">radioeins</p>
+        </article>
+        <div class="minilist">
+          <h5>New Releases</h5>
+          <ul>
+            <li><span class="name">Laila — We'll Never Be This Young Again</span> · <span class="g">Pop</span> · New York · second album</li>
+            <li><span class="name">Gyrofield — Great Jobs</span> · <span class="g">Electronic</span> · Hong Kong-born, beyond drum'n'bass</li>
+            <li><span class="name">Nomi — this wolf may cry</span> · <span class="g">R&amp;B</span> · debut</li>
+            <li><span class="name">Yeah Yeah Yeahs — Hidden in Pieces</span> · <span class="g">Rock, live</span> · Royal Albert Hall, with strings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================= NOW STREAMING ================= -->
+  <section class="band">
+    <div class="banner"><h2>Now Streaming</h2></div>
+    <div class="split-a">
+      <div class="col">
+        <article id="art-29" class="feat">
+          <span class="kicker hot">ARD Mediathek · Drama series</span>
+          <h3>
+            <a href="https://www.radioeins.de/programm/sendungen/mofr1921/_/albrecht-schuch--bayan-layla-und-tamer-trasoglu---breitscheidpla.html" target="_blank" rel="noopener" class="hl"
+              >Breitscheidplatz 19/12 (2026): six episodes asking whether Berlin's Christmas-market attack could have been stopped</a
+            >
+          </h3>
+          <p class="meta">Drama · 6 episodes · dir. David Nawrath · ARD Mediathek, free · on TV from Fri 6 Nov</p>
+          <p>
+            On 19 December 2016 Anis Amri, a supporter of Islamic State,
+            drove a lorry into the Christmas market at the Gedächtniskirche,
+            still one of the worst terror attacks in Germany. This
+            Austrian-German series by David Nawrath turns on the question
+            the inquiries kept circling: could it have been prevented, and
+            what would have happened if it had been?
+          </p>
+          <p>
+            Albrecht Schuch leads the cast with Bayan Layla and Tamer
+            Trasoglu, who talked about the series on radioeins this week.
+            It has been in the ARD Mediathek since 30 October and reaches
+            the television schedule today, in time for the tenth winter
+            since the attack.
+          </p>
+          <p class="src">radioeins · ARD</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-30" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">Netflix · Comedy</span>
+          <h4>
+            <a href="https://www.whats-on-netflix.com/coming-soon/whats-coming-to-netflix-this-week-november-2-to-8-2026/" target="_blank" rel="noopener" class="hl"
+              >Gail Daughtry and the Celebrity Sex Pass (2026): Zoey Deutch goes to Hollywood to find Jon Hamm</a
+            >
+          </h4>
+          <p class="meta">Comedy · dir. David Wain · Netflix (US list) · Sat 7 Nov · IMDb 5.9 · RT 78%</p>
+          <p>
+            Her fiancé cashed in their joke pass with Jennifer Aniston;
+            now it's her turn.
+          </p>
+          <p class="src">What's on Netflix · IMDb · Rotten Tomatoes</p>
+        </article>
+        <article id="art-31" class="brief">
+          <span class="kicker">Netflix · Mexico</span>
+          <h4>
+            <a href="https://www.whats-on-netflix.com/coming-soon/whats-coming-to-netflix-this-week-november-2-to-8-2026/" target="_blank" rel="noopener" class="hl"
+              >The Left Foot Club (2026): a burnt-out Mexico City office worker learns to dance</a
+            >
+          </h4>
+          <p class="meta">Comedy · dir. Celso R. García · Netflix (US list) · Fri 6 Nov · no ratings yet</p>
+          <p>
+            A loose remake of "Shall We Dance?", with Adrián Uribe.
+          </p>
+          <p class="src">What's on Netflix</p>
+        </article>
+      </div>
+    </div>
+    <div class="streamlist">
+      <h5>New This Week</h5>
+      <ul>
+        <li><span class="name">Mike Tyson: Return of the Mike (2026)</span> · <span class="g">Stand-up</span> · his first stage show since 2013 · Netflix · 3 Nov</li>
+        <li><span class="name">Anaesthesia, S1 (2026)</span> · <span class="g">Medical drama</span> · Polish, a disgraced doctor starts over · Netflix · 4 Nov</li>
+        <li><span class="name">One Year to Live, Buy a Man (2026)</span> · <span class="g">Romantic drama</span> · Japanese · Netflix · 5 Nov</li>
+        <li><span class="name">Overacting (2026)</span> · <span class="g">Action comedy</span> · Thai, fake missions for a retired cop dad · Netflix · 5 Nov</li>
+        <li><span class="name">Mafia Mamma (2023)</span> · <span class="g">Action comedy</span> · Toni Collette inherits the family firm · Netflix (US) · catalogue · 3 Nov · IMDb 5.5 · RT 21%</li>
+        <li><span class="name">The Neighborhood, S1–8 (2018)</span> · <span class="g">Sitcom</span> · Cedric the Entertainer · Netflix (US) · catalogue · 5 Nov</li>
+      </ul>
+      <div class="streamcap">Netflix titles and dates from What's on Netflix's US list for 2–8 November; Netflix originals land worldwide, titles marked (US) may not be on Netflix in Portugal or Germany. Breitscheidplatz 19/12 is on the free ARD Mediathek in Germany. No IMDb rating with 100+ votes yet for Breitscheidplatz 19/12, Return of the Mike, Anaesthesia or One Year to Live; no Tomatometer yet for those or The Left Foot Club.</div>
+    </div>
+  </section>
+  <!-- ================= WORLD ================= -->
+  <section class="band">
+    <div class="banner"><h2>The World</h2></div>
+    <div class="split-b">
+      <div class="col">
+        <article id="art-32" class="brief" style="border-top: 0; padding-top: 0; margin-top: 0">
+          <span class="kicker">United States · Los Angeles</span>
+          <h4>
+            <a href="https://www.bbc.co.uk/news/articles/c6e3xxwk3k11o" target="_blank" rel="noopener" class="hl"
+              >Democratic socialist Nithya Raman unseats Karen Bass as mayor of Los Angeles</a
+            >
+          </h4>
+          <p>
+            A long shot at the start; now the two biggest US cities are
+            run by democratic socialists, with Zohran Mamdani in New York.
+          </p>
+          <p class="src">BBC</p>
+        </article>
+        <article id="art-33" class="brief">
+          <span class="kicker">United States · California</span>
+          <h4>
+            <a href="https://www.bbc.co.uk/news/articles/cqrkyyd2j8mvo" target="_blank" rel="noopener" class="hl"
+              >Gavin Newsom commutes all 548 death sentences in California to life without parole</a
+            >
+          </h4>
+          <p>
+            Largely symbolic: the state has executed no one since 2006.
+          </p>
+          <p class="src">BBC · tagesschau</p>
+        </article>
+        <article id="art-34" class="brief">
+          <span class="kicker">Europe · Aviation</span>
+          <h4>
+            <a href="https://www.bbc.co.uk/news/articles/cmpqg08nz3pqo" target="_blank" rel="noopener" class="hl"
+              >A second wave of hoax bomb threats hits at least 21 flights, signed by "Fighters of the Male State"</a
+            >
+          </h4>
+          <p>
+            An Aer Lingus jet was diverted to a French air base; no
+            explosives were found anywhere.
+          </p>
+          <p class="src">BBC · tagesschau</p>
+        </article>
+      </div>
+      <div class="col">
+        <article id="art-35" class="feat">
+          <span class="kicker hot">Paraguay · Politics</span>
+          <h3>
+            <a href="https://www.bbc.co.uk/news/articles/c6p9g39vln3yo" target="_blank" rel="noopener" class="hl"
+              >Paraguay's president resigns over a collapsed bank, and Congress refuses to let him go so it can impeach him instead</a
+            >
+          </h3>
+          <p>
+            Santiago Peña announced his resignation in a video on Thursday,
+            apologising "if at any point I failed". The crisis began when
+            Ueno Bank went into insolvency and froze all its operations;
+            lawmakers accuse Peña, a shareholder until last year in the
+            company that owned it, of conflicts of interest and misconduct,
+            which he denies.
+          </p>
+          <p>
+            In Paraguay Congress must accept a president's resignation. It
+            did not: a special session adjourned in favour of the
+            impeachment the lower house had just voted to pursue, and
+            prosecutors have opened an inquiry. Peña is due to present his
+            defence on Friday, as police and protesters clashed outside the
+            Congress building.
+          </p>
+          <p class="src">BBC · tagesschau · Reuters</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <div class="colophon">
+    The Cortegaça Chronicle · assembled from 45 feeds on the morning of 6
+    November 2026 · written and edited by Claude (Anthropic)<br />
+    Sources named under every item · headlines link out to the original
+  </div>
+  <div class="archive"><a href="../archive.html">All editions</a></div>
+</div>
