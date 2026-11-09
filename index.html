@@ -8,11 +8,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.ico" sizes="32x32" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<meta name="description" content="48 editions · 1395 articles, searchable. Today: Herzog hands Gadi Eisenkot the mandate: 67 of 120 MPs back the former army chief, and the Netanyahu era may be ending" />
+<meta name="description" content="49 editions · 1430 articles, searchable. Today: 87% of Germans call democracy a good system; only one in three thinks it works, and in Berlin and Brandenburg 70% are unhappy with it" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Cortegaça Chronicle" />
 <meta property="og:title" content="The Cortegaça Chronicle" />
-<meta property="og:description" content="48 editions · 1395 articles, searchable. Today: Herzog hands Gadi Eisenkot the mandate: 67 of 120 MPs back the former army chief, and the Netanyahu era may be ending" />
+<meta property="og:description" content="49 editions · 1430 articles, searchable. Today: 87% of Germans call democracy a good system; only one in three thinks it works, and in Berlin and Brandenburg 70% are unhappy with it" />
 <meta property="og:url" content="https://daily.m3000.io/" />
 <meta property="og:image" content="https://daily.m3000.io/og/default.png" />
 <meta property="og:image:width" content="1200" />
@@ -87,11 +87,11 @@
 <body>
 <div class="sheet" lang="en">
   <header>
-    <div class="ear caps">48 editions · 1395 articles · <a href="archive.html">All editions</a></div>
+    <div class="ear caps">49 editions · 1430 articles · <a href="archive.html">All editions</a></div>
     <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
-    <a class="today" href="editions/2026-11-08.html">
-      <span class="today-k">Today's paper · Sunday, 8 November 2026 · No. 48</span>
-      <span class="today-h">Herzog hands Gadi Eisenkot the mandate: 67 of 120 MPs back the former army chief, and the Netanyahu era may be ending</span>
+    <a class="today" href="editions/2026-11-09.html">
+      <span class="today-k">Today's paper · Monday, 9 November 2026 · No. 49</span>
+      <span class="today-h">87% of Germans call democracy a good system; only one in three thinks it works, and in Berlin and Brandenburg 70% are unhappy with it</span>
       <span class="today-go">Read the edition →</span>
     </a>
   </header>
@@ -256,7 +256,7 @@
   q.value = params.get("q") || "";
   section = params.get("s") || "";
   count.textContent = "Loading the archive…";
-  fetch("articles.json?v=2026-11-08-1395")
+  fetch("articles.json?v=2026-11-09-1430")
     .then(r => r.json())
     .then(data => {
       all = data.map(a => ({ ...a, g: groupOf(a.sec), hay: words([a.h, a.k, a.sec, a.m, a.t, a.s].join(" ")) }));
