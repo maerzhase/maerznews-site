@@ -8,11 +8,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.ico" sizes="32x32" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<meta name="description" content="50 editions · 1466 articles, searchable. Today: &quot;Only leave home if you really must&quot;: storm Charles brings gusts of 100 to 120 km/h on Wednesday, and Lisbon to Faro go orange" />
+<meta name="description" content="51 editions · 1504 articles, searchable. Today: Red from Leiria to Faro: Charles turns south overnight, the mainland is on alert, and schools, offices and supermarkets stay shut" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Cortegaça Chronicle" />
 <meta property="og:title" content="The Cortegaça Chronicle" />
-<meta property="og:description" content="50 editions · 1466 articles, searchable. Today: &quot;Only leave home if you really must&quot;: storm Charles brings gusts of 100 to 120 km/h on Wednesday, and Lisbon to Faro go orange" />
+<meta property="og:description" content="51 editions · 1504 articles, searchable. Today: Red from Leiria to Faro: Charles turns south overnight, the mainland is on alert, and schools, offices and supermarkets stay shut" />
 <meta property="og:url" content="https://daily.m3000.io/" />
 <meta property="og:image" content="https://daily.m3000.io/og/default.png" />
 <meta property="og:image:width" content="1200" />
@@ -87,11 +87,11 @@
 <body>
 <div class="sheet" lang="en">
   <header>
-    <div class="ear caps">50 editions · 1466 articles · <a href="archive.html">All editions</a></div>
+    <div class="ear caps">51 editions · 1504 articles · <a href="archive.html">All editions</a></div>
     <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
-    <a class="today" href="editions/2026-11-10.html">
-      <span class="today-k">Today's paper · Tuesday, 10 November 2026 · No. 50</span>
-      <span class="today-h">&quot;Only leave home if you really must&quot;: storm Charles brings gusts of 100 to 120 km/h on Wednesday, and Lisbon to Faro go orange</span>
+    <a class="today" href="editions/2026-11-11.html">
+      <span class="today-k">Today's paper · Wednesday, 11 November 2026 · No. 51</span>
+      <span class="today-h">Red from Leiria to Faro: Charles turns south overnight, the mainland is on alert, and schools, offices and supermarkets stay shut</span>
       <span class="today-go">Read the edition →</span>
     </a>
   </header>
@@ -256,7 +256,7 @@
   q.value = params.get("q") || "";
   section = params.get("s") || "";
   count.textContent = "Loading the archive…";
-  fetch("articles.json?v=2026-11-10-1466")
+  fetch("articles.json?v=2026-11-11-1504")
     .then(r => r.json())
     .then(data => {
       all = data.map(a => ({ ...a, g: groupOf(a.sec), hay: words([a.h, a.k, a.sec, a.m, a.t, a.s].join(" ")) }));
