@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Festas &amp; Romarias · The Cortegaça Chronicle</title>
+<!-- og:start -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta name="description" content="The festa calendar around Aveiro: 23 village festas and romarias, newest first." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The Cortegaça Chronicle" />
+<meta property="og:title" content="Festas &amp; Romarias · The Cortegaça Chronicle" />
+<meta property="og:description" content="The festa calendar around Aveiro: 23 village festas and romarias, newest first." />
+<meta property="og:url" content="https://daily.m3000.io/festas.html" />
+<meta property="og:image" content="https://daily.m3000.io/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9bcffaa37f744999a4324ed20d590fbb"}'></script>
+<script defer src="reactions.js" data-api="https://daily-reaction.m3000.io" data-edition="2026-11-24"></script>
+<!-- og:end -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Old+Standard+TT&display=swap" rel="stylesheet" />
+  <style>
+    :root { --paper: #f5f1e6; --ink: #1b1917; --ink-2: #403a34; --ink-3: #6b625a; --rule: #c9bfae; --rule-2: #a89c88; --accent: #9c2b1e; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.5 "PT Serif", serif; }
+    body { padding: 26px 16px 40px; }
+    main { max-width: 44rem; margin: 0 auto; }
+    .mast { max-width: 760px; margin: 0 auto; }
+    .mast:has(.pagetitle) { margin-bottom: 26px; }
+    .ear { border-top: 1px solid #a89c88; border-bottom: 1px solid #a89c88; padding: 5px 0; text-align: center; font: .72rem/1.5 "Old Standard TT", Georgia, serif; text-transform: uppercase; letter-spacing: .14em; color: #403a34; }
+    .ear a { color: inherit; text-decoration: underline; text-decoration-color: #a89c88; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .ear a:hover { color: #1b1917; text-decoration-color: #1b1917; }
+    .ear [aria-current] { color: #1b1917; }
+    .ear-nav a, .ear-nav span { white-space: nowrap; }
+    @media (max-width: 560px) { .ear { letter-spacing: .08em; } .ear-facts, .ear-nav { display: block; } .ear-sep { display: none; } }
+    .nameplate { text-align: center; font: 900 clamp(2.1rem, 9vw, 4.2rem)/1.02 "Playfair Display", Georgia, serif; letter-spacing: -.015em; margin: .26em 0 .25em; color: #1b1917; }
+    .nameplate a { color: inherit; text-decoration: none; }
+    .nameplate .the { display: block; font-size: .24em; font-weight: 400; letter-spacing: .44em; text-transform: uppercase; margin-bottom: .5em; color: #403a34; font-family: "Old Standard TT", Georgia, serif; }
+    .mast .pagetitle { display: flex; align-items: center; gap: 14px; margin: 0; padding: 0; border: 0; font: 400 clamp(.78rem, 2.1vw, .95rem)/1.4 "Old Standard TT", Georgia, serif; letter-spacing: .24em; text-transform: uppercase; color: #1b1917; white-space: nowrap; }
+    .mast .pagetitle::before, .mast .pagetitle::after { content: ""; flex: 1; border-top: 1px solid #1b1917; border-bottom: 1px solid #1b1917; padding-top: 2px; }
+    .mast .pagesub { text-align: center; font: .68rem/1.5 "Old Standard TT", Georgia, serif; text-transform: uppercase; letter-spacing: .14em; color: #6b625a; margin: 8px 0 0; }
+    .mast .pagesub a { color: inherit; text-decoration: underline; text-decoration-color: #a89c88; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .mast .pagesub a:hover { color: #1b1917; text-decoration-color: #1b1917; }
+    p { margin: 0; text-wrap: pretty; }
+    h2, h4 { margin: 0; text-wrap: balance; }
+    a { color: var(--ink); text-decoration-color: var(--rule-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { text-decoration-color: var(--ink); }
+    a.hl { text-decoration: none; }
+    a.hl:hover { text-decoration: underline; text-decoration-color: var(--ink); }
+    a:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    [hidden] { display: none !important; }
+
+    /* each festa is a row of the editions' Diary */
+    .ev { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 0 14px; border-top: 1px solid var(--rule); padding: 11px 0; }
+    .month h2 + .ev, .now + .ev { border-top: 0; }
+    .ahead { margin-top: 1.6rem; }
+    .ahead p { text-align: center; font-style: italic; font-size: .9rem; color: var(--ink-3); margin-top: 6px; }
+    .now { display: flex; align-items: center; gap: 10px; margin: 4px 0; font: .66rem "Old Standard TT", Georgia, serif; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+    .now::before, .now::after { content: ""; flex: 1; border-top: 1px solid var(--accent); }
+    .ev .date { text-align: center; }
+    .ev .mo, .ev .wd { display: block; font: .6rem "Old Standard TT", Georgia, serif; letter-spacing: .14em; text-transform: uppercase; }
+    .ev .mo { color: var(--accent); }
+    .ev .wd { color: var(--ink-3); }
+    .ev .dy { display: block; font: 700 2.35rem/1 "Playfair Display", Georgia, serif; margin-bottom: .34em; font-variant-numeric: tabular-nums; }
+    .ev .txt { min-width: 0; border-left: 1px solid var(--rule); padding-left: 14px; }
+    .ev h4 { font: 700 1.02rem/1.2 "Playfair Display", Georgia, serif; margin-bottom: 3px; }
+    .ev .venue { font: .63rem "Old Standard TT", Georgia, serif; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 5px; }
+    .ev .venue .kind { color: var(--accent); }
+    .ev .ctx { font-size: .875rem; line-height: 1.42; color: var(--ink-2); }
+    /* held already, or undated: the date block steps back */
+    .ev.past .mo, .ev.tbc .mo { color: var(--ink-3); }
+    .ev.past .dy, .ev.tbc .dy { color: var(--rule-2); }
+    details { margin-top: 5px; }
+    summary { display: inline; cursor: pointer; list-style: none; font: .6rem "Old Standard TT", Georgia, serif; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); text-decoration: underline; text-decoration-color: var(--rule-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: " \25B8\FE0E"; }
+    details[open] summary::after { content: " \25BE\FE0E"; }
+    summary:hover { color: var(--ink); text-decoration-color: var(--ink); }
+    .more { padding-top: 6px; }
+    .more p { font-size: .875rem; line-height: 1.45; color: var(--ink-2); margin-bottom: 4px; }
+    .more b { color: var(--ink); }
+    .more .earlier { color: var(--ink-3); }
+    .foot { font: .6rem "Old Standard TT", Georgia, serif; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin-top: 5px; }
+    .foot a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule-2); }
+    .foot a:hover { color: var(--ink); text-decoration-color: var(--ink); }
+
+    /* the releases page's filter, one ruled heading per month */
+    input {  box-sizing: border-box; width: 100%; font: inherit; padding: .5rem .7rem; border: 1px solid var(--ink); border-radius: 0; background: #fbf8ef; color: inherit; }
+    .month h2 { display: flex; justify-content: space-between; gap: 10px; font: 400 .72rem "Old Standard TT", serif; text-transform: uppercase; letter-spacing: .17em; color: var(--accent); border-top: 2px solid var(--ink); margin: 1.6rem 0 0; padding-top: .5rem; }
+    .month h2 .no { color: var(--ink-3); }
+    .empty { text-align: center; font-style: italic; }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="ear"><span class="ear-facts">23 festas</span><span class="ear-sep"> · </span><span class="ear-nav"><a href="./">Front page</a> · <a href="archive.html">All editions</a> · <a href="releases.html">Album releases</a> · <span aria-current="page">Festas</span></span></div>
+    <h1 class="nameplate"><a href="./"><span class="the">The</span>Cortegaça Chronicle</a></h1>
+    <h2 class="pagetitle">Festas &amp; Romarias</h2>
+    <p class="pagesub">Village festas around Aveiro, from now back in time</p>
+  </header>
+  <main>
+    <input id="q" type="search" placeholder="Filter by village, saint or festa…" aria-label="Filter festas" autocomplete="off" spellcheck="false" />
+    <div class="ahead">
+      <div class="now"><span>✦ Today, 24 November</span></div>
+      <p>No festas announced yet. Each one appears here as soon as its parish publishes the programme; the season runs from May to September.</p>
+    </div>
+    <section class="month">
+      <h2><span>September 2026</span><span class="no">5 festas</span></h2>
+      <div class="ev past" data-rk="5bbef067f282" data-id="valega-sao-miguel" data-lat="40.835" data-lon="-8.579">
+        <div class="date"><span class="mo">Sep</span><span class="dy">29</span><span class="wd">Tue</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/cinco-jovens-dao-continuidade-as-festas-de-sao-miguel-em-valega/" target="_blank" rel="noopener" class="hl">Festas em Honra de São Miguel</a></h4>
+          <div class="venue"><span class="kind">romaria</span> · Válega · Ovar · held 29 Sep – 4 Oct 2026</div>
+          <p class="ctx">For São Miguel. Usually end of September into early October, around São Miguel&#x27;s day (29 September).</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>A romaria at the Capela de São Miguel, one of the oldest chapels in the municipality (documented in 1002), revived by a committee of five young locals after a hiatus.</p><p><b>2026:</b> 29 Sep: 21-shot salute, 20h solemn mass. 2 Oct: Grupo Trovão, fireworks. 3 Oct: Bombos de N. Sra. do Desterro, Banda MP3, fireworks. 4 Oct: bands, 15h30 solemn mass and procession, Banda Tita do Agreste, fireworks.</p><div class="foot"><a href="https://www.ovarnews.pt/cinco-jovens-dao-continuidade-as-festas-de-sao-miguel-em-valega/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.ovarnews.pt/valega-jovens-procuram-garantir-futuro-da-festa-de-s-miguel/" target="_blank" rel="noopener">ovarnews.pt 2 ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.835&amp;mlon=-8.579#map=14/40.835/-8.579" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev past" data-rk="dc2dd59cdd67" data-id="espinho-nossa-senhora-da-ajuda" data-lat="41.008" data-lon="-8.639">
+        <div class="date"><span class="mo">Sep</span><span class="dy">7</span><span class="wd">Mon</span></div>
+        <div class="txt">
+          <h4><a href="https://www.viralagenda.com/pt/events/1842674/nossa-senhora-d-ajuda-espinho-2026" target="_blank" rel="noopener" class="hl">Festas em Honra de Nossa Senhora d&#x27;Ajuda</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Espinho · held 7–21 Sep 2026</div>
+          <p class="ctx">For Nossa Senhora da Ajuda. Usually two weeks in September, main procession on the third Sunday.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>The festa of Espinho&#x27;s patron, protector of the sea trades, organised by the Município de Espinho: a candle procession, a flower carpet, a Majestosa Procissão with blessing of the sea, big concerts and fireworks at Praia da Baía.</p><p><b>2026:</b> 13 Sep: romaria with folk groups. 16 Sep: candle procession. 17 Sep: Sinfónica 4500 with Paulo de Carvalho. 19 Sep: flower carpet, Rui Veloso, piromusical fireworks. 20 Sep: solemn mass, 16h30 Majestosa Procissão e Bênção do Mar, Vizinhos, fireworks. 21 Sep: re-creation of the Feira das Cebolas.</p><div class="foot"><a href="https://www.viralagenda.com/pt/events/1842674/nossa-senhora-d-ajuda-espinho-2026" target="_blank" rel="noopener">viralagenda.com ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=41.008&amp;mlon=-8.639#map=14/41.008/-8.639" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev past" data-rk="bcc55e46d000" data-id="cortegaca-nossa-senhora-da-nazare" data-lat="40.935" data-lon="-8.659">
+        <div class="date"><span class="mo">Sep</span><span class="dy">4</span><span class="wd">Fri</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/cortegaca-nuno-ribeiro-abrilhanta-cartaz-das-festas-em-honra-de-nossa-senhora-da-nazare/" target="_blank" rel="noopener" class="hl">Festas em Honra de Nossa Senhora da Nazaré (Festas do Mar de Cortegaça)</a></h4>
+          <div class="venue"><span class="kind">romaria</span> · Praia de Cortegaça · Ovar · held 4–7 Sep 2026</div>
+          <p class="ctx">For Nossa Senhora da Nazaré. Usually first weekend of September (Infopédia: first Sunday of September).</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>Held for over 140 years at the beach chapel of Nossa Senhora da Nazaré. In 2025 OvarNews called it the biggest romaria in the region: a morning procession of more than twenty andores runs from the Souto to the beach, and an afternoon procession ends with the Bênção do Mar.</p><p><b>2026:</b> Fri 4: Bruno Cordeiro, DJ H&#x27;Alma. Sat 5: DNA, midnight fireworks, DJ Sandro Amaral. Sun 6: 9h procession from Largo do Souto to the beach with Banda Boa União and the Esmoriz firefighters&#x27; fanfarra; solemn mass at the chapel; 16h procession with blessing of the sea; Nuno Ribeiro at 22h; piromusical fireworks; DJ Renato C. Mon 7: NovaSom Band, closing fireworks. Organised by the Comissão de Festas de Cortegaça.</p><div class="foot"><a href="https://www.ovarnews.pt/cortegaca-nuno-ribeiro-abrilhanta-cartaz-das-festas-em-honra-de-nossa-senhora-da-nazare/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.ovarnews.pt/multidao-assistiu-a-bencao-do-mar-na-praia-de-cortegaca/" target="_blank" rel="noopener">ovarnews.pt 2 ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.935&amp;mlon=-8.659#map=14/40.935/-8.659" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev past" data-rk="1fe7372de95c" data-id="furadouro-senhores-da-piedade" data-lat="40.873" data-lon="-8.674">
+        <div class="date"><span class="mo">Sep</span><span class="dy">4</span><span class="wd">Fri</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/programa-das-festas-do-mar-do-furadouro-2026-esta-aqui/" target="_blank" rel="noopener" class="hl">Festas do Mar do Furadouro (Senhora e Senhor da Piedade)</a></h4>
+          <div class="venue"><span class="kind">romaria</span> · Furadouro · Ovar · held 4–14 Sep 2026</div>
+          <p class="ctx">For Nossa Senhora da Piedade and Senhor da Piedade. Usually early to mid-September, main weekend around the second weekend of September.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>The fishing community&#x27;s sea festival. On Friday night two candle processions leave the Capela dos Campos (Ovar) and the Furadouro chapel and meet at Carregal. On Sunday a solemn procession gives the blessing of the sea from the central breakwater, over a traditional flower carpet.</p><p><b>2026:</b> Sat 5: lighting ceremony, Swaly and DJ Dias. Fri 11: candle processions, Banda Tieta do Agreste. Sat 12: Miguel Ramiro, Bruno Azevedo, Banda GPS, midnight fireworks at the Paredão Marítimo Central. Sun 13: 11h field mass, 15h30 Majestosa Procissão with bênção do mar (Fanfarra BV Ovar, Banda Boa União), Beto Rocha, Banda Time. Mon 14: Grupo Sigma, closing morteiros. Organised by the Comissão Amigos do Furadouro.</p><div class="foot"><a href="https://www.ovarnews.pt/programa-das-festas-do-mar-do-furadouro-2026-esta-aqui/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.ovarnews.pt/bencao-ao-mar-foi-momento-alto-da-procissao-em-honra-dos-senhores-da-piedade/" target="_blank" rel="noopener">ovarnews.pt 2 ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.873&amp;mlon=-8.674#map=14/40.873/-8.674" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev past" data-rk="bfa67348af76" data-id="torreira-sao-paio" data-lat="40.76" data-lon="-8.707">
+        <div class="date"><span class="mo">Sep</span><span class="dy">4</span><span class="wd">Fri</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/romaria-do-s-paio-arranca-esta-sexta-feira/" target="_blank" rel="noopener" class="hl">Romaria de São Paio da Torreira</a></h4>
+          <div class="venue"><span class="kind">romaria</span> · Torreira · Murtosa · held 4–8 Sep 2026</div>
+          <p class="ctx">For São Paio. Usually early September, ending on 8 September.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>The best-known lagoon festa of the Ria de Aveiro and one of Portugal&#x27;s biggest romarias: rusgas, chinchorro and bateira sailing races, the moliceiro regatta and panel contest, fireworks over the sea and over the ria, and a closing procession.</p><p><b>2026:</b> Chinchorro race; moliceiro regatta and panel contest; bateira sailing regatta; rusgas contest. Fogo do Mar (night of 5/6) and Fogo da Ria (night of 7/8). Revenge of the 90&#x27;s, Edmundo Inácio, Marisa Liz, David Antunes, Toy. 8 Sep: field mass and majestic procession.</p><div class="foot"><a href="https://www.ovarnews.pt/romaria-do-s-paio-arranca-esta-sexta-feira/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.cm-murtosa.pt/cmmurtosa/uploads/writer_file/document/972/agendaeventos_2026_vf.pdf" target="_blank" rel="noopener">cm-murtosa.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.76&amp;mlon=-8.707#map=14/40.76/-8.707" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+    </section>
+    <section class="month">
+      <h2><span>August 2026</span><span class="no">2 festas</span></h2>
+      <div class="ev past" data-rk="fcbbd4270b24" data-id="valega-nossa-senhora-do-amparo" data-lat="40.835" data-lon="-8.579">
+        <div class="date"><span class="mo">Aug</span><span class="dy">17</span><span class="wd">Mon</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/valega-fe-e-devocao-na-procissao-em-honra-de-nossa-senhora-do-amparo/" target="_blank" rel="noopener" class="hl">Festas em Honra de Nossa Senhora do Amparo</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Válega · Ovar · held until 17 Aug 2026</div>
+          <p class="ctx">For Nossa Senhora do Amparo. Usually mid-August, around 15 August.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>Válega&#x27;s patronal festa. Thousands follow the procession through the town centre over carpets of coloured salt made by the valeguenses; there is an ethnographic parade and a mass for emigrants.</p><p><b>2026:</b> Sat 15 Aug: 16h solemn mass, then procession with Banda de São João de Loure and Fanfarra de Lourosa over salt carpets; Bruna and Nuno Portugal; midnight fireworks. Sun 16: mass for emigrants, 17h cortejo etnográfico, Os Solitários. Mon 17: Irmãos Leais, closing fireworks.</p><div class="foot"><a href="https://www.ovarnews.pt/valega-fe-e-devocao-na-procissao-em-honra-de-nossa-senhora-do-amparo/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.835&amp;mlon=-8.579#map=14/40.835/-8.579" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev tbc" data-rk="040360e41e44" data-id="maceda-senhora-da-saude" data-lat="40.931" data-lon="-8.618">
+        <div class="date"><span class="mo">Aug</span><span class="dy">–</span><span class="wd">tbc</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/claudia-nayara-nas-festas-da-sra-da-saude-maceda/" target="_blank" rel="noopener" class="hl">Festas em Honra da Senhora da Saúde</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Maceda · Ovar · dates not known yet</div>
+          <p class="ctx">For Nossa Senhora da Saúde. Usually mid-August.</p>
+          <details><summary>About &amp; sources</summary><div class="more"><p>A summer festa in Maceda for Nossa Senhora da Saúde. The only detail found so far is one concert from the 2025 edition.</p><div class="foot"><a href="https://www.ovarnews.pt/claudia-nayara-nas-festas-da-sra-da-saude-maceda/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.931&amp;mlon=-8.618#map=14/40.931/-8.618" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+    </section>
+    <section class="month">
+      <h2><span>July 2026</span><span class="no">2 festas</span></h2>
+      <div class="ev past" data-rk="5722322e80fd" data-id="silvalde-sao-tiago" data-lat="40.993" data-lon="-8.635">
+        <div class="date"><span class="mo">Jul</span><span class="dy">24</span><span class="wd">Fri</span></div>
+        <div class="txt">
+          <h4><a href="https://www.viralagenda.com/pt/events/1829533/festa-s-tiago-silvalde-2026" target="_blank" rel="noopener" class="hl">Festas em Honra de São Tiago</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Silvalde · Espinho · held 24–27 Jul 2026</div>
+          <p class="ctx">For São Tiago. Usually late July, around 25 July (São Tiago&#x27;s day).</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>Silvalde&#x27;s patronal festa: a solemn eucharist on São Tiago&#x27;s day, a Sunday procession with the Banda Musical de S. Tiago de Silvalde, nightly concerts and fireworks.</p><p><b>2026:</b> 24 Jul: Nuno Ribeiro, Pé de Samba. 25 Jul: solemn eucharist for São Tiago, Bandalusa, fireworks, DJ SU. 26 Jul: 16h30 procession with Fanfarra de Vilar de Andorinho and Banda de S. Tiago de Silvalde, Sons do Minho. 27 Jul: raffle, Bandaneia.</p><div class="foot"><a href="https://www.viralagenda.com/pt/events/1829533/festa-s-tiago-silvalde-2026" target="_blank" rel="noopener">viralagenda.com ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.993&amp;mlon=-8.635#map=14/40.993/-8.635" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev tbc" data-rk="a74a8ec38e91" data-id="cortegaca-santa-marinha" data-lat="40.942" data-lon="-8.63">
+        <div class="date"><span class="mo">Jul</span><span class="dy">–</span><span class="wd">tbc</span></div>
+        <div class="txt">
+          <h4><a href="https://ncultura.pt/a-igreja-de-cortegaca-e-uma-das-mais-bonitas-de-portugal" target="_blank" rel="noopener" class="hl">Festa de Santa Marinha</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Cortegaça · Ovar · dates not known yet</div>
+          <p class="ctx">For Santa Marinha. Usually 18 July (Santa Marinha&#x27;s day).</p>
+          <details><summary>About &amp; sources</summary><div class="more"><p>Annual festa of the parish patron, centred on the Igreja Matriz de Santa Marinha (the azulejo-covered church), with processions, solemn masses and cultural events.</p><div class="foot"><a href="https://ncultura.pt/a-igreja-de-cortegaca-e-uma-das-mais-bonitas-de-portugal" target="_blank" rel="noopener">ncultura.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.942&amp;mlon=-8.63#map=14/40.942/-8.63" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+    </section>
+    <section class="month">
+      <h2><span>June 2026</span><span class="no">5 festas</span></h2>
+      <div class="ev past" data-rk="dabe44a9631b" data-id="espinho-sao-pedro" data-lat="41.008" data-lon="-8.639">
+        <div class="date"><span class="mo">Jun</span><span class="dy">29</span><span class="wd">Mon</span></div>
+        <div class="txt">
+          <h4><a href="https://www.viralagenda.com/pt/events/1808491/festas-de-sao-pedro-d-espinho-2026" target="_blank" rel="noopener" class="hl">Festas de São Pedro d&#x27;Espinho</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Espinho · held 29 Jun – 5 Jul 2026</div>
+          <p class="ctx">For São Pedro. Usually from 29 June (São Pedro&#x27;s day) into the following weekend.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>Espinho&#x27;s São Pedro festa: a mass at the Capela de S. Pedro, a rusga, a talent contest, a field mass and procession, concerts and fireworks.</p><p><b>2026:</b> 29 Jun: São Pedro mass. 2 Jul: Banda Remédio Santo. 3 Jul: arruada of the Rusga de São Pedro. 4 Jul: Maré de Talentos, Banda Myllenium, fireworks. 5 Jul: 11h field mass, 16h30 procession, Zé Amaro, fireworks.</p><div class="foot"><a href="https://www.viralagenda.com/pt/events/1808491/festas-de-sao-pedro-d-espinho-2026" target="_blank" rel="noopener">viralagenda.com ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=41.008&amp;mlon=-8.639#map=14/41.008/-8.639" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev past" data-rk="fb70a349a476" data-id="esmoriz-arraial-da-barrinha" data-lat="40.956" data-lon="-8.652">
+        <div class="date"><span class="mo">Jun</span><span class="dy">25</span><span class="wd">Thu</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/esmoriz-arraial-da-barrinha-com-banda-variacoes-napa-e-pedro-abrunhosa/" target="_blank" rel="noopener" class="hl">Arraial da Barrinha</a></h4>
+          <div class="venue"><span class="kind">arraial</span> · Barrinha de Esmoriz · Ovar · held 25 Jun – 5 Jul 2026</div>
+          <p class="ctx">Usually late June to early July.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>A secular summer arraial of concerts by the beach, organised by the Junta de Freguesia de Esmoriz and the Câmara Municipal de Ovar. Not a saint&#x27;s festa.</p><p><b>2026:</b> Fósseis Modernos, Lean Cruz, Banda do Filme &#x27;Variações&#x27;, Joana Espadinha, Bruno Cordeiro, Doya, H1, NAPA, José Pinhal Post-Mortem Experience; Pedro Abrunhosa closes on 5 July</p><div class="foot"><a href="https://www.ovarnews.pt/esmoriz-arraial-da-barrinha-com-banda-variacoes-napa-e-pedro-abrunhosa/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.956&amp;mlon=-8.652#map=14/40.956/-8.652" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev past" data-rk="a5e0ab434c93" data-id="sao-joao-de-ovar-sao-joao" data-lat="40.873" data-lon="-8.592">
+        <div class="date"><span class="mo">Jun</span><span class="dy">20</span><span class="wd">Sat</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/sao-joao-a-mexer-com-sao-joao-de-ovar/" target="_blank" rel="noopener" class="hl">Arraial de São João de Ovar</a></h4>
+          <div class="venue"><span class="kind">arraial</span> · Largo de São João · Ovar · held 20–23 Jun 2026</div>
+          <p class="ctx">For São João Batista. Usually around 20–23 June, before São João&#x27;s day.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>Four days of sanjoanino arraial in the Largo de São João: folklore, marchas, music, food, and a solemn eucharist and procession for São João Batista.</p><p><b>2026:</b> 20 Jun: folklore festival &#x27;Cancioneiro de Ovar&#x27;, DJ Brito. 21 Jun: Banda Boa União, 9h30 eucaristia solene and procession, children&#x27;s marchas populares, Duo Expresso 23. 22 Jun: Haja Baile Trio. 23 Jun: Banda Nelly Correia.</p><div class="foot"><a href="https://www.ovarnews.pt/sao-joao-a-mexer-com-sao-joao-de-ovar/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.873&amp;mlon=-8.592#map=14/40.873/-8.592" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev past" data-rk="a4b244392bc2" data-id="estarreja-santo-antonio" data-lat="40.752" data-lon="-8.57">
+        <div class="date"><span class="mo">Jun</span><span class="dy">5</span><span class="wd">Fri</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/festas-de-santo-antonio-de-estarreja-arrancam-esta-sexta-feira/" target="_blank" rel="noopener" class="hl">Festas de Santo António (Estarreja)</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Estarreja · held 5–14 Jun 2026</div>
+          <p class="ctx">For Santo António. Usually first half of June, up to Santo António&#x27;s day (13 June) and the municipal holiday.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>Estarreja&#x27;s town and municipal festas for Santo António: an old-time market, marchas populares, tasquinhas, an ethnographic parade and concerts, ending with the religious celebrations and the Dia do Município.</p><p><b>2026:</b> Mercado Antigo (5–7 Jun); &#x27;Bandas em Festa&#x27; with the three municipal bands; Galandum Galundaina; ethnographic parade; community show &#x27;(A)braços da Ria&#x27;; concerts and marchas; closing religious celebrations</p><div class="foot"><a href="https://www.ovarnews.pt/festas-de-santo-antonio-de-estarreja-arrancam-esta-sexta-feira/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.cm-murtosa.pt/cmmurtosa/uploads/writer_file/document/972/agendaeventos_2026_vf.pdf" target="_blank" rel="noopener">cm-murtosa.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.752&amp;mlon=-8.57#map=14/40.752/-8.57" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev tbc" data-rk="b1bdedd602cd" data-id="guilhovai-senhora-da-ajuda" data-lat="40.86" data-lon="-8.592">
+        <div class="date"><span class="mo">Jun</span><span class="dy">–</span><span class="wd">tbc</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/quer-ver-o-quim-barreiros-na-marinha-de-ovar/" target="_blank" rel="noopener" class="hl">Festas em Honra de Nossa Senhora da Ajuda (Guilhovai)</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Guilhovai · Ovar · dates not known yet</div>
+          <p class="ctx">For Nossa Senhora da Ajuda. Usually June.</p>
+          <details><summary>About &amp; sources</summary><div class="more"><p>June festa in the lugar of Guilhovai; in 2022 Quim Barreiros gave a free concert there, paid for by the câmara.</p><div class="foot"><a href="https://www.ovarnews.pt/quer-ver-o-quim-barreiros-na-marinha-de-ovar/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.86&amp;mlon=-8.592#map=14/40.86/-8.592" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+    </section>
+    <section class="month">
+      <h2><span>April 2026</span><span class="no">1 festa</span></h2>
+      <div class="ev past" data-rk="aa4f8c837a2e" data-id="arada-nossa-senhora-do-desterro" data-lat="40.916" data-lon="-8.601">
+        <div class="date"><span class="mo">Apr</span><span class="dy">13</span><span class="wd">Mon</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/arada-romaria-em-honra-de-nossa-senhora-do-desterro-atrai-forasteiros/" target="_blank" rel="noopener" class="hl">Romaria em Honra de Nossa Senhora do Desterro</a></h4>
+          <div class="venue"><span class="kind">romaria</span> · Arada · Ovar · held until 13 Apr 2026</div>
+          <p class="ctx">For Nossa Senhora do Desterro. Usually April, over a long weekend.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>A romaria at the Capela da Senhora do Desterro (1663), which local legend says stands on the rock where the Virgin appeared. It draws many thousands of pilgrims and is run by the Irmandade de Nossa Senhora do Desterro.</p><p><b>2026:</b> Sat 11 Apr: Grupo Trovão, singer Kássio, fireworks. Processions on Sunday 12 Apr (11h) and Monday 13 Apr (10h30). The 2026 edition put the stress on the religious side, with no big-name acts.</p><p class="earlier">Other years: 25–28 Apr 2025</p><div class="foot"><a href="https://www.ovarnews.pt/arada-romaria-em-honra-de-nossa-senhora-do-desterro-atrai-forasteiros/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.916&amp;mlon=-8.601#map=14/40.916/-8.601" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+    </section>
+    <section class="month">
+      <h2><span>January 2026</span><span class="no">1 festa</span></h2>
+      <div class="ev past" data-rk="ca77fe343f21" data-id="santa-maria-da-feira-fogaceiras" data-lat="40.925" data-lon="-8.543">
+        <div class="date"><span class="mo">Jan</span><span class="dy">20</span><span class="wd">Tue</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/250-meninas-vestidas-de-branco-e-de-fogaca-a-cabeca/" target="_blank" rel="noopener" class="hl">Festa das Fogaceiras</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Santa Maria da Feira · held 20 Jan 2026</div>
+          <p class="ctx">For São Sebastião. Usually 20 January (São Sebastião&#x27;s day), with a programme all January.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>A vow to São Sebastião kept for over five centuries: about 250 girls in white carry fogaças (sweet bread) on their heads from the Câmara to the Igreja Matriz, a solemn mass blesses them, and a procession goes through the historic centre.</p><p><b>2026:</b> 10h30 civic cortege, 11h solemn mass with blessing of the fogaças, 15h30 Procissão das Fogaceiras. The month-long programme ended on 31 Jan with Fernando Daniel and the four municipal bands at Europarque.</p><div class="foot"><a href="https://www.ovarnews.pt/250-meninas-vestidas-de-branco-e-de-fogaca-a-cabeca/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.ovarnews.pt/janeiro-e-mes-de-fogaceiras/" target="_blank" rel="noopener">ovarnews.pt 2 ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.925&amp;mlon=-8.543#map=14/40.925/-8.543" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+    </section>
+    <section class="month">
+      <h2><span>November 2025</span><span class="no">2 festas</span></h2>
+      <div class="ev past" data-rk="bc19c67ea902" data-id="ribeira-ovar-santa-catarina" data-lat="40.859" data-lon="-8.625">
+        <div class="date"><span class="mo">Nov</span><span class="dy">22</span><span class="wd">2025</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/rosinha-faz-a-festa-este-sabado-na-ribeira-de-ovar/" target="_blank" rel="noopener" class="hl">Festas de Santa Catarina</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Ribeira · Ovar · held 22 Nov 2025</div>
+          <p class="ctx">For Santa Catarina. Usually late November, around 25 November (Santa Catarina&#x27;s day).</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>Yearly festa of the lugar da Ribeira in Ovar, kept going by volunteers; the 2025 edition was run by six young locals.</p><p><b>2025:</b> Saturday headliner Rosinha, then fireworks and a night arraial with DJ Rafa Figueiredo</p><div class="foot"><a href="https://www.ovarnews.pt/rosinha-faz-a-festa-este-sabado-na-ribeira-de-ovar/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.859&amp;mlon=-8.625#map=14/40.859/-8.625" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev past" data-rk="7da992bbbaae" data-id="arada-sao-martinho" data-lat="40.916" data-lon="-8.601">
+        <div class="date"><span class="mo">Nov</span><span class="dy">11</span><span class="wd">2025</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/freguesia-de-arada-festeja-autonomia-e-o-padroeiro-sao-martinho/" target="_blank" rel="noopener" class="hl">Dia da Freguesia de Arada / Festa de São Martinho</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Arada · Ovar · held 11–15 Nov 2025</div>
+          <p class="ctx">For São Martinho. Usually around 11 November (São Martinho&#x27;s day).</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>The parish day in honour of the patron São Martinho: flag-raising, a eucharist, a formal session and a port-wine reception.</p><p><b>2025:</b> flag-raising, schoolchildren planting an olive tree, eucharist in honour of São Martinho, formal session</p><div class="foot"><a href="https://www.ovarnews.pt/freguesia-de-arada-festeja-autonomia-e-o-padroeiro-sao-martinho/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.916&amp;mlon=-8.601#map=14/40.916/-8.601" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+    </section>
+    <section class="month">
+      <h2><span>August 2025</span><span class="no">2 festas</span></h2>
+      <div class="ev past" data-rk="17cf313ea8db" data-id="torrao-do-lameiro-senhora-da-boa-viagem" data-lat="40.83" data-lon="-8.666">
+        <div class="date"><span class="mo">Aug</span><span class="dy">29</span><span class="wd">2025</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/torrao-do-lameiro-arrancam-as-festas-da-senhora-da-boa-viagem/" target="_blank" rel="noopener" class="hl">Festas em Honra de Nossa Senhora da Boa Viagem</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Torrão do Lameiro · Ovar · held 29 Aug – 1 Sep 2025</div>
+          <p class="ctx">For Nossa Senhora da Boa Viagem. Usually end of August into early September; it opens Ovar&#x27;s Festas do Mar season.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>Festa of the fishing hamlet between the sea and the Ria, with devotions and concerts. OvarNews&#x27;s 2026 guide says the Festas do Mar started here from 28 August.</p><p><b>2025:</b> Ruben Pinto (from Maceda), Brazilian singer Marcus, other artists; religious programme</p><div class="foot"><a href="https://www.ovarnews.pt/torrao-do-lameiro-arrancam-as-festas-da-senhora-da-boa-viagem/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.ovarnews.pt/guia-das-festas-do-mar-do-concelho-de-ovar-2026/" target="_blank" rel="noopener">ovarnews.pt 2 ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.83&amp;mlon=-8.666#map=14/40.83/-8.666" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev past" data-rk="360563e3e078" data-id="esmoriz-senhor-dos-aflitos-senhora-da-boa-viagem" data-lat="40.956" data-lon="-8.652">
+        <div class="date"><span class="mo">Aug</span><span class="dy">28</span><span class="wd">2025</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/festas-do-mar-de-esmoriz-confirmadas-em-agosto/" target="_blank" rel="noopener" class="hl">Festas do Mar de Esmoriz (Senhor dos Aflitos e Senhora da Boa Viagem)</a></h4>
+          <div class="venue"><span class="kind">romaria</span> · Praia de Esmoriz · Ovar · held 28 Aug – 1 Sep 2025</div>
+          <p class="ctx">For Senhor dos Aflitos and Nossa Senhora da Boa Viagem. Usually end of August into early September (Infopédia: last Sunday of August for N. Sra. dos Aflitos).</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>Esmoriz&#x27;s seaside romaria. The Sunday procession, with andores and the Esmoriz firefighters&#x27; fanfarra, goes from the Igreja Matriz to the beach chapel and ends with the traditional blessing of the sea.</p><p><b>2025:</b> Sunday procession from the Igreja Matriz to the beach chapel, then the bênção do mar; live concerts; several fireworks sessions; local artist Lean Cruz on the beach stage on the last night</p><div class="foot"><a href="https://www.ovarnews.pt/festas-do-mar-de-esmoriz-confirmadas-em-agosto/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.956&amp;mlon=-8.652#map=14/40.956/-8.652" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+    </section>
+    <section class="month">
+      <h2><span>July 2025</span><span class="no">2 festas</span></h2>
+      <div class="ev past" data-rk="6e3f6e6707c2" data-id="espinho-nossa-senhora-do-mar" data-lat="41.008" data-lon="-8.639">
+        <div class="date"><span class="mo">Jul</span><span class="dy">31</span><span class="wd">2025</span></div>
+        <div class="txt">
+          <h4><a href="https://www.viralagenda.com/pt/events/1646649/festas-da-n-sra-do-mar-espinho-2025" target="_blank" rel="noopener" class="hl">Festas da Nossa Senhora do Mar</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Espinho, Bairro Piscatório · Espinho · held 31 Jul – 4 Aug 2025</div>
+          <p class="ctx">For Nossa Senhora do Mar. Usually turn of July/August, ending on the first weekend of August.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>The fishing quarter&#x27;s festa for Nossa Senhora do Mar, with two processions, daily morteiros, concerts and a car raffle.</p><p><b>2025:</b> 31 Jul: 21h procession. Then Bandalusa, Lean Cruz, Mastiksoul and Pé de Samba. Sun 3 Aug: Banda S. Tiago, Fanfarra BV Espinho, mass, rosary, 17h procession, AM Show. 4 Aug: Fusiforme.</p><div class="foot"><a href="https://www.viralagenda.com/pt/events/1646649/festas-da-n-sra-do-mar-espinho-2025" target="_blank" rel="noopener">viralagenda.com ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=41.008&amp;mlon=-8.639#map=14/41.008/-8.639" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+      <div class="ev past" data-rk="70823ce181f2" data-id="marinha-ovar-santa-marinha" data-lat="40.837" data-lon="-8.65">
+        <div class="date"><span class="mo">Jul</span><span class="dy">17</span><span class="wd">2025</span></div>
+        <div class="txt">
+          <h4><a href="https://www.ovarnews.pt/broa-de-mel-vem-passear-e-ser-felizes-nas-festas-de-santa-marinha/" target="_blank" rel="noopener" class="hl">Festas em Honra de Santa Marinha (Marinha de Ovar)</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Marinha · Ovar · held 17–21 Jul 2025</div>
+          <p class="ctx">For Santa Marinha. Usually mid-July, Thursday to Monday around Santa Marinha&#x27;s day.</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>Festa of the lugar da Marinha in Ovar, beside the Ovar canal of the Ria. The Sunday has a sermon, mass and procession with the Ovar firefighters&#x27; fanfarra, and there are popular concerts each night.</p><p><b>2025:</b> Fri: CS Band, Elena Correia. Sat: Grupo Lux. Sun: 15h30 sermon, mass and procession with Fanfarra BV Ovar; Broa de Mel at 22h, then Tanya. Mon: Grupo Menta Freska.</p><div class="foot"><a href="https://www.ovarnews.pt/broa-de-mel-vem-passear-e-ser-felizes-nas-festas-de-santa-marinha/" target="_blank" rel="noopener">ovarnews.pt ↗︎</a> · <a href="https://www.ovarnews.pt/quer-ver-o-quim-barreiros-na-marinha-de-ovar/" target="_blank" rel="noopener">ovarnews.pt 2 ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.837&amp;mlon=-8.65#map=14/40.837/-8.65" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+    </section>
+    <section class="month">
+      <h2><span>June 2025</span><span class="no">1 festa</span></h2>
+      <div class="ev past" data-rk="405a366290df" data-id="maceda-sao-pedro" data-lat="40.931" data-lon="-8.618">
+        <div class="date"><span class="mo">Jun</span><span class="dy">27</span><span class="wd">2025</span></div>
+        <div class="txt">
+          <h4><a href="https://www.viralagenda.com/pt/events/1650908/festa-de-sao-pedro-em-maceda" target="_blank" rel="noopener" class="hl">Festa de São Pedro em Maceda</a></h4>
+          <div class="venue"><span class="kind">festa</span> · Maceda · Ovar · held 27–29 Jun 2025</div>
+          <p class="ctx">For São Pedro. Usually late June, around 29 June (São Pedro&#x27;s day).</p>
+          <details><summary>Programme &amp; sources</summary><div class="more"><p>Maceda&#x27;s São Pedro festa, with marchas populares, concerts and fireworks. On the saint&#x27;s day there is a solemn mass at the Igreja Matriz followed by a procession.</p><p><b>2025:</b> 27 Jun marchas populares; 28 Jun Os Artistas da Rádio e Televisão, Jorge Bandeira, Lean Cruz, fireworks 23:50; 29 Jun 21-shot salute, 11h solemn mass at the Igreja Matriz, procession around 12h</p><div class="foot"><a href="https://www.viralagenda.com/pt/events/1650908/festa-de-sao-pedro-em-maceda" target="_blank" rel="noopener">viralagenda.com ↗︎</a> · <a href="https://www.openstreetmap.org/?mlat=40.931&amp;mlon=-8.618#map=14/40.931/-8.618" target="_blank" rel="noopener">Map ↗︎</a></div></div></details>
+        </div>
+      </div>
+    </section>
+    <p class="empty" id="none" hidden>No festa matches.</p>
+  </main>
+<script>
+(() => {
+  const q = document.getElementById("q"), none = document.getElementById("none");
+  const fold = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  const rows = [...document.querySelectorAll(".month .ev")].map(el => [el, fold(el.querySelector(".txt").textContent)]);
+  q.addEventListener("input", () => {
+    const words = fold(q.value).split(/\s+/).filter(Boolean);
+    let shown = 0;
+    for (const [el, text] of rows) {
+      el.hidden = !words.every(w => text.includes(w));
+      if (!el.hidden) shown++;
+    }
+    for (const s of document.querySelectorAll(".month")) s.hidden = !s.querySelector(".ev:not([hidden])");
+    none.hidden = shown > 0;
+  });
+})();
+</script>
+</body>
+</html>

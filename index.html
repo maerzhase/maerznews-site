@@ -8,11 +8,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.ico" sizes="32x32" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<meta name="description" content="63 editions · 1984 articles, searchable. Today: CP&#x27;s train drivers strike all week, and on Tuesday and Wednesday only about one train in four is guaranteed" />
+<meta name="description" content="64 editions · 2021 articles, searchable. Today: Lego will make its bricks in Estarreja: an eighth factory, up to €1 billion and more than 1,000 jobs, open in 2030" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Cortegaça Chronicle" />
 <meta property="og:title" content="The Cortegaça Chronicle" />
-<meta property="og:description" content="63 editions · 1984 articles, searchable. Today: CP&#x27;s train drivers strike all week, and on Tuesday and Wednesday only about one train in four is guaranteed" />
+<meta property="og:description" content="64 editions · 2021 articles, searchable. Today: Lego will make its bricks in Estarreja: an eighth factory, up to €1 billion and more than 1,000 jobs, open in 2030" />
 <meta property="og:url" content="https://daily.m3000.io/" />
 <meta property="og:image" content="https://daily.m3000.io/og/default.png" />
 <meta property="og:image:width" content="1200" />
@@ -31,12 +31,30 @@
     a { color: inherit; text-decoration: none; }
     a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     .caps { font-family: "Old Standard TT", Georgia, serif; text-transform: uppercase; letter-spacing: .14em; }
-    .ear { border-top: 1px solid var(--rule-2); border-bottom: 1px solid var(--rule-2); padding: 5px 0; text-align: center; font-size: .72rem; color: var(--ink-2); }
-    .ear a:hover { text-decoration: underline; text-underline-offset: 3px; }
-    .nameplate { text-align: center; font: 900 clamp(2.1rem, 9vw, 4.2rem)/1.02 "Playfair Display", Georgia, serif; letter-spacing: -.015em; margin: .26em 0 .25em; }
-    .nameplate .the { display: block; font-size: .24em; font-weight: 400; letter-spacing: .44em; text-transform: uppercase; margin-bottom: .5em; color: var(--ink-2); font-family: "Old Standard TT", Georgia, serif; }
+    .colophon a, .dayhead a, .foot a { text-decoration: underline; text-decoration-color: var(--rule-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .colophon a:hover, .dayhead a:hover, .foot a:hover { color: var(--ink); text-decoration-color: var(--ink); }
+    .mast { max-width: 760px; margin: 0 auto; }
+    .mast:has(.pagetitle) { margin-bottom: 26px; }
+    .ear { border-top: 1px solid #a89c88; border-bottom: 1px solid #a89c88; padding: 5px 0; text-align: center; font: .72rem/1.5 "Old Standard TT", Georgia, serif; text-transform: uppercase; letter-spacing: .14em; color: #403a34; }
+    .ear a { color: inherit; text-decoration: underline; text-decoration-color: #a89c88; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .ear a:hover { color: #1b1917; text-decoration-color: #1b1917; }
+    .ear [aria-current] { color: #1b1917; }
+    .ear-nav a, .ear-nav span { white-space: nowrap; }
+    @media (max-width: 560px) { .ear { letter-spacing: .08em; } .ear-facts, .ear-nav { display: block; } .ear-sep { display: none; } }
+    .nameplate { text-align: center; font: 900 clamp(2.1rem, 9vw, 4.2rem)/1.02 "Playfair Display", Georgia, serif; letter-spacing: -.015em; margin: .26em 0 .25em; color: #1b1917; }
+    .nameplate a { color: inherit; text-decoration: none; }
+    .nameplate .the { display: block; font-size: .24em; font-weight: 400; letter-spacing: .44em; text-transform: uppercase; margin-bottom: .5em; color: #403a34; font-family: "Old Standard TT", Georgia, serif; }
+    .mast .pagetitle { display: flex; align-items: center; gap: 14px; margin: 0; padding: 0; border: 0; font: 400 clamp(.78rem, 2.1vw, .95rem)/1.4 "Old Standard TT", Georgia, serif; letter-spacing: .24em; text-transform: uppercase; color: #1b1917; white-space: nowrap; }
+    .mast .pagetitle::before, .mast .pagetitle::after { content: ""; flex: 1; border-top: 1px solid #1b1917; border-bottom: 1px solid #1b1917; padding-top: 2px; }
+    .mast .pagesub { text-align: center; font: .68rem/1.5 "Old Standard TT", Georgia, serif; text-transform: uppercase; letter-spacing: .14em; color: #6b625a; margin: 8px 0 0; }
+    .mast .pagesub a { color: inherit; text-decoration: underline; text-decoration-color: #a89c88; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .mast .pagesub a:hover { color: #1b1917; text-decoration-color: #1b1917; }
 
-    .today { display: block; border-top: 3px double var(--rule-2); border-bottom: 3px double var(--rule-2); padding: 12px 0 13px; text-align: center; }
+    .today { display: block; text-align: center; }
+    /* the double rule, built like the banners' (two 1px borders 2px apart), so it is equally crisp on every screen */
+    .today::before, .today::after { content: ""; display: block; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); padding-top: 2px; }
+    .today::before { margin-bottom: 12px; }
+    .today::after { margin-top: 13px; }
     .today-k { display: block; font: .7rem "Old Standard TT", Georgia, serif; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
     .today-h { display: block; font: 700 clamp(1.25rem, 3.4vw, 1.6rem)/1.15 "Playfair Display", Georgia, serif; text-wrap: balance; }
     .today-go { display: block; font: .7rem "Old Standard TT", Georgia, serif; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); margin-top: 6px; }
@@ -60,7 +78,6 @@
 
     .day { margin-top: 22px; }
     .dayhead { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 6px 0 5px; font: .7rem "Old Standard TT", Georgia, serif; letter-spacing: .16em; text-transform: uppercase; }
-    .dayhead a:hover { text-decoration: underline; text-underline-offset: 3px; }
     .dayhead .no { color: var(--ink-3); white-space: nowrap; }
     .item { padding: 12px 0 13px; border-bottom: 1px dotted var(--rule-2); }
     .item:last-child { border-bottom: 0; }
@@ -72,8 +89,6 @@
     .meta { font: .62rem "Old Standard TT", Georgia, serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 4px; }
     .snip { font-size: .93rem; line-height: 1.5; color: var(--ink-2); margin: 0; text-wrap: pretty; }
     .foot { font: .6rem "Old Standard TT", Georgia, serif; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin-top: 5px; }
-    .foot a { border-bottom: 1px solid var(--rule); }
-    .foot a:hover { color: var(--ink); border-color: var(--ink); }
     mark { background: #ecd9b0; color: inherit; padding: 0 1px; }
 
     .more { display: block; margin: 22px auto 0; font: .7rem "Old Standard TT", Georgia, serif; letter-spacing: .18em; text-transform: uppercase; background: transparent; color: var(--ink); border: 1px solid var(--ink); padding: 9px 16px; cursor: pointer; border-radius: 0; }
@@ -81,17 +96,16 @@
     .more:hover { background: var(--ink); color: var(--paper); }
     .empty { text-align: center; font-style: italic; color: var(--ink-3); margin: 34px 0; }
     .colophon { border-top: 1px solid var(--rule-2); border-bottom: 1px solid var(--rule-2); margin-top: 34px; padding: 6px 0; text-align: center; font: .66rem "Old Standard TT", Georgia, serif; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-2); }
-    .colophon a:hover { text-decoration: underline; text-underline-offset: 3px; }
   </style>
 </head>
 <body>
 <div class="sheet" lang="en">
-  <header>
-    <div class="ear caps">63 editions · 1984 articles · <a href="archive.html">All editions</a> · <a href="releases.html">Album releases</a></div>
-    <h1 class="nameplate"><span class="the">The</span>Cortegaça Chronicle</h1>
-    <a class="today" href="editions/2026-11-23.html">
-      <span class="today-k">Today's paper · Monday, 23 November 2026 · No. 63</span>
-      <span class="today-h">CP&#x27;s train drivers strike all week, and on Tuesday and Wednesday only about one train in four is guaranteed</span>
+  <header class="mast">
+    <div class="ear"><span class="ear-facts">64 editions · 2021 articles</span><span class="ear-sep"> · </span><span class="ear-nav"><span aria-current="page">Front page</span> · <a href="archive.html">All editions</a> · <a href="releases.html">Album releases</a> · <a href="festas.html">Festas</a></span></div>
+    <h1 class="nameplate"><a href="./"><span class="the">The</span>Cortegaça Chronicle</a></h1>
+    <a class="today" href="editions/2026-11-24.html">
+      <span class="today-k">Today's paper · Tuesday, 24 November 2026 · No. 64</span>
+      <span class="today-h">Lego will make its bricks in Estarreja: an eighth factory, up to €1 billion and more than 1,000 jobs, open in 2030</span>
       <span class="today-go">Read the edition →</span>
     </a>
   </header>
@@ -107,7 +121,7 @@
   <button class="more" id="more" type="button" hidden>Show more</button>
   <noscript><p class="empty">Search needs JavaScript. <a href="archive.html">Browse all editions</a>.</p></noscript>
 
-  <div class="colophon"><a href="archive.html">All editions</a> · <a href="releases.html">Album releases</a></div>
+  <div class="colophon"><a href="archive.html">All editions</a> · <a href="releases.html">Album releases</a> · <a href="festas.html">Festas</a></div>
 </div>
 <script>
 (() => {
@@ -224,7 +238,7 @@
         `<h2 class="h"><a href="${esc(a.e)}">${mark(a.h, terms)}</a></h2>` +
         (a.m ? `<p class="meta">${mark(a.m, terms)}</p>` : "") +
         `<p class="snip">${mark(snippet(a, terms), terms)}</p>` +
-        `<div class="foot">${esc(a.s)}${a.u ? ` · <a href="${esc(a.u)}" target="_blank" rel="noopener">original ↗</a>` : ""}</div>`;
+        `<div class="foot">${esc(a.s)}${a.u ? ` · <a href="${esc(a.u)}" target="_blank" rel="noopener">original ↗\uFE0E</a>` : ""}</div>`;
       box.appendChild(el);
     }
     shown += batch.length;
@@ -256,7 +270,7 @@
   q.value = params.get("q") || "";
   section = params.get("s") || "";
   count.textContent = "Loading the archive…";
-  fetch("articles.json?v=2026-11-23-1984")
+  fetch("articles.json?v=2026-11-24-2021")
     .then(r => r.json())
     .then(data => {
       all = data.map(a => ({ ...a, g: groupOf(a.sec), hay: words([a.h, a.k, a.sec, a.m, a.t, a.s].join(" ")) }));

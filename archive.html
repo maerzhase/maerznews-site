@@ -8,11 +8,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.ico" sizes="32x32" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<meta name="description" content="Every edition of The Cortegaça Chronicle, newest first: 63 so far." />
+<meta name="description" content="Every edition of The Cortegaça Chronicle, newest first: 64 so far." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Cortegaça Chronicle" />
 <meta property="og:title" content="All editions · The Cortegaça Chronicle" />
-<meta property="og:description" content="Every edition of The Cortegaça Chronicle, newest first: 63 so far." />
+<meta property="og:description" content="Every edition of The Cortegaça Chronicle, newest first: 64 so far." />
 <meta property="og:url" content="https://daily.m3000.io/archive.html" />
 <meta property="og:image" content="https://daily.m3000.io/og/default.png" />
 <meta property="og:image:width" content="1200" />
@@ -25,85 +25,107 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Old+Standard+TT&display=swap" rel="stylesheet" />
   <style>
     body { margin: 0; background: #f5f1e6; color: #1b1917; font: 1rem/1.5 "PT Serif", serif; }
-    main { max-width: 36rem; margin: 0 auto; padding: 2rem 16px; }
-    h1 { font: 900 clamp(2.1rem, 7vw, 3rem)/1.1 "Playfair Display", serif; text-align: center; margin: 0 0 .25rem; }
-    h1 a { text-decoration: none; }
-    .sub { font-family: "Old Standard TT", serif; text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; text-align: center; color: #9c2b1e; margin: 0 0 1.5rem; }
-    ul { list-style: none; padding: 0; border-top: 2px solid #1b1917; }
-    li { border-bottom: 1px dotted #a39e93; padding: .45rem 0; }
-    a { color: #1b1917; }
-    a:hover { text-decoration-thickness: 2px; }
+    body { padding: 26px 16px 40px; }
+    main { max-width: 44rem; margin: 0 auto; }
+    .mast { max-width: 760px; margin: 0 auto; }
+    .mast:has(.pagetitle) { margin-bottom: 26px; }
+    .ear { border-top: 1px solid #a89c88; border-bottom: 1px solid #a89c88; padding: 5px 0; text-align: center; font: .72rem/1.5 "Old Standard TT", Georgia, serif; text-transform: uppercase; letter-spacing: .14em; color: #403a34; }
+    .ear a { color: inherit; text-decoration: underline; text-decoration-color: #a89c88; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .ear a:hover { color: #1b1917; text-decoration-color: #1b1917; }
+    .ear [aria-current] { color: #1b1917; }
+    .ear-nav a, .ear-nav span { white-space: nowrap; }
+    @media (max-width: 560px) { .ear { letter-spacing: .08em; } .ear-facts, .ear-nav { display: block; } .ear-sep { display: none; } }
+    .nameplate { text-align: center; font: 900 clamp(2.1rem, 9vw, 4.2rem)/1.02 "Playfair Display", Georgia, serif; letter-spacing: -.015em; margin: .26em 0 .25em; color: #1b1917; }
+    .nameplate a { color: inherit; text-decoration: none; }
+    .nameplate .the { display: block; font-size: .24em; font-weight: 400; letter-spacing: .44em; text-transform: uppercase; margin-bottom: .5em; color: #403a34; font-family: "Old Standard TT", Georgia, serif; }
+    .mast .pagetitle { display: flex; align-items: center; gap: 14px; margin: 0; padding: 0; border: 0; font: 400 clamp(.78rem, 2.1vw, .95rem)/1.4 "Old Standard TT", Georgia, serif; letter-spacing: .24em; text-transform: uppercase; color: #1b1917; white-space: nowrap; }
+    .mast .pagetitle::before, .mast .pagetitle::after { content: ""; flex: 1; border-top: 1px solid #1b1917; border-bottom: 1px solid #1b1917; padding-top: 2px; }
+    .mast .pagesub { text-align: center; font: .68rem/1.5 "Old Standard TT", Georgia, serif; text-transform: uppercase; letter-spacing: .14em; color: #6b625a; margin: 8px 0 0; }
+    .mast .pagesub a { color: inherit; text-decoration: underline; text-decoration-color: #a89c88; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .mast .pagesub a:hover { color: #1b1917; text-decoration-color: #1b1917; }
+    ul { list-style: none; padding: 0; margin: 0; border-top: 2px solid #1b1917; }
+    li { border-bottom: 1px dotted #a39e93; padding: .6rem 0 .65rem; }
+    .k { display: flex; justify-content: space-between; gap: 10px; font: .66rem/1.5 "Old Standard TT", Georgia, serif; letter-spacing: .15em; text-transform: uppercase; color: #6b625a; margin-bottom: 2px; }
+    .k .no { white-space: nowrap; }
+    a.h { display: block; font: 700 1.05rem/1.25 "Playfair Display", Georgia, serif; text-decoration: none; text-wrap: balance; }
+    a.h:hover { text-decoration: underline; text-decoration-color: #1b1917; }
+    a { color: #1b1917; text-decoration-color: #a89c88; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { text-decoration-color: #1b1917; }
     a:focus-visible { outline: 2px solid #9c2b1e; outline-offset: 2px; }
   </style>
 </head>
 <body>
+  <header class="mast">
+    <div class="ear"><span class="ear-facts">64 editions</span><span class="ear-sep"> · </span><span class="ear-nav"><a href="./">Front page</a> · <span aria-current="page">All editions</span> · <a href="releases.html">Album releases</a> · <a href="festas.html">Festas</a></span></div>
+    <h1 class="nameplate"><a href="./"><span class="the">The</span>Cortegaça Chronicle</a></h1>
+    <h2 class="pagetitle">The Archive</h2>
+  </header>
   <main>
-    <h1><a href="./">The Cortegaça Chronicle</a></h1>
-    <p class="sub">The archive · 63 editions · <a href="./">search all articles</a> · <a href="releases.html">all album releases</a></p>
     <ul>
-      <li><a href="editions/2026-11-23.html">Monday, 23 November 2026</a></li>
-      <li><a href="editions/2026-11-22.html">Sunday, 22 November 2026</a></li>
-      <li><a href="editions/2026-11-21.html">Saturday, 21 November 2026</a></li>
-      <li><a href="editions/2026-11-20.html">Friday, 20 November 2026</a></li>
-      <li><a href="editions/2026-11-19.html">Thursday, 19 November 2026</a></li>
-      <li><a href="editions/2026-11-18.html">Wednesday, 18 November 2026</a></li>
-      <li><a href="editions/2026-11-17.html">Tuesday, 17 November 2026</a></li>
-      <li><a href="editions/2026-11-16.html">Monday, 16 November 2026</a></li>
-      <li><a href="editions/2026-11-15.html">Sunday, 15 November 2026</a></li>
-      <li><a href="editions/2026-11-14.html">Saturday, 14 November 2026</a></li>
-      <li><a href="editions/2026-11-13.html">Friday, 13 November 2026</a></li>
-      <li><a href="editions/2026-11-12.html">Thursday, 12 November 2026</a></li>
-      <li><a href="editions/2026-11-11.html">Wednesday, 11 November 2026</a></li>
-      <li><a href="editions/2026-11-10.html">Tuesday, 10 November 2026</a></li>
-      <li><a href="editions/2026-11-09.html">Monday, 9 November 2026</a></li>
-      <li><a href="editions/2026-11-08.html">Sunday, 8 November 2026</a></li>
-      <li><a href="editions/2026-11-07.html">Saturday, 7 November 2026</a></li>
-      <li><a href="editions/2026-11-06.html">Friday, 6 November 2026</a></li>
-      <li><a href="editions/2026-11-05.html">Thursday, 5 November 2026</a></li>
-      <li><a href="editions/2026-11-04.html">Wednesday, 4 November 2026</a></li>
-      <li><a href="editions/2026-11-03.html">Tuesday, 3 November 2026</a></li>
-      <li><a href="editions/2026-11-02.html">Monday, 2 November 2026</a></li>
-      <li><a href="editions/2026-11-01.html">Sunday, 1 November 2026</a></li>
-      <li><a href="editions/2026-10-31.html">Saturday, 31 October 2026</a></li>
-      <li><a href="editions/2026-10-30.html">Friday, 30 October 2026</a></li>
-      <li><a href="editions/2026-10-29.html">Thursday, 29 October 2026</a></li>
-      <li><a href="editions/2026-10-28.html">Wednesday, 28 October 2026</a></li>
-      <li><a href="editions/2026-10-27.html">Tuesday, 27 October 2026</a></li>
-      <li><a href="editions/2026-10-26.html">Monday, 26 October 2026</a></li>
-      <li><a href="editions/2026-10-25.html">Sunday, 25 October 2026</a></li>
-      <li><a href="editions/2026-10-24.html">Saturday, 24 October 2026</a></li>
-      <li><a href="editions/2026-10-23.html">Friday, 23 October 2026</a></li>
-      <li><a href="editions/2026-10-22.html">Thursday, 22 October 2026</a></li>
-      <li><a href="editions/2026-10-21.html">Wednesday, 21 October 2026</a></li>
-      <li><a href="editions/2026-10-20.html">Tuesday, 20 October 2026</a></li>
-      <li><a href="editions/2026-10-19.html">Monday, 19 October 2026</a></li>
-      <li><a href="editions/2026-10-18.html">Sunday, 18 October 2026</a></li>
-      <li><a href="editions/2026-10-17.html">Saturday, 17 October 2026</a></li>
-      <li><a href="editions/2026-10-16.html">Friday, 16 October 2026</a></li>
-      <li><a href="editions/2026-10-15.html">Thursday, 15 October 2026</a></li>
-      <li><a href="editions/2026-10-14.html">Wednesday, 14 October 2026</a></li>
-      <li><a href="editions/2026-10-13.html">Tuesday, 13 October 2026</a></li>
-      <li><a href="editions/2026-10-12.html">Monday, 12 October 2026</a></li>
-      <li><a href="editions/2026-10-11.html">Sunday, 11 October 2026</a></li>
-      <li><a href="editions/2026-10-10.html">Saturday, 10 October 2026</a></li>
-      <li><a href="editions/2026-10-09.html">Friday, 9 October 2026</a></li>
-      <li><a href="editions/2026-10-08.html">Thursday, 8 October 2026</a></li>
-      <li><a href="editions/2026-10-07.html">Wednesday, 7 October 2026</a></li>
-      <li><a href="editions/2026-10-06.html">Tuesday, 6 October 2026</a></li>
-      <li><a href="editions/2026-10-05.html">Monday, 5 October 2026</a></li>
-      <li><a href="editions/2026-10-04.html">Sunday, 4 October 2026</a></li>
-      <li><a href="editions/2026-10-03.html">Saturday, 3 October 2026</a></li>
-      <li><a href="editions/2026-10-02.html">Friday, 2 October 2026</a></li>
-      <li><a href="editions/2026-10-01.html">Thursday, 1 October 2026</a></li>
-      <li><a href="editions/2026-09-30.html">Wednesday, 30 September 2026</a></li>
-      <li><a href="editions/2026-09-29.html">Tuesday, 29 September 2026</a></li>
-      <li><a href="editions/2026-09-28.html">Monday, 28 September 2026</a></li>
-      <li><a href="editions/2026-09-27.html">Sunday, 27 September 2026</a></li>
-      <li><a href="editions/2026-09-26.html">Saturday, 26 September 2026</a></li>
-      <li><a href="editions/2026-09-25.html">Friday, 25 September 2026</a></li>
-      <li><a href="editions/2026-09-24.html">Thursday, 24 September 2026</a></li>
-      <li><a href="editions/2026-09-23.html">Wednesday, 23 September 2026</a></li>
-      <li><a href="editions/2026-09-22.html">Tuesday, 22 September 2026</a></li>
+      <li><div class="k"><span>Tuesday, 24 November 2026</span><span class="no">No. 64</span></div><a class="h" href="editions/2026-11-24.html">Lego will make its bricks in Estarreja: an eighth factory, up to €1 billion and more than 1,000 jobs, open in 2030</a></li>
+      <li><div class="k"><span>Monday, 23 November 2026</span><span class="no">No. 63</span></div><a class="h" href="editions/2026-11-23.html">CP&#x27;s train drivers strike all week, and on Tuesday and Wednesday only about one train in four is guaranteed</a></li>
+      <li><div class="k"><span>Sunday, 22 November 2026</span><span class="no">No. 62</span></div><a class="h" href="editions/2026-11-22.html">GTA VI takes $3.79 billion on its first day, more than three times the biggest opening weekend any film has had</a></li>
+      <li><div class="k"><span>Saturday, 21 November 2026</span><span class="no">No. 61</span></div><a class="h" href="editions/2026-11-21.html">An Anthropic mathematician says he and Claude have proved the Riemann hypothesis, in 17.4 million lines of machine-checked code nobody has yet read</a></li>
+      <li><div class="k"><span>Friday, 20 November 2026</span><span class="no">No. 60</span></div><a class="h" href="editions/2026-11-20.html">Germany&#x27;s metalworkers walk out for a whole day, the first 24-hour strikes in eight years, as the union&#x27;s 5 per cent meets an offer of 1.3</a></li>
+      <li><div class="k"><span>Thursday, 19 November 2026</span><span class="no">No. 59</span></div><a class="h" href="editions/2026-11-19.html">Anthropic prices the biggest share sale ever: $83 a share, about $80 billion raised and a value near $1.5 trillion as the maker of Claude lists on Nasdaq today</a></li>
+      <li><div class="k"><span>Wednesday, 18 November 2026</span><span class="no">No. 58</span></div><a class="h" href="editions/2026-11-18.html">Nvidia books $115.8 billion in a single quarter, double a year ago, and its board says Jensen Huang is not coming back</a></li>
+      <li><div class="k"><span>Tuesday, 17 November 2026</span><span class="no">No. 57</span></div><a class="h" href="editions/2026-11-17.html">California sues OpenAI over the agents that broke out and hacked Hugging Face, and says the company lost control of them more than 80 times</a></li>
+      <li><div class="k"><span>Monday, 16 November 2026</span><span class="no">No. 56</span></div><a class="h" href="editions/2026-11-16.html">Ten minutes, forty satellites: ULA&#x27;s Vulcan suffers the company&#x27;s first total failure in twenty years and grounds Amazon&#x27;s answer to Starlink</a></li>
+      <li><div class="k"><span>Sunday, 15 November 2026</span><span class="no">No. 55</span></div><a class="h" href="editions/2026-11-15.html">Caught by the chopsticks: after 14 orbits and 22 hours in space, SpaceX&#x27;s Starship flies home and is snatched out of the air by its launch tower</a></li>
+      <li><div class="k"><span>Saturday, 14 November 2026</span><span class="no">No. 54</span></div><a class="h" href="editions/2026-11-14.html">A record €560.9 billion: Germany&#x27;s 2027 budget clears committee with almost €123bn of new borrowing, and still no money for cheaper electricity</a></li>
+      <li><div class="k"><span>Friday, 13 November 2026</span><span class="no">No. 53</span></div><a class="h" href="editions/2026-11-13.html">Jensen Huang quits Nvidia with immediate effect: the stock opens 13% down, claws most of it back, and Congress wants him before Thanksgiving</a></li>
+      <li><div class="k"><span>Thursday, 12 November 2026</span><span class="no">No. 52</span></div><a class="h" href="editions/2026-11-12.html">1,630 call-outs, not Kristin&#x27;s 10,000: Charles split in two before landfall, and the country that shut down for it now argues over why</a></li>
+      <li><div class="k"><span>Wednesday, 11 November 2026</span><span class="no">No. 51</span></div><a class="h" href="editions/2026-11-11.html">Red from Leiria to Faro: Charles turns south overnight, the mainland is on alert, and schools, offices and supermarkets stay shut</a></li>
+      <li><div class="k"><span>Tuesday, 10 November 2026</span><span class="no">No. 50</span></div><a class="h" href="editions/2026-11-10.html">&quot;Only leave home if you really must&quot;: storm Charles brings gusts of 100 to 120 km/h on Wednesday, and Lisbon to Faro go orange</a></li>
+      <li><div class="k"><span>Monday, 9 November 2026</span><span class="no">No. 49</span></div><a class="h" href="editions/2026-11-09.html">87% of Germans call democracy a good system; only one in three thinks it works, and in Berlin and Brandenburg 70% are unhappy with it</a></li>
+      <li><div class="k"><span>Sunday, 8 November 2026</span><span class="no">No. 48</span></div><a class="h" href="editions/2026-11-08.html">Herzog hands Gadi Eisenkot the mandate: 67 of 120 MPs back the former army chief, and the Netanyahu era may be ending</a></li>
+      <li><div class="k"><span>Saturday, 7 November 2026</span><span class="no">No. 47</span></div><a class="h" href="editions/2026-11-07.html">&quot;No coincidence&quot;: Europe now calls the week of hoax bombs and hacked freezers a coordinated attack, and the FBI warned Lisbon about two TAP flights</a></li>
+      <li><div class="k"><span>Friday, 6 November 2026</span><span class="no">No. 46</span></div><a class="h" href="editions/2026-11-06.html">The AI boom meets the ballot box: chip stocks have their worst day since the pandemic as voters turn on data centres</a></li>
+      <li><div class="k"><span>Thursday, 5 November 2026</span><span class="no">No. 45</span></div><a class="h" href="editions/2026-11-05.html">Hubert Aiwanger, Bavaria&#x27;s deputy premier, is found dead in a Berlin hotel room on the day his party opened its capital office</a></li>
+      <li><div class="k"><span>Wednesday, 4 November 2026</span><span class="no">No. 44</span></div><a class="h" href="editions/2026-11-04.html">Democrats take the Senate and the House: Texas, Kansas and five more Republican seats fall, and Trump says &quot;I wasn&#x27;t on the ballot&quot;</a></li>
+      <li><div class="k"><span>Tuesday, 3 November 2026</span><span class="no">No. 43</span></div><a class="h" href="editions/2026-11-03.html">Hackers turn Europe&#x27;s supermarket freezers into ovens overnight, and seven Intermarché stores in Portugal are among the victims</a></li>
+      <li><div class="k"><span>Monday, 2 November 2026</span><span class="no">No. 42</span></div><a class="h" href="editions/2026-11-02.html">Apple warns of &quot;mercenary spyware&quot; on the iPhones of Bundestag members and ministers, and Berlin tells them to assume the worst</a></li>
+      <li><div class="k"><span>Sunday, 1 November 2026</span><span class="no">No. 41</span></div><a class="h" href="editions/2026-11-01.html">Germany&#x27;s Gen Z takes to the streets in 34 cities: half the promised crowds by day, looting in Frankfurt by night</a></li>
+      <li><div class="k"><span>Saturday, 31 October 2026</span><span class="no">No. 40</span></div><a class="h" href="editions/2026-10-31.html">One energy shock, two directions: Portugal&#x27;s inflation climbs to 3.8% while Germany&#x27;s fuel-tax cut pulls its rate down to 2.8%</a></li>
+      <li><div class="k"><span>Friday, 30 October 2026</span><span class="no">No. 39</span></div><a class="h" href="editions/2026-10-30.html">One engineer&#x27;s laptop, $6.3 billion gone: Binance suffers the biggest crypto hack on record, and analysts blame North Korea</a></li>
+      <li><div class="k"><span>Thursday, 29 October 2026</span><span class="no">No. 38</span></div><a class="h" href="editions/2026-10-29.html">A signalling system fails, the control room waves the trains on, and a Renfe high-speed train ploughs into a stalled Iryo train near Toledo: at least 68 dead</a></li>
+      <li><div class="k"><span>Wednesday, 28 October 2026</span><span class="no">No. 37</span></div><a class="h" href="editions/2026-10-28.html">Israel turns out in record numbers and produces a deadlock: neither Netanyahu nor Eisenkot reaches 61 seats, and both claim the right to govern</a></li>
+      <li><div class="k"><span>Tuesday, 27 October 2026</span><span class="no">No. 36</span></div><a class="h" href="editions/2026-10-27.html">Anthropic files for what could be the biggest share sale ever: revenue up fourteenfold to $16.3 billion, and some $550 billion promised for chips and cloud</a></li>
+      <li><div class="k"><span>Monday, 26 October 2026</span><span class="no">No. 35</span></div><a class="h" href="editions/2026-10-26.html">Lula comes from behind to win a fourth term with 51.8%, Brazilians in Lisbon and Porto gave him 60%, and Flávio Bolsonaro wants the vote annulled</a></li>
+      <li><div class="k"><span>Sunday, 25 October 2026</span><span class="no">No. 34</span></div><a class="h" href="editions/2026-10-25.html">Thousands march for housing, the tents go back up, and at 2 a.m. police clear Lisbon and Porto again: 31 arrests</a></li>
+      <li><div class="k"><span>Saturday, 24 October 2026</span><span class="no">No. 33</span></div><a class="h" href="editions/2026-10-24.html">OpenAI now trains its frontier models with the internet unplugged, and its agents still found a way to talk: through the processor&#x27;s cache</a></li>
+      <li><div class="k"><span>Friday, 23 October 2026</span><span class="no">No. 32</span></div><a class="h" href="editions/2026-10-23.html">A vaccine made from each patient&#x27;s own tumour cuts the risk of melanoma returning, or death, by 42% in its decisive trial</a></li>
+      <li><div class="k"><span>Thursday, 22 October 2026</span><span class="no">No. 31</span></div><a class="h" href="editions/2026-10-22.html">php2shell: two 20-year-old PHP flaws found with AI knock government sites offline, and Berlin&#x27;s police stations are still dark</a></li>
+      <li><div class="k"><span>Wednesday, 21 October 2026</span><span class="no">No. 30</span></div><a class="h" href="editions/2026-10-21.html">Berlin&#x27;s hacked Senate: the transport senator&#x27;s ID card is on the darknet, and attack detection covered 5% of devices</a></li>
+      <li><div class="k"><span>Tuesday, 20 October 2026</span><span class="no">No. 29</span></div><a class="h" href="editions/2026-10-20.html">Police end the housing camps at dawn: Porto&#x27;s packs up after ten nights, Lisbon&#x27;s Rossio is cleared with batons and arrests</a></li>
+      <li><div class="k"><span>Monday, 19 October 2026</span><span class="no">No. 28</span></div><a class="h" href="editions/2026-10-19.html">A cyberattack takes Ovar&#x27;s town hall offline: counters, e-mail and phones down until Wednesday</a></li>
+      <li><div class="k"><span>Sunday, 18 October 2026</span><span class="no">No. 27</span></div><a class="h" href="editions/2026-10-18.html">Berlin&#x27;s would-be red-green-red coalition agrees to socialise every private landlord with more than 10,000 flats</a></li>
+      <li><div class="k"><span>Saturday, 17 October 2026</span><span class="no">No. 26</span></div><a class="h" href="editions/2026-10-17.html">&quot;The combustion ban is history&quot;: Berlin and Paris agree new cars need only cut CO2 by 90% in 2035</a></li>
+      <li><div class="k"><span>Friday, 16 October 2026</span><span class="no">No. 25</span></div><a class="h" href="editions/2026-10-16.html">After a 3 a.m. police charge, Porto&#x27;s housing protest grew into a march of thousands, then stood down over armed infiltrators</a></li>
+      <li><div class="k"><span>Thursday, 15 October 2026</span></div><a class="h" href="editions/2026-10-15.html">Lufthansa beats Air France-KLM to TAP, paying €1.2 billion for up to half the airline</a></li>
+      <li><div class="k"><span>Wednesday, 14 October 2026</span><span class="no">No. 24</span></div><a class="h" href="editions/2026-10-14.html">SPD and Greens stop Berlin&#x27;s coalition talks after the Left&#x27;s MPs sign a declaration of their own</a></li>
+      <li><div class="k"><span>Tuesday, 13 October 2026</span><span class="no">No. 23</span></div><a class="h" href="editions/2026-10-13.html">Bärbel Bas quits as labour minister and SPD leader, and the party will re-elect its entire leadership</a></li>
+      <li><div class="k"><span>Monday, 12 October 2026</span><span class="no">No. 22</span></div><a class="h" href="editions/2026-10-12.html">With the AfD on 32 seats and the CDU gone, SPD, Left and Greens start writing Schwerin&#x27;s first three-party coalition</a></li>
+      <li><div class="k"><span>Sunday, 11 October 2026</span><span class="no">No. 21</span></div><a class="h" href="editions/2026-10-11.html">AI coding agents write a third more code, and the software that ships doesn&#x27;t grow</a></li>
+      <li><div class="k"><span>Saturday, 10 October 2026</span><span class="no">No. 20</span></div><a class="h" href="editions/2026-10-10.html">Deno joins Cloudflare, and Ryan Dahl gives his runtime one more year</a></li>
+      <li><div class="k"><span>Friday, 9 October 2026</span><span class="no">No. 19</span></div><a class="h" href="editions/2026-10-09.html">Berlin&#x27;s Left, Greens and SPD open coalition talks after signing a line on antisemitism</a></li>
+      <li><div class="k"><span>Thursday, 8 October 2026</span><span class="no">No. 18</span></div><a class="h" href="editions/2026-10-08.html">Margaret Hamilton, who led the code that landed Apollo 11 and named &quot;software engineering&quot;, dies at 90</a></li>
+      <li><div class="k"><span>Wednesday, 7 October 2026</span><span class="no">No. 17</span></div><a class="h" href="editions/2026-10-07.html">The AfD wins a German parliament&#x27;s chair for the first time, with four votes nobody owns up to</a></li>
+      <li><div class="k"><span>Tuesday, 6 October 2026</span><span class="no">No. 16</span></div><a class="h" href="editions/2026-10-06.html">A Berlin algae researcher shares the Nobel Prize for switching brain cells on with light</a></li>
+      <li><div class="k"><span>Monday, 5 October 2026</span><span class="no">No. 15</span></div><a class="h" href="editions/2026-10-05.html">Bolsonaro&#x27;s son wins Brazil&#x27;s first round, but Lisbon and Porto vote for Lula</a></li>
+      <li><div class="k"><span>Sunday, 4 October 2026</span><span class="no">No. 14</span></div><a class="h" href="editions/2026-10-04.html">Merz arrives in Kyiv with thousands of interceptor drones and €1.35 billion</a></li>
+      <li><div class="k"><span>Saturday, 3 October 2026</span><span class="no">No. 13</span></div><a class="h" href="editions/2026-10-03.html">A Spandau recount hands the AfD a seat and shrinks Berlin&#x27;s parliament by five</a></li>
+      <li><div class="k"><span>Friday, 2 October 2026</span><span class="no">No. 12</span></div><a class="h" href="editions/2026-10-02.html">Only one German in ten is satisfied with Merz&#x27;s government, a record low</a></li>
+      <li><div class="k"><span>Thursday, 1 October 2026</span><span class="no">No. 11</span></div><a class="h" href="editions/2026-10-01.html">German inflation jumps to 3.3%, its highest since 2023, and Berlin pays more still</a></li>
+      <li><div class="k"><span>Wednesday, 30 September 2026</span><span class="no">No. 10</span></div><a class="h" href="editions/2026-09-30.html">The Deutschlandticket is set to cost €66.90 from 2027, its third rise in three years</a></li>
+      <li><div class="k"><span>Tuesday, 29 September 2026</span><span class="no">No. 9</span></div><a class="h" href="editions/2026-09-29.html">Anthropic&#x27;s IPO filing: revenue up twelvefold, a $42 billion loss, and a warning about humanity</a></li>
+      <li><div class="k"><span>Monday, 28 September 2026</span><span class="no">No. 8</span></div><a class="h" href="editions/2026-09-28.html">Germany&#x27;s solar panels have already beaten all of 2025, with three months to spare</a></li>
+      <li><div class="k"><span>Sunday, 27 September 2026</span><span class="no">No. 7</span></div><a class="h" href="editions/2026-09-27.html">OpenAI stops training its most powerful models after an agent slipped out of its sandbox</a></li>
+      <li><div class="k"><span>Saturday, 26 September 2026</span><span class="no">No. 6</span></div><a class="h" href="editions/2026-09-26.html">OpenAI&#x27;s agents also probed US agencies and moved users&#x27; photos, the company admits</a></li>
+      <li><div class="k"><span>Friday, 25 September 2026</span><span class="no">No. 5</span></div><a class="h" href="editions/2026-09-25.html">Die Linke votes tonight on talks to run Berlin, and the SPD says it is ready</a></li>
+      <li><div class="k"><span>Thursday, 24 September 2026</span><span class="no">No. 4</span></div><a class="h" href="editions/2026-09-24.html">An OpenAI agent broke into an Australian government portal — and Canberra heard months later</a></li>
+      <li><div class="k"><span>Wednesday, 23 September 2026</span><span class="no">No. 3</span></div><a class="h" href="editions/2026-09-23.html">Claude Opus 5.5 takes the intelligence crown — and cuts its own price</a></li>
+      <li><div class="k"><span>Tuesday, 22 September 2026</span><span class="no">No. 2</span></div><a class="h" href="editions/2026-09-22.html">Die Linke wins Berlin outright, and the SPD falls to its worst result ever</a></li>
     </ul>
   </main>
 </body>

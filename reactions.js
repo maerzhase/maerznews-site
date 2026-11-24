@@ -1,7 +1,8 @@
 // Reaction rows for an edition of The Cortegaça Chronicle.
 //
-// build_index.py copies this file to the site root and loads it on every edition with the API's
-// address in `data-api`. Every element carrying `data-rk` (articles, list entries, diary events)
+// build_index.py copies this file to the site root and loads it, with the API's address in
+// `data-api`, on every edition and on festas.html. Every element carrying `data-rk` (articles, list
+// entries, diary events, festas)
 // gets a row: the reactions it already has, and a button that opens a palette of five. Readers have no account: a browser is told apart by a random id
 // kept in localStorage. Opening any edition once with `#owner=<key>` stores the owner key, after
 // which this browser's reactions count as Markus's own. If the API can't be reached, no row is
@@ -9,7 +10,8 @@
 (() => {
   const script = document.currentScript;
   const API = ((script && script.dataset.api) || "").replace(/\/$/, "");
-  const edition = (location.pathname.match(/(\d{4}-\d{2}-\d{2})(?:\.html)?$/) || [])[1];
+  // an edition is named by its path; another page (festas.html) names the edition its reactions are filed under
+  const edition = (location.pathname.match(/(\d{4}-\d{2}-\d{2})(?:\.html)?$/) || [])[1] || (script && script.dataset.edition);
   const items = [...document.querySelectorAll("[data-rk]")];
   if (!API || !edition || !items.length) return;
 
@@ -202,6 +204,8 @@
         head.className = "rx-head";
         kicker.before(head);
         head.append(kicker, row);
+      } else if (inline) {
+        attachTail(el, row);
       } else {
         // a diary event is a two-column grid (date | text): the row belongs under the text
         (el.querySelector(":scope > .txt") || el).append(row);
@@ -212,7 +216,32 @@
     for (const key of rows.keys()) draw(key);
   }
 
+  // A list entry's button goes after its text, glued to the last word (or the closing link) in a
+  // nowrap span, so it never wraps onto a line of its own.
+  function attachTail(li, row) {
+    let last = li.lastChild;
+    while (last && last.nodeType === Node.TEXT_NODE && !last.textContent.trim()) last = last.previousSibling;
+    if (!last) {
+      li.append(row);
+      return;
+    }
+    const tail = document.createElement("span");
+    tail.className = "rx-tail";
+    if (last.nodeType === Node.TEXT_NODE) {
+      const text = last.textContent.replace(/\s+$/, "");
+      const cut = text.search(/\S+$/);
+      last.textContent = text.slice(0, cut);
+      tail.append(text.slice(cut));
+      last.after(tail);
+    } else {
+      last.replaceWith(tail);
+      tail.append(last);
+    }
+    tail.append(row);
+  }
+
   const CSS = `
+  .rx-tail { white-space: nowrap; }
   .rx { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-top: 7px; }
   .rx-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
   .rx-head > .kicker, .rx-head > .eyebrow { margin-bottom: 0; min-width: 0; }
