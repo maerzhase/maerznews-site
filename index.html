@@ -8,11 +8,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.ico" sizes="32x32" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<meta name="description" content="64 editions · 2021 articles, searchable. Today: Lego will make its bricks in Estarreja: an eighth factory, up to €1 billion and more than 1,000 jobs, open in 2030" />
+<meta name="description" content="65 editions · 2061 articles, searchable. Today: Matrix multiplication can never beat an exponent of 9/4: an OpenAI model claims to settle a 57-year-old question" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Cortegaça Chronicle" />
 <meta property="og:title" content="The Cortegaça Chronicle" />
-<meta property="og:description" content="64 editions · 2021 articles, searchable. Today: Lego will make its bricks in Estarreja: an eighth factory, up to €1 billion and more than 1,000 jobs, open in 2030" />
+<meta property="og:description" content="65 editions · 2061 articles, searchable. Today: Matrix multiplication can never beat an exponent of 9/4: an OpenAI model claims to settle a 57-year-old question" />
 <meta property="og:url" content="https://daily.m3000.io/" />
 <meta property="og:image" content="https://daily.m3000.io/og/default.png" />
 <meta property="og:image:width" content="1200" />
@@ -101,11 +101,11 @@
 <body>
 <div class="sheet" lang="en">
   <header class="mast">
-    <div class="ear"><span class="ear-facts">64 editions · 2021 articles</span><span class="ear-sep"> · </span><span class="ear-nav"><span aria-current="page">Front page</span> · <a href="archive.html">All editions</a> · <a href="releases.html">Album releases</a> · <a href="festas.html">Festas</a></span></div>
+    <div class="ear"><span class="ear-facts">65 editions · 2061 articles</span><span class="ear-sep"> · </span><span class="ear-nav"><span aria-current="page">Front page</span> · <a href="archive.html">All editions</a> · <a href="music.html">Music</a> · <a href="festas.html">Festas</a></span></div>
     <h1 class="nameplate"><a href="./"><span class="the">The</span>Cortegaça Chronicle</a></h1>
-    <a class="today" href="editions/2026-11-24.html">
-      <span class="today-k">Today's paper · Tuesday, 24 November 2026 · No. 64</span>
-      <span class="today-h">Lego will make its bricks in Estarreja: an eighth factory, up to €1 billion and more than 1,000 jobs, open in 2030</span>
+    <a class="today" href="editions/2026-11-25.html">
+      <span class="today-k">Today's paper · Wednesday, 25 November 2026 · No. 65</span>
+      <span class="today-h">Matrix multiplication can never beat an exponent of 9/4: an OpenAI model claims to settle a 57-year-old question</span>
       <span class="today-go">Read the edition →</span>
     </a>
   </header>
@@ -121,7 +121,7 @@
   <button class="more" id="more" type="button" hidden>Show more</button>
   <noscript><p class="empty">Search needs JavaScript. <a href="archive.html">Browse all editions</a>.</p></noscript>
 
-  <div class="colophon"><a href="archive.html">All editions</a> · <a href="releases.html">Album releases</a> · <a href="festas.html">Festas</a></div>
+  <div class="colophon"><a href="archive.html">All editions</a> · <a href="music.html">Music</a> · <a href="festas.html">Festas</a></div>
 </div>
 <script>
 (() => {
@@ -270,7 +270,7 @@
   q.value = params.get("q") || "";
   section = params.get("s") || "";
   count.textContent = "Loading the archive…";
-  fetch("articles.json?v=2026-11-24-2021")
+  fetch("articles.json?v=2026-11-25-2061")
     .then(r => r.json())
     .then(data => {
       all = data.map(a => ({ ...a, g: groupOf(a.sec), hay: words([a.h, a.k, a.sec, a.m, a.t, a.s].join(" ")) }));
